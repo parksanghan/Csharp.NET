@@ -1,0 +1,8 @@
+bin\Debug\AnimationExam.exe
+bin\Debug\AnimationExam.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\AnimationExam.Form1.resources
+obj\Debug\AnimationExam.Properties.Resources.resources
+obj\Debug\AnimationExam.csproj.GenerateResource.Cache
+obj\Debug\AnimationExam.exe
+obj\Debug\AnimationExam.pdb

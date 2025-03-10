@@ -1,0 +1,13 @@
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\bin\Debug\231023_클라이언트 시험.exe.config
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\bin\Debug\231023_클라이언트 시험.exe
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\bin\Debug\231023_클라이언트 시험.pdb
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\bin\Debug\231018_닷넷 서버 클라.dll
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\bin\Debug\231018_닷넷 서버 클라.pdb
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\obj\Debug\231023_클라이언트 시험.csproj.AssemblyReference.cache
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\obj\Debug\_231023_클라이언트_시험.MainForm.resources
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\obj\Debug\_231023_클라이언트_시험.Properties.Resources.resources
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\obj\Debug\231023_클라이언트 시험.csproj.GenerateResource.cache
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\obj\Debug\231023_클라이언트 시험.csproj.CoreCompileInputs.cache
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\obj\Debug\231023_클라이언트 시험.csproj.CopyComplete
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\obj\Debug\231023_클라이언트 시험.exe
+S:\[Education]\2학년 2학기\[05] C# & Winform\231023_클라이언트 시험\231023_클라이언트 시험\obj\Debug\231023_클라이언트 시험.pdb

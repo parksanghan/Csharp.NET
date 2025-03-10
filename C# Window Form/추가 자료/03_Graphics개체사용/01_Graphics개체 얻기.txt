@@ -1,0 +1,477 @@
+[ Graphics 개체 얻기 ]
+
+컴퓨터 그래픽 
+  - 벡터  : 점, 선, 직선, 곡선 등의 기하학 원리를 이용해 그래픽 표현
+  - 래스터 그래픽 : 비트맵 이미지에 한 픽셀씩 정보를 기록해 
+                          그래픽 표현
+
+개론 : Graphics 클래스 
+         벡터 그래픽을 주로 처리하는 닷넷의 주요 도구 
+         그리기 표면에 벡터 기반의 그래픽을 출력함
+         벡터를 이용하여 그릴 수 있는 표면은 크게 3가지 임
+
+     그리기 표면	이미지크기			해상도		색깊이
+    -------------------------------------------	------------------------
+     윈도우 폼	윈도우 클라이언트의 영역 크기	96DPI		24비트 컬러
+     프린터	프린터 드라이버의 설정을 따름	프린터해상도	24비트 컬러
+     비트맵 이미지	이미지 생성시에 지정		해상도 변경가능	다양한 컬러
+
+사용 방법
+
+    1) 그리고 싶은 영역에 대한 Graphics 개체를 얻음
+    2) Draw, Fill 등의 접두어를 갖는 그래픽 메서드 사용
+   
+--------------------------------------------------------------------
+
+Graphics 클래스
+
+   System.Drawing 네임스페이스에 포함되어 있으며, GDI+ 그리기 화면을 캡슐화한 클래스임
+
+
+Graphics객체 얻는 방법
+
+  1) Control 클래스를 상속받은 클래스에서 Paint 이벤트 핸들러를 통해 얻기
+  2) Control 클래스의 OnPaint() 메서드를 재정의해 얻기
+  3) 컨트롤 클래스의 CreateGraphics 메서드를 사용해 얻어오기 
+      이 경우 사용이 끝나면 Dispose()메서드를 사용하여 반드시 해제해야 함
+  4) 몇몇 컨트롤이 제공하는 사용자 그리기(Owner draw)기능을 이용해 얻오오기
+      MeasureItem or DrawItem등의 이벤트들은 MeasureItemEventArgs or DrawItemEventArgs
+      형의 객체를 전달함 이를 통해 얻을 수 있슴
+  5) 비트맵과 메타파일 등에서는 static 메서드인 Graphics.FromImage(...)을 이용해 얻음
+  6) 프린트 할 경우에는 PrintPage 이벤트 핸들러가 전달하는 PrintPageEventArgs 형의 
+      개체를 통해 얻음
+  7) Win32 코드를 사용할 경우 static메서드인 Graphics.FromeHwnd와  Graphics.FromHdc
+      를 사용해 얻음
+
+
+
+(1) Paint 이벤트 핸들러를 통해 얻기 
+     GDI+에서 가장 많이 사용하는 방법 중 하나임
+
+     - this.Paint += new PaintEventHandler(XXX_Paint);
+     - public void XXX_Paint( object Sender, PaintEventArgs pea){ ...}
+     - Graphics grfx = pea.Graphics;
+
+       pea의 속성 : Graphics( 그래픽 출력 객체)
+                         Rectangle(무효한 사각형 영역)
+
+예제1) 
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam1 : Form
+{
+    public GDIExam1()
+    {
+        this.Text = "Graphics 개체 얻기1";
+
+        // paint 이벤트 핸들러 등록
+        this.Paint += new PaintEventHandler(GDIExam_Paint);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam1());
+    }
+
+   // sender : Paint 이벤트가 적용될 객체를 가리킴
+   // pea     : Paint핸들러 내부 사용시 필요한 인자 
+  //              2개의 속성을 가지고 있슴
+	    - Graphics (그래픽 출력 객체) : Graphics(자료형)
+                     Rectangle(무효한 사각형 인자) : Rectangle(자료형)
+
+    public void GDIExam_Paint(object sender, PaintEventArgs pea)
+    {
+        Graphics grfx = pea.Graphics;
+        grfx.FillRectangle(new SolidBrush(Color.Blue), this.ClientRectangle);
+    }
+}
+
+
+
+
+(2) Control 클래스의 OnPaint 메서드 재정의해 Graphics 개체 얻기 
+    
+     protected virtual void onPaint( PaintEventArgs e);
+
+     이벤트 등록과정을 제외하면 (1)번 방식과 동일함
+    (1)번과 더불어 GDI+에서 가장 많이 사용되는 방법임
+       - 이벤트 핸들러 등록과정이 필요 없기 때문에 간단히 
+          Graphics 객체를 얻을 수 있다는 장점이 있슴 
+       - OnPaint()메서드는 Control 클래스에 정의되어 있슴
+     
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam2 : Form
+{
+    public GDIExam2()
+    {
+        this.Text = "Graphics 개체 얻기2";
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam2());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics grfx = pea.Graphics;
+        grfx.FillRectangle(new SolidBrush(Color.Blue), this.ClientRectangle);
+    }
+}
+
+
+(3) 컨트롤 클래스의 CreateGraphics 메서드를 사용해 얻기 
+   
+   
+     public Graphics CreateGraphics()
+     이는 반드시 사용이 끝나면 Dispose로 해제해야 함
+     (1)(2)는 무효화 관련 처리를 했슴
+
+     주로 윈폼 위에 배치된 컨트롤에서 컨트롤들의 개별 화면에 
+     GDI+작업을 직접 처리할 때 주로 사용됨 
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam3 : Form
+{
+    Button btn = null;
+    public GDIExam3()
+    {
+        this.Text = "Graphics 개체 얻기3";
+        btn = new Button();
+        btn.Text = "버튼위에 GDI+ 출력";
+        btn.SetBounds(10, 10, 200, 100);
+        btn.Click += new EventHandler(btn_Click);
+        this.Controls.Add(btn);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam3());
+    }
+
+    public void btn_Click(object sender, EventArgs e)
+    {
+
+        Graphics grfx = btn.CreateGraphics();
+        grfx.FillRectangle(new SolidBrush(Color.Blue), btn.ClientRectangle);
+        grfx.Dispose();
+        // Dispose()시키지 않으면 해당 개체의 Graphics 리소스가 회수되지 않기 
+        // 때문에 시스템에 문제를 일으킬 수 있슴
+
+
+        // 아래 구문이 더 깔끔함
+        // using(Graphics grfx = btn.CreateGraphics())
+        // {				 
+        //	 grfx.FillRectangle(new SolidBrush(Color.Blue), this.ClientRectangle);
+        // }
+
+    }
+}
+
+
+(4) MeasureItem or DrawItem을 이용해 개체 얻기
+
+    MeasureItem을 통해 개체를 얻을 수 있는 컨트롤
+      ListBox, ComboBox, CheckListBox, TabControl, MenuItem
+
+    DrawItem을 통해 개체를 얻을 수 있는 컨트롤
+     ListBox, ComboBox
+
+    위의 메서드는 이벤트를 통해서 호출되게 되는데
+    이벤트 속성 처리가 되지 않으면 호출이 안됨
+
+        DrawMode.Normal;        	// MeasureItem DrawItem이벤트 호출안됨
+				// default값임
+
+        DrawMode.OwnerDrawVarible  	// MeasureItem 이벤트 호출한후 DrawItem호출
+        DrawMode.OwnerDrawFixed	// DrawItem이벤트만 호출됨
+
+    메뉴에 사용자가 원하는 아이콘을 넣거나 탭 컨트롤 상단에 이미지와 색상을 넣는
+    작업을 하고 싶다면 이를 통해 구현하게 됨
+
+
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam4 : Form
+{
+    ListBox lstbox = null;
+    public GDIExam4()
+    {
+        this.Text = "Graphics 개체 얻기4";
+        lstbox = new ListBox();
+        lstbox.SetBounds(10, 10, 200, 100);
+        lstbox.Items.Add("사과");
+        lstbox.Items.Add("포도");
+        lstbox.Items.Add("수박");
+        lstbox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(GDIExam_DrawItem);
+        lstbox.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(GDIExam_MeasureItem);
+
+        this.Controls.Add(lstbox);
+        this.Load += new EventHandler(GDIExam_Load);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam4());
+    }
+
+    private void GDIExam_Load(object sender, EventArgs e)
+    {
+        lstbox.DrawMode = DrawMode.OwnerDrawVariable;
+        //lstbox.DrawMode = DrawMode.OwnerDrawFixed;
+    }
+
+    // 먼저 호출됨
+    private void GDIExam_MeasureItem(object sender, MeasureItemEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        Console.WriteLine("{0} : MeasureItem 이벤트 실행", e.ToString());
+
+    }
+
+    // ListBox가 다시 그려질 때마다 호출됨(데이터 갯수만큼 호출됨)
+    private void GDIExam_DrawItem(object sender, DrawItemEventArgs e)
+    {
+        Graphics g = e.Graphics;
+
+        Brush brush = Brushes.Black;
+
+        switch (e.Index)
+        {
+            case 0:
+                brush = Brushes.Red;
+                break;
+            case 1:
+                brush = Brushes.Violet;
+                break;
+            case 2:
+                brush = Brushes.Green;
+                break;
+        }
+        g.DrawString(lstbox.Items[e.Index].ToString(),
+                      e.Font, brush, e.Bounds, StringFormat.GenericDefault);
+
+        Console.WriteLine("{0} : DrawItem 이벤트 실행", e.ToString());
+    }
+}
+
+
+(5) Graphics.FromImage 메서드를 이용해 Graphics 객체 얻기
+    이미지에 대한 Graphics 개체를 얻을 때 사용
+
+    bin/debug 폴더에 jpg파일 추가
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam5 : Form
+{
+    Button btn = null;
+    Image image = null;
+    public GDIExam5()
+    {
+        this.Text = "Graphics 개체 얻기5";
+        btn = new Button();
+        btn.Text = "그림위에 글씨 쓰기";
+        btn.SetBounds(10, 100, 200, 100);
+        btn.Click += new EventHandler(btn_Click);
+        this.Controls.Add(btn);
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics grfx = e.Graphics;
+        if (image != null)
+            grfx.DrawImage(image, 0, 0);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam5());
+    }
+
+    public void btn_Click(object sender, EventArgs e)
+    {
+        Image imageFile = Image.FromFile("ocean.jpg");
+        Graphics grfx = Graphics.FromImage(imageFile);
+
+        Font font = new Font("돋음", 20);
+        Brush brush = Brushes.Pink;
+
+        grfx.DrawString("이미지에 글자쓰기", font, brush, 10, 10);
+        grfx.Dispose();
+
+        imageFile.Save("ocean.gif", System.Drawing.Imaging.ImageFormat.Gif);
+
+        this.image = Image.FromFile("ocean.gif");
+        this.Invalidate(this.ClientRectangle);
+    }
+}
+
+
+
+(6) PrintPageEventArgs를 이용해 Graphics 객체 얻기
+
+    system.Drawing.Printing.PrintDocument 클래스의 PrintPage 이벤트 이용
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Drawing.Printing;
+class GDIExam6 : Form
+{
+    Button btn = null;
+    public GDIExam6()
+    {
+        this.Text = "Graphics 개체 얻기6";
+        btn = new Button();
+        btn.Text = "문서를 프린트합니다.";
+        btn.SetBounds(10, 10, 200, 100);
+        btn.Click += new EventHandler(btn_Click);
+        this.Controls.Add(btn);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam6());
+    }
+
+    public void btn_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            PrintDocument pd = new PrintDocument();	// 1) 
+            pd.PrintPage += new PrintPageEventHandler(this.pd_PrintPage);//2)
+            pd.Print();		// 3) 
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show("프린터 도중 예외 발생 :" + ex.ToString());
+        }
+    }
+
+
+    private void pd_PrintPage(object sender, PrintPageEventArgs ppe)//4) 
+    {
+        string strText = DateTime.Today + " : 문서 작성자 [CJK] ";
+        ppe.HasMorePages = false;
+
+        Graphics g = ppe.Graphics;		// 5) 
+        Pen pen = new Pen(Color.Black, 2);
+        for (int i = 0; i < this.ClientSize.Width; i += 20)
+            g.DrawLine(pen, i, 0, i, this.ClientSize.Height);
+
+        for (int j = 0; j < this.ClientSize.Height; j += 20)
+            g.DrawLine(pen, 0, j, this.ClientSize.Width, j);
+
+        g.DrawString(strText, this.Font, Brushes.Black, 10, this.ClientSize.Height + 20);
+
+    }
+}
+
+
+
+(7) Graphics.FromHwnd와 Graphics.FromHdc를 사용해 개체 얻기
+
+      public static Graphics FromHwnd( IntPtr hwnd);    // 창 핸들
+
+      public static Graphics FromHdc( IntPtr hdc);	       // DC에 대한 핸들
+
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam7 : Form
+{
+    Button btn1 = null;
+    Button btn2 = null;
+    public GDIExam7()
+    {
+        this.Text = "Graphics 개체 얻기7";
+        btn1 = new Button();
+        btn1.Text = "Graphics.FromHwnd 이용";
+        btn1.SetBounds(10, 10, 200, 100);
+        btn1.Click += new EventHandler(btn_Click);
+
+        btn2 = new Button();
+        btn2.Text = "Graphics.FromHdc 이용";
+        btn2.SetBounds(10, 130, 200, 100);
+        btn2.Click += new EventHandler(btn_Click);
+
+        this.Controls.Add(btn1);
+        this.Controls.Add(btn2);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam7());
+    }
+
+    [System.Runtime.InteropServices.DllImportAttribute("gdi32.dll")]
+    private static extern bool Ellipse(
+            IntPtr hdc,    // handle to DC
+            int nLeftRect,  // x-coord of upper-left corner of rectangle
+            int nTopRect,   // y-coord of upper-left corner of rectangle
+            int nRightRect, // x-coord of lower-right corner of rectangle
+            int nBottomRect // y-coord of lower-right corner of rectangle
+        );
+
+    public void btn_Click(object sender, EventArgs e)
+    {
+        if ((Button)sender == btn1)
+        {
+            IntPtr hwnd = new IntPtr();
+            hwnd = this.Handle;
+
+            Graphics grfx = Graphics.FromHwnd(hwnd);
+            grfx.FillRectangle(Brushes.Blue, this.ClientRectangle);
+            grfx.Dispose();
+
+            hwnd = btn1.Handle;
+            grfx = Graphics.FromHwnd(hwnd);
+            grfx.DrawRectangle(new Pen(Color.Pink, 5), 10, 10, 180, 80);
+            grfx.Dispose();
+        }
+        else
+        {
+            Graphics g = this.btn2.CreateGraphics();
+            g.DrawEllipse(Pens.Blue, 10, 10, 100, 70);
+
+            IntPtr hdc = new IntPtr();
+            hdc = g.GetHdc();
+            Ellipse(hdc, 100, 10, 50, 50);
+
+            Graphics new_g = Graphics.FromHdc(hdc);
+            new_g.DrawRectangle(new Pen(Color.Blue, 5), 10, 10, 180, 80);
+
+            g.ReleaseHdc(hdc);
+
+            g.Dispose();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         

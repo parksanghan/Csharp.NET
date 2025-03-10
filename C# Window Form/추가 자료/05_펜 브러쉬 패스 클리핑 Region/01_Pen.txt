@@ -1,0 +1,223 @@
+[ Pen 개체로 그리기 ]
+
+예제 1) Pen 클래스를 이용한 직선 그리기 
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+public class PenExam1 : Form
+{
+    public PenExam1()
+    {
+        this.Text = "X자 그리기";
+        this.Size = new Size(300, 300);
+    }
+
+    static void Main()
+    {
+        Application.Run(new PenExam1());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        // 파랑색, 두께 10
+        Pen pen1 = new Pen(Color.Blue, 10);
+        
+        // 빨강색, 두께 5
+        Pen pen2 = new Pen(Color.Red, 5);
+
+        g.DrawLine(pen1, 50, 50, 250, 250);
+        g.DrawLine(pen2, 250, 50, 50, 250);
+    }
+}
+
+
+예제2) DashStyle을 이용한 파선 그리기 
+
+Pens 클래스  : 닷넷이 제공하는 표준 색상을 사용해 정의한 Pen클래스임
+  - 141개의 표준 색상 중 하나를 사용해 두께 1짜리  Pen개체를 쉽게 만들 수 있슴
+
+     Pens.Blue             Pen pen = new Pen(Color.Blue, 1);
+
+
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class PenExam2 : Form
+{
+    public PenExam2()
+    {
+        this.Text = "파선 그리기";
+        this.Size = new Size(450, 200);
+    }
+
+    static void Main()
+    {
+        Application.Run(new PenExam2());
+    }
+
+    // 모눈 종이 그리기 
+    void DrawGraphPaper(Graphics g)
+    {
+        int i;
+
+        // pens사용
+        for (i = 0; i < this.Width; i += 10)
+            g.DrawLine(Pens.Blue, i, 0, i, this.Height);
+
+        // pens2사용
+        for (i = 0; i < this.Width; i += 10)
+            g.DrawLine(Pens.Blue, 0, i, this.Width, i);
+
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        DrawGraphPaper(g);
+
+        DashStyle[] dash = {DashStyle.Custom, DashStyle.Dash, DashStyle.DashDot, 
+							 DashStyle.DashDotDot, DashStyle.Dot, DashStyle.Solid};
+
+
+        Pen pen = new Pen(Color.Black, 10);
+
+        for (int i = 0; i < dash.Length; i++)
+        {
+            pen.DashStyle = dash[i];
+            g.DrawLine(pen, 10, 15 + (20 * i), 400, 15 + (20 * i));
+        }
+    }
+}
+
+
+예제 3) 사용자 지정 파선 그리기
+
+    기본 스타일 이외의 다양한 패턴을 가진 파선 그리기
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class PenExam3 : Form
+{
+    public PenExam3()
+    {
+        this.Text = "사용자 지정 파선 그리기";
+        this.Size = new Size(450, 200);
+    }
+
+    static void Main()
+    {
+        Application.Run(new PenExam3());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        Pen pen1 = new Pen(Color.Red, 5);
+        Pen pen2 = new Pen(Color.Black, 5);
+
+        // Dot형태의 파선 그리기 
+        pen1.DashStyle = DashStyle.Dot;
+        g.DrawLine(pen1, 10, 20, 410, 20);
+        g.DrawRectangle(pen1, 10, 30, 400, 100);
+
+        // 사용자 지정 파선 그리기 
+        float[] dashpattern = { 15, 10, 5, 10, 20 };
+        pen2.DashPattern = dashpattern;
+
+        g.DrawLine(pen2, 10, 20, 410, 20);
+        g.DrawRectangle(pen2, 10, 30, 400, 100);
+
+        pen1.Dispose();
+        pen2.Dispose();
+    }
+}
+
+
+예제 4) 선 끝 모양 출력하기 
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class PenExam4 : Form
+{
+    public PenExam4()
+    {
+        this.Text = "선끝 모양";
+        this.Size = new Size(300, 300);
+    }
+
+    static void Main()
+    {
+        Application.Run(new PenExam4());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        Pen pen = new Pen(Brushes.Black, 10);
+
+        LineCap[] lcap = {LineCap.ArrowAnchor, LineCap.DiamondAnchor, LineCap.Flat,
+		                   LineCap.Round, LineCap.RoundAnchor, LineCap.Square,
+		                   LineCap.SquareAnchor, LineCap.Triangle};
+
+        for (int i = 0; i < lcap.Length; i++)
+        {
+            pen.StartCap = lcap[i];
+            pen.EndCap = lcap[i];
+            g.DrawLine(pen, 30, 30 + (30 * i), 100, 30 + (30 * i));
+            g.DrawString(lcap[i].ToString(), this.Font, Brushes.Blue, 150, 25 + (30 * i));
+        }
+    }
+
+}
+
+
+예제 5) 선의 결합
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+
+public class PenExam5 : Form
+{
+    public PenExam5()
+    {
+        this.Text = "선의 결합";
+    }
+
+    static void Main()
+    {
+        Application.Run(new PenExam5());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        Pen pen = new Pen(Color.Black, 15);
+
+        g.DrawRectangle(pen, 10, 10, 100, 100);
+        pen.LineJoin = LineJoin.Bevel;
+        g.DrawRectangle(pen, 10, 130, 100, 100);
+        pen.LineJoin = LineJoin.Round;
+        g.DrawRectangle(pen, 130, 130, 100, 100);
+        pen.LineJoin = LineJoin.Miter;
+        g.DrawRectangle(pen, 250, 130, 100, 100);
+        pen.LineJoin = LineJoin.MiterClipped;
+        g.DrawRectangle(pen, 370, 130, 100, 100);
+
+        pen.Dispose();
+    }
+}
+
+

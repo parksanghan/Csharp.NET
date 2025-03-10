@@ -1,0 +1,67 @@
+﻿ /// <summary>
+    /// Server의 사용법
+    /// 1. Callback함수 구현(2개)
+    /// 2. Server객체 생성시 전달(Port, Callback함수 2개)
+    /// 3. Server 실행 / 종료
+    ///    Start() / Stop()
+    /// 4. 전송처리
+    ///    SendData()
+    ///    SendDataAll()
+    /// 5. 수신처리
+    ///    1번에서 등록한 Callback함수에서 처리    
+    /// </summary>
+    internal class Program : IDisposable
+    {
+        private Server server;
+
+        #region Callback
+        public void RecvDel(Socket s, string msg)
+        {
+            Console.WriteLine("[데이터 수신] " + msg);
+
+            string[] sp = msg.Split('\a');
+            if (sp[0] == "pack_shortmessage")
+                Short_Message(s, sp[1]);            
+        }
+
+        public void LogDel(Socket s, Log log, string msg)
+        {
+            string temp = string.Format(log.ToString() + "\t" + msg);
+            Console.WriteLine(temp);
+        }
+        #endregion 
+
+        #region 수신처리
+        //msg : 이름#메시지
+        public void Short_Message(Socket s, string msg)
+        {
+            string[] sp = msg.Split('#');
+            string name = sp[0];
+            string message = sp[1];
+
+            Console.WriteLine("[{0}] {1}", name, message);
+
+            string packet = Packet.ShortMessage("최창민", message);
+            server.SendAllData(s, packet, false);            
+        }
+        #endregion 
+
+        public Program()
+        {
+            server = new Server(7000, RecvDel, LogDel);
+            server.Start();
+        }
+        public void Dispose()
+        {
+            server.Stop();
+        }
+
+
+        static void Main(string[] args)
+        {
+            using (Program p = new Program())
+            {
+                Console.ReadLine();
+            }
+        }
+    }

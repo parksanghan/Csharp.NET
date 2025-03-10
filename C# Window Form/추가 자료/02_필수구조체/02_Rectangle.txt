@@ -1,0 +1,72 @@
+[ 필수 구조체 ]
+
+//Rectangle
+
+*) Offset 메서드 
+    rect.Offset(10, -10);
+    ==>  	rect.x += 10;
+	rect.Y += -10;
+
+*) Inflate 메서드
+   rect.Inflate(10, -10);
+   ==>	rect.x -= 10;
+	rect.Y -= -10;
+	rect.Width += 2*10;
+	rect.Height += 2*(-10);
+
+   static형 Inflate메서드
+   Rectangle.Inflate(rect, 10, -10);	// 위와 동일
+
+*) FromLTRB 메서드
+   좌측상단과 우측하단의 좌표로 Rectangle객체를 만들어 반환
+   rect = Rectangle.FromLTRB(x1, y1, x2, y2);
+  ==>   rect = new Rectangle(x1, y1, x2, y2);
+
+*) Union메서드 :두 Rectnalge 영역의 합집합 반환
+   rect = Rectanble.Union(rect1, rect2);
+
+...
+
+using System;
+using System.Drawing;
+class StructExam3
+{
+
+    static void Main(string[] args)
+    {
+        Rectangle rect = new Rectangle();
+        Rectangle rect1 = new Rectangle(10, 10, 100, 100);
+        Rectangle rect2 = new Rectangle(50, 50, 100, 100);
+
+        // 좌측상단과 우측하단의 좌표로 Rectangle 객체를 만들어 반환
+        rect = Rectangle.FromLTRB(30, 30, 50, 50);
+        System.Console.WriteLine("rect 값(FromLTRB) :" + rect.ToString());
+
+        // x,y의 크기만큼 사각형의 시작 좌표를 이동
+        rect.Offset(10, -10);
+        System.Console.WriteLine("rect 값(Offset) :" + rect.ToString());
+
+        // rect.X -= 50         rect.Y -= 50
+        // rect.Width += 2*50   rect.Y  += 2*50
+        Rectangle.Inflate(rect1, 50, 50);
+        System.Console.WriteLine("rect 값(Inflate) :" + rect.ToString());
+
+        // 두 사각형 영역의 합집합을 반환
+        rect1 = Rectangle.Union(rect1, rect2);
+        System.Console.WriteLine("rect 값(Union) :" + rect.ToString());
+
+
+        // 두 사각형 영역의 교집합을 반환
+        rect1 = Rectangle.Intersect(rect1, rect2);
+        System.Console.WriteLine("rect 값(Intersect) :" + rect.ToString());
+
+        // 매개변수가 사각형 영역에 포함되는 유무 반환
+        if (rect1.Contains(rect2))
+            System.Console.WriteLine("rect2는 rect1에 포함되어 있습니다.");
+
+        // 매개변수가 사각형 영역과 교차하는 여부 반환
+        if (rect2.IntersectsWith(rect1))
+            System.Console.WriteLine("rect2는 rect1과 교차합니다.");
+
+    }
+}

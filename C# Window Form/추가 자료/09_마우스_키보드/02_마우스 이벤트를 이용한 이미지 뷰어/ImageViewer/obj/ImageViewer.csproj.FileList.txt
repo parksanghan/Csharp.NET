@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ImageViewer.Form1.resources
+obj\Debug\ImageViewer.Properties.Resources.resources
+obj\Debug\ImageViewer.csproj.GenerateResource.Cache
+bin\Debug\ImageViewer.exe
+bin\Debug\ImageViewer.pdb
+obj\Debug\ImageViewer.exe
+obj\Debug\ImageViewer.pdb

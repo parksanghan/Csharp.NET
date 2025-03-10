@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\TextViewer.Form1.resources
+obj\Debug\TextViewer.Properties.Resources.resources
+obj\Debug\TextViewer.csproj.GenerateResource.Cache
+bin\Debug\TextViewer.exe
+bin\Debug\TextViewer.pdb
+obj\Debug\TextViewer.exe
+obj\Debug\TextViewer.pdb

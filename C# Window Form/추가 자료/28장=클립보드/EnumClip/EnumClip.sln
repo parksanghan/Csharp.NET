@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnumClip", "EnumClip\EnumClip.csproj", "{2811940B-1AD8-4E02-9881-04986AF357BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2811940B-1AD8-4E02-9881-04986AF357BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2811940B-1AD8-4E02-9881-04986AF357BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2811940B-1AD8-4E02-9881-04986AF357BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2811940B-1AD8-4E02-9881-04986AF357BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

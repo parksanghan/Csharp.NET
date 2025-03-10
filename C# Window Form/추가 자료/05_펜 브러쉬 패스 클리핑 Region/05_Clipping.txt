@@ -1,0 +1,140 @@
+[Clipping]
+
+클리핑 : 그리기 표면에서 그리기 연산이 실제 수행되는 영역
+
+
+예제1) 클리핑 영역 출력
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class ClippingExam1 : System.Windows.Forms.Form
+{
+    static void Main()
+    {
+        Application.Run(new ClippingExam1());
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        Pen p = new Pen(Color.Black);
+        p.DashStyle = DashStyle.Dot;
+        g.DrawRectangle(p, 100, 100, 100, 100);
+        g.DrawRectangle(p, 10, 10, 50, 50);
+        g.DrawRectangle(p, 150, 150, 200, 200);
+
+        // 클리핑 영역 지정
+        g.SetClip(new Rectangle(100, 100, 100, 100));
+
+        // 클리핑 영역에서만 출력이 이루어지게 됨
+        g.FillRectangle(Brushes.Black, 10, 10, 50, 50);
+        g.FillRectangle(Brushes.Red, 150, 150, 200, 200);
+    }
+}
+
+예제 2) 텍스트 클리핑 예제 
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+
+public class ClippingExam2 : System.Windows.Forms.Form
+{
+    public ClippingExam2()
+    {
+        this.Text = "ClippingExam2";
+        this.Size = new Size(600, 300);
+    }
+
+    static void Main()
+    {
+        Application.Run(new ClippingExam2());
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Bitmap bmp = new Bitmap("태극기.gif");
+        FontFamily ff = new FontFamily("궁서체");
+
+        Graphics g = e.Graphics;
+        g.FillRectangle(Brushes.Pink, this.ClientRectangle);
+        GraphicsPath gp = new GraphicsPath();
+        gp.AddString("국기", ff, (int)FontStyle.Bold, 150, new Point(5, 20), StringFormat.GenericDefault);
+
+        // 글자의 영역만 클리핑 설정
+        g.SetClip(gp);
+
+        // 설정된 영역에 그림 출력
+        g.DrawImage(bmp, this.ClientRectangle);
+    }
+}
+
+
+예제 3) 새로 그려질 클리핑 영역 출력
+
+ PaintEventArgs 개체가 전달하는 클리핑 영역
+
+ - Paint 이벤트 : 새로 그려질 영역을 PaintEventArgs 인자의 ClipRectangle 속성을
+                       통해 응용프로그램에 전달됨
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+
+public class ClippingExam3 : System.Windows.Forms.Form
+{
+    static void Main()
+    {
+        Application.Run(new ClippingExam3());
+    }
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Console.WriteLine("Clipping 영역 : {0}", e.ClipRectangle);
+    }
+}
+
+
+
+예제 4) ClipRectangle을 이용한 그리기 작업 최소화 예
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class ClippingExam4 : System.Windows.Forms.Form
+{
+    static void Main()
+    {
+        Application.Run(new ClippingExam4());
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Console.WriteLine("Clipping 영역 : {0}", e.ClipRectangle);
+
+        Rectangle rect = new Rectangle(0, 0, 200, 100);
+        Graphics g = e.Graphics;
+
+        g.DrawRectangle(Pens.Black, rect);
+        g.SetClip(rect);
+
+        // 폼을 다른 윈도우로 가려보면 클리핑 영역에서는 그리기 연산이 
+        // 일어나지만 클리핑 영역이 아닌 경우에는 DrawString()
+        // 메서드의 호출이 오지 않음
+        //if (g.IsVisibleClipEmpty)
+        if (rect.IntersectsWith(e.ClipRectangle))
+        {
+            g.DrawString("그리기 작업 수행", this.Font, Brushes.Black, 20, 10);
+            Console.WriteLine("그리기 작업 실행됨!!!");
+        }
+        else
+        {
+            Console.WriteLine("아무 작업도 안함!!!");
+        }
+
+    }
+}

@@ -1,0 +1,185 @@
+[ Timer ]
+
+타이머의 종류
+
+   System.Timer.Timer 클래스		 : 서버 기반 타이머
+   System.Windows.Form.Timer 클래스 	 : 윈도우 기반 타이머
+   System.Threading.Timer 클래스 	 : 스레드 기반 타이머 
+
+
+1) 서버 기반 타이머
+
+    - 밀리초 단위로 타이머 호출 시간 설정 가능
+    - 다른 타이머에 비해 정확도가 높음
+    - 주로 24시간 가동하며, 연속된 데이터를 처리하는 웹 서버등에서 사용됨
+
+    - Elapsed 이벤트가 발생되는 반복 간격을 Interval 속성을 이용해 지정함
+
+    - Enabled 속성 : Elapsed 이벤트 활성화 여부를 설정할 때 사용
+                            Start() / Stop() 메서드를 이용해 속성 값 변경
+
+    - Elapsed 이벤트는 지정된 시간(Interval)이 경과하면 ElapsedEventHandler에 
+       등록된 메서드를 호출하게 됨
+
+    
+예제 1) 서버 기반 타이머 
+
+using System;
+using System.Timers;
+public class ServerTimer
+{
+
+    public static void Main()
+    {
+        System.Timers.Timer serverTimer = new System.Timers.Timer();
+        serverTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+        serverTimer.Enabled = true; // 서버 타이머 실행
+        serverTimer.Interval = 1000;
+
+        Console.WriteLine("예제를 종료하려면 q를 입력하세요.");
+        while (Console.Read() != 'q') ;
+    }
+
+    // 1초에 한번씩 호출하는 메서드 
+    private static void OnTimedEvent(object sender, ElapsedEventArgs e)
+    {
+        Console.WriteLine("서버 타이머 이벤트 발생");
+        Console.WriteLine("발생 시간 : {0}", e.SignalTime);
+    }
+}
+
+
+
+2) 윈도우 기반 타이머 
+
+    - 서버 타이머에 비해 작고 가벼움
+    - 서버타이머가 지정된 시간마다 Elapsed 이벤트에 등록한 메서드를 호출하는 것에 비해, 
+       윈도우 타이머는 Tick 이벤트에 등록한 메서드를 호출함
+ 
+    - Tick 이벤트는 EventHandler 대리자 형태의 메서드를 Interval 간격마다 호출하게 됨
+
+    - Interval과 Enabled 속성이 있슴
+       서버와 달리 Enabled속성을 이용하기 보다는 Start() / Stop()메서드를 이용하여 타이머를
+       제어하도록 코드를 작성함
+
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+public class WinTimer : System.Windows.Forms.Form
+{
+    Timer time;
+    int timecount = 0;
+
+    public WinTimer()
+    {
+        this.Text = "10초후에 닫히는 창 예제";
+        time = new Timer();
+        time.Interval = 1 * 1000;
+        time.Tick += new EventHandler(time_Tick);
+
+        this.Load += new EventHandler(WinTimer_Load);
+    }
+
+    private void WinTimer_Load(object obj, EventArgs e)
+    {
+        System.Console.WriteLine("타이머 시작!!!");
+        time.Start();    // 타이머 시작
+    }
+
+    private void time_Tick(object sender, EventArgs ea)
+    {
+        if (timecount < 10)
+        {
+            System.Console.WriteLine("{0} Tick...", DateTime.Now);
+            this.Text = (10 - timecount) + " 초 남았습니다...";
+            timecount++;
+        }
+        else
+        {
+            time.Stop();
+            MessageBox.Show("프로그램을 종료합니다.", "10초 타이머");
+            this.Close();
+        }
+    }
+
+    public static void Main()
+    {
+        Application.Run(new WinTimer());
+    }
+}
+
+
+
+3) 스레드 기반 타이머
+
+    - 생성자로 스레드 타이머 객체를 생성함
+       Timer( TimerCallback callback ,	//  호출될 메서드
+	   object state,		//  콜백 메서드에서 사용할 정보가 포함된 개체
+	   int dueTime,		//  TimerCallback에 등록된 메서드를 호출하기 전에 
+				//  타이머 지연 시간을 밀리초 단위로 설정
+                 int period);		//  호출 간격
+
+    - public bool Change(int dueTime, int period);
+
+       타이머 실행되는 도중에 타이머의 시작시간, 메서드 호출 간격 변경 사용가능
+
+    - 반드시 개체 사용이 끝나면 Dispose() 메서드로 타이머 리소스를 해제해야 함
+
+
+using System;
+using System.Threading;
+
+class TimerExampleState 
+{
+	public int counter = 0;
+	public Timer timer;
+}
+
+class ThreadTimer 
+{
+	public static void Main()
+	{
+		TimerExampleState s = new TimerExampleState();
+
+		TimerCallback timerDelegate = new TimerCallback(CheckStatus);
+
+		Timer timer = new Timer(timerDelegate, s, 2000, 1000);
+    
+		s.timer = timer;
+
+		while(s.timer != null);					
+	}
+
+	private static void CheckStatus(Object state)
+	{
+		TimerExampleState ts =(TimerExampleState)state;
+		ts.counter++;
+		if(ts.counter == 3)
+		{
+			Console.WriteLine("{0}:스레드 체크 :{1}.", ts.counter, DateTime.Now);
+			(ts.timer).Change(5000,2000);
+			Console.WriteLine("스레드 상태 변경...");
+			Console.WriteLine("5초후에 2초 간격으로 다시 시작됩니다.");
+		}
+		else if(ts.counter == 4)
+		{
+			Console.WriteLine("스레드 상태 변경 => 2초 간격으로 시작");
+			Console.WriteLine("{0}:스레드 체크 :{1}.", ts.counter, DateTime.Now);			
+		}
+		else if(ts.counter == 7)
+		{
+			Console.WriteLine("타이머를 종료합니다...");
+			ts.timer.Dispose();
+			ts.timer = null;
+		}
+		else
+		{
+			Console.WriteLine("{0}:스레드 체크 :{1}.", ts.counter, DateTime.Now);
+		}
+	}
+}
+
+
+
+

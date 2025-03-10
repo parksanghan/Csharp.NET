@@ -1,0 +1,22 @@
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\bin\Debug\1018_채팅클라이언트.exe.config
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\bin\Debug\1018_채팅클라이언트.exe
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\bin\Debug\1018_채팅클라이언트.pdb
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\_1018_채팅클라이언트.Properties.Resources.resources
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\_1018_채팅클라이언트.Form_Main.resources
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.csproj.GenerateResource.cache
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.exe
+C:\Users\user\Desktop\닷넷예제\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.pdb
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\bin\Debug\1018_채팅클라이언트.exe.config
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\bin\Debug\1018_채팅클라이언트.exe
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\bin\Debug\1018_채팅클라이언트.pdb
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\_1018_채팅클라이언트.Properties.Resources.resources
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\_1018_채팅클라이언트.Form_Main.resources
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.csproj.GenerateResource.cache
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.exe
+C:\Users\snagh\Desktop\C# Window Form\1018_채팅클라이언트\1018_채팅클라이언트\obj\Debug\1018_채팅클라이언트.pdb

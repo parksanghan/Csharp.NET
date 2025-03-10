@@ -1,0 +1,111 @@
+[ 필수 구조체 ]
+
+Point의 생성자 
+
+    Point()		: 기본 생성자
+    Point(int data)	: 앞16bit : Y  뒤 16bit : X
+    Point(Size data)  : Size 구조체의 Width: X, Height:Y
+    Point(int x, int y) : X, Y
+
+   *) Point pt = new Point(0x10100050);
+      X = 80(0x0050)   Y  = 4112(0x1010)으로 설정됨
+    
+    ==> 마우스 좌표를 다룰 때 주로 사용
+
+
+Size의 생성자
+
+   Size()		: 기본 생성자
+   Size(Point data)  : Point구조체의 X :Width, Y : Height
+   Size(int x, int y)  : 각각 Width, Height
+
+   ==> 윈도우 영역을 저장할 때 주로 사용
+
+   *) 구조체이지만 명시적으로 메모리에 할당시켜야 함
+      즉 반드시 new 연산자를 이용해 개체 인스턴스를 생성해야 함
+
+      ex) 	point pt;
+	pt.x	= 10;		// 할당되지 않은 pt 지역변수사용 에러
+
+   *) 두 구문은 동일함
+
+      Point pt = Point.Empty;		Point pt = new Point();
+      pt.x 	= 100;			pt.x = 100;
+      pt.y   = 200; 			pt.y = 200;
+
+
+   *) 메서드 
+      string ToStrign()	: Point값을 문자열로 변환 리턴
+      bool Equals(Point obj)	: Point값이 obj와 같은지 여부 판단
+      void Offset(int dx, int dy) : Point를 지정된 dx, dy크기로 변환
+
+      Point pt = new Point(100,100);	
+      Size sz = new Size(200, 200);
+
+      Point pt1, pt2;
+      if( pt1.Equals(pt2))	== if( pt1 == pt2)
+
+      Point pt = new Point(100, 100);
+      pt.Offset(-10, 30);		// pt.x += -10;  pt.y ++ 30;
+
+      Point pt = new Point(100, 100);   Size sz = new Size(200,200);
+      pz = (Size)pt;	// Point를 Size에 형변환
+      pt  = (Point)pz; // Size를 Point에 형변환
+
+
+[ 예제 코드 ]
+
+  *예제1) Size 구조체 연산
+                    +, -, +=, -= 등의 연산자를 사용한 데이터 관리
+
+using System;
+using System.Drawing;
+class StructExam1
+{
+    static void Main(string[] args)
+    {
+        Size sz1 = new Size(100, 100);
+        Size sz2 = new Size(50, -50);
+        Size sz3 = new Size();
+        sz3 = sz1 + sz2;
+        System.Console.WriteLine(sz3.ToString());
+        sz3 = sz2 - sz1;
+        System.Console.WriteLine(sz3.ToString());
+        sz3 += sz1;
+        System.Console.WriteLine(sz3.ToString());
+        sz3 -= sz2;
+        System.Console.WriteLine(sz3.ToString());
+    }
+}
+
+
+  * 예제2) SizeF를 Size형태로 변환
+
+     Size : int형을 저장할 수 있는 구조체
+     SizeF : 부동소수점형태(float)를 저장할 수 있는 구조체
+              PointF ptf = new PointF();
+	ptf.x  = 10.5f;
+	ptf.Y  = (float)-5.2;
+
+using System;
+using System.Drawing;
+class StructExam2
+{
+    static void Main(string[] args)
+    {
+        Size sz = new Size();
+        SizeF szf = new SizeF(100.3f, 100.7f);
+
+        // Celling : PointF/SizeF 값을 정수 값으로 올림해 반환
+        sz = Size.Ceiling(szf);
+        System.Console.WriteLine("Ceiling 결과 :" + sz.ToString());
+
+        // Round : PointF / SizeF 값을 정수 값으로 반올림해 반환
+        sz = Size.Round(szf);
+        System.Console.WriteLine("Round 결과 :" + sz.ToString());
+
+        // Round : PointF / SizeF 값을 정수 버림을 한 후 반환
+        sz = Size.Truncate(szf);
+        System.Console.WriteLine("Truncate 결과 :" + sz.ToString());
+    }
+}
