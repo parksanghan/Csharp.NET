@@ -1,0 +1,8 @@
+bin\Debug\FileFind.exe
+bin\Debug\FileFind.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\FileFind.Form1.resources
+obj\Debug\FileFind.Properties.Resources.resources
+obj\Debug\FileFind.csproj.GenerateResource.Cache
+obj\Debug\FileFind.exe
+obj\Debug\FileFind.pdb

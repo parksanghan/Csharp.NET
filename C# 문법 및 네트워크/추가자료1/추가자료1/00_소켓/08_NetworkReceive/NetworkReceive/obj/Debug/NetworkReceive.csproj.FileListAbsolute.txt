@@ -1,0 +1,2 @@
+D:\01_강의자료\03_고급반 수업자료\04_C#\0410_추가내용\00_소켓\08_NetworkReceive\NetworkReceive\obj\Debug\NetworkReceive.exe
+D:\01_강의자료\03_고급반 수업자료\04_C#\0410_추가내용\00_소켓\08_NetworkReceive\NetworkReceive\obj\Debug\NetworkReceive.pdb

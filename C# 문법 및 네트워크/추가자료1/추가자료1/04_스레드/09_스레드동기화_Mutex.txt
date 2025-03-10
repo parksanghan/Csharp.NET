@@ -1,0 +1,52 @@
+/*****************************************************************
+ * 스레드 동기화
+ *   C# 동기화 처리 : lock 키워드를 이용한 동기화 
+ *                    System.Threading 네임스페이스의 Monitor, Mutex 
+ *                    클래스를 통해 이루어짐 
+ * 
+ *  시물레이션 : 
+ *****************************************************************/
+using System;
+using System.Threading;
+
+class MutexExam
+{
+    private static Mutex mtx = new Mutex(false, "MutexExam");   // 뮤텍스 객체 생성
+    int count = 0;
+    public MutexExam(int count)
+    {
+        this.count = count;
+    }
+    public void ShowData()
+    {
+        mtx.WaitOne();  // Mutex 요청하기(소유)        
+        try
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(Thread.CurrentThread.Name + " : " + i);
+                Thread.Sleep(100);
+                if (this.count == i) throw (new Exception());
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            mtx.ReleaseMutex(); // Mutex 해제하기(반납)
+        }
+    }
+    public static void Main()
+    {
+        MutexExam obj1 = new MutexExam(3);
+        MutexExam obj2 = new MutexExam(5);
+        Thread t1 = new Thread(new ThreadStart(obj1.ShowData));
+        Thread t2 = new Thread(new ThreadStart(obj2.ShowData));
+        t1.Name = "Thread - A";
+        t2.Name = "Thread - B";
+        t1.Start();
+        t2.Start();
+    }
+}

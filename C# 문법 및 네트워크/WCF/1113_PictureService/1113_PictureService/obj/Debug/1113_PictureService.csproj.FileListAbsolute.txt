@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\닷넷예제\1113_PictureService\1113_PictureService\bin\Debug\1113_PictureService.exe
+C:\Users\snagh\Desktop\WCF\1113_PictureService\1113_PictureService\bin\Debug\1113_PictureService.exe.config
+C:\Users\snagh\Desktop\WCF\1113_PictureService\1113_PictureService\bin\Debug\1113_PictureService.exe
+C:\Users\snagh\Desktop\WCF\1113_PictureService\1113_PictureService\bin\Debug\1113_PictureService.pdb
+C:\Users\snagh\Desktop\WCF\1113_PictureService\1113_PictureService\obj\Debug\1113_PictureService.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\WCF\1113_PictureService\1113_PictureService\obj\Debug\1113_PictureService.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\WCF\1113_PictureService\1113_PictureService\obj\Debug\1113_PictureService.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\WCF\1113_PictureService\1113_PictureService\obj\Debug\1113_PictureService.exe
+C:\Users\snagh\Desktop\WCF\1113_PictureService\1113_PictureService\obj\Debug\1113_PictureService.pdb

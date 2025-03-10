@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\bin\Debug\1012_CS평가.exe.config
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\bin\Debug\1012_CS평가.exe
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\bin\Debug\1012_CS평가.pdb
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.exe
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.pdb
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_클라이언트\1012_CS평가\bin\Debug\1012_CS평가.exe.config
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_클라이언트\1012_CS평가\bin\Debug\1012_CS평가.exe
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_클라이언트\1012_CS평가\bin\Debug\1012_CS평가.pdb
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\1012_CS평가.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\1012_CS평가.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\1012_CS평가.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\1012_CS평가.exe
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\1012_CS평가.pdb

@@ -1,0 +1,53 @@
+/*****************************************************************
+ * [System.NET ]
+ * 
+ * IP 주소 관련 클래스 
+ *  IPAddress  : IP주소를 나타내는 클래스 
+ *  IPEndPoint : IP 주소와 포트로 네트웤 종단점 정보를 가져오는 클래스
+ *  IPHostEntry :하나의 호스트에 대한 상세 정보를 제공하는 클래스 
+ *****************************************************************/
+using System;
+using System.Net;
+/*
+class IPTest
+{
+    static void Main()
+    {
+        // IP 일반 설정 
+//        IPAddress ex1 = IPAddress.Parse("61.81.98.44");
+//        Console.WriteLine("{0} = {1}", "ex1", ex1);
+
+        // IPEndPoint
+        // 로컬 주소를 바인드 하거나 소켓과 원격 주소를 연결할 때 사용
+
+        IPAddress ex = IPAddress.Parse("61.81.98.44");
+        IPEndPoint ie = new IPEndPoint(ex, 8000);
+
+        Console.WriteLine("ToString()    : {0}", ie.ToString());
+        Console.WriteLine("AddressFamily : {0}", ie.AddressFamily);
+        Console.WriteLine("Address       : {0}", ie.Address);
+        Console.WriteLine("Port          : {0}", ie.Port);
+        Console.WriteLine("MaxPort:{0}MinPort:{1}", IPEndPoint.MaxPort, IPEndPoint.MinPort);
+    }
+}
+*/
+class IpInfo
+{
+    static void Main(string[] args)
+    {
+        Console.Write(" 주소를 입력 하세요 -> ");
+        string str = Console.ReadLine();
+
+        IPAddress[] host = Dns.GetHostAddresses(str);
+
+        Console.WriteLine("호스트 이름: " + Dns.GetHostEntry(host[0]).HostName);
+        Console.WriteLine(" 아이피 주소 리스트 :");
+
+        for (int i = 0; i < host.Length; i++)
+        {
+            IPAddress ip = host[i];
+            Console.WriteLine("[{0}]", ip.ToString());
+        }
+    }
+}
+

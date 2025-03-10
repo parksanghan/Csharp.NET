@@ -1,0 +1,138 @@
+패킷 구성
+
+// 1) 패킷 구성 
+{
+string msg = null ;
+msg += "CTOS_MESSAGE_REGISTER_REQUEST\a" ;         // 회원 가입 요청 메시지
+msg += txt_ID.Text.Trim() + "#" ;                  // 아이디
+msg += txt_Pwd.Text.Trim() + "#" ;                 // 암호
+msg += txt_Name.Text.Trim() + "#" ;                // 이름
+msg += txt_NickName.Text.Trim() +"#"             ; // 별칭
+msg +=  txt_Ssn1.Text.Trim() + "-" + txt_Ssn2.Text.Trim() + "#" ;   // 주민 번호
+msg +=  txt_Tel.Text.Trim() + "#" ;                // 전화번호
+msg +=  txt_Email.Text.Trim() + "#" ;              // 이메일 주소 
+msg +=  txt_Zip1.Text.Trim() + "-" + txt_Zip2.Text.Trim() + " " ;   // 우편번호
+msg +=  txt_Addr1.Text.Trim() + " " + txt_Addr2.Text.Trim() + "#" ; // 주소
+msg +=  txt_Intro.Text.Trim() ;                    // 자기소개
+
+// 메신저 서버에 문자열 전송
+this.net.Send( msg ) ;
+
+};
+
+
+//2)  send 함수 구현
+
+public void Send(string msg)
+{
+	try
+	{
+		if( client.Connected )
+		{
+			byte [] data = Encoding.Default.GetBytes(msg);
+			this.SendData(data);
+		}
+		else
+		{
+			this.wnd.Add_MSG("메시지 전송 실패!");
+		}
+	}
+	catch(Exception ex)
+	{
+	               this.wnd.Add_MSG(ex.Message);
+	}
+}	
+
+// 3) SendData 함수 구현
+private void SendData(byte[] data)
+{
+	try
+	{		 
+		int total = 0;
+		int size = data.Length;
+		int left_data = size ;
+		int send_data = 0;
+
+		// 전송할 실제 데이터의 크기 전달
+		byte [] data_size =new byte[4];
+		data_size = BitConverter.GetBytes(size);
+		send_data = this.client.Send(data_size);			
+		
+		// 실제 데이터 전송
+		while(total < size)
+		{  
+			send_data  = this.client.Send(data, total, left_data, SocketFlags.None);
+			total     += send_data;
+			left_data -= send_data;
+		}
+	}
+	catch(Exception ex)
+	{
+		this.wnd.Add_MSG(ex.Message);
+	}
+}
+
+
+
+// 1)  /// 접속된 상대방 데이터 수신
+public void Receive()
+{
+	try
+	{
+		while( client != null && client.Connected )
+		{
+			byte [] data = this.ReceiveData();                    
+			string msg = Encoding.Default.GetString(data);
+			string [] token = msg.Split('\a'); 
+			switch(token[0].Trim())
+			{
+				case "STOC_MESSAGE_LOGIN_OK": //아이디 중복조회 결과 사용가능
+				System.Windows.Forms.MessageBox.Show("로그인 성공!");
+				    break;
+
+				case "STOC_MESSAGE_LOGIN_FAIL":  //아이디 중복조회 결과 사용불가
+					System.Windows.Forms.MessageBox.Show("아이디/비밀번호 틀림!");
+					this.DisConnect();
+							break;
+			}
+		}
+	}
+	catch(Exception ex)
+	{
+		this.wnd.Add_MSG(ex.Message);
+	}
+}
+
+// 2) 
+private byte[] ReceiveData()
+{
+	try
+	{
+		int total = 0;
+		int size = 0;
+		int left_data = 0;
+		int recv_data = 0;
+   		// 수신할 데이터 크기 알아내기   
+		byte[] data_size = new byte[4];  
+		recv_data = this.client.Receive(data_size, 0, 4, SocketFlags.None);
+		size = BitConverter.ToInt32(data_size, 0);
+		left_data = size ;
+
+		byte [] data = new byte[size];
+		// 서버에서 전송한 실제 데이터 수신
+		while(total < size)
+		{
+			recv_data = this.client.Receive(data, total, left_data, 0);
+			if(recv_data == 0) break;
+			total     += recv_data ;
+			left_data -= recv_data;
+		}
+		return data;
+	}
+	catch(Exception ex)
+	{
+		this.wnd.Add_MSG(ex.Message);
+		return null;
+	}
+}
+

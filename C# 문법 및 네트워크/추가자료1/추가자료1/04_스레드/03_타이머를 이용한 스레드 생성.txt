@@ -1,0 +1,47 @@
+﻿/*
+   Timer클래스를 이용한 스레드 생성
+   닷넷에서 지원되는 3가지 Timer클래스
+   1) System.WinForms.Timer
+       단일 스레드환경에서 사용하는 윈폼 툴 박스 Timer로
+       주어진 시간마다 Tick 이벤트를 발생시킴
+
+   2) System.Timer.Timer
+      멀티 스레드 환경에서 사용 가능하며 ServerTimer,
+      Component 툴 박스의 타이머에 사용되며 주어진
+     기간마다 Tick이벤트를 발생시킴
+   
+   3) System.Treading.Timer
+       Timer를 이용한 스레드는 주로 System.Threading.Timer
+      클래스를 사용해 발생시킴
+      Timer클래스 객체를 생성한 후 TimerCallback델리게이트
+      인자와 메서드로 타이머에 전달할 인자, 기간을 설정해
+      스레드를만듬 
+*/
+
+using System;
+using System.Threading;
+public class ThreadExam3
+{
+    public static void Print1(object obj)
+    {
+        Console.WriteLine("첫 번째 Thread : ***");
+    }
+
+    public void Print2(object obj)
+    {
+        Console.WriteLine("두 번째 Thread : ***");
+    }
+
+    public static void Main()
+    {
+        // timer를 이용해 0.2초마다 static 형 Print1메서드 호출
+        Timer timer = new Timer(new TimerCallback(Print1), null, 200, 100);
+
+        // 0.2초마다 Print2 메서드 호출
+        timer = new Timer(new TimerCallback((new ThreadExam3()).Print2), null, 200, 100);
+
+        Thread.Sleep(500);   // Main 스레드를 곧바로 종료하지 않고 0.5초간 중지시킴
+
+        timer.Dispose();  //Timer 를 종료
+    }
+}

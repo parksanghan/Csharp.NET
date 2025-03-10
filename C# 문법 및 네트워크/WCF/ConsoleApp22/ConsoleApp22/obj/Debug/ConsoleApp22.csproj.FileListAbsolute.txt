@@ -1,0 +1,8 @@
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\ConsoleApp22\bin\Debug\ConsoleApp22.exe.config
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\ConsoleApp22\bin\Debug\ConsoleApp22.exe
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\ConsoleApp22\bin\Debug\ConsoleApp22.pdb
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\ConsoleApp22\obj\Debug\ConsoleApp22.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\ConsoleApp22\obj\Debug\ConsoleApp22.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\ConsoleApp22\obj\Debug\ConsoleApp22.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\ConsoleApp22\obj\Debug\ConsoleApp22.exe
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\ConsoleApp22\obj\Debug\ConsoleApp22.pdb

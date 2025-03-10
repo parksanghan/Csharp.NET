@@ -1,0 +1,17 @@
+﻿1. 데이터 클래스 
+   Account
+   AccountInfo
+
+2. 저장 클래스(수정없이 사용)
+   WBArray
+
+3. 라이브러리 클래스(수정없이 사용)
+   WbLib
+
+3. 기능 클래스
+   AccControl
+
+4. 흐름
+   App
+
+5. main함수 처리

@@ -1,0 +1,32 @@
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\bin\Debug\1012_CS평가.exe.config
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\bin\Debug\1012_CS평가.exe
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\bin\Debug\1012_CS평가.pdb
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.exe
+C:\Users\user\Desktop\닷넷예제\1012_CS평가\1012_CS평가\obj\Debug\1012_CS평가.pdb
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_서버\1012_CS평가\bin\Debug\1012_CS평가.exe.config
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_서버\1012_CS평가\bin\Debug\1012_CS평가.exe
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_서버\1012_CS평가\bin\Debug\1012_CS평가.pdb
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.exe
+C:\Users\user\Desktop\닷넷예제\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.pdb
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_서버\1012_CS평가\bin\Debug\서버.exe.config
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_서버\1012_CS평가\bin\Debug\서버.exe
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_서버\1012_CS평가\bin\Debug\서버.pdb
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.AssemblyReference.cache
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.CoreCompileInputs.cache
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_서버\1012_CS평가\obj\Debug\서버.exe
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_서버\1012_CS평가\obj\Debug\서버.pdb
+C:\Users\snagh\Desktop\C# 문법 및 네트워크\C#(6일차)-[가변 데이터 , 패킷 처리기반 구현]\1013_음료수관리_서버\1012_CS평가\bin\Debug\서버.exe.config
+C:\Users\snagh\Desktop\C# 문법 및 네트워크\C#(6일차)-[가변 데이터 , 패킷 처리기반 구현]\1013_음료수관리_서버\1012_CS평가\bin\Debug\서버.exe
+C:\Users\snagh\Desktop\C# 문법 및 네트워크\C#(6일차)-[가변 데이터 , 패킷 처리기반 구현]\1013_음료수관리_서버\1012_CS평가\bin\Debug\서버.pdb
+C:\Users\snagh\Desktop\C# 문법 및 네트워크\C#(6일차)-[가변 데이터 , 패킷 처리기반 구현]\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\C# 문법 및 네트워크\C#(6일차)-[가변 데이터 , 패킷 처리기반 구현]\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\C# 문법 및 네트워크\C#(6일차)-[가변 데이터 , 패킷 처리기반 구현]\1013_음료수관리_서버\1012_CS평가\obj\Debug\1012_CS평가.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\C# 문법 및 네트워크\C#(6일차)-[가변 데이터 , 패킷 처리기반 구현]\1013_음료수관리_서버\1012_CS평가\obj\Debug\서버.exe
+C:\Users\snagh\Desktop\C# 문법 및 네트워크\C#(6일차)-[가변 데이터 , 패킷 처리기반 구현]\1013_음료수관리_서버\1012_CS평가\obj\Debug\서버.pdb

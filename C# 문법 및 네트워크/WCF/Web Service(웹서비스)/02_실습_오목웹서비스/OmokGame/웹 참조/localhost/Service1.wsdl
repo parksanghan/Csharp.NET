@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://tempuri.org/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetBestJum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJums" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="stone" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBestJumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBestJumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckChakJum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strJums" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="x" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="y" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="stone" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckChakJumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CheckChakJumResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </types>
+  <message name="GetBestJumSoapIn">
+    <part name="parameters" element="s0:GetBestJum" />
+  </message>
+  <message name="GetBestJumSoapOut">
+    <part name="parameters" element="s0:GetBestJumResponse" />
+  </message>
+  <message name="CheckChakJumSoapIn">
+    <part name="parameters" element="s0:CheckChakJum" />
+  </message>
+  <message name="CheckChakJumSoapOut">
+    <part name="parameters" element="s0:CheckChakJumResponse" />
+  </message>
+  <message name="GetBestJumHttpGetIn">
+    <part name="strJums" type="s:string" />
+    <part name="stone" type="s:string" />
+  </message>
+  <message name="GetBestJumHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="CheckChakJumHttpGetIn">
+    <part name="strJums" type="s:string" />
+    <part name="x" type="s:string" />
+    <part name="y" type="s:string" />
+    <part name="stone" type="s:string" />
+  </message>
+  <message name="CheckChakJumHttpGetOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="GetBestJumHttpPostIn">
+    <part name="strJums" type="s:string" />
+    <part name="stone" type="s:string" />
+  </message>
+  <message name="GetBestJumHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <message name="CheckChakJumHttpPostIn">
+    <part name="strJums" type="s:string" />
+    <part name="x" type="s:string" />
+    <part name="y" type="s:string" />
+    <part name="stone" type="s:string" />
+  </message>
+  <message name="CheckChakJumHttpPostOut">
+    <part name="Body" element="s0:string" />
+  </message>
+  <portType name="Service1Soap">
+    <operation name="GetBestJum">
+      <documentation>공격점과 방어점을 분석해서 최적의 좌표를 리턴해주는 메소드입니다. 
+				 메소드의 인자는 2개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 stone : 현재 둘 차례인 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2</documentation>
+      <input message="s0:GetBestJumSoapIn" />
+      <output message="s0:GetBestJumSoapOut" />
+    </operation>
+    <operation name="CheckChakJum">
+      <documentation>지금 놓으려는 점, 즉 착점(着點)에 대한 판단을 리턴해주는 웹 메소드입니다.
+				 메소드의 인자는 4개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 x : 착점의 x좌표입니다.
+				 y : 착점의 y좌표입니다.
+				 stone : 현재 두려고 하는 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2
+				 리턴값은 문자열로 승리를 의미하는 "Win", 
+				 삼삼을 의미하는 "SamSam", 
+				 아무것도 아니면 "Nothing"중에 하나입니다.</documentation>
+      <input message="s0:CheckChakJumSoapIn" />
+      <output message="s0:CheckChakJumSoapOut" />
+    </operation>
+  </portType>
+  <portType name="Service1HttpGet">
+    <operation name="GetBestJum">
+      <documentation>공격점과 방어점을 분석해서 최적의 좌표를 리턴해주는 메소드입니다. 
+				 메소드의 인자는 2개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 stone : 현재 둘 차례인 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2</documentation>
+      <input message="s0:GetBestJumHttpGetIn" />
+      <output message="s0:GetBestJumHttpGetOut" />
+    </operation>
+    <operation name="CheckChakJum">
+      <documentation>지금 놓으려는 점, 즉 착점(着點)에 대한 판단을 리턴해주는 웹 메소드입니다.
+				 메소드의 인자는 4개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 x : 착점의 x좌표입니다.
+				 y : 착점의 y좌표입니다.
+				 stone : 현재 두려고 하는 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2
+				 리턴값은 문자열로 승리를 의미하는 "Win", 
+				 삼삼을 의미하는 "SamSam", 
+				 아무것도 아니면 "Nothing"중에 하나입니다.</documentation>
+      <input message="s0:CheckChakJumHttpGetIn" />
+      <output message="s0:CheckChakJumHttpGetOut" />
+    </operation>
+  </portType>
+  <portType name="Service1HttpPost">
+    <operation name="GetBestJum">
+      <documentation>공격점과 방어점을 분석해서 최적의 좌표를 리턴해주는 메소드입니다. 
+				 메소드의 인자는 2개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 stone : 현재 둘 차례인 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2</documentation>
+      <input message="s0:GetBestJumHttpPostIn" />
+      <output message="s0:GetBestJumHttpPostOut" />
+    </operation>
+    <operation name="CheckChakJum">
+      <documentation>지금 놓으려는 점, 즉 착점(着點)에 대한 판단을 리턴해주는 웹 메소드입니다.
+				 메소드의 인자는 4개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 x : 착점의 x좌표입니다.
+				 y : 착점의 y좌표입니다.
+				 stone : 현재 두려고 하는 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2
+				 리턴값은 문자열로 승리를 의미하는 "Win", 
+				 삼삼을 의미하는 "SamSam", 
+				 아무것도 아니면 "Nothing"중에 하나입니다.</documentation>
+      <input message="s0:CheckChakJumHttpPostIn" />
+      <output message="s0:CheckChakJumHttpPostOut" />
+    </operation>
+  </portType>
+  <binding name="Service1Soap" type="s0:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document" />
+    <operation name="GetBestJum">
+      <soap:operation soapAction="http://tempuri.org/GetBestJum" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CheckChakJum">
+      <soap:operation soapAction="http://tempuri.org/CheckChakJum" style="document" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="Service1HttpGet" type="s0:Service1HttpGet">
+    <http:binding verb="GET" />
+    <operation name="GetBestJum">
+      <http:operation location="/GetBestJum" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="CheckChakJum">
+      <http:operation location="/CheckChakJum" />
+      <input>
+        <http:urlEncoded />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <binding name="Service1HttpPost" type="s0:Service1HttpPost">
+    <http:binding verb="POST" />
+    <operation name="GetBestJum">
+      <http:operation location="/GetBestJum" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+    <operation name="CheckChakJum">
+      <http:operation location="/CheckChakJum" />
+      <input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </input>
+      <output>
+        <mime:mimeXml part="Body" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Service1">
+    <port name="Service1Soap" binding="s0:Service1Soap">
+      <soap:address location="http://localhost/OmokAIService/Service1.asmx" />
+    </port>
+    <port name="Service1HttpGet" binding="s0:Service1HttpGet">
+      <http:address location="http://localhost/OmokAIService/Service1.asmx" />
+    </port>
+    <port name="Service1HttpPost" binding="s0:Service1HttpPost">
+      <http:address location="http://localhost/OmokAIService/Service1.asmx" />
+    </port>
+  </service>
+</definitions>

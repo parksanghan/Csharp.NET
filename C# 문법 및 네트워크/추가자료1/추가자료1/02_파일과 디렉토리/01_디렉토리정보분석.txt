@@ -1,0 +1,43 @@
+/*****************************************************************
+ * 파일과 디렉토리
+ *  System.IO에서 제공되는 클래스
+ *      BinaryWriter/Reader : 바이너리 데이터를 저장하거나 읽음
+ *      BufferedStream      : 바이너리 데이터 스트림 일시 저장
+ *      Directory/DirectoryInfo/File/FileInfo : 디렉토리와 파일 입출력 처리
+ *      FileStream          : 파일 입출력 스트림
+ *      MomoryStream        : 메모리에 저장된 스트림 처리
+ *      StreamWriter/Reader : 파일에 대해 스트림 데이터를 저장하거나 읽음
+ * 
+ * [ 디렉토리 정보 분석하기 ]
+ *   DirectoryInfo 클래스 사용
+ *      Create() : 주어진 경로 이름으로 디렉토리 생성
+ *      CreateSubdirectory() : 주어진 경로 이름으로 서부 디렉토리 생성
+ *      Delete : 디렉토리 삭제, 인자 true로 지정하면 하위항목도 모두 삭제
+ *      GetDirectoriese() : 현재 디렉토리의 모든 서부디렉토리 목록을 문자열 배열로 반환
+ *      GetFiles() : 디렉토리에 포함된 파일명을 문자열 배열로 반환
+ *      MoveTo() : 디렉토리와 포함된 내용을 새로운 경로로 이동
+ *****************************************************************/
+using System;
+using System.IO;
+class FileExam1
+{
+    static void Main()
+    {         // DirectoryInfo 개체 변수 생성
+        DirectoryInfo dinfo = new DirectoryInfo(@"C:\Program Files\Internet Explorer");
+
+        if (dinfo.Exists)  // 해당 디렉토리가 존재하면
+        {
+            Console.WriteLine("전체 경로     : {0}", dinfo.FullName);
+            Console.WriteLine("디렉토리 이름 : {0}", dinfo.Name);
+            Console.WriteLine("생성일        : {0}", dinfo.CreationTime);
+            Console.WriteLine("디렉토리 속성 : {0}", dinfo.Attributes);
+            Console.WriteLine("루트 경로     : {0}", dinfo.Root);
+            Console.WriteLine("부모 디렉토리 : {0}", dinfo.Parent);
+        }
+        else
+        {
+            Console.WriteLine("디렉토리가 존재하지 않습니다.");
+        }
+    }
+}
+

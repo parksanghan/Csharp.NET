@@ -1,0 +1,107 @@
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\AzureService.exe.config
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\AzureService.exe
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\AzureService.pdb
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\obj\Debug\AzureService.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\obj\Debug\AzureService.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\obj\Debug\AzureService.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\obj\Debug\AzureService.csproj.CopyComplete
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\obj\Debug\AzureService.exe
+C:\Users\snagh\Desktop\비트고급\AzureService\AzureService\obj\Debug\AzureService.pdb
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\AzureService.exe.config
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\AzureService.exe
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\AzureService.pdb
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\obj\Debug\AzureService.csproj.AssemblyReference.cache
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\obj\Debug\AzureService.csproj.CoreCompileInputs.cache
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\obj\Debug\AzureService.csproj.CopyComplete
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\obj\Debug\AzureService.exe
+C:\Users\BOOK7 Force\Downloads\AzureService ver 0.2\AzureService\AzureService\obj\Debug\AzureService.pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\AzureService.exe.config
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\AzureService.exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\AzureService.pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\obj\Debug\AzureService.csproj.AssemblyReference.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\obj\Debug\AzureService.csproj.CoreCompileInputs.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\obj\Debug\AzureService.csproj.CopyComplete
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\obj\Debug\AzureService.exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\AzureService\obj\Debug\AzureService.pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\AzureService.exe.config
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\AzureService.exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\AzureService.pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\obj\Debug\AzureService.csproj.AssemblyReference.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\obj\Debug\AzureService.csproj.CoreCompileInputs.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\obj\Debug\AzureService.csproj.CopyComplete
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\obj\Debug\AzureService.exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\AzureService\AzureService\obj\Debug\AzureService.pdb
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\AzureService.exe
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\AzureService.exe.config
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\AzureService.pdb
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\obj\Debug\AzureService.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\obj\Debug\AzureService.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\obj\Debug\AzureService.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\obj\Debug\AzureService.csproj.CopyComplete
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\obj\Debug\AzureService.exe
+C:\Users\snagh\Desktop\최에종\333\AzureService\AzureService\obj\Debug\AzureService.pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\obj\Debug\AzureService.csproj.AssemblyReference.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\obj\Debug\AzureService.csproj.CoreCompileInputs.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\obj\Debug\AzureService.exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\obj\Debug\AzureService.pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\AzureService.exe.config
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\AzureService.exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\AzureService.pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\AzureService\AzureService\obj\Debug\AzureService.csproj.CopyComplete
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\AzureService.exe.config
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\AzureService.exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\AzureService.pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\Microsoft.Azure.CognitiveServices.Vision.ComputerVision.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\Newtonsoft.Json.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\Microsoft.Rest.ClientRuntime.Azure.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\bin\Debug\Newtonsoft.Json.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\obj\Debug\AzureService.csproj.AssemblyReference.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\obj\Debug\AzureService.csproj.CoreCompileInputs.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\obj\Debug\AzureService.csproj.CopyComplete
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\obj\Debug\AzureService.exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\AzureService\AzureService\obj\Debug\AzureService.pdb

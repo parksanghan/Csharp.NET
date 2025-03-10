@@ -1,0 +1,6 @@
+bin\Debug\NetworkReceive.exe
+bin\Debug\NetworkReceive.pdb
+bin\Debug\SerialExample.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NetworkReceive.exe
+obj\Debug\NetworkReceive.pdb

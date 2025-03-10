@@ -1,0 +1,17 @@
+﻿1. 데이터클래스(p128)
+    Member
+
+2. 라이브러리 클래스 가져오기 (네임스페이스 변경)
+   WBLib, WBMenu
+
+3. 인터페이스 클래스
+   MemberAdder(p134)
+
+4. 관리클래스 
+   MemberManager(p132)
+
+5. 흐름
+   Application (기존 클래스 참조 - 싱글톤패턴)
+
+6. Program(기존 클래스 참조)
+   main함수 구성 

@@ -1,0 +1,345 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE>OmokGame.OmokForm</TITLE>
+<LINK REL=STYLESHEET HREF="../CommentReport.css" TYPE="text/css">
+</HEAD>
+<BODY topmargin=0 rightmargin=0 leftmargin=0 style="background-image: url(../titletile.jpg); background-repeat:repeat-x; background-position: 0 0;" >
+<DIV CLASS="PageHeading">OmokGame.OmokForm 클래스</DIV>
+<DIV CLASS="Description">
+
+이 폼은 오목판과 메뉴가 있는 폼으로, 가장 주된 폼이다.
+<P>
+
+</DIV>
+<IMG src="../GradLeft.jpg" width=7 height=378 alt="" border="0" style="position:absolute; left:10; top:18;z-Index:2">
+<IMG src="../GradTop.jpg" width=352 height=7 alt="" border="0" align="top" style="position:absolute; left:10; top:18; z-index:1">
+<DIV CLASS="Remarks">
+<SPAN CLASS="RemarkHdrX">액세스: </SPAN>Public</DIV>
+<DIV CLASS="Remarks">
+<SPAN CLASS="RemarkHdrX">기본 클래스: </SPAN>Form</DIV>
+<TABLE CLASS="InfoTable" cellpadding=0 cellspacing=0>
+<TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD valign=top align=left width=9 bgcolor="#cccc66"><IMG SRC="../graycorner.jpg" align=top></TD>
+<TD CLASS="TableLightLabel" WIDTH=206>멤버</TD>
+<TD CLASS="TableLightLabel" >설명</TD>
+<TD width=20>&nbsp;</TD>
+</TR>
+<TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP35.HTM" TARGET="CNTFRAME">components</A></TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP36.HTM" TARGET="CNTFRAME">m_UserBitmap</A></TD>
+<TD CLASS="TableLightDesc">
+사용자의 돌을 저장하는 비트맵 클래스
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP37.HTM" TARGET="CNTFRAME">m_ComBitmap</A></TD>
+<TD CLASS="TableLightDesc">
+컴퓨터의 돌을 저장하는 비트맵 클래스
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP38.HTM" TARGET="CNTFRAME">m_BoardBitmap</A></TD>
+<TD CLASS="TableLightDesc">
+오목판 이미지를 저장하는 배트맵 클래스
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP39.HTM" TARGET="CNTFRAME">mainMenu1</A></TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP40.HTM" TARGET="CNTFRAME">menuItem1</A></TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP41.HTM" TARGET="CNTFRAME">menuItem3</A></TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP42.HTM" TARGET="CNTFRAME">TopMarginPixel</A></TD>
+<TD CLASS="TableLightDesc">
+바둑판 위쪽 외곽의 픽셀을 나타내는 상수
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP43.HTM" TARGET="CNTFRAME">LeftMarginPixel</A></TD>
+<TD CLASS="TableLightDesc">
+바둑판 왼쪽 외곽의 픽셀을 나타내는 상수
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP44.HTM" TARGET="CNTFRAME">JumArea</A></TD>
+<TD CLASS="TableLightDesc">
+돌 하나가 오목판 위에 차지하는 픽셀이 가로 19 세로 19임을 나타내는 상수
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP45.HTM" TARGET="CNTFRAME">m_bMouseCapture</A></TD>
+<TD CLASS="TableLightDesc">
+승리한 후 마우스를 캡쳐하기 위해 쓰이는 변수
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP46.HTM" TARGET="CNTFRAME">nKindOfStartStone</A></TD>
+<TD CLASS="TableLightDesc">
+먼저 하는 돌이 사용자인지인지 컴퓨터인지 저장하는 변수
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP47.HTM" TARGET="CNTFRAME">m_bWinAfter</A></TD>
+<TD CLASS="TableLightDesc">
+승리한 후라는 것을 나타내주는 필드
+이 변수는 승리한 후 물리기를 하면 다시 바둑판이 활성화되게끔 하기 위해 필요하다.
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP48.HTM" TARGET="CNTFRAME">m_bWinMulligi</A></TD>
+<TD CLASS="TableLightDesc">
+승리한 후 물리기를 하면 다시 마우스를 정상으로 되돌려 놓아야 하므로, 이 변수를 보고 마우스 캡쳐를 푼다.		
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP49.HTM" TARGET="CNTFRAME">m_bUserWin</A></TD>
+<TD CLASS="TableLightDesc">
+사람이 이겼다고 알리는 변수
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP50.HTM" TARGET="CNTFRAME">m_bComWin</A></TD>
+<TD CLASS="TableLightDesc">
+컴퓨터가 이겼다고 알리는 변수
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP51.HTM" TARGET="CNTFRAME">menuItemNew</A></TD>
+<TD CLASS="TableLightDesc">
+새 게임을 하기위해 쓰이는 메뉴 아이템
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP52.HTM" TARGET="CNTFRAME">menuItemMulligi</A></TD>
+<TD CLASS="TableLightDesc">
+물리기를 위한 메뉴 아이템
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP53.HTM" TARGET="CNTFRAME">menuCurrentOmokPanInfo</A></TD>
+<TD CLASS="TableLightDesc">
+현재 오목판을 수치로 보기위한 메뉴 아이템
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP54.HTM" TARGET="CNTFRAME">menuItemQuit</A></TD>
+<TD CLASS="TableLightDesc">
+오목게임을 끝내기 위한 메뉴 아이템
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP55.HTM" TARGET="CNTFRAME">menuItemInfo</A></TD>
+<TD CLASS="TableLightDesc">
+정보를 표시하는 메뉴 아이템
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP56.HTM" TARGET="CNTFRAME">m_OmokData</A></TD>
+<TD CLASS="TableLightDesc">
+현재 두는 오목에 대한 모든 데이터가 들어가게 된다.
+그리고, 이 필드를 통해서 오목 웹 서비스와 통신한다.
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP57.HTM" TARGET="CNTFRAME">OmokForm</A></TD>
+<TD CLASS="TableLightDesc">
+생성자
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP58.HTM" TARGET="CNTFRAME">Dispose</A></TD>
+<TD CLASS="TableLightDesc">
+Clean up any resources being used.
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP59.HTM" TARGET="CNTFRAME">InitializeComponent</A></TD>
+<TD CLASS="TableLightDesc">
+Required method for Designer support - do not modify
+the contents of this method with the code editor.
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP60.HTM" TARGET="CNTFRAME">Main</A></TD>
+<TD CLASS="TableLightDesc">
+The main entry point for the application.
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP61.HTM" TARGET="CNTFRAME">OnPaint</A></TD>
+<TD CLASS="TableLightDesc">
+화면에 이미지를 나타내는 메소드
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP62.HTM" TARGET="CNTFRAME">OnMouseDown</A></TD>
+<TD CLASS="TableLightDesc">
+오목판에 마우스를 누르면 호출되는 메소드
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP63.HTM" TARGET="CNTFRAME">menuItemNew_Click</A></TD>
+<TD CLASS="TableLightDesc">
+시작 폼을 보여주는 메소드
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP64.HTM" TARGET="CNTFRAME">TurnStone</A></TD>
+<TD CLASS="TableLightDesc">
+사용자와 컴의 순서를 바꾸어 주는 함수
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP65.HTM" TARGET="CNTFRAME">GameStart</A></TD>
+<TD CLASS="TableLightDesc">
+ 첫 대화상자를 마치면 실행되는 함수로서 바둑판의 초기화등 
+ 오목을 시작할 수 있게끔 하는 함수 
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP66.HTM" TARGET="CNTFRAME">menuItemQuit_Click</A></TD>
+<TD CLASS="TableLightDesc">
+프로그램을 종료하는 메소드
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP67.HTM" TARGET="CNTFRAME">menuItemInfo_Click</A></TD>
+<TD CLASS="TableLightDesc">
+정보 폼을 보여주는 메소드
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP68.HTM" TARGET="CNTFRAME">menuItemMulligi_Click</A></TD>
+<TD CLASS="TableLightDesc">
+한수 물리기를 하는 메소드
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR><TR height=20>
+<TD width=20>&nbsp;</TD>
+<TD CLASS="TableLightDesc">&nbsp;</TD>
+<TD CLASS="TableLightDesc"><A HREF="CWP69.HTM" TARGET="CNTFRAME">menuItemCurrentOmokPanInfo_Click</A></TD>
+<TD CLASS="TableLightDesc">
+오목판의 수치화해서 보여주는 메소드
+<P>
+</TD>
+<TD width=20>&nbsp;</TD>
+</TR></TABLE>
+<DIV CLASS="RemarkHdr">주의:</DIV>
+<DIV CLASS="Remarks">
+
+오목판, 검은돌, 흰돌 이미지는 각각 Bitmap 클래스 멤버를 이용한다. 
+그리고, 화면에 관련된 각종 멤버들이 있다.
+<P>
+</DIV>
+</BODY>
+</HTML>

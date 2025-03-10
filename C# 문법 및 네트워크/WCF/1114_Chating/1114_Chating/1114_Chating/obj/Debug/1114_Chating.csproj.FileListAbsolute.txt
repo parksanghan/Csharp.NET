@@ -1,0 +1,8 @@
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating\1114_Chating\bin\Debug\1114_Chating.exe.config
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating\1114_Chating\bin\Debug\1114_Chating.exe
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating\1114_Chating\bin\Debug\1114_Chating.pdb
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating\1114_Chating\obj\Debug\1114_Chating.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating\1114_Chating\obj\Debug\1114_Chating.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating\1114_Chating\obj\Debug\1114_Chating.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating\1114_Chating\obj\Debug\1114_Chating.exe
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating\1114_Chating\obj\Debug\1114_Chating.pdb

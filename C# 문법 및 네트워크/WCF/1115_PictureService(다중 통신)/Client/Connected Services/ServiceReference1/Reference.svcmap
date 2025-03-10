@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="9216cf3d-2a12-4258-b2d0-de50bb21db27" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://220.90.179.75/wcf/example/pictureservice" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="pictureservice.xsd" MetadataType="Schema" ID="711243b2-4c3d-43fa-a9b7-5daa27b4b2e3" SourceId="1" SourceUrl="http://220.90.179.75/wcf/example/pictureservice?xsd=xsd0" />
+    <MetadataFile FileName="PictureService.wsdl" MetadataType="Wsdl" ID="d0c3639e-ec56-4e29-8274-54f05af31393" SourceId="1" SourceUrl="http://220.90.179.75/wcf/example/pictureservice?wsdl" />
+    <MetadataFile FileName="pictureservice1.xsd" MetadataType="Schema" ID="cc4e3f02-d2e5-4200-b680-3a39187c521e" SourceId="1" SourceUrl="http://220.90.179.75/wcf/example/pictureservice?xsd=xsd1" />
+    <MetadataFile FileName="pictureservice2.xsd" MetadataType="Schema" ID="c3305d98-ad9d-4fda-9978-d508cc31e444" SourceId="1" SourceUrl="http://220.90.179.75/wcf/example/pictureservice?xsd=xsd2" />
+    <MetadataFile FileName="pictureservice.disco" MetadataType="Disco" ID="0c2ebcde-1abd-4a5b-9b19-f9453408eb03" SourceId="1" SourceUrl="http://220.90.179.75/wcf/example/pictureservice?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

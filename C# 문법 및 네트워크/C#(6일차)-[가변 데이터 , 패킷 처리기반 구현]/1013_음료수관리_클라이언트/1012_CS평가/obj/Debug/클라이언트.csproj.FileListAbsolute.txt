@@ -1,0 +1,8 @@
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_클라이언트\1012_CS평가\bin\Debug\클라이언트.exe.config
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_클라이언트\1012_CS평가\bin\Debug\클라이언트.exe
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_클라이언트\1012_CS평가\bin\Debug\클라이언트.pdb
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\클라이언트.csproj.AssemblyReference.cache
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\클라이언트.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\클라이언트.csproj.CoreCompileInputs.cache
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\클라이언트.exe
+C:\Users\snagh\OneDrive\바탕 화면\C# 문법 및 네트워크\C#(6일차)\1013_음료수관리_클라이언트\1012_CS평가\obj\Debug\클라이언트.pdb

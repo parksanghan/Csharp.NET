@@ -1,0 +1,10 @@
+obj\Debug\OmokGame.exe
+obj\Debug\OmokGame.pdb
+bin\Debug\OmokGame.exe
+bin\Debug\OmokGame.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\OmokGame.AboutForm.resources
+obj\Debug\OmokGame.OmokForm.resources
+obj\Debug\OmokGame.OmokJumsInfoForm.resources
+obj\Debug\OmokGame.StartForm.resources
+obj\Debug\OmokGame.csproj.GenerateResource.Cache

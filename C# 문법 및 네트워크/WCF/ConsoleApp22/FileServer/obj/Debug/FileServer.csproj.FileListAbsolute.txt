@@ -1,0 +1,7 @@
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileServer\bin\FileServer.dll.config
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileServer\bin\FileServer.dll
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileServer\bin\FileServer.pdb
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileServer\obj\Debug\FileServer.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileServer\obj\Debug\FileServer.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileServer\obj\Debug\FileServer.dll
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileServer\obj\Debug\FileServer.pdb

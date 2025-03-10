@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="OmokGame">
+</Property><Property Name="솔루션 파일" Value="G:\5674-002\source\14장소스\OmokGame\OmokGame.sln">
+</Property><Property Name="Date" Value="2007년 5월 17일 목요일">
+</Property><Property Name="Time" Value="오후 20:49">
+</Property></Properties><Event ErrorLevel="0" Project="OmokGame" Source="OmokGame.csproj" Description="프로젝트를 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="OmokGame" Source="OmokGame.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="OmokGame.sln" Description="솔루션을 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="" Source="OmokGame.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="OmokGame" Source="OmokGame.csproj" Description="검사 완료: 프로젝트 파일을 업그레이드할 필요가 없습니다.">
+</Event></UpgradeLog>

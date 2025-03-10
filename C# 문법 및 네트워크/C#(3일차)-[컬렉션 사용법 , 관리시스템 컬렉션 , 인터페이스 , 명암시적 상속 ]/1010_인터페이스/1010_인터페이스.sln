@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1010_인터페이스", "1010_인터페이스\1010_인터페이스.csproj", "{359B83C3-8D2C-447E-904F-1F90DFA4DAF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{359B83C3-8D2C-447E-904F-1F90DFA4DAF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{359B83C3-8D2C-447E-904F-1F90DFA4DAF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{359B83C3-8D2C-447E-904F-1F90DFA4DAF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{359B83C3-8D2C-447E-904F-1F90DFA4DAF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B82C3687-3F04-4E78-90E6-8D9250696696}
+	EndGlobalSection
+EndGlobal

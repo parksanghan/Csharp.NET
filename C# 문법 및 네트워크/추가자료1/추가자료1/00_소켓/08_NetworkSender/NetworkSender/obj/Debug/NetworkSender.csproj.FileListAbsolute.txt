@@ -1,0 +1,2 @@
+\\61.81.99.99\Users\공유폴더\고급17기\06_.NET\0410\00_소켓\08_NetworkSender\NetworkSender\obj\Debug\NetworkSender.exe
+\\61.81.99.99\Users\공유폴더\고급17기\06_.NET\0410\00_소켓\08_NetworkSender\NetworkSender\obj\Debug\NetworkSender.pdb

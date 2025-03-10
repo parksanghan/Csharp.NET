@@ -1,0 +1,9 @@
+[ 최종 실습 코드 ]
+
+
+DB와 관련 작업을 수행하는 WebService를 구현
+
+  - 회원가입, 로그인
+
+
+WebClient와 WinForm 에서 Web Service 구현 내용을 사용해서 동일 기능 처리

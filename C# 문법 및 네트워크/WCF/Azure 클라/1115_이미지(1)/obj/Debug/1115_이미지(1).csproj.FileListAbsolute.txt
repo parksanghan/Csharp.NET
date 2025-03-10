@@ -1,0 +1,95 @@
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\bin\Debug\1115_이미지(1).exe.config
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\bin\Debug\1115_이미지(1).exe
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\bin\Debug\1115_이미지(1).pdb
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.AssemblyReference.cache
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Form1.resources
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Properties.Resources.resources
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.GenerateResource.cache
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CoreCompileInputs.cache
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\obj\Debug\1115_이미지(1).exe
+D:\비트고급\1115_이미지(1)\1115_이미지(1)\obj\Debug\1115_이미지(1).pdb
+D:\비트고급\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe.config
+D:\비트고급\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe
+D:\비트고급\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).pdb
+D:\비트고급\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.AssemblyReference.cache
+D:\비트고급\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Form1.resources
+D:\비트고급\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Properties.Resources.resources
+D:\비트고급\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.GenerateResource.cache
+D:\비트고급\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CoreCompileInputs.cache
+D:\비트고급\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).exe
+D:\비트고급\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe.config
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.AssemblyReference.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Form1.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Properties.Resources.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.GenerateResource.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CoreCompileInputs.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe.config
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.AssemblyReference.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Form1.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Properties.Resources.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.GenerateResource.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CoreCompileInputs.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).pdb
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.CarmeraForm.resources
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Form1.resources
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Properties.Resources.resources
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.GenerateResource.cache
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).exe
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).pdb
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe.config
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).pdb
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.dll
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.dll
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.xml
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.xml
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\snagh\Desktop\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CopyComplete
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe.config
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.AssemblyReference.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.CarmeraForm.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Form1.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Properties.Resources.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.GenerateResource.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CoreCompileInputs.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CopyComplete
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\최에종333\최에종\333\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe.config
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\1115_이미지(1).pdb
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\AForge.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.dll
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\AForge.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.AssemblyReference.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.CarmeraForm.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Form1.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\_1115_이미지_1_.Properties.Resources.resources
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.GenerateResource.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CoreCompileInputs.cache
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).csproj.CopyComplete
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).exe
+C:\Users\pdypd\Desktop\WCF\231115_조별실습\최종\찐최종\Azure 클라\1115_이미지(1)\obj\Debug\1115_이미지(1).pdb

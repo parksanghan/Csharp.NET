@@ -1,0 +1,35 @@
+// ListBox & Button 컨트롤 추가...........
+
+public class PicListForm : System.Windows.Forms.Form
+{
+     // PictureService 객체를 하나 생성
+     PictureService.Service1 pic = new PictureService.Service1();
+
+     public PicListForm()
+     {
+	// 이미지 파일의 목록을 가져오는 메소드를 호출해서 문자열 배열에 저장한다.
+	string[] strPicList = pic.GetPictureList();
+	listBox1.DataSource = strPicList;
+     }
+
+     private void listBox1_DoubleClick(object sender, System.EventArgs e)
+    {
+         DialogResult = DialogResult.OK;
+         Close();
+    }
+
+    private void button1_Click(object sender, System.EventArgs e)
+   {
+        DialogResult = DialogResult.OK;
+        Close();
+   }
+	
+   public string SelectedPic 
+  {
+    get 
+     {
+          return listBox1.SelectedItem.ToString();
+     }
+   }
+
+}

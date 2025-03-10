@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileFind", "FileFind\FileFind.csproj", "{28B824F4-CD87-4383-B935-8EC9A0DFE058}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28B824F4-CD87-4383-B935-8EC9A0DFE058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28B824F4-CD87-4383-B935-8EC9A0DFE058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28B824F4-CD87-4383-B935-8EC9A0DFE058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28B824F4-CD87-4383-B935-8EC9A0DFE058}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

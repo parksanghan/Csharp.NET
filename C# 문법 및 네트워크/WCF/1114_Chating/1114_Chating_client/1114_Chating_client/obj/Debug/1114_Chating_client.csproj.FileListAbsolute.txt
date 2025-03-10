@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\bin\Debug\1114_Chating_client.exe.config
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\bin\Debug\1114_Chating_client.exe
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\bin\Debug\1114_Chating_client.pdb
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\MainWindow.g.cs
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\App.g.cs
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client_MarkupCompile.cache
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client_MarkupCompile.lref
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\MainWindow.baml
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client.g.resources
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\_1114_Chating_client.Properties.Resources.resources
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client.csproj.GenerateResource.cache
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client.exe
+C:\Users\user\Desktop\WCF코딩실습\1114_Chating_client\1114_Chating_client\obj\Debug\1114_Chating_client.pdb

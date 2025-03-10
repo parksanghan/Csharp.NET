@@ -1,0 +1,16 @@
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileService\bin\Debug\FileService.exe.config
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileService\bin\Debug\FileService.exe
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileService\bin\Debug\FileService.pdb
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileService\obj\Debug\FileService.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileService\obj\Debug\FileService.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileService\obj\Debug\FileService.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileService\obj\Debug\FileService.exe
+C:\Users\snagh\Desktop\비트고급\ConsoleApp22\FileService\obj\Debug\FileService.pdb
+C:\Users\snagh\Desktop\WCF\ConsoleApp22\FileService\bin\Debug\FileService.exe.config
+C:\Users\snagh\Desktop\WCF\ConsoleApp22\FileService\bin\Debug\FileService.exe
+C:\Users\snagh\Desktop\WCF\ConsoleApp22\FileService\bin\Debug\FileService.pdb
+C:\Users\snagh\Desktop\WCF\ConsoleApp22\FileService\obj\Debug\FileService.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\WCF\ConsoleApp22\FileService\obj\Debug\FileService.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\WCF\ConsoleApp22\FileService\obj\Debug\FileService.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\WCF\ConsoleApp22\FileService\obj\Debug\FileService.exe
+C:\Users\snagh\Desktop\WCF\ConsoleApp22\FileService\obj\Debug\FileService.pdb

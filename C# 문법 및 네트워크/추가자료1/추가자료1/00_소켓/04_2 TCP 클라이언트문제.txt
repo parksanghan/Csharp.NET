@@ -1,0 +1,51 @@
+/*****************************************************************
+ * [System.NET ]
+ * 
+ * TCP Server의 문제
+ * 
+ *   1. Receive()메서드는 요청이 있을때마다 TCP 버퍼에서 데이터를 읽는다.
+ *      읽어들이는 데이터는 Receive에 할당된 버퍼의 크기에 따라 결정됨
+ *      만약, TCP버퍼에 지정된 크기보다 큰 데이터가 들어가 있을 경우?
+ *      완전하게 읽오지 못함
+ *      => 읽어오려는 데이터보다 버퍼의 크기가 작으면 문제 발생됨
+ *         버퍼를 무조건 크게 하면 메모리 낭비 발생
+ * 
+ *   2. 데이터를 보내는 시점에 데이터를 정확히 수신할 수 없슴
+ *      A => 100byte => B로 전송
+ *      스트림 방식의 전달...
+ * 
+ *  [ 예제 ] TCP는 프로토콜 수준에서 전송하는 데이터의 내용을 조작함
+ *           10번 보냈다고 10번 읽어오면 문제 발생
+ *           만드시 크기로 확인해라...
+ *****************************************************************/
+using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+
+class ErrorTcpClient
+{
+    static void Main(string[] args)
+    {
+        IPEndPoint ipep = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 7000);
+        Socket server = new Socket(AddressFamily.InterNetwork, SocketType.Stream,
+                         ProtocolType.Tcp);
+
+        server.Connect(ipep);
+
+        for (int i = 0; i < 10; i++)
+        {   // 서버에  send data :0~9 문자열을 10번 전송
+            server.Send(Encoding.Default.GetBytes("send data :" + i));
+        }
+
+        server.Close();
+    }
+}
+
+
+
+
+
+
+
+

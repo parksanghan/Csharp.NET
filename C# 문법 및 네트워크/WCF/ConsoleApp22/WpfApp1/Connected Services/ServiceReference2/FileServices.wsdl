@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="FileServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IFile_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://127.0.0.1:7000/GetFile?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://127.0.0.1:7000/GetFile?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://127.0.0.1:7000/GetFile?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFile_FileServiceLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileServiceLoad" />
+  </wsdl:message>
+  <wsdl:message name="IFile_GetPicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPicture" />
+  </wsdl:message>
+  <wsdl:message name="IFile_GetPictureList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPictureList" />
+  </wsdl:message>
+  <wsdl:message name="IFile_UploadPicture_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadPicture" />
+  </wsdl:message>
+  <wsdl:message name="IFile_FileServiceClose_InputMessage">
+    <wsdl:part name="parameters" element="tns:FileServiceClose" />
+  </wsdl:message>
+  <wsdl:message name="IFile_ServiceLoad_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ServiceLoad" />
+  </wsdl:message>
+  <wsdl:message name="IFile_GetPictureACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GetPictureACK" />
+  </wsdl:message>
+  <wsdl:message name="IFile_GetPictureListACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GetPictureListACK" />
+  </wsdl:message>
+  <wsdl:message name="IFile_UploadPictureACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:UploadPictureACK" />
+  </wsdl:message>
+  <wsdl:message name="IFile_ServiceClose_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ServiceClose" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IFile">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="FileServiceLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFile/FileServiceLoad" message="tns:IFile_FileServiceLoad_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="GetPicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFile/GetPicture" message="tns:IFile_GetPicture_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="GetPictureList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFile/GetPictureList" message="tns:IFile_GetPictureList_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="UploadPicture">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFile/UploadPicture" message="tns:IFile_UploadPicture_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="true" name="FileServiceClose">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFile/FileServiceClose" message="tns:IFile_FileServiceClose_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ServiceLoad">
+      <wsdl:output wsaw:Action="http://tempuri.org/IFile/ServiceLoad" message="tns:IFile_ServiceLoad_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetPictureACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IFile/GetPictureACK" message="tns:IFile_GetPictureACK_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetPictureListACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IFile/GetPictureListACK" message="tns:IFile_GetPictureListACK_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UploadPictureACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IFile/UploadPictureACK" message="tns:IFile_UploadPictureACK_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ServiceClose">
+      <wsdl:output wsaw:Action="http://tempuri.org/IFile/ServiceClose" message="tns:IFile_ServiceClose_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IFile" type="tns:IFile">
+    <wsp:PolicyReference URI="#NetTcpBinding_IFile_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="FileServiceLoad">
+      <soap12:operation soapAction="http://tempuri.org/IFile/FileServiceLoad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetPicture">
+      <soap12:operation soapAction="http://tempuri.org/IFile/GetPicture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetPictureList">
+      <soap12:operation soapAction="http://tempuri.org/IFile/GetPictureList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="UploadPicture">
+      <soap12:operation soapAction="http://tempuri.org/IFile/UploadPicture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="FileServiceClose">
+      <soap12:operation soapAction="http://tempuri.org/IFile/FileServiceClose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceLoad">
+      <soap12:operation soapAction="http://tempuri.org/IFile/ServiceLoad" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPictureACK">
+      <soap12:operation soapAction="http://tempuri.org/IFile/GetPictureACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPictureListACK">
+      <soap12:operation soapAction="http://tempuri.org/IFile/GetPictureListACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadPictureACK">
+      <soap12:operation soapAction="http://tempuri.org/IFile/UploadPictureACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceClose">
+      <soap12:operation soapAction="http://tempuri.org/IFile/ServiceClose" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileServices">
+    <wsdl:port name="NetTcpBinding_IFile" binding="tns:NetTcpBinding_IFile">
+      <soap12:address location="net.tcp://127.0.0.1:6000/GetFile" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://127.0.0.1:6000/GetFile</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

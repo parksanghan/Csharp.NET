@@ -1,0 +1,62 @@
+/*****************************************************************
+ * 스레드에서 콜백을 이용한 데이터 처리
+ *  - 스레드 실행시 콜백 메서드 등록
+ *  - 콜백은 스레드간 데이터를 교환하는 주요 방법임
+ *  - A 스레드에서 B 스레드를 생성할 때,
+ *    B 스레드 콜백을 A 스레드에 등록해 두면
+ *    B 스레드에서 특정 이벤트가 발생할 때
+ *    A 스레드에 등록한 콜백을 통해 A스레드에 값을 전달 함 
+ *****************************************************************/
+using System;
+using System.Threading;
+
+public class CallbackExam
+{
+    private ExampleCallback callback;
+
+    public CallbackExam(ExampleCallback callbackDelegate)
+    {
+        callback = callbackDelegate;
+    }
+
+    public void ThreadProc()
+    {
+        Console.WriteLine(Thread.CurrentThread.Name + " : ThreadProc() 호출");
+        Thread.Sleep(1000);
+        if (callback != null)
+            callback(1000);
+    }
+}
+
+public delegate void ExampleCallback(int lineCount);
+
+public class Example
+{
+    private static int examdata = 0;
+
+    public static void ResultCallback(int data)
+    {
+        Console.WriteLine(Thread.CurrentThread.Name + " 스레드가 실행한 ResultCallback : " + data);
+        Example.examdata = data;
+    }
+
+    public static void ShowData()
+    {
+        Console.WriteLine("Example.ShowData() => " + Example.examdata);
+    }
+
+    public static void Main()
+    {
+        CallbackExam ce = new CallbackExam(new ExampleCallback(ResultCallback)
+       );
+
+        Thread th = new Thread(new ThreadStart(ce.ThreadProc));
+        th.Name = "Thread A";
+        th.Start();
+        Console.WriteLine("th 스레드 Start() 메서드 실행 후~");
+        th.Join();
+        Example.ShowData();
+    }
+
+
+}

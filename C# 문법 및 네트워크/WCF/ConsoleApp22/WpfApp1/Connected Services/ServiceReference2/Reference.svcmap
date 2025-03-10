@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="6dc93f7b-e8c2-4eb5-9070-83f3395e53b8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://127.0.0.1:7000/GetFile" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GetFile.xsd" MetadataType="Schema" ID="b01d093c-4d99-4f23-8f9c-4cfdf29ae618" SourceId="1" SourceUrl="http://127.0.0.1:7000/GetFile?xsd=xsd0" />
+    <MetadataFile FileName="FileServices.wsdl" MetadataType="Wsdl" ID="59bb4215-d85a-429b-ae30-3316efc8f43d" SourceId="1" SourceUrl="http://127.0.0.1:7000/GetFile?wsdl" />
+    <MetadataFile FileName="GetFile1.xsd" MetadataType="Schema" ID="f62d9703-77d9-4394-9727-acbd973dfc24" SourceId="1" SourceUrl="http://127.0.0.1:7000/GetFile?xsd=xsd1" />
+    <MetadataFile FileName="GetFile2.xsd" MetadataType="Schema" ID="81cdd2ef-0cb9-4d92-ae17-4168f9bba8ed" SourceId="1" SourceUrl="http://127.0.0.1:7000/GetFile?xsd=xsd2" />
+    <MetadataFile FileName="GetFile.disco" MetadataType="Disco" ID="35b1949b-2a47-409e-a5ed-552c3d635ff8" SourceId="1" SourceUrl="http://127.0.0.1:7000/GetFile?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="ControlService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/wcf/example/Databaseex?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/wcf/example/Databaseex?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IControlService_Load_InputMessage">
+    <wsdl:part name="parameters" element="tns:Load" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_Load_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_FormClosed_InputMessage">
+    <wsdl:part name="parameters" element="tns:FormClosed" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_FormClosed_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FormClosedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_insecrtdata_InputMessage">
+    <wsdl:part name="parameters" element="tns:insecrtdata" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_insecrtdata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:insecrtdataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_deletedata_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletedata" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_deletedata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletedataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_selectall_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectall" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_selectall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_selectitem_InputMessage">
+    <wsdl:part name="parameters" element="tns:selectitem" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_selectitem_OutputMessage">
+    <wsdl:part name="parameters" element="tns:selectitemResponse" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_updatedata_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatedata" />
+  </wsdl:message>
+  <wsdl:message name="IControlService_updatedata_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatedataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IControlService">
+    <wsdl:operation name="Load">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlService/Load" message="tns:IControlService_Load_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlService/LoadResponse" message="tns:IControlService_Load_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FormClosed">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlService/FormClosed" message="tns:IControlService_FormClosed_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlService/FormClosedResponse" message="tns:IControlService_FormClosed_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="insecrtdata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlService/insecrtdata" message="tns:IControlService_insecrtdata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlService/insecrtdataResponse" message="tns:IControlService_insecrtdata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletedata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlService/deletedata" message="tns:IControlService_deletedata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlService/deletedataResponse" message="tns:IControlService_deletedata_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectall">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlService/selectall" message="tns:IControlService_selectall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlService/selectallResponse" message="tns:IControlService_selectall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="selectitem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlService/selectitem" message="tns:IControlService_selectitem_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlService/selectitemResponse" message="tns:IControlService_selectitem_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <wsdl:input wsaw:Action="http://tempuri.org/IControlService/updatedata" message="tns:IControlService_updatedata_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IControlService/updatedataResponse" message="tns:IControlService_updatedata_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IControlService" type="tns:IControlService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Load">
+      <soap:operation soapAction="http://tempuri.org/IControlService/Load" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormClosed">
+      <soap:operation soapAction="http://tempuri.org/IControlService/FormClosed" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insecrtdata">
+      <soap:operation soapAction="http://tempuri.org/IControlService/insecrtdata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletedata">
+      <soap:operation soapAction="http://tempuri.org/IControlService/deletedata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectall">
+      <soap:operation soapAction="http://tempuri.org/IControlService/selectall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectitem">
+      <soap:operation soapAction="http://tempuri.org/IControlService/selectitem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updatedata">
+      <soap:operation soapAction="http://tempuri.org/IControlService/updatedata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ControlService">
+    <wsdl:port name="BasicHttpBinding_IControlService" binding="tns:BasicHttpBinding_IControlService">
+      <soap:address location="http://localhost/wcf/example/Databaseex" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

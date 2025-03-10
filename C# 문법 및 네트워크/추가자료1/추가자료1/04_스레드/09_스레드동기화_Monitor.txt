@@ -1,0 +1,58 @@
+﻿/*****************************************************************
+ * 스레드 동기화
+ *   C# 동기화 처리 : lock 키워드를 이용한 동기화 
+ *                    System.Threading 네임스페이스의 Monitor, Mutex 
+ *                    클래스를 통해 이루어짐 
+ * 
+ *  시물레이션 : Monitor클래스는 lock 키워드보다 정교한 동기화 제공
+ *     Monitor는 봉인(sealed) 클래스로 임계영역의 시작점과 끝점을 조절	   *     lock키워드는 블록으로 감싸고 있는 코드 전체에 영향을 줌
+ *     Monitor는 Monitor.Enter()메서드로 지정한 동기화 시작점부터,
+ *                   Monitor.Exit()메서드로 동기화 끝을 설정한 영역에서만
+ *                   임계영역 처리가 됨
+ *          Enter(), TryEnter, Wait, Pulse(하나 이상 대기 쓰레드에 신호를 줌), Exit      *
+ *****************************************************************/
+using System;
+using System.Threading;
+
+class MonitorExam
+{
+    private static Object obj = new Object();
+    int count = 0;
+    public MonitorExam(int count)
+    {
+        this.count = count;
+    }
+    public void ShowData()
+    {
+        Monitor.Enter(MonitorExam.obj);
+        //Monitor.TryEnter(MonitorExam.obj, 1000);
+        try
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(Thread.CurrentThread.Name + " : " + i);
+                Thread.Sleep(100);
+                if (this.count == i) throw (new Exception());
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        finally
+        {
+            Monitor.Exit(MonitorExam.obj);
+        }
+    }
+    public static void Main()
+    {
+        MonitorExam obj1 = new MonitorExam(5);
+        MonitorExam obj2 = new MonitorExam(7);
+        Thread t1 = new Thread(new ThreadStart(obj1.ShowData));
+        Thread t2 = new Thread(new ThreadStart(obj2.ShowData));
+        t1.Name = "Thread - A";
+        t2.Name = "Thread - B";
+        t1.Start();
+        t2.Start();
+    }
+}

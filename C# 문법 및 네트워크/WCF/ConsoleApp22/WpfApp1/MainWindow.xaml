@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded" Closing="Window_Closing" >
+    <Grid>
+        <TextBox Name="textbox1" HorizontalAlignment="Left" Margin="75,39,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Name="joinbtn"  Content="Button" HorizontalAlignment="Left" Margin="245,44,0,0" VerticalAlignment="Top" Click="joinbtn_Click"/>
+        <Button Name="leavebtn" Content="Button" HorizontalAlignment="Left" Margin="300,39,0,0" VerticalAlignment="Top" Click="leavebtn_Click"/>
+        <ListBox Name="listbox1" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="0,69,470,100" Height="NaN"/>
+        <TextBox Name="messagetext" HorizontalAlignment="Left" Margin="5,371,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="325"/>
+        <Button Name="sendbtn" Content="Button" HorizontalAlignment="Left" Margin="280,404,0,0" VerticalAlignment="Top" Click="sendbtn_Click"/>
+        <ListBox Name="listbox2" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="415,64,55,105" Height="NaN"/>
+        <Button Name="그림들가져오기" Content="그림들가져오기" HorizontalAlignment="Left" Margin="695,339,0,0" VerticalAlignment="Top" Click="그림들가져오기_Click"/>
+        <Image Name="imagebox" HorizontalAlignment="Left" Height="100" Margin="420,324,0,0" VerticalAlignment="Top" Width="160"/>
+        <Button Content="그림하나로드" HorizontalAlignment="Left" Margin="455,29,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <Button Content="업로드" HorizontalAlignment="Left" Margin="640,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,-0.499" Click="Button_Click"/>
+
+    </Grid>
+</Window>

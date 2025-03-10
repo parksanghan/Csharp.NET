@@ -1,0 +1,700 @@
+public class Service1 : System.Web.Services.WebService
+
+
+//현재 컴퓨터돌의 종류를 저장
+int KindOfStone;	
+
+//현재 오목판에 놓여진 돌들의 수치 정보
+string m_strJums;	
+
+//각 점에 대한 상태를 저장해놓은 곳 
+//각 빈점에 대한 좌표와 레벨을 임시로 저장하는 구조체 
+SStatus Status = new SStatus(new Point(-1, -1), -1);     
+
+
+//최적의 점을 저장하기 위해 선언
+//최적의 점의 좌표와 레벨을 저장하기 위한 구조체 
+SStatus MaxStatus = new SStatus(new Point(-1, -1), -1);	
+
+
+
+//---------------------------------------------------------------------
+// 공격점과 방어점을 분석해서 최적의 좌표를 리턴해주는 웹 메소드
+//----------------------------------------------------------------------
+
+[WebMethod(Description=@"공격점과 방어점을 분석해서 최적의 좌표를 리턴해주는 메소드입니다. 
+		 메소드의 인자는 2개입니다.
+		 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+                    예) 3333333333333300000000330000000120000 ... 
+		 stone : 현재 둘 차례인 돌이 어느 것인지 보내야 합니다.
+                        예) 검은돌 1, 흰돌 2")]
+
+public string GetBestJum(string strJums, int stone)  
+{
+	// 인자로 들어온 strJums을 통해 현재 오목판의 상태를 파악
+
+	// stone이라는 돌을 다음의 어느 곳에 두어야 할지를 결정해 그 좌표를 리턴
+}
+
+
+
+//---------------------------------------------------------------------
+// 지금 사용자가 놓은 점에 대한 판단을 리턴해주는 웹 메소드
+// 혹은, 컴퓨터가 놓을 점에 대한 판단을 리턴해주는 웹 메소드
+//---------------------------------------------------------------------
+[WebMethod(Description=@"지금 놓으려는 점, 즉 착점(着點)에 대한 판단을 리턴해주는 웹 메소드입니다.
+				 메소드의 인자는 4개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 x : 착점의 x좌표입니다.
+				 y : 착점의 y좌표입니다.
+				 stone : 현재 두려고 하는 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2
+				 리턴값은 문자열로 승리를 의미하는 ""Win"", 
+				 삼삼을 의미하는 ""SamSam"", 
+				 아무것도 아니면 ""Nothing""중에 하나입니다.")]
+public string CheckChakJum(string strJums, int x, int y, int stone) 
+{
+	// 현재 오목판에 놓여진 돌들을 strJums과 같은 형태임
+
+	// 여기에 stone이라는 돌을 (x,y) 좌표에 놓으면, 승리,삼삼, 아무것도 아님을
+	// 리턴한다.
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+
+[ 오목판의 좌표 설정 ]
+
+좌표는 19 *19 배열  => 테두리를 그려서 총 21 * 21 좌표로 변경
+
+왼쪽 상단을 (0, 0)
+
+오른쪽으로 가면서 X 증가, 아래로 가면서 Y 증가
+
+오목판을 수치화
+
+0 : 빈 공간
+1 : 검은돌
+2 : 흰돌
+3 : 테두리의 모든 점
+
+enum JumInfo 
+{
+	Nothing,
+	Black,
+	White,
+	Boundary
+}
+
+
+
+[ 빈 점들의 레벨을 나타내기 위한 설정 ]
+
+승리점(WinJum)		: 10000
+
+승리확신점(SemiWinJum)	:  1000
+
+공격점(AttackJum)	:   100
+
+준비점(ReadyJum)	:    10
+
+일반점(CommonJum)	:     1
+
+enum BinJumLevel 
+{
+	WinJum = 10000,
+	SemiWinJum = 1000,
+	AttackJum = 100,
+	AttackReadyJum = 10,
+	ReadyJum = 1,
+	CommonJum = 0
+}
+
+
+
+
+[ 빈 점의 좌표와 그 좌표의 상태를 함께 저장하기 위한 struct 선언 ]
+
+
+//바둑판 좌표와 그 좌표의 상태를 저장하기 위한 구조체
+struct SStatus 
+{	
+	public Point pt;	//좌표저장
+	public int status;	//그 좌표의 상태저장	: BinJumLevel
+	public SStatus(Point pt, int status) 
+	{
+		this.pt = pt;
+		this.status = status;
+	}
+}
+
+
+
+-------------------------------------------------------------------------------------
+
+
+[ 최적의 점을 찾는 메서드 구현 ]
+
+
+// 공격점과 방어점을 분석해서 최적의 좌표를 리턴해주는 웹 메소드
+1) GetBestJum 메서드( 웹 메서드)
+
+
+
+//사용자가 공격할 수 있는 가장 좋은 점을 가져옴. 즉, 컴한테는 방어점이 된다.
+2) GetAllBinJumLevel 메서드
+
+
+//하나의 빈점의 특정방향을 분석해서, 그 결과를 수치화 해서 리턴 
+3) GetOneBinJumLevel 메서드 
+
+
+
+[ 착점을 조사하는 웹 메서드 구현 ]
+
+- 마지막에 둔 돌로 인해 오목 게임의 어떤 결과를 가져오는지를 조사
+
+1) CheckChakJum 메서드(웹 메서드)
+
+
+2) IsWin() 메서드    IsSamSam()메서드
+
+
+3)		     IsSam() 메서드  : 같은 돌 3개가 나타나고 양쪽이 뚫렸는지 검사
+
+
+---------------------------------------------------------------------------------------------------
+[ Sample 소스 ]
+
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Web;
+using System.Web.Services;
+
+using System.Text.RegularExpressions;
+using System.Drawing;
+
+namespace OmokAIService
+{
+    /// <summary>
+    /// Service1에 대한 요약 설명입니다.
+    /// </summary>
+    public class Service1 : System.Web.Services.WebService
+    {
+        public Service1()
+        {
+            //CODEGEN: 이 호출은 ASP.NET 웹 서비스 디자이너에 필요합니다.
+            InitializeComponent();
+        }
+
+        #region Component Designer generated code
+
+        //웹 서비스 디자이너에 필요합니다. 
+        private IContainer components = null;
+
+        /// <summary>
+        /// 디자이너 지원에 필요한 메서드입니다.
+        /// 이 메서드의 내용을 코드 편집기로 수정하지 마십시오.
+        /// </summary>
+        private void InitializeComponent()
+        {
+        }
+
+        /// <summary>
+        /// 사용 중인 모든 리소스를 정리합니다.
+        /// </summary>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && components != null)
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #endregion
+
+        // 웹 서비스 예제
+        // HelloWorld() 예제 서비스는 Hello World라는 문자열을 반환합니다.
+        // 빌드하려면 다음 줄의 주석 처리를 제거하고 저장한 후 해당 프로젝트를 빌드합니다.
+        // 이 웹 서비스를 테스트하려면 <F5> 키를 누릅니다.
+
+        //		[WebMethod]
+        //		public string HelloWorld()
+        //		{
+        //			return "Hello World";
+        //		}
+
+        enum JumInfo
+        {
+            Nothing,
+            Black,
+            White,
+            Boundary
+        }
+
+        enum BinJumLevel
+        {
+            WinJum = 10000,
+            SemiWinJum = 1000,
+            AttackJum = 100,
+            AttackReadyJum = 10,
+            ReadyJum = 1,
+            CommonJum = 0
+        }
+
+        //바둑판 좌표와 그 좌표의 상태를 저장하기 위한 구조체
+        struct SStatus
+        {
+            public Point pt;	//좌표저장
+            public int status;	//그 좌표의 상태저장
+            public SStatus(Point pt, int status)
+            {
+                this.pt = pt;
+                this.status = status;
+            }
+        }
+
+        int KindOfStone;	//현재 컴퓨터돌의 종류를 저장
+        string m_strJums;
+        SStatus Status = new SStatus(new Point(-1, -1), -1);     //각 점에 대한 상태를 저장해놓은 곳 
+        SStatus MaxStatus = new SStatus(new Point(-1, -1), -1);	//최적의 점을 저장하기 위해 선언
+
+        // 공격점과 방어점을 분석해서 최적의 좌표를 리턴해주는 웹 메소드
+        [WebMethod(Description = @"공격점과 방어점을 분석해서 최적의 좌표를 리턴해주는 메소드입니다. 
+				 메소드의 인자는 2개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 stone : 현재 둘 차례인 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2")]
+        public string GetBestJum(string strJums, int stone)
+        {
+            // 먼저, 유효한 인자인지 검사한다.
+            // 정규식(Regular Expression)을 이요하면 검사를 보다 쉽게 할 수 있다.
+            // <그림 5>와 같이 오목판이 수치화되어야한다.
+            Regex regex = new Regex(@"^3{21}(3[0-2]{19}3){19}3{21}$");
+            if (!regex.IsMatch(strJums))
+            {
+                return "strJums 부적절한 인자입니다.";
+            }
+            // 돌은 검은 돌이나 흰 돌이어야 한다.
+            if (!(stone == (int)JumInfo.Black || stone == (int)JumInfo.White))
+            {
+                return "부적절한 인자입니다.";
+            }
+
+            // 클라이언트에서 인자로 넘겨받은 21*21 좌표 내용을 변수에 대입
+            m_strJums = string.Copy(strJums);
+            //컴돌이 무슨돌인지를 입력하는 초기화 작업
+            KindOfStone = stone;
+
+            Point BestPoint;
+            SStatus BestComStatus = new SStatus(new Point(-1, -1), -1);
+            SStatus BestUserStatus = new SStatus(new Point(-1, -1), -1);
+
+            GetAllBinJumLevel(); // MaxStatus 값을 변화 시킨다.
+            BestComStatus = MaxStatus;
+
+            //사용자점으로 바꾸고
+            if (KindOfStone == (int)JumInfo.White)
+                KindOfStone = (int)JumInfo.Black;
+            else
+                KindOfStone = (int)JumInfo.White;
+
+            //사용자가 공격할 수 있는 가장 좋은 점을 가져옴. 즉, 컴한테는 방어점이 된다.
+            GetAllBinJumLevel(); // MaxStatus 값을 변화 시킨다.
+            BestUserStatus = MaxStatus;
+
+            //일단 컴이 승리점을 가지면 따질것 없이 바로 그점에 놓는다.
+            if (BestComStatus.status >= (int)BinJumLevel.WinJum)
+            {
+                BestPoint = BestComStatus.pt;
+                return BestPoint.ToString();	// Point를 문자열로 보낸다.
+            }
+
+                //사용자 점에 승리점이 있으면 따질 것없이 바로 그점에 놓는다.
+            else if (BestUserStatus.status >= (int)BinJumLevel.WinJum)
+            {
+                BestPoint = BestUserStatus.pt;
+                return BestPoint.ToString();	// Point를 문자열로 보낸다.
+            }
+
+                //컴점 사람점 둘다 승리확신점이면 컴의 승리확신점에 놓는다.
+            else if ((BestComStatus.status >= (int)BinJumLevel.SemiWinJum) &&
+                (BestUserStatus.status >= (int)BinJumLevel.SemiWinJum))
+            {
+                BestPoint = BestComStatus.pt;
+                return BestPoint.ToString();	// Point를 문자열로 보낸다.
+            }
+
+                //그외에 것은 수치가 높은 점에다가 놓는다.
+            else if (BestComStatus.status >= BestUserStatus.status)
+                BestPoint = BestComStatus.pt;
+
+            else BestPoint = BestUserStatus.pt;
+
+            return BestPoint.ToString();	// Point를 문자열로 보낸다.
+        }
+
+        // 바둑판의 빈점들을 하나하나 분석해서 ,
+        // 가장 좋은 좌표와 그 좌표의 상태(WIN_JUM, SEMIWIN_JUM....)를 리턴 
+        // 인공지능의 가장 핵심적인 부분
+        public void GetAllBinJumLevel()
+        {
+            MaxStatus.status = (int)BinJumLevel.CommonJum;
+            for (int y = 1; y <= 19; y++)
+            {
+                for (int x = 1; x <= 19; x++)
+                {
+                    //빈점만 골라서 분석한다 
+                    if (Convert.ToInt32(m_strJums[x + y * 21].ToString()) != (int)JumInfo.Nothing)
+                        continue;
+
+                    Status.pt.X = x;
+                    Status.pt.Y = y;
+                    for (int dir = 0; dir < 4; dir++) //네 방향을 다 분석해서 더한다
+                        Status.status += GetOneBinJumLevel(x, y, dir);
+                    //현재 분석한 빈점중 가장 좋은 점을 계속해서 MaxStatus에 저장
+                    if (Status.status > MaxStatus.status)
+                    {
+                        MaxStatus.pt.X = Status.pt.X;
+                        MaxStatus.pt.Y = Status.pt.Y;
+                        MaxStatus.status = Status.status;
+                    }
+                    //밑의 if문은 WIN_JUM이상되는 것이 나오면 
+                    //더이상 판단하지말고, 그 상태를 리턴!
+                    if (Status.status >= (int)BinJumLevel.WinJum)
+                        return;
+                    Status.status = 0;	//다음 빈점 분석을 위해 0으로 초기화 				
+                }
+            }
+        }
+
+        //하나의 빈점의 특정방향을 분석해서, 그 결과를 수치화 해서 리턴
+        int GetOneBinJumLevel(int x, int y, int direction)
+        {
+            int number = 1, blocked = 0;
+            int offsetX, offsetY;
+            switch (direction)
+            {
+                case 0: //좌우 방향이라면,
+                    offsetX = 1;
+                    offsetY = 0;
+                    break;
+                case 1: //위아래 방향이라면,
+                    offsetX = 0;
+                    offsetY = 1;
+                    break;
+                case 2: //왼쪽위 오른쪽아래방향이라면,
+                    offsetX = 1;
+                    offsetY = 1;
+                    break;
+                case 3: //왼쪽아래 오른쪽위 방향이라면,
+                    offsetX = -1;
+                    offsetY = 1;
+                    break;
+                default:
+                    return -1;
+            }
+
+            //방향 각마다 다시 2개의 방향이 있으니까 for문으로 2번 돌린다.
+            for (int k = 0; k < 2; k++)
+            {
+                int i = x;
+                int j = y;
+                bool bLOOP = true;
+                while (bLOOP)
+                {
+                    if (k == 0)
+                    {
+                        i += offsetX;
+                        j += offsetY;
+                    }
+                    else
+                    {
+                        i -= offsetX;
+                        j -= offsetY;
+                    }
+
+                    // 바둑판 경계를 벗어나는 경우 blocked 1증가
+                    if (Convert.ToInt32(m_strJums[i + j * 21].ToString()) == (int)JumInfo.Boundary)
+                    {	// beta2
+                        blocked++;
+                        bLOOP = false;
+                    }//break; 	
+                    // 같은 종류 돌이면 number 1 증가
+                    else if (Convert.ToInt32(m_strJums[i + j * 21].ToString()) == KindOfStone)
+                    {
+                        number++;	// beta2
+                    }
+                    else
+                    {
+                        if (Convert.ToInt32(m_strJums[i + j * 21].ToString()) == (int)JumInfo.Nothing)
+                        {
+                            bLOOP = false;//break;  // 비어 있으면 그 쪽 방향으로의 검색 중단
+                        }
+                        else
+                        {
+                            blocked++;
+                            bLOOP = false;//break; 
+                        }
+                    }
+                }
+            }
+
+            if (number > 5) return (int)BinJumLevel.CommonJum;	//육목, 칠목등이 되는 경우 
+
+            if (number == 5) return (int)BinJumLevel.WinJum; //돌이 연속으로 5개가 되면 
+
+            //돌이 연속으로 4개이고 양쪽이 다 뚫렸을 경우
+            if ((number == 4) && (blocked == 0)) return (int)BinJumLevel.SemiWinJum;
+
+            //돌이 연속으로 4개이고 한쪽이 막히거나, 연속으로 3개이고 양쪽이 뚫린 경우
+            if (((number == 4) && (blocked == 1)) || ((number == 3) && (blocked == 0)))
+                return (int)BinJumLevel.AttackJum;
+
+            //돌이 연속으로 3개이고 한쪽이 막히거나, 연속으로 2개이고 양쪽이 뚫린 경우
+            if (((number == 3) && (blocked == 1)) || ((number == 2) && (blocked == 0)))
+                return (int)BinJumLevel.AttackReadyJum;
+
+            //돌이 연속으로 2개이고 한쪽이 막힌경우
+            if ((number == 2) && (blocked == 1))// || ((number==1) && (blocked==0)))
+                return (int)BinJumLevel.ReadyJum;
+
+            return (int)BinJumLevel.CommonJum;	//그외에는 0으로 리턴!
+        }
+
+        // 지금 사용자가 놓은 점에 대한 판단을 리턴해주는 웹 메소드
+        // 혹은, 컴퓨터가 놓을 점에 대한 판단을 리턴해주는 웹 메소드
+        [WebMethod(Description = @"지금 놓으려는 점, 즉 착점(着點)에 대한 판단을 리턴해주는 웹 메소드입니다.
+				 메소드의 인자는 4개입니다.
+				 strJums : 오목판의 상태를 수치화해서 보내야합니다.
+	                         예) 3333333333333300000000330000000120000 ... 
+				 x : 착점의 x좌표입니다.
+				 y : 착점의 y좌표입니다.
+				 stone : 현재 두려고 하는 돌이 어느 것인지 보내야 합니다.
+	                         예) 검은돌 1, 흰돌 2
+				 리턴값은 문자열로 승리를 의미하는 ""Win"", 
+				 삼삼을 의미하는 ""SamSam"", 
+				 아무것도 아니면 ""Nothing""중에 하나입니다.")]
+        public string CheckChakJum(string strJums, int x, int y, int stone)
+        {
+            // 먼저, 유효한 인자인지 검사한다.
+            // 정규식(Regular Expression)을 이요하면 검사를 보다 쉽게 할 수 있다.
+            // <그림 5>와 같이 오목판이 수치화되어야한다.
+            Regex regex = new Regex(@"^3{21}(3[0-2]{19}3){19}3{21}$");
+            if (!regex.IsMatch(strJums))
+            {
+                return "strJums 부적절한 인자입니다.";
+            }
+            // 지금 놓으려는 점이 비어있고, 놓으려는 점이 검은 돌이나 흰돌이어야 한다.
+            if (!(Convert.ToInt32(strJums[x + y * 21].ToString()) == (int)JumInfo.Nothing)
+                ||
+                !(stone == (int)JumInfo.Black || stone == (int)JumInfo.White))
+            {
+                return "부적절한 인자입니다.";
+            }
+
+
+            m_strJums = string.Copy(strJums);
+
+            if (IsWin(x, y, stone) == true)
+            {
+                return "Win";	// (x,y)에 놓으면 이김 
+            }
+
+            else if (IsSamSam(x, y, stone) == true)
+            {
+                return "SamSam";	// (x,y)에 놓으면 삼삼
+            }
+            else
+            {
+                return "Nothing";	// (x,y)에 놓으면 아무것두 아님
+            }
+        }
+
+
+        //지금 놓인점이 승리 인지 판단 하는 함수
+        public bool IsWin(int x, int y, int kindOfJum)
+        {
+            int i, j;
+            int numOfNearbyOne = 0, numOfNearbyOther = 0;
+
+            string strKindOfJum = kindOfJum.ToString();
+
+            //왼쪽 오른쪽을 보자
+            i = 1;  //초기화
+            while (strKindOfJum == m_strJums[x + i + y * 21].ToString())
+                i++;	//점 오른쪽에 자기점이 몇개 있는지 판단 beta2
+            numOfNearbyOne = i - 1;		//자기 오른쪽에 자기 점이 몇개인지를 저장
+            i = -1; // 초기화
+            while (strKindOfJum == m_strJums[x + i + y * 21].ToString())
+                i--; 	//점 왼쪽에 자기점이 몇개 있는지 판단 beta2
+            numOfNearbyOther = -(i + 1);							//자기 왼쪽에 자기 점이 몇개인지를 저장
+            if (numOfNearbyOne + numOfNearbyOther == 4)
+                return true;			//양쪽에 자기점이 4개이면 true리턴
+
+
+            //위 아래를 보자
+            j = 1; // 초기화
+            while (strKindOfJum == m_strJums[x + (y + j) * 21].ToString())
+                j++;	//점 아래쪽에 자기점이 몇개 있는지 판단 beta2
+            numOfNearbyOne = j - 1;	//자기 아래쪽에 자기 점이 몇개인지를 저장
+            j = -1; //초기화
+            while (strKindOfJum == m_strJums[x + (y + j) * 21].ToString())
+                j--; 	//점 왼쪽에 자기점이 몇개 있는지 판단 
+            numOfNearbyOther = -(j + 1);					//자기 오른쪽에 자기 점이 몇개인지를 저장
+            if (numOfNearbyOne + numOfNearbyOther == 4)
+                return true;			//양쪽에 자기점이 4개이면 true리턴
+
+
+            //오른쪽 대각선을 보자
+            i = 1; j = -1;
+            while (strKindOfJum == m_strJums[x + i + (y + j) * 21].ToString())
+            {
+                i++;
+                j--;
+            } 	//점 왼쪽에 자기점이 몇개 있는지 판단 beta2
+            numOfNearbyOne = i - 1;							//자기 오른쪽위에 자기 점이 몇개인지를 저장
+            i = -1; j = 1; //초기화 
+            while (strKindOfJum == m_strJums[x + i + (y + j) * 21].ToString())
+            {
+                i--;
+                j++;
+            }	//점 왼쪽아래에 자기점이 몇개 있는지 판단 beta2
+            numOfNearbyOther = j - 1;							//자기 왼쪽아래에 자기 점이 몇개인지를 저장
+            if (numOfNearbyOne + numOfNearbyOther == 4)
+                return true;			//양쪽에 자기점이 4개이면 true리턴
+
+
+            //왼쪽 대각선을 보자
+            i = -1; j = -1; //초기화
+            while (strKindOfJum == m_strJums[x + i + (y + j) * 21].ToString())
+            {
+                i--;
+                j--;
+            }	//점 왼쪽위에 자기점이 몇개 있는지 판단 beta2
+            numOfNearbyOne = -(i + 1);    							//자기 왼쪽위에 자기 점이 몇개인지를 저장
+            i = 1; j = 1; //초기화
+            while (strKindOfJum == m_strJums[x + i + (y + j) * 21].ToString())
+            {
+                i++;
+                j++;
+            }	//점 오른쪽아래에 자기점이 몇개 있는지 판단 beta2
+            numOfNearbyOther = i - 1;							//자기 오른쪽아래에 자기 점이 몇개인지를 저장
+            if (numOfNearbyOne + numOfNearbyOther == 4)
+            {
+                return true;			//양쪽에 자기점이 4개이면 true리턴
+            }
+
+            return false;	//해당되는 것이 없으면 즉, 승리가 아니면 false리턴!!
+        }
+
+
+        //지금 놓인 점이 삼삼인지 판단하는 함수
+        public bool IsSamSam(int x, int y, int kindOfJum)
+        {
+            int offsetX, offsetY;
+            int samStatus = 0;
+
+            //4개의 방향으로 조사를 한다.
+            for (int dir = 0; dir < 4; dir++)
+            {
+                switch (dir)
+                {
+                    case 0: //좌우 방향으로 검사
+                        offsetX = 1; offsetY = 0;
+                        if (IsSam(x, y, offsetX, offsetY, kindOfJum))
+                            samStatus++;
+                        break;
+                    case 1: //위 아래 방향으로 검사
+                        offsetX = 0; offsetY = 1;
+                        if (IsSam(x, y, offsetX, offsetY, kindOfJum))
+                            samStatus++;
+                        break;
+                    case 2: //왼쪽위 오른쪽 아래 방향으로 검사
+                        offsetX = 1; offsetY = 1;
+                        if (IsSam(x, y, offsetX, offsetY, kindOfJum))
+                            samStatus++;
+                        break;
+                    case 3: //왼쪽밑 오른쪽 아래 방향으로 검사 
+                        offsetX = -1; offsetY = 1;
+                        if (IsSam(x, y, offsetX, offsetY, kindOfJum))
+                            samStatus++;
+                        break;
+                    default:
+                        return false;
+                }
+            }
+
+            if (samStatus == 2)
+            {
+                return true;	//삼삼이 된 경우 
+            }
+
+            return false;	//아닌 경우 
+        }
+
+        //어떤 방향으로 세개가 이어져있고, 양쪽으로 공백이 있는지 판단하는 함수
+        public bool IsSam(int x, int y, int offsetX, int offsetY, int kindOfJum)
+        {
+            int sameStone = 1;
+            int empty = 0;
+            string strKindOfJum = kindOfJum.ToString();
+
+            //양방향으로 검사하기 위해 2번 돌린다.
+            for (int k = 0; k < 2; k++)
+            {
+                int i = x, j = y;
+                bool bLOOP = true;
+                while (bLOOP)
+                {
+                    if (k == 0)
+                    {
+                        i += offsetX;
+                        j += offsetY;
+                    }	//한 방향
+                    else if (k == 1)
+                    {
+                        i -= offsetX;
+                        j -= offsetY;
+                    }		//반대 방향
+
+                    if (sameStone > 4)
+                    {
+                        break;
+                    }
+                    else if (m_strJums[i + j * 21].ToString() == strKindOfJum)
+                    {
+                        sameStone++;
+                    }
+                    else
+                    {
+                        if (m_strJums[i + j * 21].ToString() == ((int)(JumInfo.Nothing)).ToString())
+                        {
+                            empty++;
+                            bLOOP = false;
+                        }
+                        else
+                        {
+                            bLOOP = false;
+                        }
+                    }
+                }
+            }
+            if ((sameStone == 3) && (empty == 2))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+
+    }
+}

@@ -1,0 +1,316 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Data.OleDb;
+using System.Web;
+using System.Web.Services;
+using System.Web.Services.Protocols;
+using System.Configuration;
+using System.Collections;
+using System.Web.Security;
+
+
+[WebService(Namespace = "http://tempuri.org/")]
+[WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+public class Service : System.Web.Services.WebService
+{
+    public Service () {
+
+        //디자인된 구성 요소를 사용하는 경우 다음 줄의 주석 처리를 제거합니다. 
+        //InitializeComponent(); 
+    }
+
+    #region 관리자 DB 연결 & 데이터 보여 주기
+    [WebMethod]
+    public DataSet AdminConnect()
+    {
+        string connectStr = "Server=mint\\sqlexpress; database=Login; user id=mint;Pwd=think0";
+
+        SqlConnection Con = new SqlConnection(connectStr);
+        SqlDataAdapter Adap = new SqlDataAdapter("Select ID, NAME, DATA, STATE, CHMOD from MemberInfo", Con);
+        DataSet ds = new DataSet();
+        Adap.Fill(ds, "MemberInfo");
+        
+        return ds;
+
+    }
+    #endregion
+
+    #region 관리자 로그인 연결
+    [WebMethod]
+    public bool AdminLoginConnect()
+    {
+         OleDbConnection cn = new OleDbConnection();
+
+        cn.ConnectionString = "Provider=SQLOLEDB.1;" +
+            "User ID=mint;Pwd=think0;Initial Catalog=Login;" +
+            "Data Source=mint\\sqlexpress;Connect Timeout=30";
+
+        cn.Open();
+
+        string strSQL = "SELECT * FROM dbo.MemberInfo Where ID ='admin' and PASS='admin'";
+
+        OleDbCommand myCommand = new OleDbCommand(strSQL, cn);
+        myCommand.ExecuteNonQuery();
+
+        // Obtain a data reader ala ExecuteReader().
+        OleDbDataReader myDataReader;
+        myDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+        if (myDataReader.Read())
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    #endregion 
+
+    #region 카운트 연결 & 데이터 보여주기
+    [WebMethod]
+    public DataSet Count()
+    {
+        string connectStr = "Server=mint\\sqlexpress; database=Login; user id=mint;Pwd=think0";
+
+        SqlConnection Con = new SqlConnection(connectStr);
+        SqlDataAdapter Adap = new SqlDataAdapter("Select TOTALCOUNT, CURCOUNT from dbo.CountInfo", Con);
+
+        DataSet ds = new DataSet();
+        Adap.Fill(ds, "CountInfo");
+
+        return ds;
+    }
+    #endregion
+
+    #region 회원가입시 아이디 중복체크 처리 부분
+
+    [WebMethod]
+    public bool ReJoinCheck(string id)
+    {
+
+        OleDbConnection cn = new OleDbConnection();
+
+        cn.ConnectionString = "Provider=SQLOLEDB.1;" +
+            "User ID=mint;Pwd=think0;Initial Catalog=Login;" +
+            "Data Source=mint\\sqlexpress;Connect Timeout=30";
+
+        cn.Open();
+
+        OleDbCommand cmd = null;// SQL insert.
+        string sql = "";
+        sql = "select ID from MemberInfo where ID = '" + id + "'";
+        cmd = new OleDbCommand(sql, cn);
+        OleDbDataReader dr;
+        dr = cmd.ExecuteReader();
+
+        if (dr.Read())
+        {
+            return true;
+            dr.Close();
+        }
+        else return false;
+
+        cn.Close();
+    }
+
+    #endregion
+
+    #region 회원가입 처리 부분
+    [WebMethod]
+
+    public void JoinMember(string id, string name, string number, string pwd,
+                       string hometel, string comtel, string handphone, string add, string zipcode)
+    {
+        OleDbConnection cn = new OleDbConnection();
+
+        cn.ConnectionString = "Provider=SQLOLEDB.1;" +
+            "User ID=mint;Pwd=think0;Initial Catalog=Login;" +
+            "Data Source=mint\\sqlexpress;Connect Timeout=30";
+
+        cn.Open();
+
+
+        OleDbCommand cmd = null;// SQL insert.
+
+        string sql = "";
+
+        sql = "INSERT INTO MemberInfo" +
+              "(ID, NAME, NUMBER, PASS, HOMEPHONE, WORKPHONE, HANDPHONE, ADDRESS, ADDNUMBER, DATA, STATE, CHMOD) VALUES" +
+              "('" + id + "','" + name + "','" + number +
+              "','" + pwd + "','" + hometel + "','" + comtel + "','" +
+              handphone + "','" + add + "','" + zipcode + "','"
+              + DateTime.Now.ToString() + "'," + 0 + "," + 9 + ")";
+
+
+        // Create an INSERT command.
+        cmd = new OleDbCommand(sql, cn);
+        cmd.ExecuteNonQuery();
+
+    }
+
+    #endregion
+
+    #region 로그인 처리부분
+    [WebMethod]
+    public bool Login(string id, string pwd, string name)
+    {
+        #region DB 연결부분
+        OleDbConnection cn = new OleDbConnection();
+
+        cn.ConnectionString = "Provider=SQLOLEDB.1;" +
+            "User ID=mint;Pwd=think0;Initial Catalog=Login;" +
+            "Data Source=mint\\sqlexpress;Connect Timeout=30";
+
+        cn.Open();
+        #endregion
+
+        #region 로그인 처리부분..
+        string strSQL = "SELECT NAME, STATE FROM dbo.MemberInfo Where ID ='" + id + "'" + " and " + "PASS='" + pwd + "'";
+
+        OleDbCommand myCommand = new OleDbCommand(strSQL, cn);
+        myCommand.ExecuteNonQuery();
+        #endregion
+
+        #region 카운터 읽는 부분..
+        // Obtain a data reader ala ExecuteReader().
+        OleDbDataReader myDataReader;
+        myDataReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+        int cnt = 0;
+        string temp;
+
+        if (myDataReader.Read())
+        {
+            name = myDataReader["NAME"].ToString();
+            string curTime = myDataReader["STATE"].ToString();
+
+            if (curTime.CompareTo("1") != null)
+            {
+                string strSQLTime = "SELECT CURCOUNT FROM dbo.CountInfo Where CURCOUNT is not null";
+                myCommand = new OleDbCommand(strSQLTime, cn);
+                myCommand.ExecuteNonQuery();
+
+                if (myDataReader.Read())
+                {
+                    temp = myDataReader["CURCOUNT"].ToString();
+                    cnt = int.Parse(temp);
+                }
+                ++cnt;
+
+                string sqlu = "UPDATE dbo.CountInfo SET CURCOUNT =" + cnt + "WHERE CURCOUNT is not null";
+
+                myCommand = new OleDbCommand(sqlu, cn);
+                myCommand.ExecuteNonQuery();
+
+            }
+
+            string sqlt = "UPDATE dbo.MemberInfo SET DATA ='" + DateTime.Today.ToString() + "' "
+                + ", " + "STATE=" + 1 + "WHERE NAME='" + name + "'";
+
+            OleDbCommand cmdtime = new OleDbCommand(sqlt, cn);
+            cmdtime.ExecuteNonQuery();
+
+            return true;
+
+        }
+
+        else return false;
+        #endregion
+
+    }
+
+    #endregion 
+
+    #region 게시판 리스트 데이터 보여주기
+    [WebMethod]
+    public DataSet BoardList()
+    {
+        string connectStr = "Server=mint\\sqlexpress; database=Login; user id=mint;Pwd=think0";
+
+        SqlConnection Con = new SqlConnection(connectStr);
+        SqlCommand Cmd = new SqlCommand();
+        Cmd.Connection = Con;
+        Cmd.CommandText = "UP_SELECT_BOARDLIST";
+        Cmd.CommandType = CommandType.StoredProcedure;
+
+        SqlDataAdapter adp = new SqlDataAdapter(Cmd);
+        DataSet ds = new DataSet();
+
+        adp.Fill(ds, "Board");
+
+        return ds;
+
+    }
+
+    #endregion
+
+    #region 게시판 글쓰기
+    [WebMethod]
+    public void BoardWrite(string id, string subject, string text)
+    {
+        int no = 0;
+        int r = 0;
+        string temp;
+
+        OleDbConnection cn = new OleDbConnection();
+
+        cn.ConnectionString = "Provider=SQLOLEDB.1;" +
+            "User ID=mint;Pwd=think0;Initial Catalog=Login;" +
+            "Data Source=mint\\sqlexpress;Connect Timeout=30";
+
+        cn.Open();
+
+        OleDbCommand cmd = null;// SQL insert.
+
+        string sqln = "SELECT count(*) as cnt FROM dbo.Board";
+
+        // Create an INSERT command.
+        cmd = new OleDbCommand(sqln, cn);
+        cmd.ExecuteNonQuery();
+
+        OleDbDataReader myDataReader;
+        myDataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+        if (myDataReader.Read())
+        {
+            temp = myDataReader["cnt"].ToString();
+            no = int.Parse(temp);
+        }
+
+        string sql = "";
+
+        if (id != "" && subject != "" && text != "")
+        {
+            no++;
+            sql = "INSERT INTO Board" +
+                "(No, Subject, Writer, R, TEXT) VALUES" +
+                "(" + no + ",'" + subject + "','" + id + "'," + r + ",'"
+                + text + "')";
+
+            // Create an INSERT command.
+            cmd = new OleDbCommand(sql, cn);
+            cmd.ExecuteNonQuery();
+        }
+
+        else
+        {
+            //lbError.Visible = true;
+        }
+
+        
+    }
+
+    #endregion
+
+    #region 게시판 글읽기
+    [WebMethod]
+    public bool BoardRead()
+    {
+        return true;
+    }
+
+    #endregion
+
+
+}

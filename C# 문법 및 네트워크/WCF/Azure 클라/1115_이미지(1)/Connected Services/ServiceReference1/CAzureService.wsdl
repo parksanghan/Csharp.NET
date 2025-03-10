@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="CAzureService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IAzure_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://127.0.0.1:7000/GetAzure?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://127.0.0.1:7000/GetAzure?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAzure_AzureServiceLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:AzureServiceLoad" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_Analyze_InputMessage">
+    <wsdl:part name="parameters" element="tns:Analyze" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_ExtractText_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExtractText" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_GetListSql_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListSql" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_GetSelectItem_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectItem" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_AzureServiceClose_InputMessage">
+    <wsdl:part name="parameters" element="tns:AzureServiceClose" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_AzureServiceLoadACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AzureServiceLoadACK" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_AnalyzeACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AnalyzeACK" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_ExtractTextACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:ExtractTextACK" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_GetListSqlACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GetListSqlACK" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_GetSelectItemACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:GetSelectItemACK" />
+  </wsdl:message>
+  <wsdl:message name="IAzure_AzureServiceCloseACK_OutputCallbackMessage">
+    <wsdl:part name="parameters" element="tns:AzureServiceCloseACK" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IAzure">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AzureServiceLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAzure/AzureServiceLoad" message="tns:IAzure_AzureServiceLoad_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="Analyze">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAzure/Analyze" message="tns:IAzure_Analyze_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="ExtractText">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAzure/ExtractText" message="tns:IAzure_ExtractText_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="GetListSql">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAzure/GetListSql" message="tns:IAzure_GetListSql_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="false" name="GetSelectItem">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAzure/GetSelectItem" message="tns:IAzure_GetSelectItem_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="false" msc:isTerminating="true" name="AzureServiceClose">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAzure/AzureServiceClose" message="tns:IAzure_AzureServiceClose_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AzureServiceLoadACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IAzure/AzureServiceLoadACK" message="tns:IAzure_AzureServiceLoadACK_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AnalyzeACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IAzure/AnalyzeACK" message="tns:IAzure_AnalyzeACK_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ExtractTextACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IAzure/ExtractTextACK" message="tns:IAzure_ExtractTextACK_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetListSqlACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IAzure/GetListSqlACK" message="tns:IAzure_GetListSqlACK_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSelectItemACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IAzure/GetSelectItemACK" message="tns:IAzure_GetSelectItemACK_OutputCallbackMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AzureServiceCloseACK">
+      <wsdl:output wsaw:Action="http://tempuri.org/IAzure/AzureServiceCloseACK" message="tns:IAzure_AzureServiceCloseACK_OutputCallbackMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IAzure" type="tns:IAzure">
+    <wsp:PolicyReference URI="#NetTcpBinding_IAzure_policy" />
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="AzureServiceLoad">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/AzureServiceLoad" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="Analyze">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/Analyze" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="ExtractText">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/ExtractText" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetListSql">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/GetListSql" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectItem">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/GetSelectItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AzureServiceClose">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/AzureServiceClose" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="AzureServiceLoadACK">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/AzureServiceLoadACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AnalyzeACK">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/AnalyzeACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExtractTextACK">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/ExtractTextACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListSqlACK">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/GetListSqlACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSelectItemACK">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/GetSelectItemACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AzureServiceCloseACK">
+      <soap12:operation soapAction="http://tempuri.org/IAzure/AzureServiceCloseACK" style="document" />
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CAzureService">
+    <wsdl:port name="NetTcpBinding_IAzure" binding="tns:NetTcpBinding_IAzure">
+      <soap12:address location="net.tcp://127.0.0.1:6000/GetAzure" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://127.0.0.1:6000/GetAzure</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+obj\Debug\ResolveAssemblyReference.cache
+bin\Debug\NetworkSender.exe
+bin\Debug\NetworkSender.pdb
+bin\Debug\SerialExample.dll
+obj\Debug\NetworkSender.exe
+obj\Debug\NetworkSender.pdb
