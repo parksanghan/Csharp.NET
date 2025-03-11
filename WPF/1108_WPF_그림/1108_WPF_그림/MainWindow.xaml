@@ -1,0 +1,111 @@
+﻿<Window x:Class="_1108_WPF_그림.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_1108_WPF_그림"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1300">
+    <Window.Resources>
+        <local:ShapeList x:Key="shapelist"/>
+        <local:Shape x:Key="curshape" Typename="사각형" Pointx="10" Pointy="250" Size="50" Color="BlanchedAlmond" />
+        <local:ShapeVisibilityConverter x:Key="ShapeVisibilityConverter"/>
+
+    </Window.Resources>
+    <Grid Name="grid" DataContext="{StaticResource shapelist}" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <!--상단부-->
+        <Grid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0" Margin="5" Orientation="Horizontal">
+                <Label >타입(_T):</Label>
+                <TextBox x:Name="type" Width ="120"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="5" Orientation="Horizontal">
+                <Label >좌표(_P):</Label>
+                <TextBox Name="pointx" Width="120" />
+                <TextBox Name="pointy" Width="120"/>
+            </StackPanel>
+            <StackPanel Grid.Column="2" Margin="5" Orientation="Horizontal">
+                <Label >크기(_S):</Label>
+                <TextBox Name="size" Width="120" />
+            </StackPanel>
+            <StackPanel Grid.Column="3" Margin="5" Orientation="Horizontal" Background="LightGreen">
+                <Label >색상(_C):</Label>
+                <TextBox Name="color" Width="120" />
+            </StackPanel>
+        </Grid>
+        <!--좌측1-->
+        <ListBox ItemsSource="{Binding}" IsSynchronizedWithCurrentItem="True" Grid.Column="0" Grid.Row="1" Margin="5">            
+        </ListBox>
+        <!--좌측2-->
+        <StackPanel Grid.Column="0" Grid.Row="2">
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label >타입(_T):</Label>
+                <TextBox Text="{Binding Path=Typename}" x:Name="cur_type" Width ="225"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label >좌표(_P):</Label>
+                <TextBox Text="{Binding Path=Pointx}" x:Name="cur_pointx" Width ="96"/>
+                <Label Width ="35"/>
+                <TextBox Text="{Binding Path=Pointy}" x:Name="cur_pointy" Width ="94"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label >크기(_S):</Label>
+                <TextBox Text="{Binding Path=Size}" x:Name="cur_size" Width ="225"/>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <Label >색상(_C):</Label>
+                <TextBox Text="{Binding Path=Color}" x:Name="cur_clolr" Width ="225"/>
+            </StackPanel>
+        </StackPanel>
+        <!--우측-->
+        <Canvas Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Margin="5" Background="Aquamarine">
+            <ItemsControl ItemsSource="{Binding}" Height="383" Width="975">
+                <ItemsControl.Resources>
+                    <DataTemplate DataType="{x:Type local:Shape}">
+                        <DockPanel>
+                            <TextBlock Text="{Binding Path=Typename}" />
+                            <!-- 타원 위치 바인딩 -->
+                            <!-- 사각형 위치 바인딩 -->
+                            <Rectangle Fill="{Binding Path=Color}" Width="{Binding Path=Size}" Height="{Binding Path=Size}">
+                                <Canvas.Left>
+                                    <Binding Path="Pointx" />
+                                </Canvas.Left>
+                                <Canvas.Top>
+                                    <Binding Path="Pointy" />
+                                </Canvas.Top>
+                                <Rectangle.Visibility>
+                                    <Binding Path="Typename" Converter="{StaticResource ShapeVisibilityConverter}" ConverterParameter="사각형" />
+                                </Rectangle.Visibility>
+                            </Rectangle>
+
+
+                            <!-- 타원 위치 바인딩 -->
+                            <Ellipse Fill="{Binding Path=Color}" Width="{Binding Path=Size}" Height="{Binding Path=Size}"
+         Canvas.Left="{Binding Path=Pointx}" Canvas.Top="{Binding Path=Pointy}"
+         Visibility="{Binding Path=Typename, Converter={StaticResource ShapeVisibilityConverter}, ConverterParameter=타원}" />
+
+
+                        </DockPanel>
+                    </DataTemplate>
+                </ItemsControl.Resources>
+            </ItemsControl>
+        </Canvas>
+
+
+    </Grid>
+</Window>

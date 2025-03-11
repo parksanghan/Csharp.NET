@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "231108_도서관리프로그램", "231108_도서관리프로그램\231108_도서관리프로그램.csproj", "{12E4C2FF-F3E8-4468-99C8-345225E5A306}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12E4C2FF-F3E8-4468-99C8-345225E5A306}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E4C2FF-F3E8-4468-99C8-345225E5A306}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E4C2FF-F3E8-4468-99C8-345225E5A306}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E4C2FF-F3E8-4468-99C8-345225E5A306}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12ADB09A-099B-4286-B091-C61F53E5B783}
+	EndGlobalSection
+EndGlobal
