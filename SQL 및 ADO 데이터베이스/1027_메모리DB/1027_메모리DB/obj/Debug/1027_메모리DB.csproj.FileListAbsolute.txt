@@ -1,0 +1,23 @@
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\bin\Debug\1027_메모리DB.exe.config
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\bin\Debug\1027_메모리DB.exe
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\bin\Debug\1027_메모리DB.pdb
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\obj\Debug\_1027_메모리DB.Form1.resources
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\obj\Debug\_1027_메모리DB.Properties.Resources.resources
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.csproj.GenerateResource.cache
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.exe
+C:\Users\user\Desktop\닷넷예제\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.pdb
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\bin\Debug\1027_메모리DB.exe.config
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\bin\Debug\1027_메모리DB.exe
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\bin\Debug\1027_메모리DB.pdb
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\_1027_메모리DB.Form1.resources
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\_1027_메모리DB.Form2.resources
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\_1027_메모리DB.Properties.Resources.resources
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.csproj.GenerateResource.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.exe
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1027_메모리DB\1027_메모리DB\obj\Debug\1027_메모리DB.pdb

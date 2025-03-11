@@ -1,0 +1,22 @@
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\bin\Debug\1030_XML.exe.config
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\bin\Debug\1030_XML.exe
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\bin\Debug\1030_XML.pdb
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\obj\Debug\1030_XML.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\obj\Debug\1030_XML.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\obj\Debug\_1030_XML.Form1.resources
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\obj\Debug\_1030_XML.Properties.Resources.resources
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\obj\Debug\1030_XML.csproj.GenerateResource.cache
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\obj\Debug\1030_XML.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\obj\Debug\1030_XML.exe
+C:\Users\user\Desktop\닷넷예제\1030_XML\1030_XML\obj\Debug\1030_XML.pdb
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\bin\Debug\1030_XML.exe.config
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\bin\Debug\1030_XML.exe
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\bin\Debug\1030_XML.pdb
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\obj\Debug\1030_XML.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\obj\Debug\1030_XML.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\obj\Debug\_1030_XML.Form1.resources
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\obj\Debug\_1030_XML.Properties.Resources.resources
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\obj\Debug\1030_XML.csproj.GenerateResource.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\obj\Debug\1030_XML.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\obj\Debug\1030_XML.exe
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1030_XML\1030_XML\obj\Debug\1030_XML.pdb

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--XmlWriter 개체로 특성 쓰기-->
+<books>
+  <book title="XML.NET" 가격="12000" 수량="50" />
+  <book title="ADO.NET" 가격="15000" 수량="150" />
+</books>

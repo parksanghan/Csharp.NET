@@ -1,0 +1,14 @@
+﻿{"message":
+  {"@type":"response",
+   "@service":"naverservice.nmt.proxy",
+   "@version":"1.0.0",
+   "result":
+   {"srcLangType":"ko",
+    "tarLangType":"en",
+    "translatedText":"How is the weather today?",
+    "engineType":"N2MT"
+    }
+   }
+}
+
+프로젝트 >> Nuget 패키지 관리  : 검색탭(json) --> Newtonsoft.json 설치

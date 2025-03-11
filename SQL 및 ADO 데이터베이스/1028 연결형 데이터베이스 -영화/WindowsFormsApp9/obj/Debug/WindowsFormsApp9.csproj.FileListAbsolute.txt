@@ -1,0 +1,15 @@
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\bin\Debug\WindowsFormsApp9.exe.config
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\bin\Debug\WindowsFormsApp9.exe
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\bin\Debug\WindowsFormsApp9.pdb
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.deleteform.resources
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.Form1.resources
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.insertform.resources
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.Properties.Resources.resources
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.selectform.resources
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.updateform.resources
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.csproj.GenerateResource.cache
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.exe
+C:\Users\snagh\Desktop\비트고급\WindowsFormsApp9\WindowsFormsApp9\obj\Debug\WindowsFormsApp9.pdb

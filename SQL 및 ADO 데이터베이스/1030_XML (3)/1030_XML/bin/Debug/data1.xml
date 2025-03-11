@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--XmlWriter 개체 만들기 실습 예제-->
+<books>
+  <book>ADO.NET</book>
+  <book>XML.NET</book>
+</books>

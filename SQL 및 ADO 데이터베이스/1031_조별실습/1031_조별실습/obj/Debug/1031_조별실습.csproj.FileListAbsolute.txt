@@ -1,0 +1,27 @@
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\bin\Debug\1031_조별실습.exe.config
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\bin\Debug\1031_조별실습.exe
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\bin\Debug\1031_조별실습.pdb
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.AssemblyReference.cache
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\obj\Debug\_1031_조별실습.Form1.resources
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\obj\Debug\_1031_조별실습.Properties.Resources.resources
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.GenerateResource.cache
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.CoreCompileInputs.cache
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.exe
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.pdb
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dkseh\OneDrive\바탕 화면\SQL\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.CopyComplete
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\bin\Debug\1031_조별실습.exe.config
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\bin\Debug\1031_조별실습.exe
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\bin\Debug\1031_조별실습.pdb
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\bin\Debug\Newtonsoft.Json.dll
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\bin\Debug\Newtonsoft.Json.xml
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\_1031_조별실습.Form1.resources
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\_1031_조별실습.Properties.Resources.resources
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.GenerateResource.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.csproj.CopyComplete
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.exe
+C:\Users\snagh\Desktop\SQL 및 ADO 데이터베이스\1031_조별실습\1031_조별실습\obj\Debug\1031_조별실습.pdb

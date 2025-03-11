@@ -1,0 +1,19 @@
+﻿drop table Account;
+
+CREATE TABLE Account (
+accid int  PRIMARY KEY,
+name VARCHAR(20)  NOT NULL,
+balance INT CHECK(balance >= 0),
+);
+
+drop table AccoutIO;
+
+CREATE TABLE AccountIO(
+accio_id int identity(1,1) PRIMARY KEY 
+accid int,
+input int NOT NULL,
+output int NOT NULL,
+balance int NOT NULL,
+date DateTime NOT NULL
+FOREIGN KEY(accid) REFERENCES Account(accid)
+);

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--XmlWriter 개체로 요소 쓰기-->
+<books>
+  <book>
+    <title>XML.NET</title>
+    <가격>12000</가격>
+    <수량>50</수량>
+  </book>
+  <book>
+    <title>ADO.NET</title>
+    <가격>15000</가격>
+    <수량>150</수량>
+  </book>
+</books>

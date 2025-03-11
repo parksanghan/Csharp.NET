@@ -1,0 +1,21 @@
+<?xml version="1.0" standalone="yes"?>
+<DocumentElement>
+  <Account>
+    <AccID>1000</AccID>
+    <Name>홍길동</Name>
+    <Balance>5000</Balance>
+    <NewDate>2023-10-27T00:00:00+09:00</NewDate>
+  </Account>
+  <Account>
+    <AccID>1010</AccID>
+    <Name>김길동</Name>
+    <Balance>10000</Balance>
+    <NewDate>2023-10-27T00:00:00+09:00</NewDate>
+  </Account>
+  <Account>
+    <AccID>1020</AccID>
+    <Name>이길동</Name>
+    <Balance>800</Balance>
+    <NewDate>2023-10-11T00:00:00+09:00</NewDate>
+  </Account>
+</DocumentElement>
