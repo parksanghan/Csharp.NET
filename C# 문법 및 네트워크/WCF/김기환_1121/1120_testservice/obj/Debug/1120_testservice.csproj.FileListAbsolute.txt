@@ -1,7 +1,0 @@
-C:\Users\user\Desktop\23WCF\1120_test연\1120_testservice\bin\1120_testservice.dll.config
-C:\Users\user\Desktop\23WCF\1120_test연\1120_testservice\bin\1120_testservice.dll
-C:\Users\user\Desktop\23WCF\1120_test연\1120_testservice\bin\1120_testservice.pdb
-C:\Users\user\Desktop\23WCF\1120_test연\1120_testservice\obj\Debug\1120_testservice.csproj.AssemblyReference.cache
-C:\Users\user\Desktop\23WCF\1120_test연\1120_testservice\obj\Debug\1120_testservice.csproj.CoreCompileInputs.cache
-C:\Users\user\Desktop\23WCF\1120_test연\1120_testservice\obj\Debug\1120_testservice.dll
-C:\Users\user\Desktop\23WCF\1120_test연\1120_testservice\obj\Debug\1120_testservice.pdb
