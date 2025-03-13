@@ -11,6 +11,11 @@ int APIENTRY WinMain(HINSTANCE hInstance,HINSTANCE hPrevInstance
 	HWND hWnd;
 	MSG Message;
 	WNDCLASS WndClass;
+	g_hInst=hInstance;
+
+	WndClass.cbClsExtra=0;
+	WndClass.cbWndExtra=0;
+	WndClass.hbrBackground=(HBRUSH)(COLOR_WINDOW+1);
 	WndClass.hCursor=LoadCursor(NULL,IDC_ARROW);
 	WndClass.hIcon=LoadIcon(NULL,IDI_APPLICATION);
 	WndClass.hInstance=hInstance;
@@ -39,7 +44,7 @@ LRESULT CALLBACK WndProc(HWND hWnd,UINT iMessage,WPARAM wParam,LPARAM lParam)
 {
 	HDC hdc;
 	PAINTSTRUCT ps;
-	TCHAR *Mes=TEXT("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ì½º ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã¿ï¿½.");
+	TCHAR *Mes=TEXT("¿ÞÂÊ ¸¶¿ì½º ¹öÆ°À» ´­·¯ Æú´õ¸¦ ¼±ÅÃÇÏ½Ã¿À.");
 	static TCHAR StartPath[MAX_PATH];
 	TCHAR Folder[MAX_PATH];
 
@@ -48,8 +53,8 @@ LRESULT CALLBACK WndProc(HWND hWnd,UINT iMessage,WPARAM wParam,LPARAM lParam)
 		hWndMain=hWnd;
 		return 0;
 	case WM_LBUTTONDOWN:
-		if (BrowseFolder(hWnd,TEXT("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã¿ï¿½"),StartPath,Folder)) {
-			MessageBox(hWnd,Folder,TEXT("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"),MB_OK);
+		if (BrowseFolder(hWnd,TEXT("Æú´õ¸¦ ¼±ÅÃÇÏ½Ã¿À"),StartPath,Folder)) {
+			MessageBox(hWnd,Folder,TEXT("¼±ÅÃÇÑ Æú´õ"),MB_OK);
 			lstrcpy(StartPath,Folder);
 		}
 		return 0;
