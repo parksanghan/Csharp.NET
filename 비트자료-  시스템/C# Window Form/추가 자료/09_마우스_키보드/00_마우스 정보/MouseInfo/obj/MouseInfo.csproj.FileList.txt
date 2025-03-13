@@ -1,0 +1,8 @@
+bin\Debug\MouseInfo.exe
+bin\Debug\MouseInfo.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\MouseInfo.Form1.resources
+obj\Debug\MouseInfo.Properties.Resources.resources
+obj\Debug\MouseInfo.csproj.GenerateResource.Cache
+obj\Debug\MouseInfo.exe
+obj\Debug\MouseInfo.pdb

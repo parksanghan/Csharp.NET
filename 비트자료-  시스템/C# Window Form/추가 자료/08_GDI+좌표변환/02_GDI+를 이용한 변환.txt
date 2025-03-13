@@ -1,0 +1,368 @@
+[ 영역 좌표계가 제공하는 변환 기능 ]
+
+
+  메서드		설명
+  -------------------------------------------------
+  ResetTransform	변환된 좌표계를 초기화 시킴
+  RotateTransform	점(0.0)을 중심으로 지정된 각도만큼 회전
+  ScaleTransform	영역 변환 배율을 설정
+  TranslateTransform 좌표계의 원점을 변경
+  MultiplyTransform	 지정된 Matrix를 곱해 좌표계를 변환
+  --------------------------------------------------
+
+
+1) 배율 변환
+
+예제 1) 영역 좌표계 배율 변환
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+public class TransExam1 : System.Windows.Forms.Form
+{
+    public TransExam1()
+    {
+        this.Text = "배율(Scaling) 변환";
+    }
+    static void Main()
+    {
+        Application.Run(new TransExam1());
+    }
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Rectangle rect = new Rectangle(0, 0, 100, 100);
+        Graphics g = e.Graphics;
+
+        g.DrawRectangle(Pens.Black, rect);
+        g.DrawString("VC#", this.Font, Brushes.Black, 10, 50);
+
+        // 가로 3배, 세로 2.5배 확대
+        g.ScaleTransform(3.0f, 2.5f);
+
+        g.DrawRectangle(Pens.Red, rect);
+        g.DrawString("VC#", this.Font, Brushes.Red, 10, 50);
+    }
+}
+
+
+
+2) 이동 변환
+
+예제 2) 영역 좌표계의 이동
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class TransExam2 : System.Windows.Forms.Form
+{
+    public TransExam2()
+    {
+        this.Text = "이동(Translation) 변환";
+    }
+    static void Main()
+    {
+        Application.Run(new TransExam2());
+    }
+    private void DrawGrid(Graphics g)
+    {
+        Pen pen = new Pen(Color.Blue, 0.1f);
+        pen.DashStyle = DashStyle.Dot;
+
+        for (int i = 0; i < this.Width; i += 10)
+            g.DrawLine(pen, i, 0, i, this.Height);
+
+        for (int j = 0; j < this.Height; j += 10)
+            g.DrawLine(pen, 0, j, this.Width, j);
+
+        pen.Dispose();
+    }
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+
+        // 화면에 격자 문양 출력 
+        this.DrawGrid(g);
+
+        Font font = new Font("궁서체", 20);
+
+        g.DrawString("VC#", font, Brushes.Black, 10, 20);
+        g.DrawLine(Pens.Black, 0, 100, this.Width, 100);
+        g.DrawLine(Pens.Black, 100, 0, 100, this.Height);
+
+        // X좌표 , Y좌표 변환
+        g.TranslateTransform(100, 100);
+
+        g.DrawString("VC#", font, Brushes.Red, 10, 20);
+
+        font.Dispose();
+    }
+}
+
+
+
+3) 회전 변환
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class TransExam3 : System.Windows.Forms.Form
+{
+    public TransExam3()
+    {
+        this.Text = "회전(Rotation) 변환";
+        this.Size = new Size(300, 300);
+    }
+    static void Main()
+    {
+        Application.Run(new TransExam3());
+    }
+    private void DrawGrid(Graphics g)
+    {
+        Pen pen = new Pen(Color.Blue, 0.1f);
+        pen.DashStyle = DashStyle.Dot;
+
+        for (int i = 0; i < this.Width; i += 10)
+            g.DrawLine(pen, i, 0, i, this.Height);
+
+        for (int j = 0; j < this.Height; j += 10)
+            g.DrawLine(pen, 0, j, this.Width, j);
+
+        pen.Dispose();
+    }
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        this.DrawGrid(g);
+
+        Font font = new Font("궁서체", 20);
+
+        g.DrawString("회전시키기전", font, Brushes.Black, 50, 20);
+        g.DrawLine(Pens.Black, 0, 0, this.ClientSize.Width, this.ClientSize.Height);
+
+        //회전 각도 
+        g.RotateTransform(45);
+
+        g.DrawString("회전시킨후", font, Brushes.Red, 50, 20);
+
+        font.Dispose();
+    }
+}
+
+
+
+4) 기울기 변환
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class TransExam4 : System.Windows.Forms.Form
+{
+    public TransExam4()
+    {
+        this.Text = "기울기(Shearing) 변환";
+        this.Size = new Size(300, 300);
+    }
+    static void Main()
+    {
+        Application.Run(new TransExam4());
+    }
+    private void DrawGrid(Graphics g)
+    {
+        Pen pen = new Pen(Color.Blue, 0.1f);
+        pen.DashStyle = DashStyle.Dot;
+
+        for (int i = 0; i < this.Width; i += 10)
+            g.DrawLine(pen, i, 0, i, this.Height);
+
+        for (int j = 0; j < this.Height; j += 10)
+            g.DrawLine(pen, 0, j, this.Width, j);
+
+        pen.Dispose();
+    }
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        this.DrawGrid(g);
+
+        Font font = new Font("궁서체", 20);
+
+        g.DrawString("기울기 변환전", font, Brushes.Black, 50, 20);
+        g.DrawRectangle(Pens.Black, 50, 20, 170, 22);
+
+        Matrix matrix = new Matrix();
+
+        // 가로 기울기 , 세로 기울기 
+        matrix.Shear(0.5f, 0.5f);
+
+        // 가로 세로를 0.5 도씩 기울여 출력
+        g.MultiplyTransform(matrix);
+
+        matrix.Dispose();
+
+        g.DrawString("Youngjin.com", font, Brushes.Red, 50, 20);
+        g.DrawRectangle(Pens.Red, 50, 20, 170, 22);
+
+        font.Dispose();
+    }
+}
+
+
+
+5) 누적 변환
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class TransExam5 : System.Windows.Forms.Form
+{
+    public TransExam5()
+    {
+        this.Text = "누적 변환";
+        this.Size = new Size(300, 300);
+    }
+    static void Main()
+    {
+        Application.Run(new TransExam5());
+    }
+    private void DrawGrid(Graphics g)
+    {
+        Pen pen = new Pen(Color.Blue, 0.1f);
+        pen.DashStyle = DashStyle.Dot;
+
+        for (int i = 0; i < this.Width; i += 10)
+            g.DrawLine(pen, i, 0, i, this.Height);
+
+        for (int j = 0; j < this.Height; j += 10)
+            g.DrawLine(pen, 0, j, this.Width, j);
+
+        pen.Dispose();
+    }
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        this.DrawGrid(g);
+
+
+        // 좌표계의 기준 원점을 10번 이동시킴
+        for (int i = 0; i < 10; i++)
+        {
+            g.DrawEllipse(Pens.Black, new Rectangle(10, 10, 50, 70));
+
+            // 원점을 10, 10씩 x, y축으로 이동시킴
+            g.TranslateTransform(10, 10);
+        }
+    }
+}
+
+
+
+6) 비누적 변환
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class TransExam6 : System.Windows.Forms.Form
+{
+    public TransExam6()
+    {
+        this.Text = "비누적 변환";
+        this.Size = new Size(300, 300);
+    }
+    static void Main()
+    {
+        Application.Run(new TransExam6());
+    }
+    private void DrawGrid(Graphics g)
+    {
+        Pen pen = new Pen(Color.Blue, 0.1f);
+        pen.DashStyle = DashStyle.Dot;
+
+        for (int i = 0; i < this.Width; i += 10)
+            g.DrawLine(pen, i, 0, i, this.Height);
+
+        for (int j = 0; j < this.Height; j += 10)
+            g.DrawLine(pen, 0, j, this.Width, j);
+
+        pen.Dispose();
+    }
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        this.DrawGrid(g);
+
+        // 원점을 기준으로 반지름 100인 파란색 원을 그림
+        g.DrawEllipse(Pens.Black, new Rectangle(10, 10, 100, 100));
+
+        // 원점을 50, 50 x축 y축 방향으로 이동
+        g.TranslateTransform(50, 50);
+
+        // 반지름 100인 빨간색 타원형을 그림
+        g.DrawEllipse(Pens.Red, new Rectangle(10, 10, 100, 100));
+
+        // 원점을 0으로 되돌린 후 
+        g.ResetTransform();
+
+        // 가로 세로가 100인 파란색 사각형을 그림
+        g.DrawRectangle(Pens.Blue, new Rectangle(10, 10, 100, 100));
+    }
+}
+
+
+8) 복합 변환
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class TransExam7 : System.Windows.Forms.Form
+{
+    public TransExam7()
+    {
+        this.Text = "복합 변환";
+        this.Size = new Size(350, 350);
+    }
+    static void Main()
+    {
+        Application.Run(new TransExam7());
+    }
+    private void DrawGrid(Graphics g)
+    {
+        Pen pen = new Pen(Color.Blue, 0.1f);
+        pen.DashStyle = DashStyle.Dot;
+
+        for (int i = 0; i < this.Width; i += 10)
+            g.DrawLine(pen, i, 0, i, this.Height);
+
+        for (int j = 0; j < this.Height; j += 10)
+            g.DrawLine(pen, 0, j, this.Width, j);
+
+        pen.Dispose();
+    }
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        this.DrawGrid(g);
+
+        Font font = new Font("궁서체", 18);
+        Pen pen = new Pen(Brushes.Red, 2);
+
+        // 좌표계의 원즘을 윈도우 화면의 중앙으로 이동
+        g.TranslateTransform(this.Width / 2, this.Height / 2);
+
+        for (int i = 0; i < 360; i += 45)
+        {
+            // 45도 단위로 좌표축을 회전시키면서 문자열 출력
+            g.RotateTransform(i);
+            g.DrawRectangle(pen, 0, 0, 300, 24);
+            g.DrawString(".NET 3.0", font, Brushes.Blue, 30, 0);
+        }
+
+        pen.Dispose();
+        font.Dispose();
+    }
+}
+
+
+  

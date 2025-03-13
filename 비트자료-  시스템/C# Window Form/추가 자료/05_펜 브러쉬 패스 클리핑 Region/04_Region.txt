@@ -1,0 +1,143 @@
+[Region]
+
+GraphicsPath와 비슷한 기능을 갖고 있슴
+
+  - 도형의 영역을 정의하고 내부를 채우거나 
+  - 정의된 영역의 일부를 잘라내는 등의 작업에 사용됨
+
+  - GraphicsPath와 달리 AddXXX 형태의 메서드가 없슴
+
+  - 사용법 : Region클래스의 생성자에 Rectangle, RectangleF 또는 GraphicsPath
+                개체를 인자로 넣어서 만듬
+
+  - 영역처리 : 두 영역에 대한 처리 
+
+     r1.Intersect(r2)		: r1과 r2영역의 교집합 영역
+
+     r1.Union(r2)		: r1과 r2영역의 합집합 영역
+
+     r1.Xor(r2)		: r1과 r2영역의 배타적 합집합(합집합에서 교집합 뺀)영역
+
+     r1.Complement(r2)	: r1과 r2의 합집합에서 r1에 해당되는 부분을 뺀 영역
+
+     r1.Exclude(r2)		: r1영역중 r2에 해당하는 영역을 뺀 영역
+
+
+예제 1) Region 개체 조합 
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class RegionExam1 : Form
+{
+    Rectangle rect1, rect2;
+    Region reg1, reg2;
+
+    public RegionExam1()
+    {
+        this.Text = "Region 개체 조합 예제";
+        this.Size = new Size(700, 200);
+    }
+    static void Main()
+    {
+        Application.Run(new RegionExam1());
+    }
+
+    private void DrawRect(Graphics g, string str)
+    {
+        g.DrawRectangle(Pens.Black, rect1);
+        g.DrawRectangle(Pens.Black, rect2);
+        g.FillRegion(Brushes.Black, reg1);
+        g.DrawString(str, this.Font, Brushes.Black, rect2.X + 20, rect1.Y + 130);
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+
+        rect1 = new Rectangle(50, 20, 50, 110);
+        rect2 = new Rectangle(20, 50, 110, 50);
+
+        reg1 = new Region(rect1);
+        reg2 = new Region(rect2);
+        reg1.Complement(reg2);
+        this.DrawRect(g, "Complement");
+
+        rect1.X += 130;
+        rect2.X += 130;
+        reg1 = new Region(rect1);
+        reg2 = new Region(rect2);
+        reg1.Exclude(reg2);
+        this.DrawRect(g, "Exclude");
+
+
+        rect1.X += 130;
+        rect2.X += 130;
+        reg1 = new Region(rect1);
+        reg2 = new Region(rect2);
+        reg1.Intersect(reg2);
+        this.DrawRect(g, "  Intersect");
+
+
+        rect1.X += 130;
+        rect2.X += 130;
+        reg1 = new Region(rect1);
+        reg2 = new Region(rect2);
+        reg1.Union(reg2);
+        this.DrawRect(g, "   Union");
+
+        rect1.X += 130;
+        rect2.X += 130;
+        reg1 = new Region(rect1);
+        reg2 = new Region(rect2);
+        reg1.Xor(reg2);
+        this.DrawRect(g, "    Xor");
+
+        reg1.Dispose();
+        reg2.Dispose();
+    }
+}
+
+
+예제 2) GraphicsPath와 Region 응용
+
+  다른 형태의 윈폼 만들기
+
+  - Graphics 개체 얻기
+  - 영역을 정의한 GraphicsPath 개체로 Region 생성
+  - form 클래스의 Region 맴버에 대입
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class RegionExam2 : Form
+{
+    public RegionExam2()
+    {
+        this.Text = "    원 모양 폼";
+    }
+
+    static void Main()
+    {
+        Application.Run(new RegionExam2());
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        GraphicsPath shape = new GraphicsPath();
+        shape.AddEllipse(0, 0, 100, 100);
+        shape.AddRectangle(new Rectangle(100, 0, this.Width - 100, this.Height));
+        shape.AddLine(100, 100, 0, 200);
+        shape.AddLine(0, 200, 200, 200);
+        shape.CloseFigure();
+        this.Region = new Region(shape);
+        shape.Dispose();
+
+        g.DrawString("GraphicsPath와 Region 응용", this.Font, Brushes.Black, 120, 30);
+    }
+}
+  
+                

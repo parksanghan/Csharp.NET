@@ -1,0 +1,199 @@
+[ Graphics 클래스의 주요 메서드 ]
+
+Clear(전체 그리기 화면을 지우고, 화면을 배경색으로 채움)
+DrawArc, DrawBezier(두개의 끝점을 잇는 Bazier 스플라인)
+DrawCurve, DrawEllipse,Drawimage, DrawLine, DrawPath, DrawPie, DrawPolygon(다각형그리기)
+DrawRectangle, DrawString, FillElipse, FillPath, FillPolygon,
+FillRectangle, FillRegion
+
+예제1) GDI+ 그래픽  그리기 
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam8 : Form
+{
+    public GDIExam8()
+    {
+        this.Text = "그래픽 그리기";
+        this.Size = new Size(200, 200);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam8());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        Pen pen = new Pen(Color.Black, 2);
+        g.DrawLine(pen, 10, 10, 190, 190);
+        g.DrawRectangle(pen, 10, 10, 100, 100);
+        g.DrawEllipse(pen, 50, 50, 100, 100);
+        g.DrawArc(pen, 100, 100, 80, 80, 0, -90);
+    }
+}
+
+
+예제2) 다각형과 타원 그리기
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam9 : Form
+{
+    Point[] point1 = new Point[5];
+    Point[] point2 = new Point[3];
+
+    public GDIExam9()
+    {
+        this.Text = "다각형과 타원 그리기";
+        this.Size = new Size(300, 400);
+
+        point1[0] = new Point(10, 20);
+        point1[1] = new Point(20, 70);
+        point1[2] = new Point(50, 100);
+        point1[3] = new Point(10, 150);
+        point1[4] = new Point(100, 100);
+
+        point2[0] = new Point(100, 10);
+        point2[1] = new Point(10, 100);
+        point2[2] = new Point(190, 100);
+
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam9());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        Pen pen = new Pen(Color.Red, 2);// 빨간색2의 두께를 갖는 선으로
+        g.DrawPolygon(pen, point1);// 5개 점을 경유하는 다각형 그림
+
+        pen = new Pen(Color.Blue, 3);// 파랑색 3의 두께를 갖는 선으로
+        g.DrawPolygon(pen, point2);   // 3개의 점을 경유하는 다각형
+
+        pen = new Pen(Color.Black, 1);// 두께 1의 검은색 선으로
+        for (int i = 0; i < 200; i += 20)    // 9개의 타원을 그림
+        {
+            g.DrawEllipse(pen, 70, 130, i, i + 50);
+        }
+    }
+}
+
+
+예제3) FillXXX 계열 메서드 사용하기 
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Drawing.Drawing2D;
+class GDIExam10 : Form
+{
+    Point[] point = new Point[3];
+    public GDIExam10()
+    {
+        this.Text = "FillXXX 계열 메서드";
+        point[0] = new Point(100, 10);
+        point[1] = new Point(10, 100);
+        point[2] = new Point(190, 100);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam10());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        g.FillEllipse(Brushes.Brown, 10, 100, 50, 50);// 채워진 타원 그리기
+
+        GraphicsPath graphPath = new GraphicsPath();
+        graphPath.AddEllipse(0, 0, 150, 100);// 타원 등록
+        g.FillPath(Brushes.Red, graphPath);// FilPath를 사용해 영역을 그림
+
+        g.FillPie(Brushes.Yellow, 200, 10, 100, 100, 90, 180);
+
+        g.FillPolygon(Brushes.Green, point);
+
+        g.FillRectangle(Brushes.Magenta, 50, 150, 100, 100);
+
+        Rectangle fillRect = new Rectangle(150, 150, 100, 100);
+        Region fillRegion = new Region(fillRect);
+        g.FillRegion(Brushes.Orange, fillRegion);
+    }
+}
+
+
+예제 4) 그라데이션 효과 주기 
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam11 : Form
+{
+    public GDIExam11()
+    {
+        this.Text = "그라데이션 효과주기";
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam11());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        for (int i = 0; i < 256; i++)
+        {
+            // 색상을 바꿔가며, 좌측 상단에서 대각선 방향으로 선을 그림
+            g.DrawLine(new Pen(Color.FromArgb(i, 0, 0)), 10, 10, 265 - i, 10 + i);
+        }
+    }
+}
+
+
+예제 5) 얼굴 그리기
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam12 : Form
+{
+    public GDIExam12()
+    {
+        this.Text = "얼굴 그리기";
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam12());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        g.DrawArc(Pens.Black, 70, 20, 130, 180, 180, -180);  // 아랫턱 그리기
+
+        for (int i = 0; i < 15; i++)
+        {
+	// 머리카락그리기
+            g.DrawArc(Pens.Brown, 50 + 2 * i, 50, 100, 160, 130, 80);
+            g.DrawArc(Pens.Brown, 20 + 2 * i, 50, 190, 160, 140, 100);
+            g.DrawArc(Pens.Brown, 90 + 2 * i, 50, 100, 160, 200, 260);
+            g.DrawArc(Pens.Brown, 80 + 3 * i, 50, 100, 90, 130, 80);
+        }
+
+        g.DrawEllipse(Pens.Black, 90, 120, 20, 25);			// 눈
+        g.DrawEllipse(Pens.Black, 155, 120, 20, 25);		// 눈
+        g.FillEllipse(Brushes.Blue, 93, 130, 15, 15);		// 눈동자
+        g.FillEllipse(Brushes.Blue, 158, 130, 15, 15);		// 눈동자
+        g.DrawArc(Pens.Black, 110, 150, 50, 40, 0, 180);
+    }
+}

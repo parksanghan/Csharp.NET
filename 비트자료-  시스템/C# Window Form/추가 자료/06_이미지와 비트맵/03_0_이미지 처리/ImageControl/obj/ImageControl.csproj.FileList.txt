@@ -1,0 +1,8 @@
+bin\Debug\ImageControl.exe
+bin\Debug\ImageControl.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\ImageControl.Form1.resources
+obj\Debug\ImageControl.Properties.Resources.resources
+obj\Debug\ImageControl.csproj.GenerateResource.Cache
+obj\Debug\ImageControl.exe
+obj\Debug\ImageControl.pdb

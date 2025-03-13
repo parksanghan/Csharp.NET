@@ -1,0 +1,137 @@
+[GraphicsPath 클래스 ]
+
+Graphics 클래스가 제공하는 메서드 
+
+   DrawXXX, FillXXX계열 메서드 
+
+   - 타원, 사각형, 호, 직선, 다각형등의 기본 도형 구현 가능
+
+   - 제공하지 않는 오각형 도형을 그리고 싶다면??
+      DrawLine()메서드로 5개의 선을 연결하여 구현
+
+GraphicsPath  클래스
+
+   - 다각형을 정의하고 테두리(Draw) 영역(Fill) 을 채우는
+      GDI+ 도구 클래스임
+
+   - System.Drawing.Drawing2D 네임스페이스에 정의되어 있슴
+
+   - AddArc	   AddBezier	AddBeziers
+     AddClosedCurve  AddCurve	AddEllipse
+     AddLIne	   AddPath	AddPie
+     AddPolygon	  AddRectangle	AddRectangles
+     AddString
+
+   - 시작과 끝을 갖는 패스를 정의할 수 있슴
+   - 열린 그림 : 시작과 끝이 다름
+      닫힌 그림 : 시작과 끝이 같음
+
+      시작하고 닫을 때 사용하는 3가지 메서드 
+ 
+       StartFlgure()	현재 그림을 닫지 않고 새 그림을 시작
+       CloseFigure()  현재 그림을 닫고 새 그림을 시작
+                            연결된 일련의 선과 곡선이 현재 그림에 있으면
+                            메서드가 끝점에서 시작점으로 선을 연결하여
+                            루프를 닫음
+       CloseAllFigure()  이 경로에 있는 열린 그림을 모두 닫고 새 그림을 시작
+                               열린 그림의 각 끝점에서 시작점으로 선을 연결하면 
+                               해당 그림이 닫힘
+
+예제 1) GraphicsPath사용하기
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class GraphicsPathExam1 : System.Windows.Forms.Form
+{
+    public GraphicsPathExam1()
+    {
+        this.Text = "GraphicsPathExam1";
+        this.Size = new Size(500, 500);
+    }
+
+    static void Main()
+    {
+        Application.Run(new GraphicsPathExam1());
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        Pen pen = new Pen(Brushes.Black, 3);
+
+        // 개체 생성
+        GraphicsPath gp = new GraphicsPath();
+
+        // 첫번째 그림
+        gp.AddLine(10, 10, 100, 100);
+        gp.AddEllipse(50, 50, 100, 100);
+        // 현재 그림을 닫음 
+        gp.CloseFigure();
+
+        // 두번째 그림
+        gp.StartFigure();
+        gp.AddArc(300, 300, 50, 50, 45, 180);
+        gp.AddLine(250, 200, 370, 350);
+        // 지금까지 열린 그림을 닫음
+        gp.CloseAllFigures();
+
+        // 세번째 그림
+        gp.AddPie(30, 300, 70, 70, 90, 270);
+
+        // 실제 도형을 그려주는 부분
+        g.DrawPath(pen, gp);
+        //g.FillPath(Brushes.Black, gp);
+
+        pen.Dispose();
+        gp.Dispose();
+    }
+}
+
+
+예제 2) Graphics개체 사용하기
+
+패스를 닫는 방법 1 : 그림이 끝나는 점과 시작점을 동일하게 처리
+패스를 닫는 방법 2 : CloseFigure() 사용
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class GraphicsPathExam2 : System.Windows.Forms.Form
+{
+    public GraphicsPathExam2()
+    {
+        this.Text = "GraphicsPathExam2";
+        this.Size = new Size(250, 150);
+    }
+    static void Main()
+    {
+        Application.Run(new GraphicsPathExam2());
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        Pen pen = new Pen(Brushes.Black, 3);
+
+        GraphicsPath gp = new GraphicsPath();
+        
+        gp.AddLine(10, 10, 10, 110);
+        gp.AddLine(10, 110, 110, 110);
+        gp.AddLine(110, 110, 110, 10);
+        gp.CloseFigure();
+
+
+        gp.AddLine(120, 10, 120, 110);
+        gp.AddLine(120, 110, 220, 110);
+        gp.AddLine(220, 110, 220, 10);
+
+        g.DrawPath(pen, gp);
+
+        pen.Dispose();
+        gp.Dispose();
+    }
+
+}
+

@@ -1,0 +1,78 @@
+﻿//ui.cpp
+#include "std.h"
+
+HWND hEdit_Server, hEdit_Name, hBtn_Connect, hBtn_DisConnect;
+HWND hEdit_Print;
+HWND hEdit_Send, hBtn_Send;
+
+/*
+모든 컨트롤의 핸들 획득
+*/
+void ui_GetControlHandle(HWND hDlg)
+{
+	//1.핸들획득
+	hEdit_Server	= GetDlgItem(hDlg, IDC_EDIT_SERVER);
+	hEdit_Name		= GetDlgItem(hDlg, IDC_EDIT_NAME);
+	hBtn_Connect	= GetDlgItem(hDlg, IDC_BTN_CONNECT);
+	hBtn_DisConnect = GetDlgItem(hDlg, IDC_BTN_DISCONNECT);
+
+	hEdit_Print		= GetDlgItem(hDlg, IDC_EDIT_PRINT);
+
+	hEdit_Send		= GetDlgItem(hDlg, IDC_EDIT_SEND);
+	hBtn_Send		= GetDlgItem(hDlg, IDC_BTN_SEND);
+}
+
+/*
+버튼 컨트롤 활성화여부
+*/
+void ui_SetStateButton(BOOL b1, BOOL b2, BOOL b3)
+{
+	EnableWindow(hBtn_Connect, b1);
+	EnableWindow(hBtn_DisConnect, b2);
+	EnableWindow(hBtn_Send, b3);
+}
+
+void ui_GetHandleNickName(HWND hDlg, TCHAR* s_handle, TCHAR* nickname)
+{
+	GetWindowText(hEdit_Server, s_handle, 40);
+	GetWindowText(hEdit_Name,  nickname, 40);
+}
+
+void ui_PrintMessage(HWND hDlg, const TCHAR* msg)
+{
+	SYSTEMTIME time;
+	GetLocalTime(&time);
+
+	TCHAR buf[100];
+	wsprintf(buf, TEXT("%s (%02d:%02d:%02d)"), 
+		msg, time.wHour, time.wMinute, time.wSecond);
+
+	SendMessage(hEdit_Print, EM_REPLACESEL, 0, (LPARAM)buf);
+	SendMessage(hEdit_Print, EM_REPLACESEL, 0, (LPARAM)TEXT("\r\n"));
+}
+
+void ui_GetMessage(HWND hDlg, TCHAR* msg, int size)
+{
+	GetWindowText(hEdit_Send, msg, size);
+}
+
+//전송 후 에디트 컨트롤에 입력된 문자열 제거
+//포커스를 버튼으로...
+void ui_SetSendMessageInit(HWND hDlg)
+{
+	SetWindowText(hEdit_Send, TEXT(""));
+	SetFocus(hEdit_Send);
+}
+
+void ui_MsgPrint(HWND hDlg, void* p)
+{
+	PACKET* pack = (PACKET*)p;
+
+	TCHAR buf[100];
+	wsprintf(buf, TEXT("[%s] %s (%02d:%02d:%02d)"),
+		pack->nickname, pack->msg,
+		pack->dt.wHour, pack->dt.wMinute, pack->dt.wSecond);
+
+	SendMessage(hEdit_Print, EM_REPLACESEL, 0, (LPARAM)buf);
+	SendMessage(hEdit_Print, EM_REPLACESEL, 0, (LPARAM)TEXT("\r\n"));
+}

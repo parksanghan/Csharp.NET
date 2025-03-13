@@ -1,0 +1,144 @@
+[ 비트맵 지원 ]
+
+
+비트맵 관련 클래스 
+
+   Object  <-- MarshalByRefObject <-- Image(추상 클래스)
+
+   Image를 상속받는 Bitmap / Metafile 클래스 
+
+   - System.Drawing 에 정의
+
+   - Image 클래스 : 다양한 이미지 처리 메서드와 속성 제공
+
+   - Bitmap 클래스 : 픽셀 단위로 이미지를 다룰 때 자주 사용
+                            닷넷에서 주로 사용하는 클래스
+
+   - Metafile클래스: 벡터 이미지를 다룰 때 사용
+                            GDI+를 이용 그리기 연산 수행시 해당 정보가 벡터 이미지의 큐에
+                            저장되며 이러한 벡터 정보 이미지를 기록 및 재생 할 수 있슴
+
+        Win OS에서 메타 파일 처리를 위한 파일 형식 
+           - WMF(Windows 메타 파일)
+           - EMF(확장 메타 파일)
+           *) Metafile클래스로 손쉽게 제어 가능
+
+
+1) Image 클래스 (추상 클래스)
+
+  두개의 static 메서드로 이미지 인스턴스 객체를 얻게 됨
+   Image image = Image.FromFile("F15.jpg");	//이미지 파일 읽어 들임
+   Image image = Image.FromStream(stream);	// stream :이미지정보가 포함된 스트림
+
+   Graphics g = e.Graphics;
+   Image image = Image.FromFile("f15.jpg");
+   g.DrawImage( image, 0, 0);           	            //화면에 이미지 출력
+
+
+
+
+2) Bitmap 클래스
+
+    - 고유한 색상 정보를 갖는 각 픽셀들의 배열로 이루어져 있슴
+    - 픽셀 단위로 이미지 조작이 가능한 레스터 방식의 이미지를 조작할 수 있슴
+
+    - Image 클래스를 상속받음
+    - 이미지 생성, 로딩에 관련된 풍부한 생성자와 Getpixel(), SetPixel()의 
+       픽셀 단위 접근 메서드를 제공함
+
+
+예제 1)  이미지를 GDI+화면에 출력
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+public class LoadImage : System.Windows.Forms.Form
+{
+    static void Main()
+    {
+        Application.Run(new LoadImage());
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        Graphics g = e.Graphics;
+        Image bmp = Image.FromFile("f15.jpg");
+        //Bitmap bmp = new Bitmap("f15.jpg");
+
+        this.Height = bmp.Height;
+        this.Width = bmp.Width;
+
+        g.DrawImage(bmp, 0, 0);
+    }
+}
+
+
+
+3) Metafile 클래스
+
+   백터 방식 그래픽을 처리 
+  
+   여러 개의 벡터 정보를 갖는 레코드로 구성되어 있슴
+
+   이들 레코드는 개별적인 점, 선, 사각형, 다각형, 이미지 등의 좌표와 색상 정보를 갖고 
+   있슴
+
+    PlayRecord() 메서드로 메타 파일의 개별적인 레코드를 하나씩 꺼낼수 있슴
+
+  예제 2) 메타 파일 다루기 
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Drawing.Imaging;
+using System.Runtime.InteropServices;
+
+
+public class MetafileExam : System.Windows.Forms.Form
+{
+    private Metafile metafile;
+    private int index;
+    private Graphics.EnumerateMetafileProc metafileDelegate;
+    private Point destPoint;
+
+    public MetafileExam()
+    {
+        metafile = new Metafile("test.wmf");
+        index = 0;
+
+        metafileDelegate = new Graphics.EnumerateMetafileProc(MetafileCallback);
+        destPoint = new Point(20, 10);
+        this.Text = "Metafile 이미지 출력";
+    }
+
+    static void Main()
+    {
+        Application.Run(new MetafileExam());
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        e.Graphics.EnumerateMetafile(metafile, destPoint, metafileDelegate);
+    }
+
+    private bool MetafileCallback(
+        EmfPlusRecordType recordType,
+        int flags,
+        int dataSize,
+        IntPtr data,
+        PlayRecordCallback callbackData)
+    {
+        byte[] dataArray = null;
+        if (data != IntPtr.Zero)
+        {
+            dataArray = new byte[dataSize];
+            Marshal.Copy(data, dataArray, 0, dataSize);
+        }
+
+        metafile.PlayRecord(recordType, flags, dataSize, dataArray);
+        Console.WriteLine("{0} -> type:{1}, flags:{2}, size:{3}", this.index++, recordType, flags, dataSize);
+
+        return true;
+    }
+}

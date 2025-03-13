@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "음료수 관리 프로그램 (시험)", "음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험).csproj", "{743CCD59-6442-4635-A508-E219C34DD64D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{743CCD59-6442-4635-A508-E219C34DD64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743CCD59-6442-4635-A508-E219C34DD64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743CCD59-6442-4635-A508-E219C34DD64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743CCD59-6442-4635-A508-E219C34DD64D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AAFFC095-8EFF-4454-90EA-AE7B4DEF68E8}
+	EndGlobalSection
+EndGlobal

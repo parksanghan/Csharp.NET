@@ -1,0 +1,322 @@
+[ Brush ]
+
+
+Brush 클래스는 추상 클래스로 직접 인스턴스 생성 불가함
+
+상속받은 아래와 같은 클래스로 인스턴스를 생성해서 사용함
+
+
+   클래스	       	     설명
+   ------------------------------------------------------------------
+   [ System.Drawing 네임스페이스에 선언]
+   SolidBrush	     영역을 단색으로 채움
+   TextureBrush	     영역을 이미지(비트맵, jpg, gif등)로 채움
+
+   [ System.Darawing2D  네임스페이스에 선언 ]
+   LinearGradientBrush  영역을 그라데이션 효과로 채움
+   PathGradientBrush    영역의 가장자리에서 중심 쪽으로 그라데이션 효과를 주어 채움
+   HatchBrush	     패턴을 사용해 영역을 채움
+
+
+
+예제 1) 솔리드 브러쉬 사용
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+public class SolidBrushExam : Form
+{
+    public SolidBrushExam()
+    {
+        this.Text = "SolidBrush 사용예";
+    }
+
+    static void Main()
+    {
+        Application.Run(new SolidBrushExam());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        SolidBrush brush = new SolidBrush(Color.Black);
+
+        g.FillRectangle(brush, this.ClientRectangle);
+
+        brush.Color = Color.Yellow;
+        g.FillRectangle(brush, 100, 100, 100, 100);
+
+        brush.Dispose();
+    }
+}
+
+
+
+예제2) TextureBrush 사용
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class TextureBrushExam1 : Form
+{
+    public TextureBrushExam1()
+    {
+        this.Text = "TextureBrush 예제";
+    }
+
+    static void Main()
+    {
+        Application.Run(new TextureBrushExam1());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        Bitmap bmp = new Bitmap("logo.bmp");
+        TextureBrush tb = new TextureBrush(bmp);
+
+        g.FillRectangle(tb, 10, 10, 200, 100);
+        g.FillEllipse(tb, 100, 150, 100, 100);
+
+        bmp.Dispose();
+        tb.Dispose();
+    }
+}
+
+
+
+예제 3) TextureBrush의 WrapMode 속성 사용
+
+   TextureBrush tb = new TextureBrush(bmp);
+   tb.WrapMode    = WrapMode.Tile;
+
+   Clamp     : 질감과 그라데이션을 개체 가장자리에 맞춤
+   Tile         : 질감과 그라데이션을 바둑판 모양으로 배열
+   TileFlipX  : 질감과 그라데이션을 좌우로 대칭 이동한 다음 바둑판 모양으로 배열	
+   TileFlipXY: 질감과 그라데이션을 상하좌우로 대칭 이동한 다음 바둑판 모양으로 배열	
+   TileFilpY  : 질감과 그라데이션을 상하로 대칭 이동한 다음 바둑판 모양으로 배열	
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class TextureBrushExam2 : Form
+{
+    public TextureBrushExam2()
+    {
+        this.Text = "TextureBrush 예제";
+    }
+
+    static void Main()
+    {
+        Application.Run(new TextureBrushExam2());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        Bitmap bmp = new Bitmap("logo.bmp");
+        TextureBrush tb = new TextureBrush(bmp);
+        tb.WrapMode = WrapMode.Tile;		// 영역을 채우는 방법(title선택)
+        //tb.WrapMode = WrapMode.TileFlipX;
+        //tb.WrapMode = WrapMode.TileFlipXY;
+        //tb.WrapMode = WrapMode.TileFlipY;
+
+        g.FillRectangle(tb, this.ClientRectangle);
+
+        bmp.Dispose();
+        tb.Dispose();
+    }
+}
+
+
+예제 4) LinearGradientBrush
+
+  영역의 내부를 그라데이션 효과로 채움
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class LinearGradientBrushExam : Form
+{
+    public LinearGradientBrushExam()
+    {
+        this.Text = "LinearGradientBrush 예제";
+    }
+
+    static void Main()
+    {
+        Application.Run(new LinearGradientBrushExam());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        Point pt1 = new Point(0, 0);
+        Point pt2 = new Point(30, 30);
+        Rectangle rect = new Rectangle(0, 0, 50, 50);
+
+        // (0,0) 빨간색 좌표  (30,30) 파란색 설정
+        // 두 점사이의 직선을 따라 빨간색에서 파란색으로 그라데이션 효과를
+        // 주는 브러쉬로 영역을 채움
+        LinearGradientBrush lgb1 = new LinearGradientBrush(pt1, pt2, Color.Red, Color.Blue);
+        LinearGradientBrush lgb2 = new LinearGradientBrush(rect, Color.Yellow, Color.Magenta, 45.0f);
+
+        g.FillEllipse(lgb1, 30, 50, 100, 100);
+        g.FillRectangle(lgb2, 150, 50, 100, 100);
+
+        lgb1.Dispose();
+        lgb2.Dispose();
+    }
+}
+
+
+예제 5) PathGradientBrush
+
+   개체 내부를 그라데이션 효과로 채움
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class PathGradientBrushExam : Form
+{
+    public PathGradientBrushExam()
+    {
+        this.Text = "PathGradientBrush 예제";
+    }
+
+    static void Main()
+    {
+        Application.Run(new PathGradientBrushExam());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        GraphicsPath gp = new GraphicsPath();
+        gp.AddLine(150, 10, 300, 100);
+        gp.AddLine(300, 100, 270, 250);
+        gp.AddLine(270, 250, 150, 300);
+        gp.AddLine(150, 300, 50, 250);
+        gp.AddLine(50, 250, 30, 150);
+        gp.AddLine(30, 150, 50, 70);
+        gp.AddLine(50, 70, 150, 10);
+        gp.CloseFigure();
+
+        PathGradientBrush pgb = new PathGradientBrush(gp);
+
+        // 그라데이션의 가운데 색상을 설정
+        pgb.CenterColor = Color.White;
+
+        // 색 배열을 설정
+        pgb.SurroundColors = new Color[] { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Magenta };
+
+        g.FillPath(pgb, gp);
+        g.DrawPath(Pens.Black, gp);
+
+        pgb.Dispose();
+        gp.Dispose();
+    }
+}
+
+
+예제 6) HatchBrush
+
+   다양한 빗살 무늬로 영역을 채움
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+public class HatchBrushExam : Form
+{
+    public HatchBrushExam()
+    {
+        this.Text = "HatchBrush 예제";
+    }
+
+    static void Main()
+    {
+        Application.Run(new HatchBrushExam());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        HatchBrush hb = new HatchBrush(HatchStyle.Divot, Color.Red, Color.Blue);
+        g.FillRectangle(hb, this.ClientRectangle);
+
+        hb = new HatchBrush(HatchStyle.Cross, Color.Orange, Color.Green);
+        g.FillRectangle(hb, 50, 50, 100, 100);
+
+        hb = new HatchBrush(HatchStyle.DiagonalBrick, Color.Pink, Color.Cyan);
+        g.FillRectangle(hb, 150, 50, 100, 100);
+
+        hb = new HatchBrush(HatchStyle.Wave, Color.Yellow, Color.Magenta);
+        g.FillRectangle(hb, 50, 150, 100, 100);
+
+        hb = new HatchBrush(HatchStyle.ZigZag, Color.White, Color.Black);
+        g.FillRectangle(hb, 150, 150, 100, 100);
+
+        hb.Dispose();
+    }
+}
+
+
+
+예제 7) TextBrush : 브러쉬를 이용한 글자 출력
+
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+
+public class TextBrushExam : Form
+{
+    public TextBrushExam()
+    {
+        this.Text = "TextBrush 예제";
+    }
+
+    static void Main()
+    {
+        Application.Run(new TextBrushExam());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        Bitmap bmp = new Bitmap("logo.bmp");
+        Rectangle rect = new Rectangle(0, 0, 20, 20);
+        Font font = new Font("궁서체", 30, FontStyle.Bold);
+
+        Brush brush = new TextureBrush(bmp);
+        g.DrawString("TexTureBrush...", font, brush, 10, 20);
+        brush = new LinearGradientBrush(rect, Color.Yellow, Color.Magenta, 45.0f);
+        g.DrawString("LinearGradientBrush...", font, brush, 10, 70);
+        brush = new HatchBrush(HatchStyle.Cross, Color.Orange, Color.Green);
+        g.DrawString("HatchBrush...", font, brush, 10, 120);
+
+        brush.Dispose();
+
+    }
+}
+
+ 
+   Pens 클래스와 마찬가지로 141개의 표준 Color색상을 사용해 단색 브러쉬를 생성함
+
+   Brushes.Blue 	== new SolidBrush(Color.Blue)와 동일
+
+
+
+
+
+
+

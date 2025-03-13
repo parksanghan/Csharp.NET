@@ -1,0 +1,12 @@
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\bin\Debug\음료수 관리 프로그램 (시험).exe.config
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\bin\Debug\음료수 관리 프로그램 (시험).exe
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\bin\Debug\음료수 관리 프로그램 (시험).pdb
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\bin\Debug\1018_Wb_Client.dll
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\obj\Debug\음료수 관리 프로그램 (시험).csproj.AssemblyReference.cache
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\obj\Debug\음료수_관리_프로그램__시험_.Main.resources
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\obj\Debug\음료수_관리_프로그램__시험_.Properties.Resources.resources
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\obj\Debug\음료수 관리 프로그램 (시험).csproj.GenerateResource.cache
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\obj\Debug\음료수 관리 프로그램 (시험).csproj.CoreCompileInputs.cache
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\obj\Debug\음료수 관리 프로그램 (시험).csproj.CopyComplete
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\obj\Debug\음료수 관리 프로그램 (시험).exe
+C:\Users\dokur\OneDrive\바탕 화면\비트고급폴더\음료수 관리 프로그램 (시험)\음료수 관리 프로그램 (시험)\obj\Debug\음료수 관리 프로그램 (시험).pdb

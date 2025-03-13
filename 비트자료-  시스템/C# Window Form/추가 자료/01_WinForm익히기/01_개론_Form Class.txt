@@ -1,0 +1,400 @@
+[ WinForm ]
+
+개 념 : Windows programming을 만들기 위한 API(Win32와 비슷)
+
+           Form 클래스는 윈폼 프로그램의 기반이 되는 폼을 정의한 개체임
+           - 제목 표시줄(캡션바) / 윈도우 클라이언트의 영역을 가지고 있슴
+              즉, 비클라이언트영역과 클라이언트 영역으로 구분
+
+내 용 : 풍부한 컨트롤
+        분산 컴퓨팅, n-tier응용 프로그램 개발을 위한 다양한 기능 제공
+        
+          GDI+(Graphics Device Interface plus) 지원
+          그래픽을 위한 MS차세대 API
+          창, 비트맵, 프린터라는 세 종류의 그리기 표면 제공
+          GDI확장 및 다양한 고급 기능 추가됨
+
+관련 네임스페이스
+
+    WinForm : System.Windows.Forms
+
+              ==> System.Windows.Forms.dll에 구현되어 있슴
+    
+    GDI+    : System.Drawing
+
+              System.Drawing : 이미지, 색, 브러시, 펜, 글꼴 등 기본 그래픽 기능
+              System.Drawing.Drawing2D : 고급 레스터 및 백터 그래픽 기능
+              System.Drawing.Imaging : 이미지 처리에 관련 고급 기능
+              System.Drawing.Printing : 인쇄 및 인쇄 미리보기 기능
+              System.Drawing.Text : 고급 글꼴 제어 기능
+              System.Drawing.Desing : 사용자 지정 컨트롤의 디자인 시점 지원
+	
+               ==> 모두 System.Drawing.dll에 구현되어 있슴
+
+
+윈폼 구현하기
+
+ 필요사항
+ 1) System.Windows.Forms 네임스페이스 선언
+ 2) [참조] 항목에 System.Windows.Forms.dll 파일 등록
+ 3) Form 클래스를 이용한 윈도우 화면 구성
+ 4) Application.Run(...) 을 이용한 윈도우 프로그램 구동
+
+
+*) 예제 구현1) : 
+    콘솔 프로그램에서 WinForm구현하기 
+    c:\csc.exe /target:winexe /reference:System.Drawing.dll;System.Windows.Forms.dll NewWinForm.cs
+
+  using System;
+  using System.Windows.Forms;
+
+  class Program
+  {
+      static void Main(string[] args)
+      {
+
+	  // Application : 응용프로그램의 시작 및 중지를 위한 메서드,
+	  //               윈도우 메시지 처리, 응용프로그램 정보를 가져오기 
+	  //               위한 속성 관리등을 함
+	  
+          // Run : Form클래스의 인스턴스를 등록하게 되면
+	  //       윈도우 메시지의 처리 루틴 동작하게 됨
+          Application.Run(new Form());
+	//System.Windows.FormsApplication.Run(new System.Windows.Forms.Form());
+      }
+  }
+
+
+ *) 예제 구현2) : 
+    콘솔 프로그램에서 WinForm구현하기: 개선된 윈도우 출력
+
+using System;
+using System.Windows.Forms;
+class NewWinForm2
+{
+    static void Main(string[] args)
+    {
+        Form obj = new Form();
+        obj.Text = "Form클래스를 이용한 윈폼";		// 제목표시줄에 글자 출력
+        obj.SetBounds(10, 10, 300, 150);			// 윈폼 크기 지정
+        obj.MaximizeBox = false;			// 윈도우 버튼 속성 지정
+        obj.StartPosition = FormStartPosition.CenterScreen;	// 초기 출력위치 
+						// 윈폼 크기 지정시 초기 출력위치가 변경됨
+        Application.Run(obj);
+    }
+}
+
+
+
+ *) Form의 계층도
+
+    Object <-- MarshalByRefObject <-- Component <-- Control <-- ScrollableControl <-- ContainerControl <-- Form
+
+    - Component : 응용 프로그램간 개체 공유를 가능케 하는 IComponent 인터페이스를 상속받은
+                  클래스로 모든 윈폼 개체의 출발점임
+   
+    - Control   : 버튼, 텍스트, 라벨 등의 사용자 인터페이스 개체들의 기반 클래스로 
+                  키보드/마우스 처리, 화면 출력 등의 컨트롤 기본 기능을 갖고 있슴
+
+    - ScrollableControl : 자동 스크롤 기능을 구현한 클래스로 
+                          출력할 폼의 클라이언트 영역이 화면 표시 영역을 벗어날 경우 
+                          스크롤 관련 처리 수행
+  
+    - ContainerContrl : 폼에 다른 컨드롤을 담을 수 있는 속성 제공 
+
+    - Form : 상위 클래스의 기능을 가지고 있게 됨
+
+             컨트롤(contrl)의 일종이다.
+             표시할 영역이 화면에서 벗어나더라도 스크롤을 이용해 표시가 가능하다.
+             다른 컨트롤을 담을 수 있는 부모 컨트롤(ContainerControl)이다.
+
+
+ 
+
+  
+
+
+ *) 예제 구현3) : 
+    콘솔 프로그램에서 WinForm구현하기: 여러 개의 윈폼 출력
+
+using System;
+using System.Windows.Forms;
+class NewWinForm3
+{
+    static string[] strText = { "빨", "주", "노", "초", "파", "남", "보" };
+    static void Main(string[] args)
+    {
+        Form[] wnd = new Form[7];
+        for (int i = 0; i < 7; i++)
+        {
+            wnd[i] = new Form();
+            wnd[i].Text = strText[i];
+            wnd[i].SetBounds((i + 1) * 10, (i + 1) * 10, 100, 100);
+            wnd[i].MaximizeBox = false;
+            wnd[i].Show();
+            Console.WriteLine("{0} 번째 윈도우 출력 성공!!!", i);
+        }
+
+        Application.Run(wnd[0]);
+        // 창이 여러개일 경우에도 Run메서드에 등록하는 Form 개체 인스턴스는
+       //  한번만 설정하면 됨
+
+         // 첫번째 윈도우를 등록... : 등록된 윈도우만 메시지루프가 구동됨
+        // 이를 주석처리하면 Show되었다가 사라짐
+        // 등록된 놈을 제거하면 모두 제거됨
+    }
+}
+
+
+ *) 예제 구현4) : 
+    콘솔 프로그램에서 WinForm구현하기: 클래스 상속받아 윈도우 만들기
+    보통의 구현처리 방식임 : 자유로운 폼 구현처리를 위해서(상속 없이 사용시 기본 폼 이상의 구현 제약이 있슴)
+    - 장점 : 프로그램의 복잡성을 줄인다.
+                   Main()메서드에서Form 개체를 만들고 속성을 지정할 경우, 폼의 속성이나 폼이 
+                   여러 개일 경우 프로그램이 필요 이상 복잡해 질수 있다.
+
+	  다양한 속성이 추가된 사용자 윈도우를 구현할 수 있다.
+                   폼에 버튼, 라벨 등의 컨트롤 추가가 어려우며 
+                   새로운 속성과 메서드를 추가하기도 어렵다.
+
+                이벤트 처리가 쉽다.
+                   Form 개체를 직접 사용하게 되면 이벤트 처리가 필요 이상 복잡해 지게 됨
+
+
+using System;
+using System.Windows.Forms;
+class NewWinForm4 : Form
+{
+    public NewWinForm4(string strText)
+    {
+        this.Text = strText;
+        this.Top = 10;
+        this.Left = 10;
+        this.Width = 250;
+        this.Height = 200;
+        this.MaximizeBox = false;
+        this.MinimizeBox = false;
+        this.Show();
+    }
+    static void Main(string[] args)
+    {
+        Application.Run(new NewWinForm4("상속받아 구현된 윈도우"));
+    }
+}
+
+
+  *) 예제 구현 5)
+     콘솔 프로그램에서 WinForm구현하기 : 이벤트 등록/해제 처리
+
+     Form 에는 다양한 이벤트가 정의되어 있슴
+      - 폼 초기화 시 : Load
+      - 폼 종료시    : FormClosed
+      - 마우스 발생시: MouseMove
+      - 키가 눌릴때  : keyDown
+      - 윈도우 크기 변경시 : ClientSize
+
+
+    이벤트 등록 / 처리 방법
+
+      이벤트 등록
+        [이벤트이름] += new System.EventHandler(이벤트처리메서드이름);
+
+      이벤트 해제
+        [이벤트이름] -= new System.EventHandler(이벤트처리메서드이름);
+
+      ==> EventHandler()메서드에 등록하는 이벤트 처리메서드의 형태
+          private void 메서드이름(object sender, System.EventArgs e){...}
+
+
+using System;
+using System.Windows.Forms;
+class NewWinForm5 : Form
+{
+    public NewWinForm5(string strText)
+    {
+        this.Text = strText;
+        this.Load += new System.EventHandler(this.Form_Load);
+        this.FormClosed += new FormClosedEventHandler(this.Form_Closed);
+        this.Show();
+    }
+    static void Main(string[] args)
+    {
+        Application.Run(new NewWinForm5("이벤트 등록"));
+    }
+
+   // 초기화 작업 표시 
+    private void Form_Load(object sender, System.EventArgs e)
+    {
+        Console.WriteLine("윈도우가 Load 됩니다.");
+    }
+
+   // 종료 작업 표시 
+    private void Form_Closed(object sender, FormClosedEventArgs e)
+    {
+        Console.WriteLine("윈도우가 Closed 됩니다.");
+    }
+}
+
+
+
+  * 예제구현 6) 
+    콘솔 프로그램에서 WinForm구현하기 : 이벤트 처리 예제
+   
+using System;
+using System.Windows.Forms;
+class NewWinForm6 : Form
+{
+    public NewWinForm6(string strText)
+    {
+        this.Text = strText;
+
+        //마우스가 해당 컨트롤에 진입할 때 발생되는 이벤트 
+        this.MouseEnter += new System.EventHandler(this.Form_MouseEnter);
+
+        //마우스가 해당 컨트롤에서 빠져나갈때 발생되는 이벤트
+        this.MouseLeave += new System.EventHandler(this.Form_MouseLeave);
+
+        // 마우스가 해당 컨트롤 위에서 움직일 때 발생되는 이벤트 
+        this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
+        //this.MouseMove -= new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
+
+
+        // 폼이 닫히는 동안 발생하는 이벤트 
+        // 프로그램 종료시 먼저 호출
+        // 폼 닫기를 취소하고자 한다면 : e.Cancel을 true로 설정
+        this.FormClosing += new FormClosingEventHandler(this.Form_Closing);
+
+
+        // 폼이 닫힐 때 발생되는 이벤트
+        // Close()메서드에 의해 폼이 닫힌 직후에 발생됨
+        // 만약) 윈도우 종료버튼 클릭시 폼이 닫히지 않게 처리하고 싶다면?
+        //       여기서는 늦음 : FormClosing에서 처리필요
+        // 여기서는 폼에 사용된 리소스 해제 작업 및
+        // 폼에 입력된 정보를 저장하거나 부모 폼을 업데이트 하는데 
+        // 주로 사용됨
+        this.FormClosed += new FormClosedEventHandler(this.Form_Closed);
+
+
+        this.Show();
+    }
+    static void Main(string[] args)
+    {
+        Application.Run(new NewWinForm6("이벤트 등록"));
+    }
+
+    // 이벤트 핸들러의 인자 확인할 것!....
+    private void Form_MouseEnter(object sender, System.EventArgs e)
+    {
+        Console.WriteLine("MouseEnter 이벤트 발생!!!");
+    }
+
+    private void Form_MouseLeave(object sender, System.EventArgs e)
+    {
+        Console.WriteLine("MouseLeave 이벤트 발생!!!");
+
+    }
+
+    private void Form_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+    {
+        Console.WriteLine("MouseMove 이벤트 발생!!!");
+        Console.WriteLine("(x,y)=({0},{1})", e.X, e.Y);
+    }     
+
+    private void Form_Closed(object sender, FormClosedEventArgs e)
+    {
+        Console.WriteLine("윈도우가 Closed 됩니다.");
+        
+    }
+
+    private void Form_Closing(object sender, FormClosingEventArgs e)
+    {
+        Console.WriteLine("윈도우가 Closing 됩니다.");
+//      e.Cancel = true;
+    }
+}
+
+
+
+  * 예제구현 7) Partial Types 윈도우 작성
+
+    닷넷 2.X버전 이상에서 추가된 기능
+
+     - 클래스를 여러 개의 파일로 분할해 정의할 수 있는 기능
+
+     - partial 키워드로 동일한 네임스페이스 공간에 선언된 하나의 
+       큰 클래스를 여러 개의 파일로 쪼갤 수 있는 기능임
+
+     - parial 키워드를 붙여 여러 파일로 쪼개 구현한 클래스는 C# 컴파일러에
+       의해 하나의 클래스 파일로 합쳐져 컴파일됨 
+
+     - 즉,윈폼 프로그램의 GUI부분과 이벤트 처리부분을 서로 다른 파일에 
+       기술할 수 있어 코드 관리에 많은 장점을 주게 됨
+
+
+    파일 1) program.cs
+
+// program.cs : main문의 구성
+
+using System;
+using System.Windows.Forms;
+
+namespace PartialType
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Application.Run(new TestNewWinForm("Partial Type 예제"));
+        }
+    }   
+}
+
+   파일 2) codefile1.cs
+
+//codefile1.cs : 상속 및 생성자 구성
+
+using System;
+using System.Windows.Forms;
+
+namespace PartialType
+{
+    public partial class TestNewWinForm : Form
+    {
+        public TestNewWinForm(string strText)
+        {
+            this.Text = strText;
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form_MouseMove);
+            this.Closed += new System.EventHandler(this.Form_Closed);
+            this.Show();
+        }
+    }
+}
+
+
+   파일 3) codefile2.cs
+
+// codefile2.cs : 이벤트 핸들러 구성
+
+using System;
+using System.Windows.Forms;
+
+namespace PartialType
+{
+    partial class TestNewWinForm
+    {
+        private void Form_MouseMove(object sender, System.Windows.Forms.MouseEventArgs e)
+        {
+            Console.WriteLine("MouseMove 이벤트 발생!!!");
+            Console.WriteLine("(x,y)=({0},{1})", e.X, e.Y);
+        }
+
+        private void Form_Closed(object sender, System.EventArgs e)
+        {
+            Console.WriteLine("윈도우가 Closed 됩니다.");
+        }
+
+    }
+}
+
+
+
