@@ -1,0 +1,13 @@
+//std.h
+#pragma once
+
+#pragma comment (linker, "/subsystem:windows")		// "/subsystem:console"
+
+#include <Windows.h>
+#include <tchar.h>
+#include "resource.h"
+
+#include "shape.h"
+#include "handler.h"
+#include "shapeSet.h"
+#include "shapeCur.h"

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="WB_UI">
+      <UniqueIdentifier>{ad499ea4-0ca2-4c91-a4ce-b40c1e77687b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WB_NETWORK">
+      <UniqueIdentifier>{13554c11-8b22-4339-9347-05ab3d704a0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WB_DATA">
+      <UniqueIdentifier>{ba6d4020-dd20-49de-8c82-8c94c585ab67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WB_MAIN">
+      <UniqueIdentifier>{b6c00744-aaae-44f1-85ff-d710e97d5e5d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="std.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_delete.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_header.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_insert.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_print.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_select.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_update.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="net.h">
+      <Filter>WB_NETWORK</Filter>
+    </ClInclude>
+    <ClInclude Include="packet.h">
+      <Filter>WB_NETWORK</Filter>
+    </ClInclude>
+    <ClInclude Include="account.h">
+      <Filter>WB_DATA</Filter>
+    </ClInclude>
+    <ClInclude Include="control.h">
+      <Filter>WB_MAIN</Filter>
+    </ClInclude>
+    <ClInclude Include="handler.h">
+      <Filter>WB_MAIN</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="0921_계좌관리(Client_UI).rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ui_delete.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_header.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_insert.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_print.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_select.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_update.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="net.cpp">
+      <Filter>WB_NETWORK</Filter>
+    </ClCompile>
+    <ClCompile Include="packet.cpp">
+      <Filter>WB_NETWORK</Filter>
+    </ClCompile>
+    <ClCompile Include="account.cpp">
+      <Filter>WB_DATA</Filter>
+    </ClCompile>
+    <ClCompile Include="start.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="handler.cpp">
+      <Filter>WB_MAIN</Filter>
+    </ClCompile>
+    <ClCompile Include="control.cpp">
+      <Filter>WB_MAIN</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

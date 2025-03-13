@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="WB_UI">
+      <UniqueIdentifier>{cb03f972-7889-4f00-944a-c1ef0a137da2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WB_NETWORK">
+      <UniqueIdentifier>{475d43cc-9c31-43a3-b2d6-d8c2f4cba499}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="control.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="handler.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="std.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_download.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_upload.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_message.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="net.h">
+      <Filter>WB_NETWORK</Filter>
+    </ClInclude>
+    <ClInclude Include="net_upload.h">
+      <Filter>WB_NETWORK</Filter>
+    </ClInclude>
+    <ClInclude Include="net_download.h">
+      <Filter>WB_NETWORK</Filter>
+    </ClInclude>
+    <ClInclude Include="packet.h">
+      <Filter>WB_NETWORK</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="0925_파일클라이언트.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ui_download.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_upload.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_message.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="net.cpp">
+      <Filter>WB_NETWORK</Filter>
+    </ClCompile>
+    <ClCompile Include="net_upload.cpp">
+      <Filter>WB_NETWORK</Filter>
+    </ClCompile>
+    <ClCompile Include="net_download.cpp">
+      <Filter>WB_NETWORK</Filter>
+    </ClCompile>
+    <ClCompile Include="control.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="handler.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="packet.cpp">
+      <Filter>WB_NETWORK</Filter>
+    </ClCompile>
+    <ClCompile Include="start.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="구현순서.txt" />
+  </ItemGroup>
+</Project>

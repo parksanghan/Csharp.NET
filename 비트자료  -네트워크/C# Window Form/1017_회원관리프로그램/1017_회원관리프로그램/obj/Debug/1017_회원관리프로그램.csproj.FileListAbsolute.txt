@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\bin\Debug\1017_회원관리프로그램.exe.config
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\bin\Debug\1017_회원관리프로그램.exe
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\bin\Debug\1017_회원관리프로그램.pdb
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\1017_회원관리프로그램.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\1017_회원관리프로그램.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\_1017_회원관리프로그램.Dlg_MemberDelete.resources
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\_1017_회원관리프로그램.Dlg_MemberInsert.resources
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\_1017_회원관리프로그램.Dlg_MemberSelect.resources
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\_1017_회원관리프로그램.Form1.resources
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\_1017_회원관리프로그램.Properties.Resources.resources
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\1017_회원관리프로그램.csproj.GenerateResource.cache
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\1017_회원관리프로그램.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\1017_회원관리프로그램.exe
+C:\Users\user\Desktop\닷넷예제\1017_회원관리프로그램\1017_회원관리프로그램\obj\Debug\1017_회원관리프로그램.pdb

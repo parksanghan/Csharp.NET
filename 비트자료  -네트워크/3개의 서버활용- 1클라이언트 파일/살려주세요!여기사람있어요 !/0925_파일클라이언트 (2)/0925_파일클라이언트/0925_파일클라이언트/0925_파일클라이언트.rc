@@ -1,0 +1,121 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_MAIN DIALOGEX 0, 0, 659, 305
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_MESSAGE,21,26,208,194,ES_MULTILINE | ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | WS_VSCROLL
+    PUSHBUTTON      "전송",IDC_BTN_MESSAGE,174,235,50,14
+    PUSHBUTTON      "파일다운로드",IDC_BTN_FILEDOWN,320,284,50,14
+    LISTBOX         IDC_LIST_FILELIST,261,45,172,175,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "전체경로",IDC_STATIC,271,231,30,8
+    LTEXT           "파일명",IDC_STATIC,272,245,23,8
+    EDITTEXT        IDC_EDIT_DOWN_FILEDIR,319,225,319,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_DOWN_FILENAME,319,243,315,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "파일리스트얻기",IDC_BTN_FILELIST,383,24,50,14
+    PUSHBUTTON      "파일찾기...",IDC_BTN_UPLOAD_FILEFIND,573,28,50,14
+    LTEXT           "일명",IDC_STATIC,465,57,30,8
+    LTEXT           "사이즈",IDC_STATIC,466,71,23,8
+    EDITTEXT        IDC_EDIT_UP_FILE_FULLNAME,520,52,108,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_UP_FILE_NAME,519,71,108,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "파일찾기...",IDC_BTN_DOWN_FILE,575,99,50,14
+    LTEXT           "파일크기",IDC_STATIC,273,264,30,8
+    EDITTEXT        IDC_EDIT_DOWN_FILESIZE,319,262,312,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 652
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 298
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_MAIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

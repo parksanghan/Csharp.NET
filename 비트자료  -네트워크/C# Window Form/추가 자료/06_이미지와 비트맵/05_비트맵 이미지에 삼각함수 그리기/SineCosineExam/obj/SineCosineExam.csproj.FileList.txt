@@ -1,0 +1,8 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\SineCosineExam.Form1.resources
+obj\Debug\SineCosineExam.Properties.Resources.resources
+obj\Debug\SineCosineExam.csproj.GenerateResource.Cache
+bin\Debug\SineCosineExam.exe
+bin\Debug\SineCosineExam.pdb
+obj\Debug\SineCosineExam.exe
+obj\Debug\SineCosineExam.pdb

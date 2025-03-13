@@ -1,0 +1,124 @@
+[ 무효화 영역과 Invalidate() 메서드 ]
+
+예제 1) Invalidate 메서드를 이용한 무효화 처리
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam13 : Form
+{
+    public GDIExam13()
+    {
+        this.Text = "Invalidate 예제";
+        this.Click += new EventHandler(this.GDIExam_Click);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam13());
+    }
+
+    private void DrawGraphics()
+    {
+       // Graphics 개체 얻기
+        Graphics g = this.CreateGraphics();
+
+       // 사각형 테두리 그리기 
+        g.DrawRectangle(Pens.Black, 10, 10, 200, 200);
+        // 사각형 안쪽을 노란색으로 채움
+        g.FillRectangle(Brushes.Yellow, 20, 20, 180, 180);
+        // 문자열 출력 
+        g.DrawString("사라지는 색상", this.Font, Brushes.Black, 30, 100);
+
+    }
+
+   // 마우스 왼쪽 버튼 클릭시 호출 
+    private void GDIExam_Click(object sender, System.EventArgs e)
+    {
+        this.DrawGraphics();
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        // 자동으로 화면 갱신
+        // this.DrawGraphics();
+    }
+
+}
+
+
+예제2) Invalidate()메서드를 사용해 영역 갱신하기
+    - 표면이 화면일 경우만 가능
+    - 그리기 표면이 프린터나 이미지일 경우에는 Invalidate()
+       메서드를 이용한 무효화 메커니즘이 작동되지 않음
+
+using System;
+
+using System.Drawing;
+using System.Windows.Forms;
+class GDIExam14 : Form
+{
+    int signal = 0;
+    string[] str = new string[3] { "빨강", "노랑", "녹색" };
+    public GDIExam14()
+    {
+        this.Text = "신호등 예제";
+        this.Size = new Size(150, 400);
+
+        Timer time = new Timer();// timer객체 생성, 메서드 호출 
+        time.Interval = 1000;
+        time.Enabled = true;
+        time.Tick += new EventHandler(time_Tick);
+    }
+
+    static void Main(string[] args)
+    {
+        Application.Run(new GDIExam14());
+    }
+
+    // 1초에 한번씩 호출 
+    private void time_Tick(object sender, EventArgs ea)
+    {
+        Random rnd = new Random();
+        signal = rnd.Next(3);		// 난수 발생
+
+        Console.WriteLine(str[signal] + " 발생");
+
+       // 특정 영역 갱신
+        this.Invalidate(new Rectangle(10, 10, 120, 350));
+        //	this.Invalidate();	// 화면 전체 갱신 
+        this.Update();
+    }
+
+
+    // 신호등 외곽선 그리기
+    private void DrawOutLine(Graphics g)
+    {
+        Pen pen = new Pen(Color.White, 3);
+        g.FillRectangle(Brushes.Black, 10, 10, 120, 350);
+        g.DrawEllipse(pen, 20, 20, 100, 100);	//빨강 테두리 그리기 
+        g.DrawEllipse(pen, 20, 130, 100, 100);	// 노랑 테두리 그리기
+        g.DrawEllipse(pen, 20, 240, 100, 100);	// 녹색 테두리 그리기
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Console.WriteLine("Invalidate 영역 = " + pea.ClipRectangle);
+        Graphics g = pea.Graphics;
+        DrawOutLine(g);		// 신호등 외곽선 그리기 
+
+        switch (signal)
+        {
+            case 0: // red
+                g.FillEllipse(Brushes.Red, 20, 20, 100, 100);
+                break;
+            case 1: // yellow
+                g.FillEllipse(Brushes.Yellow, 20, 130, 100, 100);
+                break;
+            case 2: // green
+                g.FillEllipse(Brushes.Green, 20, 240, 100, 100);
+                break;
+
+        }
+    }
+}

@@ -1,0 +1,57 @@
+[구현단계]
+
+[대화상자 기반 응용 프로그램]
+
+1. 기본 파일 생성
+    std.h / start.cpp  / handler.h  / handler.cpp
+
+2. 대화상자 리소스 생성
+   자동으로 resource.h / xxx.rc 이 생성됨 
+   ID를 변경처리 : IDD_DIALOG_MAIN
+
+3. 기본 코드 구성
+   INT_PTR CALLBACK DlgProc(HWND hDlg, UINT msg, WPARAM wParam, LPARAM lParam);
+
+   INT_PTR ret = DialogBox(hInst,// instance
+		MAKEINTRESOURCE(IDD_DIALOG_MAIN), // 다이얼로그 선택
+		0, // 부모 윈도우
+		DlgProc); // Proc..
+
+4. 화면 UI 구성(적절한 컨트롤 생성)
+   4.1 설정(set)정보
+        타입   콤보박스 ( IDC_SET_COMBO_TYPE)
+        위치    에디트  (IDC_SET_EDIT_X)  (IDC_SET_EDIT_Y)  
+        크기   콤보박스 ( IDC_SET_COMBO_SIZE)
+        색상   에디트   (IDC_SET_EDIT_R)   픽처박스(IDC_SET_STATIC_COLOR)
+                        (IDC_SET_EDIT_G)
+                        (IDC_SET_EDIT_B)
+
+        모든 에디트 (*읽기 전용으로 속성 변경)
+
+    4.2 선택된 도형(cur)정보
+        타입   콤보박스 ( IDC_CUR_COMBO_TYPE)
+        위치    에디트  (IDC_CUR_EDIT_X)  (IDC_CUR_EDIT_Y)  
+        크기   콤보박스 ( IDC_CUR_COMBO_SIZE)
+        색상   에디트   (IDC_CUR_EDIT_R)   픽처박스(IDC_CUR_STATIC_COLOR)
+                        (IDC_CUR_EDIT_G)
+                        (IDC_CUR_EDIT_B)
+     
+               버튼(IDC_CUR_UPDATE)  (IDC_CUR_DELETE)
+
+    4.3 전체출력(PRINT)정보
+        저장개수  스태틱 (IDC_PRINT_COUNT)
+
+        리스트박스  IDC_PRINT_LIST
+
+
+5. 프로그램 시작
+
+   5.1 타입 정의
+       Shape
+       int type;       타입( 사각형(1), 타원(2), 삼각형(3) )
+       POINT pt;       위치(출력 중앙)
+       int size;       크기(25, 50, 75)
+       COLORREF color; 색상(빨, 녹, 파, 선택…)
+
+       shape.h / cpp
+       h : 구조체 정의

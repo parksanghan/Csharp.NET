@@ -1,0 +1,5 @@
+bin\Debug\KeyExamChar.exe
+bin\Debug\KeyExamChar.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\KeyExamChar.exe
+obj\Debug\KeyExamChar.pdb

@@ -1,0 +1,120 @@
+[마우스 ]
+
+1. 마우스 정보 
+    - System.Windows.Forms 네임스페이스의 Systeminformation클래스 이용
+      	MouseWheelPresent (bool) 마우스 휠이 있으면 true리턴
+	MouseWheelScrollDelta(int) 마우스 휠 회전 증분에 대한 델타값 크기 반환
+	MouseWheelScrollLines(int) 마우스 휠이 회전될때 스크롤할 줄의 수
+	MouseButtons(int)	마우스에 있는 버튼 수 반환
+	MouseButtonsSwapped(bool)마우스 왼쪽 및 오른쪽 버튼의 기능이 바뀌었으면
+				true, 아니면 false반환
+	MouseSpeed(int) 현재 마우스 속도 반환
+	DoubleClickTime(int) 더블 클릭이 이루어지기 위해 첫번째 클릭 이후 두번째 클릭
+			  할때까지의 제한 시간
+	DoubleClickSize(size) 사용자 입력이 더블 클릭으로 간주되기 위한 영역의 최소 크기 
+
+2. 마우스 이벤트 처리 
+   MouseEnter	: 마우스커서가 컨트롤 위를 지나갈 때 발생
+   MouseLeave       : 마우스 커서가 컨트롤 영역을 벗어날 때 발생
+   MouseHover	: 마우스 커서가 컨트롤 영역으로 들어와 움직임을 멈춘 후 발생
+	                (MouseEnter와 MouseLeave 사이에 반드시 한번은 발생함)
+
+
+3. 마우스 이벤트의 발생 순서
+
+   1) MouseEnter : 특정 컨트롤 영역 진입
+   2) MouseMove : 마우스 포인터 이동
+   3) MouseHover / MouseDown / MouseWheel : 이동 또는 버튼 조작
+   4) Mouseup  : 버튼 놓음
+   5) MouseLeave : 특정 컨트롤 영역에서 빠져 나옴 
+
+
+4. 마우스 이벤트 
+    Click
+    DoubleClick
+
+
+5. 마우스 커서 변경
+   속성창에서 ...
+
+    Cursor 관련 속성
+    Current (Cursor)  마우스 커서를 나타내는 커서 개체를 가져오거나 설정
+    position (Point)    커서 위치를 가져오거나 설정
+    Clip( Rectangle)    커서의 클리핑 사각형을 나타내는 영역을 가져오거나 설정
+
+    Cursor관련 메서드
+    Show()   마우스 커서를 화면에 출력
+    Hide()    마우스 커서를 화면에서 제거 
+
+
+    static bool cursor_onoff = false; /// 현재 커서 저장
+  
+    void foo()
+    {
+	if( cursor_onoff)
+	{
+		this.Cursor = System.Windows.Foms.Cursors.WaitCursor;
+		cursor_onoff = false;
+	}
+	else
+	{
+		this.Cursor = Sytstem.Windows.Forms.Cursors.Defulat;
+		cursor_onoff = true;
+	}
+    }
+
+
+6. 마우스 휠 사용
+
+
+7. 마우스 이벤트 처리
+
+
+8. 키 이벤트 처리 
+
+   키보드는 활성화 폼에서만 입력 가능
+
+   4가지 종류의 그룹으로 구분
+
+   - 문자키 : 문자, 숫자 ,<Space>, <Tab>, <BackSpace>, <Esc>
+
+   - 비문자키 : 방향키, 함수키, 삭제, 삽입 키들로 문자 입력과는 직접적인 연관이 없습
+   
+   - 토글키 : <Caps Lock> < Num Lock > < Scroll Lock> < Insert>
+
+   - 쉬프트키 : <Shift> <Alt> < Ctrl> 등으로 다른 키나 마우스키 등과 조합해서 사용
+
+
+   *) KeyDown이벤트 : 컨트롤에 포커스가 있을때 키를 누르면 발생
+      KeyUp이벤트     : 컨트롤에 포커스가 있을 때 키를 놓으면 발생 
+
+      KeyPress이벤트 : 컨트롤에 포커스가 있을 때 키를 누르면 발생
+
+       - 키 관련 이벤트 발생 순서
+          KeyDown   : 문자, 비문자, 토글, Shift키 등이 눌리면 모두 호출되는 이벤트
+          KeyPress  : 문자키가 눌릴때만 발생
+          KeyUp      : 문자, 비문자, 토글, Shift키 등이 눌리면 모두 호출되는 이벤트
+
+
+     *) KeyPressEventArgs 클래스( 키 이벤트 발생시 전달되는 객체)
+         
+         KeyChar(char)속성  : 유니 코드 문자 (KeyPress 이벤트가 넘겨주는 키보드의 문자 값을 유니코드(16bit)로 가지고 있슴)
+         Handled(bool)   : KeyPress 이벤트가 처리되었는지 여부를 나타내는 값을 가져오거나 설정
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

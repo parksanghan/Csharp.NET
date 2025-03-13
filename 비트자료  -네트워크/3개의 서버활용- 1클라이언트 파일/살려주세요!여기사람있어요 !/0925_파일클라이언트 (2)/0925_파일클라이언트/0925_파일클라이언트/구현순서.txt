@@ -1,0 +1,21 @@
+* 패킷 정의(#define , packet 구조체)
+
+1. Client -> Server
+1) [handler >> OnCommand] 시작점 : 버튼 클릭!
+2) [handler >> 사용자 정의함수 구현]
+    OnBtnFileList()
+3) [control] >> 사용자 정의함수 구현
+    con_DownLoad_FileList()
+      a) UI에서 정보 획득(X)
+      b) packet에 패킷 요청 ************ [약속] pack_FILELIST
+      c) 전송 
+----------------------------------------------------------------------
+
+2. Server -> Client
+1) [control] con_Recive 패킷 필터링 : ACK_FILELIST
+    a) 구조체 파싱 : pack_FILELIST_ACK
+
+2) con_FileList()
+3) ui_DownLoad_FileList()
+   a) [리스트박스] 기존 파일리스트를 제거          ********* [계좌관리프로그램 -전체출력]
+   a) [리스트박스] 전달된 파일명들을 컨트롤에 추가 **********

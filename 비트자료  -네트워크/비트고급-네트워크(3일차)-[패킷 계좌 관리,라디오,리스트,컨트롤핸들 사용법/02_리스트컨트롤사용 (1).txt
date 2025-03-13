@@ -1,0 +1,131 @@
+//ui_print.cpp
+#include "std.h"
+
+HWND g_hStaicPrint;
+HWND g_hListPrint;
+
+//1. 핸들얻기
+void ui_print_GetControlHandle(HWND hDlg)
+{
+	g_hStaicPrint = GetDlgItem(hDlg, IDC_STATIC_PRINT_COUNT);
+	g_hListPrint  = GetDlgItem(hDlg, IDC_LIST_PRINT_VIEW);
+}
+
+//2. 컬럼헤더 
+void ui_print_ListColumeHeader(HWND hDlg)
+{
+	LVCOLUMN COL;
+
+	// 헤더를 추가한다.
+	COL.mask = LVCF_FMT | LVCF_WIDTH | LVCF_TEXT | LVCF_SUBITEM;
+	COL.fmt	 = LVCFMT_LEFT;
+	COL.cx = 100;
+	COL.pszText = (LPWSTR)TEXT("회원번호");				// 첫 번째 헤더
+	COL.iSubItem = 0;
+	SendMessage(g_hListPrint, LVM_INSERTCOLUMN, 0, (LPARAM)&COL);
+
+	COL.cx = 100;
+	COL.pszText = (LPWSTR)TEXT("이름");			// 두 번째 헤더
+	COL.iSubItem = 1;
+	SendMessage(g_hListPrint, LVM_INSERTCOLUMN, 1, (LPARAM)&COL);
+
+	COL.cx = 130;
+	COL.pszText = (LPWSTR)TEXT("전화번호");				// 세 번째 헤더
+	COL.iSubItem = 2;
+	SendMessage(g_hListPrint, LVM_INSERTCOLUMN, 2, (LPARAM)&COL);
+
+	COL.cx = 100;
+	COL.pszText = (LPWSTR)TEXT("성별");				// 세 번째 헤더
+	COL.iSubItem = 3;
+	SendMessage(g_hListPrint, LVM_INSERTCOLUMN, 3, (LPARAM)&COL);
+
+	
+	ListView_SetExtendedListViewStyle(g_hListPrint, 
+		LVS_EX_FULLROWSELECT |LVS_EX_GRIDLINES | LVS_EX_HEADERDRAGDROP);
+
+}
+
+//리스트 출력
+void ui_print_PrintAll(HWND hDlg, const vector<MEMBER>& members)
+{
+	TCHAR buf[20];
+	wsprintf(buf, TEXT("회원수 : %d명"), (int)members.size());
+	SetWindowText(g_hStaicPrint, buf);
+
+	ListPrintAll(hDlg, members);
+}
+
+//리스트 출력
+void ListPrintAll(HWND hDlg, const vector<MEMBER>& members)
+{
+	ListView_DeleteAllItems(g_hListPrint);
+
+	for (int i = 0; i < members.size(); i++)
+	{
+		MEMBER member = members[i];
+
+
+		LVITEM LI;
+
+		LI.mask = LVIF_TEXT;
+		LI.iSubItem = 0;
+		LI.iItem = 0;
+		TCHAR buf[20];
+		wsprintf(buf, TEXT("%d"), member.id);
+		LI.pszText = buf;						// 첫 번째 아이템
+		SendMessage(g_hListPrint, LVM_INSERTITEM, i, (LPARAM)&LI);
+
+		LI.iSubItem = 1;
+		LI.pszText = member.name;
+		SendMessage(g_hListPrint, LVM_SETITEM, i, (LPARAM)&LI);
+
+		LI.iSubItem = 2;
+		LI.pszText = member.phone;
+		SendMessage(g_hListPrint, LVM_SETITEM, i, (LPARAM)&LI);		
+
+		wsprintf(buf, TEXT("%s"), member.gender=='M'?TEXT("남") : TEXT("여"));
+		LI.pszText = buf;	
+		LI.iSubItem = 3;
+		LI.pszText = buf;
+		SendMessage(g_hListPrint, LVM_SETITEM, i, (LPARAM)&LI);
+	}
+}
+
+//리스트 통지메시지 처리
+MEMBER ui_print_List_Notify(HWND hDlg, WPARAM wParam, LPARAM lParam)
+{
+	LPNMHDR hdr;
+	LPNMLISTVIEW nlv;
+	hdr = (LPNMHDR)lParam;
+	nlv = (LPNMLISTVIEW)lParam;
+
+	if (hdr->hwndFrom == g_hListPrint)
+	{
+		if (hdr->code == LVN_ITEMCHANGED)
+		{
+			if (nlv->uChanged == LVIF_STATE && nlv->uNewState == (LVIS_SELECTED | LVIS_FOCUSED)) 
+			{
+				MEMBER member; 
+				TCHAR buf[50] = { 0 };
+				
+				//아이디만 리스트뷰에서 얻고, 나머지는 vector를 검색해서 획득가능!
+				ListView_GetItemText(g_hListPrint, nlv->iItem, 0, buf, _countof(buf));
+				member.id = _ttoi(buf);
+
+				ListView_GetItemText(g_hListPrint, nlv->iItem, 1, member.name, _countof(member.name));
+				ListView_GetItemText(g_hListPrint, nlv->iItem, 2, member.phone, _countof(member.phone));
+
+				ListView_GetItemText(g_hListPrint, nlv->iItem, 3, buf, _countof(buf));
+				if (_tcscmp(buf, _TEXT("남")) == 0)
+					member.gender = 'M';
+				else
+					member.gender = 'F';
+				return member; 
+			}
+		}
+	}
+
+	//첫번째 맴버의 값 -1, 나머지는 0으로 초기화
+	MEMBER mem = {-1};
+	return mem;
+}

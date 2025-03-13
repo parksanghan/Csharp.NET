@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="WB_UI">
+      <UniqueIdentifier>{d5549cc2-085c-45ba-bf31-296aaa3a20d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WB_NETWORK">
+      <UniqueIdentifier>{1ce35201-0aac-4280-9bd3-29a12f0e7d62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WB_APP">
+      <UniqueIdentifier>{abc4cd8a-56b0-424e-9e51-b8f8242b1721}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="start.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_group.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_msg.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ui_print.cpp">
+      <Filter>WB_UI</Filter>
+    </ClCompile>
+    <ClCompile Include="net_recv.cpp">
+      <Filter>WB_NETWORK</Filter>
+    </ClCompile>
+    <ClCompile Include="net_send.cpp">
+      <Filter>WB_NETWORK</Filter>
+    </ClCompile>
+    <ClCompile Include="control.cpp">
+      <Filter>WB_APP</Filter>
+    </ClCompile>
+    <ClCompile Include="handler.cpp">
+      <Filter>WB_APP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="std.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_group.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_msg.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ui_print.h">
+      <Filter>WB_UI</Filter>
+    </ClInclude>
+    <ClInclude Include="net_recv.h">
+      <Filter>WB_NETWORK</Filter>
+    </ClInclude>
+    <ClInclude Include="net_send.h">
+      <Filter>WB_NETWORK</Filter>
+    </ClInclude>
+    <ClInclude Include="control.h">
+      <Filter>WB_APP</Filter>
+    </ClInclude>
+    <ClInclude Include="handler.h">
+      <Filter>WB_APP</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="0926_멀티캐스트실습.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

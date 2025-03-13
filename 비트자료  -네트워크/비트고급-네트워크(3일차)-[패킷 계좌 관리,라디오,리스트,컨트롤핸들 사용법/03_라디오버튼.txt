@@ -1,0 +1,25 @@
+void ui_io_GetInsertData(HWND hDlg, int* memberid, TCHAR* name, TCHAR* phone, TCHAR* gender)
+{
+	*memberid = GetDlgItemInt(hDlg, IDC_EDIT1, 0, 0);
+	GetDlgItemText(hDlg, IDC_EDIT2, name, 20);
+	GetDlgItemText(hDlg, IDC_EDIT3, phone, 20);
+
+        //라디오버튼 채크 여부 확인
+	if (IsDlgButtonChecked(hDlg, IDC_RADIO1) == TRUE)
+		*gender = TEXT('M');
+	else
+		*gender = TEXT('F');
+}
+
+void ui_io_PrintMember(HWND hDlg, MEMBER member)
+{	
+	SetDlgItemInt(hDlg, IDC_EDIT1, member.id, 0);
+	SetDlgItemText(hDlg, IDC_EDIT2, member.name);
+	SetDlgItemText(hDlg, IDC_EDIT3, member.phone);
+
+        //라디오버튼채크 상태 변경
+	if (member.gender == 'M')
+		CheckRadioButton(hDlg, IDC_RADIO1, IDC_RADIO2, IDC_RADIO1);
+	else
+		CheckRadioButton(hDlg, IDC_RADIO1, IDC_RADIO2, IDC_RADIO2);
+}

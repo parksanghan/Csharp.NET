@@ -1,0 +1,132 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어(대한민국) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_MAIN DIALOGEX 0, 0, 877, 415
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "[설정(SET)정보]",IDC_STATIC,7,36,197,149
+    GROUPBOX        "[도형출력정보]",IDC_STATIC,438,36,432,372
+    GROUPBOX        "[전체출력]",IDC_STATIC,214,40,217,345
+    LTEXT           "타입",IDC_STATIC,17,56,16,8
+    COMBOBOX        IDC_SET_COMBO_TYPE,67,52,125,103,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "위치",IDC_STATIC,17,79,16,8
+    EDITTEXT        IDC_SET_EDIT_X,68,74,56,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SET_EDIT_Y,137,74,56,14,ES_AUTOHSCROLL
+    LTEXT           "크기",IDC_STATIC,17,106,16,8
+    COMBOBOX        IDC_SET_COMBO_SIZE,67,102,125,103,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "색상",IDC_STATIC,17,132,16,8
+    EDITTEXT        IDC_SET_EDIT_R,67,126,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SET_EDIT_G,68,146,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SET_EDIT_B,67,164,57,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SET_STATIC_COLOR,"Static",SS_BLACKFRAME,135,128,56,49
+    GROUPBOX        "[설정(SET)정보]",IDC_STATIC,7,225,197,149
+    LTEXT           "타입",IDC_STATIC,17,245,16,8
+    COMBOBOX        IDC_CUR_COMBO_TYPE,67,241,125,103,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "위치",IDC_STATIC,17,268,16,8
+    EDITTEXT        IDC_CUR_EDIT_X,68,263,56,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CUR_EDIT_Y,137,263,56,14,ES_AUTOHSCROLL
+    LTEXT           "크기",IDC_STATIC,17,295,16,8
+    COMBOBOX        IDC_CUR_COMBO_SIZE,67,291,125,103,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "색상",IDC_STATIC,17,321,16,8
+    EDITTEXT        IDC_CUR_EDIT_R,67,315,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CUR_EDIT_G,68,335,57,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CUR_EDIT_B,67,353,57,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_CUR_STATIC_COLOR,"Static",SS_BLACKFRAME,135,317,56,49
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DIALOG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 870
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 408
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_MAIN AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 한국어(대한민국) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

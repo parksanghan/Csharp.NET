@@ -1,0 +1,122 @@
+[ Font 클래스 ]
+
+-  화면에 문자열 출력시 Graphics 클래스의 Drawstring()메서드 사용
+- 이 메서드 인자 중 Font 설정을 바꾸면, 출력되는 문자열의 글꼴 수정 가능
+   public void DrawString( string, Font, Brush, PointF)
+   public void DrawString( string, Font, Brush, RectangleF)
+   public void DrawString( string, Font, Brush, PointF, StringFomat)
+   public void DrawString( string, Font, Brush, RectangleF, StringFomat)
+   public void DrawString( string, Font, Brush, float)
+   public void DrawString( string, Font, Brush, float, StringFomat)
+
+   *) string : 화면에 출력될 문자열
+       Brush : 글자의 색상과 테두리 설정시 사용
+       PointF, RectnagleF, float : 문자열이 출력될 좌표 지정
+       StringFormat : 맞춤 및 줄 간격과 같은 텍스트 레이아웃 정보를 설정시 사용
+
+   *) Font 클래스의 생성자 중 자주 사용되는 형태 
+      Font( string, float)	// 글꼴 이름, 글꼴 크기 
+      Font( string, float, FontStyle)	// Bold, italic, Regular, Strikeout(중간에 밑줄), UnderLine속성 설정
+
+   ex) Font font1 = new Font( "바탕채", 10);
+         Font font2 = new Font("sanserif", 20, FontStyle.UnderLine);
+
+
+GDI+에서 화면에 문자열 출력 단계
+
+1) Font 클래스 개체 생성
+    Font font = new Font("Timesroman", 20);
+
+2) Brush 클래스 개체 생성
+    SolidBrush brush = new SolidBrush(color.Blue);
+
+3) 출력할 좌표 및 텍스트 레이아웃 정보 설정
+    RectangleF rect = new RectangleF(50, 10, 200, 30);
+
+4) Graphics 개체를 얻은 후 DrawString()메서드로 문자열 출력
+    g.DrawString("안녕하세요", font, brush, rect);
+
+
+예제1) 글꼴 출력하기 
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Drawing.Text;
+public class TextExam1 : Form
+{
+    public TextExam1()
+    {
+        this.Text = "Font 예제";
+    }
+
+    static void Main()
+    {
+        Application.Run(new TextExam1());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        // 글꼴 생성 객체 
+        Font font = new Font("Timesroman", 20);	// 글꼴 지정
+        SolidBrush brush = new SolidBrush(Color.Blue);//브러쉬 생성
+        RectangleF rect = new RectangleF(50, 10, 200, 30);// 문자열 영역 설정
+
+        // 화면에 문자를 출력할 떄 사용하는 메서드 
+        g.DrawString("안녕하세요", font, brush, rect);// 출력
+
+        font = new Font("돋움", 10);	// 글꼴을 돋움10으로 변경
+        g.DrawString("폰트 예제입니다.", font, brush, 50, 50);//바뀐 글꼴로 문자열 출력
+
+        font = new Font("궁서", 15);
+        brush = new SolidBrush(Color.Red);
+        PointF point = new PointF(10, 10);
+        StringFormat sf = new StringFormat();
+        sf.FormatFlags = StringFormatFlags.DirectionVertical;// 글꼴 출력을 세로로 지정 
+
+        g.DrawString("C# Font 다루기", font, brush, point, sf);
+    }
+}
+
+
+예제 2) 그림자 효과 주기 
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Drawing.Text;
+
+public class TextExam : Form
+{
+    public TextExam()
+    {
+        this.Text = "그림자 효과 주기";
+        this.Size = new Size(400, 150);
+    }
+    static void Main()
+    {
+        Application.Run(new TextExam());
+    }
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        // 글꼴 생성
+        Font font = new Font("Timesroman", 30, FontStyle.Italic);
+        string str = "빨주노초파남보";
+        Color[] color = {Color.Red, Color.Orange, Color.Yellow, 
+								  Color.Green, Color.Blue, Color.Magenta,
+								  Color.Violet};
+        for (int i = 0; i < 7; i++)
+        {
+            // 출력 : 색상을 바꾸어 가면서 겹쳐서 출력
+            g.DrawString(str, font, new SolidBrush(color[6 - i]), (20 + i), 30 + (i * 2));
+            System.Console.WriteLine("{0},{1}", 20 + i, 30 + 2 * i);
+        }
+    }
+}
+
+
+    

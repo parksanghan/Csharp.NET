@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: AsyncServer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x412 /fo"Debug/AsyncServer.res" /d "_DEBUG" "C:\Documents and Settings\woosong bit\πŸ≈¡ »≠∏È\01_WNP\01_¿‘√‚∑¬∏µ®\2_Sample\2_WSAAsyncSelect\AsyncServer\AsyncServer.rc"" 
+Creating temporary file "C:\DOCUME~1\WOOSON~1\LOCALS~1\Temp\RSP8.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /FR"Debug/" /Fp"Debug/AsyncServer.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Documents and Settings\woosong bit\πŸ≈¡ »≠∏È\01_WNP\01_¿‘√‚∑¬∏µ®\2_Sample\2_WSAAsyncSelect\AsyncServer\AsyncServer.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\WOOSON~1\LOCALS~1\Temp\RSP8.tmp" 
+Creating temporary file "C:\DOCUME~1\WOOSON~1\LOCALS~1\Temp\RSP9.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib ws2_32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/AsyncServer.pdb" /debug /machine:I386 /out:"Debug/AsyncServer.exe" /pdbtype:sept 
+".\Debug\AsyncServer.obj"
+".\Debug\AsyncServer.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\WOOSON~1\LOCALS~1\Temp\RSP9.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+AsyncServer.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+AsyncServer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

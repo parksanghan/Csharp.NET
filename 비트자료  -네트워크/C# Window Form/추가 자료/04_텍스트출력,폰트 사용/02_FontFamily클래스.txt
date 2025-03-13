@@ -1,0 +1,337 @@
+[ FontFamily 클래스 ]
+
+
+
+예제 3) 글꼴 목록 확인
+        
+   컴퓨터에 설치된 글꼴의 목록을 얻고 싶은 경우 
+using System;
+using System.Drawing;
+using System.Drawing.Text;
+class FontFamilyExam
+{
+    static void Main(string[] args)
+    {
+        InstalledFontCollection installfont = new InstalledFontCollection();
+        FontFamily [] ff = installfont.Families;
+        for (int i = 0; i < ff.Length; i++)
+        {
+            System.Console.WriteLine("FontName-[{0}] : {1}", i, ff[i].Name);
+        }
+    }
+}
+
+
+예제 4) FontFamily 
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Drawing.Text;
+
+public class TextExam3 : Form
+{
+    public TextExam3()
+    {
+        this.Text = "FontFamily 예제";
+        this.AutoScrollMinSize = new Size(200, 500);
+    }
+
+    static void Main()
+    {
+        Application.Run(new TextExam3());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+
+        int height = 20;
+
+        // 시스템에 있는 글꼴 얻기 : 2가지 방법
+        FontFamily[] fontname = FontFamily.Families;
+        //FontFamily [] fontname = FontFamily.GetFamilies(g);
+
+        for (int i = 0; i < fontname.Length; i++)
+        {
+            if (fontname[i].IsStyleAvailable(FontStyle.Regular))
+            {
+                Font font = new Font(fontname[i], 10);
+                g.DrawString(fontname[i].Name + " :[ 글꼴, ABC 123 ]", font, Brushes.Black, 10, height);
+                height += font.Height + 5;
+                System.Console.WriteLine("{0}-{1}", i, fontname[i].Name);
+                font.Dispose();	// 리소스 해제 
+            }
+        }
+    }
+}
+
+
+예제 5) 글꼴 수치 정보 보기 
+
+    머리선
+	    Ascent(머리선 - 기준선 간격 : 글자가 써지는 영역)
+      기준선
+                 Descent(기준선 - 꼬리선 간격 : 글자에 따라 사용되는 영역)
+    꼬리선
+                 Leading(꼬리선 - 다음 라인  :  문자 출력 공간 사이의 간격)
+    다음라인
+
+                 Height(  머리선 - 꼬리선 : 문자 출력 전체 공간)
+
+
+using System;
+using System.Drawing;
+public class TextExam4
+{
+    static void Main()
+    {
+        float ascent = 0.0f;
+        float descent = 0.0f;
+        float linespacing = 0.0f;
+        float height = 0.0f;
+        string format = "{0,-30}{1,10}{2,10},{3,10},{4,15}";
+
+        FontFamily[] ff = FontFamily.Families;
+        System.Console.WriteLine(format, "FontName", "Ascent", "Descent", "Height", "Linespacing");
+
+        for (int i = 0; i < ff.Length; i++)
+        {
+            ascent = ff[i].GetCellAscent(FontStyle.Regular);
+            descent = ff[i].GetCellDescent(FontStyle.Regular);
+            linespacing = ff[i].GetLineSpacing(FontStyle.Regular);
+            height = ff[i].GetEmHeight(FontStyle.Regular);
+            System.Console.WriteLine(format, ff[i].Name, ascent, descent, height, linespacing);
+        }
+    }
+}
+
+
+
+예제 6) 글꼴 수치를 화면에 표시하기 
+
+FontFamily :  여기서 얻은 값들은 디자인 단위로 크기를 반환함
+                    보통 한 변의 길이가 2048  or 1024인 정사각형에 글꼴의 글리프를 작성함
+                    ex) 2048을 1em 단위로 설정함
+                          일반적으로 어센트는 1/4em ,  디센트는 3/4em, 행간 거리인 레딩은 1em보다 크다.
+                          글꼴의 종류마다 약간씩 다름
+
+글꼴 수치를 물리적인 단위로 변환
+
+ GraphicsUnit = DeiignUnit * EmSizeGraphicsUnit /  EmSizeDesignUnit 
+
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+public class TextExam5 : Form
+{
+    public TextExam5()
+    {
+        this.Text = "글꼴 수치 예제";
+        this.Size = new Size(360, 170);
+    }
+
+    static void Main()
+    {
+        Application.Run(new TextExam5());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        float EmSizeGraphicsUnit = 50;  // 글꼴 크기 
+
+        // 글꼴의 Em 높이
+        float EmSizeDesignUnit;
+
+        // 어센트(머리선 - 기준선 간격 : 글자가 써지는 영역)
+        float AscentGraphicsUnit;
+
+        // 디센트(기준선 - 꼬리선 간격 : 글자에 따라 사용되는 영역)
+        float DescentGraphicsUnit;
+
+        // 레딩(꼬리선 - 다음 라인  :  문자 출력 공간 사이의 간격)
+        float LinespacingGraphicsUnit;
+
+        // 글자출력 기준선 
+        PointF baseLine = new PointF(30, 30);
+
+        Font font = new Font("궁서체", EmSizeGraphicsUnit);// 궁서체 Font개체 생성
+        FontFamily ff = new FontFamily("궁서체");
+
+        EmSizeDesignUnit = ff.GetEmHeight(FontStyle.Regular);
+
+       // DesignUnit 좌표 구하기(em 단위 좌표)
+        float ascent = ff.GetCellAscent(FontStyle.Regular);//궁서체 글꼴 정보를 변수에 저장
+        float descent = ff.GetCellDescent(FontStyle.Regular);
+        float linespacing = ff.GetLineSpacing(FontStyle.Regular);
+
+        // Graphicsunit 좌표 단위로 변환)
+        AscentGraphicsUnit = ascent * (EmSizeGraphicsUnit / EmSizeDesignUnit);
+        DescentGraphicsUnit = descent * (EmSizeGraphicsUnit / EmSizeDesignUnit);
+        LinespacingGraphicsUnit = linespacing * (EmSizeGraphicsUnit / EmSizeDesignUnit);
+
+        g.DrawString("글자 화면 출력", font, Brushes.Black, baseLine);
+
+        g.DrawLine(Pens.Red, baseLine, new PointF(baseLine.X + 300, baseLine.Y));
+
+        PointF p = new PointF(baseLine.X, baseLine.Y + LinespacingGraphicsUnit);
+        g.DrawLine(Pens.Blue, p, new PointF(p.X + 300, p.Y));
+        p = new PointF(baseLine.X, baseLine.Y + LinespacingGraphicsUnit - AscentGraphicsUnit);
+        g.DrawLine(Pens.Magenta, p, new PointF(p.X + 300, p.Y));
+        p = new PointF(baseLine.X, baseLine.Y + LinespacingGraphicsUnit + DescentGraphicsUnit);
+        g.DrawLine(Pens.Green, p, new PointF(p.X + 300, p.Y));
+
+    }
+}
+
+
+예제 7) 사각형 영역 안에 문자열 출력하기 
+
+  - DrawString() 메서드의 Rectangle 인자를 이용하여 지정된 영역 안에 출력
+
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+public class TextExam6 : Form
+{
+    public TextExam6()
+    {
+        this.Text = "문자열 출력";
+        this.Size = new Size(450, 200);
+    }
+
+    static void Main()
+    {
+        Application.Run(new TextExam6());
+    }
+
+    protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        string str = "한산섬 달밝은 밤에 수루에 홀로 앉아";
+        str += "큰 칼 옆에 차고 깊은 시름하는 차에";
+        str += "어디서 일성호가는 남의 애를 끊나니.";
+        str += "-난중일기中-";
+
+        Font font = new Font("궁서체", 15);
+        Rectangle rect = new Rectangle(20, 20, 400, font.Height * 4);
+        g.DrawRectangle(Pens.Red, rect);
+        g.DrawString(str, font, Brushes.Black, rect);
+        font.Dispose();	// 가비지 컬렉션 호출
+    }
+}
+
+
+// DrawString()메서드는 출력 문자열에 포함된 줄 바꿈 기호를 인식한다.
+// 단, StringFormatFlags.NoWrap 속성이 설정되면 줄바꿈 기호가 무시됨
+ protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        string str = "한산섬 달밝은 밤에 수루에 홀로 앉아\n";
+        str += "큰 칼 옆에 차고 깊은 시름하는 차에\n";
+        str += "어디서 일성호가는 남의 애를 끊나니.\n";
+        str += "-난중일기中-";
+
+   
+        Font font = new Font("궁서체", 15);
+       StringFormat sf = new StringFormat();	// stringFormat개체 생성
+       sf.FormatFlags  = StringFormatFlags.NoWrap;
+
+        Rectangle rect = new Rectangle(20, 20, 400, font.Height * 4);
+        g.DrawRectangle(Pens.Red, rect.Left, rect.Top, rect.Width, rect.Height);
+        g.DrawString(str, font, Brushes.Black, rect, sf);
+//      g.DrawString(str, font, Brushes.Black, rect);  
+
+        sf.Dispose();
+        font.Dispose();
+        
+    }
+
+// 문자열 정렬
+protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        string str = "한산섬 달밝은 밤에 수루에 홀로 앉아\n";
+        str += "큰 칼 옆에 차고 깊은 시름하는 차에\n";
+        str += "어디서 일성호가는 남의 애를 끊나니.\n";
+        str += "-난중일기中-";
+
+   
+        Font font = new Font("궁서체", 13);
+       StringFormat sf = new StringFormat();	// stringFormat개체 생성
+       sf.Alignement  = StringAlignment.Center;	// 텍스트를 중앙에 출력
+       sf.LineAlignment = StringAlignment.Center;	// 텍스트를 중앙에 출력
+
+        Rectangle rect = new Rectangle(20, 20, 400, font.Height * 4);
+        g.DrawRectangle(Pens.Red, rect.Left, rect.Top, rect.Width, rect.Height);
+        g.DrawString(str, font, Brushes.Black, rect, sf);
+
+        sf.Dispose();
+        font.Dispose();
+    }
+
+// 세로 문자열 출력 
+// - DirectionRightToLeft : 텍스트를 오른쪽에서 왼쪽으로 출력
+// - DirectionVerical : 텍스트를 위에서 아래로 출력
+
+protected override void OnPaint(PaintEventArgs pea)
+    {
+        Graphics g = pea.Graphics;
+        string str = "한산섬 달밝은 밤에 수루에 홀로 앉아\n";
+        str += "큰 칼 옆에 차고 깊은 시름하는 차에\n";
+        str += "어디서 일성호가는 남의 애를 끊나니.\n";
+        str += "-난중일기中-";
+
+   
+        Font font = new Font("궁서체", 13);
+
+       StringFormat sf = new StringFormat(StringFormatFlags.DirectionVerical);	// stringFormat개체 생성
+        Rectangle rect = new Rectangle(20, 20, 400, font.Height * 6);
+
+        g.DrawRectangle(Pens.Red, rect.Left, rect.Top, rect.Width, rect.Height);
+        g.DrawString(str, font, Brushes.Black, rect, sf);
+
+        sf.Dispose();
+        font.Dispose();
+    }
+
+
+// SetTatStops( float firstTabOffset, float[] tabStops);
+// 1인자 : 텍스트 줄의 시작 부분과 텝 사이의 공백(보통 0.0f 입력)
+// 2인자 : 텝 정지 사이의 거리(공백 너비)배열
+  private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+
+            Font bFont = new Font("돋움", 12, FontStyle.Bold);
+            Font font = new Font("돋움", 12);
+
+            StringFormat sf = new StringFormat();
+            float[] tab = { 50.0f, 50.0f, 50.0f, 50.0f };
+            sf.SetTabStops(0.0f, tab);
+
+            string str1 = "\t국어\t영어\t수학\t총점\t평균";
+            string str2 = "\t75\t80\t70\t225\t75.0";
+            string str3 = "\t55\t90\t60\t205\t68.4";
+
+            g.DrawString(str1, bFont, Brushes.Black, 10, 30, sf);
+            g.DrawString(str2, font, Brushes.Black, 10, 50, sf);
+            g.DrawString(str3, font, Brushes.Black, 10, 70, sf);
+
+            font.Dispose();
+            bFont.Dispose();
+
+        }
+
+
+
+
+
+
+
+
+
+
+
