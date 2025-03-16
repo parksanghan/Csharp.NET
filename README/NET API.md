@@ -51,7 +51,7 @@ CloseHandle(hFile); // 사용이 끝난 리소스를 해제
 Car myCar; // myCar는 Car 클래스의 인스턴스입니다.
 ```
 
-![Untitled](Untitled.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled.png)
 
 # **리소스 (Resource)**
 
@@ -74,7 +74,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 - **`lpCmdLine`**: 프로그램이 시작될 때 명령줄 매개변수입니다. 이를 통해 프로그램을 특정 방식으로 구성하거나 인자를 전달할 수 있습니다.
 - **`nCmdShow`**: 윈도우를 어떻게 표시할 것인지를 지정하는 값입니다. 주로 **`SW_SHOWNORMAL`**, **`SW_MAXIMIZED`**, **`SW_MINIMIZED`** 등의 표시 상태를 설정하는 데 사용됩니다.
 
-![Untitled](Untitled%201.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%201.png)
 
 ```cpp
 //minwindef.h
@@ -89,9 +89,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
  
 
-![Untitled](Untitled%202.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%202.png)
 
-![Untitled](Untitled%203.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%203.png)
 
 # **핸들(Handle)**
 
@@ -113,7 +113,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 - **예외없이 모든 핸들은 접두어 H로 시작되며 핸들값을 저장하기 위해 별도의 데이터
 형을 정의해 두고 있으며, 모두 부호없는 정수형이다.**
 
-![Untitled](Untitled%204.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%204.png)
 
 # **인스턴스(Instnace)**
 
@@ -134,7 +134,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 프로그램으로 인식한다. 이 때 각 메모장은 서로 다른 인스턴스 핸들을 가지며 운영체제
 는 이 인스턴스 핸들값으로 두 개의 메모장을 서로 구별한다.**
 
-![Untitled](Untitled%205.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%205.png)
 
 ```jsx
 #pragma once
@@ -150,7 +150,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 # **함수 호출 규약**
 
-![Untitled](Untitled%206.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%206.png)
 
 **__cdecl과
 의 차이점은 호출된 함수가 스택에서 인자를 제거한다**
@@ -161,7 +161,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
 
 # **윈도우 생성 단계**
 
-![Untitled](Untitled%207.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%207.png)
 
 ```jsx
 #include <windows.h>
@@ -248,7 +248,7 @@ Button, edit, scrollbar, listbox, 등이 그 예이며, 따라서 버튼 윈도�
 
 **윈도우 객체는 운영체제가 하나의 윈도우를 관리하기 위해 생성하는 데이터 구조체이다.**
 
-![Untitled](Untitled%208.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%208.png)
 
 **createWindow()의 경우 윈도우 오브잭트를 생성하고 showWindow의 경우 생성된 윈도우 오브잭트 정보를 바탕으로 화면에 윈도우를 출력해준다.**
 
@@ -265,7 +265,7 @@ etWindowLongPtr() 함수는 저장된 윈도우 오브젝트 정보를 수정할
 **LRESULT CALLBACK WndProc(HWND hWNd, UINT iMessage,
 WPARAM, wParam, LPARAM lParam)**
 
-![Untitled](Untitled%209.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%209.png)
 
 **윈도우 프로시저는 이 함수로 전달되는 무수히 많은 메시지들을 처리하므로 거대한 switc
 h 문으로 구성된다. 처리하는 메시지가 많으면 많을수록 case 문이 많아질 것이며, 처리
@@ -281,7 +281,7 @@ h 문으로 구성된다. 처리하는 메시지가 많으면 많을수록 case 
 **비큐 메시지 : 비큐 메시지는 윈도우에게 특정 사실을 알리거나 명령을 내리기 위해 큐를 통하지 않고
 바로 윈도우 프로시저로 보내지는 메시지이다.**
 
-![Untitled](Untitled%2010.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2010.png)
 
 **(1) 사용자가 윈도우를 만들기 위해 CreateWindowEx API를 호출하면 윈도우가 만들어
 지고
@@ -292,14 +292,14 @@ h 문으로 구성된다. 처리하는 메시지가 많으면 많을수록 case 
 즉, WM_CREATE 메시지는 메시지 큐에 놓이지 않고 직접 윈도우 프로시져에 전달된다. (
 이 떄 사용된 함수가 SendMessage 이다.) 이를 비큐 메시지라고 한다.**
 
-![Untitled](Untitled%2011.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2011.png)
 
 **큐 메시지 :  마우스 키보드 메시지들은 직접 윈도우 프로시저로 전달되지 않고 메시지 큐에 놓이게
 되는 데 이를 큐 메시지라고 한다**
 
-![Untitled](Untitled%2012.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2012.png)
 
-![Untitled](Untitled%2013.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2013.png)
 
 **메시지 처리 함수에서 발생된 메시지를 처리하지 않은 경우 반드시 아래 함수로 보내서
 default 처리가 되게 해야 한다**
@@ -516,7 +516,7 @@ printf("프로그램을 종료합니다.\n");
 의 모양을 지정하는 폰트, 선의 색상과 굵기, 채움 무늬와 색상, 그리기 모드 등등이 모두
 출력에 필요한 정보들이다.**
 
-![Untitled](Untitled%2014.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2014.png)
 
 **클라이언트 DC 얻기**
 
@@ -529,7 +529,7 @@ HDC hdc = CreateDC(“DISPLAY”, 0, 0, 0);**
 
 ## **무효화 영역→ 다시 그려져야 하는 영역**
 
-![Untitled](Untitled%2015.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2015.png)
 
 **—> 무효화 영역이 발생하면 운영체제는 WM_PAINT 메시지를 해당 윈도우 프로시저에게 보낸다.** 
 
@@ -547,7 +547,7 @@ return 0;  —> 이렇게 사용하게 되면 무효화 영역이 유효화 되�
 
 **즉, TRUE 로 설정하게 된다면?** 
 
-![Untitled](Untitled%2016.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2016.png)
 
 **GDI 객체의 기본적인 사용 방법**
 
@@ -578,9 +578,9 @@ EndPaint(hwnd, &ps);
 
 **→ 상위 16비트에는 X 좌표가 , 하위 16비트에는 Y 좌표가 있다.**
 
-![Untitled](Untitled%2017.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2017.png)
 
-![Untitled](Untitled%2018.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2018.png)
 
 **HIT TEST CODE** 
 
@@ -592,9 +592,9 @@ EndPaint(hwnd, &ps);
 
 **특정 윈도우가 SetCapture함수를 사용해서 마우스를 캡쳐할 경우 , 모든 마우스 메시지는 캡쳐한 윈도우에게 전달된다.** 
 
-![Untitled](Untitled%2019.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2019.png)
 
-![Untitled](Untitled%2020.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2020.png)
 
 **—> 마우스 캡쳐가 되어 있을 경우 WM_NCHITTEST , WM_SETCURSOR 메시지는 발생되지 않음.**
 
@@ -602,13 +602,13 @@ EndPaint(hwnd, &ps);
 
 **키보드로 부터 입력이 발생했을 경우 윈도우는 포커스를 가진 프로그램에게 키보드 메시지 WM_CHAR, WM_KEYDOWN 등 을 보내주며 프로그램은 이 메시지를 받아 입력을 처리한다.**
 
-![Untitled](Untitled%2021.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2021.png)
 
 **→ 발생한 스캔 코드는 키보드 디바이스 드라이버를 거쳐 시스템에서 발생하는 모든 메시지를 담는 SYSTEM MESSAGE QUEUE 에 저장된다.**  
 
 **—> 저장된 메시지는 모든 애플리케이션이 독립적으로 가지고 있는 메세지 큐에 전달되고 API 코드에서 작성된 메시지 루프에서 해당 메시지를 읽어 프로시저에 최종 전달되게 됩니다.**
 
-![Untitled](Untitled%2022.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2022.png)
 
 **스캔 코드와 가상 키 코드 값은 대소문자가 동일하다는 것을 볼 수 있다.**
 
@@ -618,11 +618,11 @@ EndPaint(hwnd, &ps);
 
 **만약 WM_KEYDOWN 메시지를 위의 함수로 전달하면 위 함수가 WM_CHAR 메시지를 생성해주어 메시지 루프에 작성한다.**
 
-![Untitled](Untitled%2023.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2023.png)
 
 # **시간정보 획득하기**
 
-![Untitled](Untitled%2024.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2024.png)
 
 **UNIT SetTimer(HWND hWnd, UINT nIDEvent, UINT uElapse,
 TIMERPROC lpTimerFunc); → 타이머를 생성**
@@ -633,7 +633,7 @@ TIMERPROC lpTimerFunc); → 타이머를 생성**
 
 **비트맵이란 이미지를 저장하고 있는 그래픽 오브잭트이다. 미리 그려진 그림의 각 픽셀 색상과 기타 이미지의 크기 , 해상도 정보를 가지고 있는 이미지 데이터의 덩어리이다.**
 
-![Untitled](Untitled%2025.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2025.png)
 
 **모니터 화면에서 나오는 것들은 결국 비디오 메모리에 있는 BIT 들이다. 결국 비디오 메모리를 하나의 비트맵으로 생각할 수 있다. → 아래의 함수는 비디오 메모리의 특정 영역에 있는 데이터를 다른 영역에 옮길때 사용한다.** 
 
@@ -667,7 +667,7 @@ ReleaseDC( hwnd, hdcClient );
 - **DDB : 이미지의 크기와 색상에 관한 기본적인 정보와 그리고 이미지 데이터만으로 구성되ㅓ어 있기에 해상도의 장치에 광범위하게 사용되지 못하여 만들어진 장치 외의 다른 장치에서 출력하면 제대로 출력하지 못하는 경우가 있다.**
 - **DIB : 포멧의 비트맵은 장치에 독립적이기에 제 모양되로 출력될 수 있다.**
 
-![Untitled](Untitled%2026.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2026.png)
 
 # **리소스 다루기**
 
@@ -683,7 +683,7 @@ ReleaseDC( hwnd, hdcClient );
 **컨트롤이란, 사용자와의 인터페이스를 이루는 도구이다. 인터페이스를 이룬다는 말은 사
 용자로부터 명령과 입력을 받아들이고 출력 결과를 보여준다는 뜻이다.**
 
-![Untitled](Untitled%2027.png)
+![Untitled](NET%20API%20c30a7ca31f7e49e1a101671269285091/Untitled%2027.png)
 
 **컨트롤을 생성하기 위해 필요한 것 : 컨트롤의 ID, 컨트롤의 핸들** 
 
