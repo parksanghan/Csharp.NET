@@ -1,0 +1,1 @@
+F:\Csharp.NET\Csharp.NET\MAUI\MauiApp1\MauiApp1\MauiApp1.csproj;x64
