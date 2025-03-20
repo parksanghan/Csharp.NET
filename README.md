@@ -7,8 +7,7 @@
 
 [![.NET SYSTEM](https://img.shields.io/badge/.NET-SYSTEM-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/.NET%20System) 
 &nbsp;
-[![.NET SYSTEM README](https://img.shields.io/badge/.NET%20SYSTEM-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)]
- 
+[![.NET SYSTEM README](https://img.shields.io/badge/.NET%20SYSTEM-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/NET%20SYSTEM.md)
 
 
 [![ADO .NET](https://img.shields.io/badge/ADO.NET-Database-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/.NET%20SQL%20ADO%20Database)
