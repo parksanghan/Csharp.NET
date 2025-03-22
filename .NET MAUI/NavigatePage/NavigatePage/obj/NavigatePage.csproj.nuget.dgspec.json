@@ -84,6 +84,10 @@
               "target": "Package",
               "version": "[8.0.14, )",
               "autoReferenced": true
+            },
+            "Xamarin.Google.MLKit.FaceDetection": {
+              "target": "Package",
+              "version": "[116.1.7.2, )"
             }
           },
           "imports": [

@@ -62,4 +62,10 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 	</ItemGroup>
 
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
+	  <PackageReference Include="Xamarin.Google.MLKit.FaceDetection">
+	    <Version>116.1.7.2</Version>
+	  </PackageReference>
+	</ItemGroup>
+
 </Project>
