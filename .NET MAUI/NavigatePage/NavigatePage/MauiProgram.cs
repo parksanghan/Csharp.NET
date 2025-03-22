@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace NavigatePage
 {
@@ -9,6 +10,7 @@ namespace NavigatePage
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<Views.App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
