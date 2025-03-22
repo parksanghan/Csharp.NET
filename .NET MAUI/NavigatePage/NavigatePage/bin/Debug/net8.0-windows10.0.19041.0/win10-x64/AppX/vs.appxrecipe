@@ -29,7 +29,7 @@
     <AppXManifest Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-22T16:55:52.170</Modified>
+      <Modified>2025-03-22T18:20:48.585</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NavigatePage.dll">
       <PackagePath>NavigatePage.dll</PackagePath>
-      <Modified>2025-03-22T16:55:50.735</Modified>
+      <Modified>2025-03-22T18:20:47.444</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>NavigatePage.exe</PackagePath>
-      <Modified>2025-03-22T16:55:50.784</Modified>
+      <Modified>2025-03-22T18:20:47.761</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
@@ -81,209 +81,209 @@
       <PackagePath>OpenSans-Semibold.ttf</PackagePath>
       <Modified>2025-03-21T14:45:23.523</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
-      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
+      <PackagePath>appicon.ico</PackagePath>
+      <Modified>2025-03-22T16:55:49.976</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
-      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
-      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
-      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
-      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
-      <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
-      <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
-      <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
+      <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
       <Modified>2025-03-22T16:55:49.972</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
       <Modified>2025-03-22T16:55:49.972</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
-      <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
+      <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
       <Modified>2025-03-22T16:55:49.972</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
-      <PackagePath>appiconWideTile.scale-400.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
+      <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
       <Modified>2025-03-22T16:55:49.972</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
-      <PackagePath>appiconWideTile.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
+      <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
       <Modified>2025-03-22T16:55:49.972</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
-      <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
-      <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.972</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
-      <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
-      <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
-      <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
-      <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
-      <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
-      <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
-      <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
-      <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
-      <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
-      <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
-      <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
-      <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
-      <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
-      <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
-      <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
-      <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
-      <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
-      <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.974</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
-      <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
       <Modified>2025-03-22T16:55:49.974</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
       <Modified>2025-03-22T16:55:49.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
-      <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
       <Modified>2025-03-22T16:55:49.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
-      <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
       <Modified>2025-03-22T16:55:49.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
-      <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
       <Modified>2025-03-22T16:55:49.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
-      <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
       <Modified>2025-03-22T16:55:49.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
       <Modified>2025-03-22T16:55:49.976</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
-      <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
       <Modified>2025-03-22T16:55:49.976</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
-      <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.976</Modified>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
+      <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
-      <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.976</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
-      <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.976</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
-      <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.976</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
-      <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.976</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
-      <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.976</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
-      <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2025-03-22T16:55:49.976</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
-      <PackagePath>appiconLogo.scale-150.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
+      <PackagePath>appiconLogo.scale-100.png</PackagePath>
       <Modified>2025-03-22T16:55:49.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
       <Modified>2025-03-22T16:55:49.976</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
-      <PackagePath>appiconLogo.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
+      <PackagePath>appiconLogo.scale-150.png</PackagePath>
       <Modified>2025-03-22T16:55:49.976</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
-      <PackagePath>appicon.ico</PackagePath>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
+      <PackagePath>appiconLogo.scale-200.png</PackagePath>
       <Modified>2025-03-22T16:55:49.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
+      <PackagePath>appiconLogo.scale-400.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
+      <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
+      <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
+      <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
+      <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
+      <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.976</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
+      <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
+      <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
+      <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
+      <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
+      <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
+      <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
+      <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
+      <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
+      <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
+      <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
+      <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
+      <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
+      <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
+      <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
+      <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
+      <PackagePath>appiconWideTile.scale-100.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.974</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
+      <PackagePath>appiconWideTile.scale-125.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
+      <PackagePath>appiconWideTile.scale-150.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
+      <PackagePath>appiconWideTile.scale-200.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
+      <PackagePath>appiconWideTile.scale-400.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
+      <PackagePath>dotnet_bot.scale-100.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
+      <PackagePath>dotnet_bot.scale-125.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
+      <PackagePath>dotnet_bot.scale-150.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
+      <PackagePath>dotnet_bot.scale-200.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
+      <PackagePath>dotnet_bot.scale-400.png</PackagePath>
+      <Modified>2025-03-22T16:55:49.972</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="F:\Csharp.NET\Csharp.NET\.NET MAUI\NavigatePage\NavigatePage\bin\Debug\net8.0-windows10.0.19041.0\win10-x64\NavigatePage.deps.json">
       <PackagePath>NavigatePage.deps.json</PackagePath>
