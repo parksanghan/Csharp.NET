@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CameraView")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+5959ce46704f022b9fca75de1e16db9cefbcb3b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8a09f054207b2472193f2bcb6634c1eb4c5d0a0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("CameraView")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CameraView")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
