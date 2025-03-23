@@ -2,6 +2,10 @@
 
 # CameraView
 
+## Cameraview ms guide-line
+https://learn.microsoft.com/ko-kr/dotnet/communitytoolkit/maui/views/camera-view?tabs=android
+## CommunityToolkit Cameraview git
+https://github.com/CommunityToolkit/Maui/tree/main/src/CommunityToolkit.Maui.Camera
 ```xml
 Microsoft.Maui.Controls {9.0.30} CameraView
 CommunityToolkit.Maui.MediaElement {6.0.1} CameraView
