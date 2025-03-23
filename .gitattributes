@@ -2,3 +2,4 @@
 * text=auto
 *.ll linguist-detectable=false
 *.bc linguist-detectable=false
+*.java linguist-detectable=false
