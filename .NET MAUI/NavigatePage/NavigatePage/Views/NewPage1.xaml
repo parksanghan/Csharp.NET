@@ -12,7 +12,7 @@
  
         <Button 
            Text="카메라 작동"
-           Clicked="CameraButtonClicked"
+           Clicked="Button_Clicked"
            HorizontalOptions="Center" />
         <toolkit:CameraView x:Name="cameraView"
                     WidthRequest="300"
@@ -20,5 +20,6 @@
                     CameraOptions="Rear"
                     CaptureMode="Preview"
                     OnFrameAvailable="CameraView_OnFrameAvailable" />
+ 
     </VerticalStackLayout>
 </ContentPage>

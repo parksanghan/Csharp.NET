@@ -30,6 +30,22 @@ namespace NavigatePage.Platforms.Android.Api
             }
             return null;
         }
+        public static async Task<float?> DetectYawAsync(byte[] data, int width, int height, int rotation)
+        {
+            var image = InputImage.FromByteArray(data, width, height, rotation, InputImageFormatType.Nv21);
+            var options = new FaceDetectorOptions.Builder()
+                .SetPerformanceMode(FaceDetectorOptions.PerformanceMode.Accurate)
+                .SetLandmarkMode(FaceDetectorOptions.LandmarkMode.All)
+                .SetClassificationMode(FaceDetectorOptions.ClassificationMode.All)
+                .EnableTracking()
+                .Build();
+
+            var detector = FaceDetection.GetClient(options);
+            var result = await detector.ProcessAsync(image);
+            var face = result.FirstOrDefault();
+
+            return face?.HeadEulerAngleY;
+        }
     }
 
 }
