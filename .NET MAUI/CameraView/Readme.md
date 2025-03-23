@@ -5,3 +5,8 @@ Microsoft.NET.ILLink.Tasks          {9.0.3}                                  Cam
 Xamarin.Google.MLKit.FaceDetection  {116.1.7.2}                              CameraView                                                                               
 CommunityToolkit.Maui.Camera        {2.0.2}                                  CameraView                                                                               
 Microsoft.Extensions.Logging.Debug  {9.0.0}                                  CameraView  
+
+# Git sample
+https://github.com/CommunityToolkit/Maui/blob/main/src/CommunityToolkit.Maui.Camera/Views/CameraView.shared.cs
+# MS Guideline
+https://learn.microsoft.com/en-us/dotnet/communitytoolkit/maui/views/camera-view?tabs=windows
