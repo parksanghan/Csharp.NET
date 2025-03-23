@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="NavigatePage.Views.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:NavigatePage.Views"
+ 
+    Title="NavigatePage">
+    <FlyoutItem>
+        <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}"/>
+        <ShellContent Title="New" ContentTemplate="{DataTemplate local:NewPage1}"/>
+    </FlyoutItem>
+    <!--아래와 같이 하면 처음에 하나만을 로드-->
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+       
+        Route="MainPage" />-->
+
+</Shell>
