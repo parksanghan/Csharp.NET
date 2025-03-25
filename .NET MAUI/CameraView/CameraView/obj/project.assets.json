@@ -10240,7 +10240,7 @@
         }
       }
     },
-    "net9.0-android35.0/iossimulator-x64": {
+    "net9.0-android35.0/ios-arm64": {
       "CommunityToolkit.Maui/11.1.0": {
         "type": "package",
         "dependencies": {
@@ -21883,7 +21883,7 @@
         }
       }
     },
-    "net9.0-ios18.2/iossimulator-x64": {
+    "net9.0-ios18.2/ios-arm64": {
       "CommunityToolkit.Maui/11.1.0": {
         "type": "package",
         "dependencies": {
@@ -24691,7 +24691,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.2/iossimulator-x64": {
+    "net9.0-maccatalyst18.2/ios-arm64": {
       "CommunityToolkit.Maui/11.1.0": {
         "type": "package",
         "dependencies": {
@@ -28102,7 +28102,7 @@
         }
       }
     },
-    "net9.0-windows10.0.19041/iossimulator-x64": {
+    "net9.0-windows10.0.19041/ios-arm64": {
       "CommunityToolkit.Maui/11.1.0": {
         "type": "package",
         "dependencies": {
@@ -35164,7 +35164,9 @@
       "Microsoft.Extensions.Logging.Debug >= 9.0.0",
       "Microsoft.Maui.Controls >= 9.0.30",
       "Microsoft.NET.ILLink.Tasks >= 9.0.3",
-      "Xamarin.Google.MLKit.FaceDetection >= 116.1.7.2"
+      "Xamarin.Google.MLKit.FaceDetection >= 116.1.7.2",
+      "Xamarin.Google.MLKit.Vision.Common >= 117.3.0.13",
+      "Xamarin.GooglePlayServices.MLKit.FaceDetection >= 117.1.0.13"
     ],
     "net9.0-ios18.2": [
       "CommunityToolkit.Maui >= 11.1.0",
@@ -35286,6 +35288,14 @@
           "Xamarin.Google.MLKit.FaceDetection": {
             "target": "Package",
             "version": "[116.1.7.2, )"
+          },
+          "Xamarin.Google.MLKit.Vision.Common": {
+            "target": "Package",
+            "version": "[117.3.0.13, )"
+          },
+          "Xamarin.GooglePlayServices.MLKit.FaceDetection": {
+            "target": "Package",
+            "version": "[117.1.0.13, )"
           }
         },
         "imports": [
@@ -35471,7 +35481,7 @@
       "android-x64": {
         "#import": []
       },
-      "iossimulator-x64": {
+      "ios-arm64": {
         "#import": []
       },
       "maccatalyst-x64": {

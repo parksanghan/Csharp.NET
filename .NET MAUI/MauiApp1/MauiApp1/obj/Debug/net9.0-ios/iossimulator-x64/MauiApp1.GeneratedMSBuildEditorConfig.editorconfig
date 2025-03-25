@@ -1,0 +1,97 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net9.0-ios
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MauiApp1
+build_property.ProjectDir = F:\SkinMate\Client\MauiApp1\MauiApp1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.App.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\App.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\App.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\AppShell.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/CameraViewPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.CameraViewPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\CameraViewPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\CameraViewPage.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/ChatViewPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.ChatViewPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ChatViewPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ChatViewPage.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/Footer.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.Footer.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Footer.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Footer.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/HearderView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.HearderView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HearderView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HearderView.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/HistoryViewPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.HistoryViewPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\HistoryViewPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\HistoryViewPage.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/LocalAreaViewPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.LocalAreaViewPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\LocalAreaViewPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\LocalAreaViewPage.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/Login_RegisterPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.Login_RegisterPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\Login_RegisterPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\Login_RegisterPage.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MainPage.xaml
+
+[F:/SkinMate/Client/MauiApp1/MauiApp1/Views/MenuContentView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Views.MenuContentView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\MenuContentView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\MenuContentView.xaml

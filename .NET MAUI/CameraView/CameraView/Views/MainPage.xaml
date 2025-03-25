@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:CameraView.Views"
              
              x:Class="CameraView.Views.MainPage">
 
@@ -32,18 +33,44 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
-            <Button 
-                Text="카메라 작동"
-                Clicked="Button_Clicked"
-                HorizontalOptions="Center" />
+           
             <Grid ColumnDefinitions="*,*,*" RowDefinitions="*,30,30">
                 <toolkit:CameraView 
                     x:Name="cameraView"
-            Grid.ColumnSpan="3" 
-            Grid.Row="0" 
-            SelectedCamera="{Binding SelectedCamera}" />
+                    Grid.ColumnSpan="3" 
+                    Grid.Row="0" 
+                    SelectedCamera="{Binding SelectedCamera}"
+                    MediaCaptured="cameraView_MediaCaptured"
+                
+                    />
+           
             </Grid>
-
+            <toolkit:CameraView
+                x:Name="cameraView2"
+      
+                
+                />
+            <Label
+                x:Name="directionLabel"
+                Text="얼굴 방향 표시"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            <Button
+                Text="진단"
+                Clicked="Button_Clicked3"
+                HorizontalOptions="Center"
+                
+                />
+            <Button 
+                Text="카메라 후면"
+                Clicked="Button_Clicked"
+                HorizontalOptions="Center" 
+      />
+            <Button
+                Text="카메라 전면"
+                Clicked="Button_Clicked2"
+                HorizontalOptions="Center"
+      />
 
 
         </VerticalStackLayout>

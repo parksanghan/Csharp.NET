@@ -3,7 +3,7 @@ using Xamarin.Google.MLKit.Vision.Common;
 using System.Linq;
 using Android.Gms.Extensions;
 using Android.Graphics;
-
+ 
 namespace CameraView.Platforms.Android.Api
 {
     public class FaceDetectionService

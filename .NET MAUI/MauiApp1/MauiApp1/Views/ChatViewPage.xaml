@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MauiApp1.Data"
+             x:Class="MauiApp1.Views.ChatViewPage"
+             Title="ChatViewPage">
+
+    <ContentPage.Resources>
+        <!-- UserTemplate 바인딩으로 추가되면 자동으로 추가됨 -->
+        <DataTemplate x:Key="UserTemplate">
+            <Border BackgroundColor="LightBlue" Padding="10" Margin="5"
+                  StrokeShape="RoundRectangle 20,0,20,20"
+                   HorizontalOptions="End">
+                <Label Text="{Binding Text}" TextColor="Black"/>
+            </Border>
+        </DataTemplate>
+
+        <!-- BotTemplate 바인딩으로 자동으로 추가됨 -->
+        <DataTemplate x:Key="BotTemplate">
+            <Border  BackgroundColor="LightGray" Padding="10" Margin="5"
+                  StrokeShape="RoundRectangle 20,0,20,20"
+                   HorizontalOptions="Start">
+                <Label Text="{Binding Text}" TextColor="Black"/>
+            </Border>
+        </DataTemplate>
+
+        <!-- 템플릿 선택자 -->
+        <local:ChatTemplateSelector x:Key="ChatSelector"
+                                    UserTemplate="{StaticResource UserTemplate}"
+                                    BotTemplate="{StaticResource BotTemplate}" />
+    </ContentPage.Resources>
+
+    <!-- 실제 화면 레이아웃 -->
+    <VerticalStackLayout Padding="10">
+        <!-- 채팅 메시지 목록 -->
+        <CollectionView ItemsSource="{Binding Messages}"
+                        ItemTemplate="{StaticResource ChatSelector}"
+                        x:Name="chatCollectionView"
+                         />
+
+        <!-- 사용자 입력 및 전송 버튼 -->
+        <HorizontalStackLayout>
+            <Entry x:Name="chatEntry" Placeholder="메시지를 입력하세요"/>
+            <Button Text="전송" Clicked="OnSendClicked"/>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

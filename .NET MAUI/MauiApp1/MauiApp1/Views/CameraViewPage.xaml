@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="MauiApp1.Views.CameraViewPage"
+             Title="CameraViewPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+
+            HorizontalOptions="Center" />
+        <toolkit:CameraView x:Name="cameraView"
+                      WidthRequest="360"
+                      HeightRequest="640"     
+                      IsTorchOn="False"
+                     />
+        <Button 
+          Text="카메라 후면"
+          Clicked="ButtonRear"
+          HorizontalOptions="Center" 
+/>
+        <Button
+          Text="카메라 전면"
+          Clicked="ButtonFront"
+          HorizontalOptions="Center"
+/>
+
+    </VerticalStackLayout>
+</ContentPage>
