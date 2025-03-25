@@ -133,7 +133,7 @@ namespace Camera2View.Platforms.Android
                 preview.captureSession = session;
                 var request = requestBuilder.Build();
                 session.SetRepeatingRequest(request, null, preview.backgroundHandler);
-                // 이때 부터 ImageReaderOnImageavilable 이 게속호출
+                // 이때 부터 ImageReaderOnImageavilable 이 게속호출ddd
             }
 
             public override void OnConfigureFailed(CameraCaptureSession session)
