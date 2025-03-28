@@ -12,14 +12,13 @@ namespace Camera2View.Platforms.Android.AdHandler
 {
     public class MyCameraPreviewHandler : ViewHandler<MyCameraPreview, Camera2Preview>
     {
- 
+        public MyCameraPreviewHandler() : base(Mapper)
+        {
+        }
 
         public static IPropertyMapper<MyCameraPreview, MyCameraPreviewHandler> Mapper =
         new PropertyMapper<MyCameraPreview, MyCameraPreviewHandler>(ViewHandler.ViewMapper);
-
-       
-
-Z        protected override Camera2Preview CreatePlatformView()
+        protected override Camera2Preview CreatePlatformView()
         {
             return new Camera2Preview(Context);
         }
