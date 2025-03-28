@@ -2,6 +2,7 @@ int attr alpha 0x0
 int attr font 0x0
 int attr fontProviderAuthority 0x0
 int attr fontProviderCerts 0x0
+int attr fontProviderFallbackQuery 0x0
 int attr fontProviderFetchStrategy 0x0
 int attr fontProviderFetchTimeout 0x0
 int attr fontProviderPackage 0x0
@@ -170,14 +171,15 @@ int styleable ColorStateListItem_android_alpha 1
 int styleable ColorStateListItem_android_color 2
 int styleable ColorStateListItem_android_lStar 3
 int styleable ColorStateListItem_lStar 4
-int[] styleable FontFamily { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
+int[] styleable FontFamily { 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable FontFamily_fontProviderAuthority 0
 int styleable FontFamily_fontProviderCerts 1
-int styleable FontFamily_fontProviderFetchStrategy 2
-int styleable FontFamily_fontProviderFetchTimeout 3
-int styleable FontFamily_fontProviderPackage 4
-int styleable FontFamily_fontProviderQuery 5
-int styleable FontFamily_fontProviderSystemFontFamily 6
+int styleable FontFamily_fontProviderFallbackQuery 2
+int styleable FontFamily_fontProviderFetchStrategy 3
+int styleable FontFamily_fontProviderFetchTimeout 4
+int styleable FontFamily_fontProviderPackage 5
+int styleable FontFamily_fontProviderQuery 6
+int styleable FontFamily_fontProviderSystemFontFamily 7
 int[] styleable FontFamilyFont { 0x1010532, 0x101053f, 0x1010570, 0x1010533, 0x101056f, 0x0, 0x0, 0x0, 0x0, 0x0 }
 int styleable FontFamilyFont_android_font 0
 int styleable FontFamilyFont_android_fontStyle 1

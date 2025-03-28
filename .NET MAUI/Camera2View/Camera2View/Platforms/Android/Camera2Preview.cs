@@ -133,7 +133,7 @@ namespace Camera2View.Platforms.Android
                 preview.captureSession = session;
                 var request = requestBuilder.Build();
                 session.SetRepeatingRequest(request, null, preview.backgroundHandler);
-                // 이때 부터 ImageReaderOnImageavilable 이 게속호출ddd
+                // 이때 부터 ImageReaderOnImageavilable 이 게속호출
             }
 
             public override void OnConfigureFailed(CameraCaptureSession session)
@@ -151,7 +151,7 @@ namespace Camera2View.Platforms.Android
 
                 // ML Kit InputImage로 변환 시작
                 var planes = image.GetPlanes();
-                var buffer = planes[0].Buffer;
+                var buffer =    planes[0].Buffer;
                 var data = new byte[buffer.Remaining()];
                 buffer.Get(data);
 
