@@ -1,6 +1,6 @@
 ﻿using Android.Content;
 using Camera2View.Platforms.Android;
- 
+using MauiApp1.Platforms.Android;
 using Microsoft.Maui.Handlers;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Camera2View.Platforms.Android.AdHandler
+namespace Camera2View.Platforms.Android
 {
     public class MyCameraPreviewHandler : ViewHandler<MyCameraPreview, Camera2Preview>
     {

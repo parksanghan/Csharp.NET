@@ -11,10 +11,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-namespace Camera2View.Platforms.Android
+ 
+namespace MauiApp1.Platforms.Android
 {
-    public class Camera2Preview : TextureView, TextureView.ISurfaceTextureListener
+    public class Camera2Preview:TextureView , TextureView.ISurfaceTextureListener
     {
         private readonly Context context;
         private CameraDevice? cameraDevice;
@@ -23,7 +23,8 @@ namespace Camera2View.Platforms.Android
         private string? cameraId;
         private HandlerThread? backgroundThread;
         private Handler backgroundHandler;
-        public Camera2Preview(Context conttext) : base(conttext)
+        
+        public Camera2Preview(Context conttext):base(conttext)  
         {
             this.context = conttext;
             SurfaceTextureListener = this;
@@ -115,7 +116,7 @@ namespace Camera2View.Platforms.Android
             cameraDevice.CreateCaptureSession(surfaces, new SessionStateCallback(this, requestBuilder), backgroundHandler);
         }
 
-
+      
 
         private class SessionStateCallback : CameraCaptureSession.StateCallback
         {
@@ -151,7 +152,7 @@ namespace Camera2View.Platforms.Android
 
                 // ML Kit InputImage로 변환 시작
                 var planes = image.GetPlanes();
-                var buffer =    planes[0].Buffer;
+                var buffer = planes[0].Buffer;
                 var data = new byte[buffer.Remaining()];
                 buffer.Get(data);
 

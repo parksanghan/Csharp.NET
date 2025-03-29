@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 #if ANDROID
-using Camera2View.Platforms.Android.AdHandler;
+using Camera2View.Platforms.Android;
 #endif
 namespace Camera2View
 {
