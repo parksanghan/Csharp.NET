@@ -11,7 +11,7 @@ namespace Camera2View.Platforms.Android.Api
     public class FaceDetectorService
     {
 
-        private static FaceDetectorService _instance;   
+        private static FaceDetectorService? _instance;   
         public static FaceDetectorService Instance=>_instance ??= new FaceDetectorService();
         private IFaceDetector faceDetector;
         

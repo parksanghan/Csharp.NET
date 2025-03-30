@@ -1,2 +1,2 @@
-AdbTarget=
+AdbTarget=-s RFCX61920LE
 AdbOptions=

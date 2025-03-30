@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WhL5MNvsXiQ=",
+  "dgSpecHash": "vLVfj+M3wzY=",
   "success": true,
   "projectFilePath": "F:\\Csharp.NET\\Csharp.NET\\.NET MAUI\\Camera2View\\Camera2View\\Camera2View.csproj",
   "expectedPackageFiles": [
@@ -159,7 +159,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -174,7 +174,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -189,7 +189,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -204,7 +204,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -219,7 +219,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -234,7 +234,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -249,7 +249,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -264,7 +264,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]

@@ -14,8 +14,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
- 
-namespace MauiApp1.Platforms.Android
+
+namespace Camera2View.Platforms.Android
 {   // surface는 TextureView에 연결된 SurfaceTexture로부터 만들어진 프리뷰 출력용 Surface
     public class Camera2Preview:TextureView , TextureView.ISurfaceTextureListener
     {
@@ -28,23 +28,30 @@ namespace MauiApp1.Platforms.Android
         private Handler backgroundHandler;
         private readonly FaceDetectorService detector = FaceDetectorService.Instance;
         public Action<float>? OnYawDetected { get; set; }
+
         public Camera2Preview(Context conttext):base(conttext)  
         {
             this.context = conttext;
             this.SurfaceTextureListener = this;// 생성 시 싱글톤 인스턴스 준비만 해놓기 (딱 한 번만 실행됨)
             var _=  FaceDetectorService.Instance;
 
-             
-
-
-
         }
 
+        // SurfaceTexture가 준비되면 Surface 저장만 해두고 카메라는 즉시 시작하지 않음
+        Surface? previewSurface = null;
         public void OnSurfaceTextureAvailable(SurfaceTexture surface, int width, int height)
         {
+            previewSurface = new Surface(surface);  
             System.Diagnostics.Debug.WriteLine("🟢 SurfaceTexture available - StartCamera()");
             //  startCamera 자체는 실행중인 쓰레드에서 실행
-            StartCamera();
+          /*  StartCamera();*/
+        }
+        public void TryStartCamera()
+        {
+            if (previewSurface != null)
+            {
+                StartCamera();
+            }
         }
         // 사용 X 
         public bool OnSurfaceTextureDestroyed(SurfaceTexture surface)
@@ -117,7 +124,7 @@ namespace MauiApp1.Platforms.Android
             var surface = new Surface(texture);
 
             imageReader = ImageReader.NewInstance(640, 480, ImageFormatType.Yuv420888, 2);
-            imageReader.SetOnImageAvailableListener(new ImageAvailableListener(context), backgroundHandler);
+            imageReader.SetOnImageAvailableListener(new ImageAvailableListener(context,this), backgroundHandler);
 
             var surfaces = new List<Surface> { surface, imageReader.Surface! };
 
@@ -158,9 +165,11 @@ namespace MauiApp1.Platforms.Android
         private class ImageAvailableListener : Java.Lang.Object, ImageReader.IOnImageAvailableListener
         {
             private readonly Context context;
-            public ImageAvailableListener(Context _context)
+            private readonly Camera2Preview preview;   
+            public ImageAvailableListener(Context _context,Camera2Preview _preview)
             {
-                this.context = _context;    
+                this.context = _context;
+                this.preview = _preview;
             }
             public  async void OnImageAvailable(ImageReader reader)
             {
@@ -185,7 +194,7 @@ namespace MauiApp1.Platforms.Android
                 {
                     MainThread.BeginInvokeOnMainThread(() =>
                     {
-
+                        preview?.OnYawDetected?.Invoke(yaw.Value);  
                     });
                 }
                 var planes = image.GetPlanes();

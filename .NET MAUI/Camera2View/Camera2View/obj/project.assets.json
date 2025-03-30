@@ -8737,7 +8737,7 @@
         }
       }
     },
-    "net9.0-android35.0/iossimulator-x64": {
+    "net9.0-android35.0/ios-arm64": {
       "GoogleGson/2.11.0.3": {
         "type": "package",
         "dependencies": {
@@ -18679,7 +18679,7 @@
         }
       }
     },
-    "net9.0-ios18.2/iossimulator-x64": {
+    "net9.0-ios18.2/ios-arm64": {
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -21091,7 +21091,7 @@
         }
       }
     },
-    "net9.0-maccatalyst18.2/iossimulator-x64": {
+    "net9.0-maccatalyst18.2/ios-arm64": {
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -24049,7 +24049,7 @@
         }
       }
     },
-    "net9.0-windows10.0.19041/iossimulator-x64": {
+    "net9.0-windows10.0.19041/ios-arm64": {
       "Microsoft.Extensions.Configuration/9.0.0": {
         "type": "package",
         "dependencies": {
@@ -30554,7 +30554,7 @@
       "android-x64": {
         "#import": []
       },
-      "iossimulator-x64": {
+      "ios-arm64": {
         "#import": []
       },
       "maccatalyst-x64": {
@@ -30576,7 +30576,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -30591,7 +30591,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -30606,7 +30606,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -30621,7 +30621,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -30636,7 +30636,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -30651,7 +30651,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -30666,7 +30666,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
@@ -30681,7 +30681,7 @@
         "net9.0-android35.0",
         "net9.0-android35.0/android-arm64",
         "net9.0-android35.0/android-x64",
-        "net9.0-android35.0/iossimulator-x64",
+        "net9.0-android35.0/ios-arm64",
         "net9.0-android35.0/maccatalyst-x64",
         "net9.0-android35.0/win10-x64"
       ]
