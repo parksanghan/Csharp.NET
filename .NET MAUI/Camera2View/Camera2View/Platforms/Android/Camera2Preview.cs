@@ -1,10 +1,12 @@
 ﻿using Android.Content;
+using Android.Gms.Common.Apis;
 using Android.Graphics;
 using Android.Hardware.Camera2;
 using Android.Media;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
+using Camera2View.Platforms.Android.Api;
 using Java.Lang;
 using System;
 using System.Collections.Generic;
@@ -13,7 +15,7 @@ using System.Text;
 using System.Threading.Tasks;
  
 namespace MauiApp1.Platforms.Android
-{
+{   // surface는 TextureView에 연결된 SurfaceTexture로부터 만들어진 프리뷰 출력용 Surface
     public class Camera2Preview:TextureView , TextureView.ISurfaceTextureListener
     {
         private readonly Context context;
@@ -23,40 +25,45 @@ namespace MauiApp1.Platforms.Android
         private string? cameraId;
         private HandlerThread? backgroundThread;
         private Handler backgroundHandler;
+       
         
         public Camera2Preview(Context conttext):base(conttext)  
         {
             this.context = conttext;
             SurfaceTextureListener = this;
+            
 
         }
 
         public void OnSurfaceTextureAvailable(SurfaceTexture surface, int width, int height)
         {
             System.Diagnostics.Debug.WriteLine("🟢 SurfaceTexture available - StartCamera()");
+            //  startCamera 자체는 실행중인 쓰레드에서 실행
             StartCamera();
         }
-
+        // 사용 X 
         public bool OnSurfaceTextureDestroyed(SurfaceTexture surface)
         {
             return true; // true: 우리가 직접 SurfaceTexture를 관리하지 않겠다
         }
 
+        // 사용 X 
         public void OnSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height)
         {
             // 해상도 변경 대응 필요시 처리
         }
-
+        // 사용 X 
         public void OnSurfaceTextureUpdated(SurfaceTexture surface)
         {
             // 프레임이 업데이트 될 때 호출됨 (선택적으로 활용 가능)
         }
+
         public void StartCamera()
         {
             StartBackgroundThread();
 
             var cameraManager = (CameraManager)context.GetSystemService(Context.CameraService)!;
-            cameraId = cameraManager.GetCameraIdList().First(id =>
+            cameraId = cameraManager.GetCameraIdList().First(id => // 이 id 가 cameraid에 할당
             {
                 // 카메라 가져옴
                 var characteristics = cameraManager.GetCameraCharacteristics(id);
@@ -69,7 +76,7 @@ namespace MauiApp1.Platforms.Android
         private void StartBackgroundThread()
         {
             backgroundThread = new HandlerThread("CameraBackground");
-            backgroundThread.Start();
+            backgroundThread.Start(); // 쓰레드할당
             backgroundHandler = new Handler(backgroundThread.Looper!);
         }
         private class CameraStateCallback : CameraDevice.StateCallback
@@ -112,7 +119,7 @@ namespace MauiApp1.Platforms.Android
             var requestBuilder = cameraDevice.CreateCaptureRequest(CameraTemplate.Preview)!;
             requestBuilder.AddTarget(surface);
             requestBuilder.AddTarget(imageReader.Surface!);
-
+            //캡처
             cameraDevice.CreateCaptureSession(surfaces, new SessionStateCallback(this, requestBuilder), backgroundHandler);
         }
 
@@ -142,13 +149,14 @@ namespace MauiApp1.Platforms.Android
                 // 실패 처리
             }
         }
-
+        // SeyCapture 요청시 ImageReader의 Surface로 전달됨
         private class ImageAvailableListener : Java.Lang.Object, ImageReader.IOnImageAvailableListener
         {
             public void OnImageAvailable(ImageReader reader)
             {
                 using var image = reader.AcquireLatestImage();
                 if (image == null) return;
+                var rotation = 0;
 
                 // ML Kit InputImage로 변환 시작
                 var planes = image.GetPlanes();
@@ -160,6 +168,7 @@ namespace MauiApp1.Platforms.Android
                 int height = image.Height;
 
                 // 여기서 ML Kit 처리 시작
+               
                 System.Diagnostics.Debug.WriteLine($"[프레임 수신] {data.Length} bytes, {width}x{height}");
 
                 image.Close();

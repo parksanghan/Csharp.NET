@@ -10,8 +10,8 @@ namespace Camera2View.Platforms.Android.Api
 {
     public class FaceDetectorService
     {
-        private IFaceDetector faceDetector;
-        
+        private static IFaceDetector faceDetector;
+        public static FaceDetectorService getInstance => faceDetector ?? =  new FaceDetectorService();  
         public FaceDetectorService()
         {
             var faceOpt =  new FaceDetectorOptions.Builder().
