@@ -8,5 +8,6 @@ namespace Camera2View
 {
     public class MyCameraPreview:View
     {
+        public Action<float>? OnYawDetected { get; set; }
     }
 }

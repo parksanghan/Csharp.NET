@@ -1,4 +1,5 @@
-﻿using Android.Content;
+﻿using Android.App;
+using Android.Content;
 using Android.Gms.Common.Apis;
 using Android.Graphics;
 using Android.Hardware.Camera2;
@@ -25,13 +26,17 @@ namespace MauiApp1.Platforms.Android
         private string? cameraId;
         private HandlerThread? backgroundThread;
         private Handler backgroundHandler;
-       
-        
+        private readonly FaceDetectorService detector = FaceDetectorService.Instance;
+        public Action<float>? OnYawDetected { get; set; }
         public Camera2Preview(Context conttext):base(conttext)  
         {
             this.context = conttext;
-            SurfaceTextureListener = this;
-            
+            this.SurfaceTextureListener = this;// 생성 시 싱글톤 인스턴스 준비만 해놓기 (딱 한 번만 실행됨)
+            var _=  FaceDetectorService.Instance;
+
+             
+
+
 
         }
 
@@ -112,7 +117,7 @@ namespace MauiApp1.Platforms.Android
             var surface = new Surface(texture);
 
             imageReader = ImageReader.NewInstance(640, 480, ImageFormatType.Yuv420888, 2);
-            imageReader.SetOnImageAvailableListener(new ImageAvailableListener(), backgroundHandler);
+            imageReader.SetOnImageAvailableListener(new ImageAvailableListener(context), backgroundHandler);
 
             var surfaces = new List<Surface> { surface, imageReader.Surface! };
 
@@ -152,13 +157,37 @@ namespace MauiApp1.Platforms.Android
         // SeyCapture 요청시 ImageReader의 Surface로 전달됨
         private class ImageAvailableListener : Java.Lang.Object, ImageReader.IOnImageAvailableListener
         {
-            public void OnImageAvailable(ImageReader reader)
+            private readonly Context context;
+            public ImageAvailableListener(Context _context)
             {
-                using var image = reader.AcquireLatestImage();
-                if (image == null) return;
-                var rotation = 0;
+                this.context = _context;    
+            }
+            public  async void OnImageAvailable(ImageReader reader)
+            {
 
+                using var image = reader.AcquireLatestImage();
+                 
+                if (image == null) return;
+                var windowManager = (context as Activity)?.WindowManager;
+                var display = windowManager.DefaultDisplay;
+                var surfaceRotation = display?.Rotation ?? SurfaceOrientation.Rotation0;
+                int rotationDegrees = surfaceRotation switch
+                {
+                    SurfaceOrientation.Rotation0 => 0,
+                    SurfaceOrientation.Rotation90 => 90,
+                    SurfaceOrientation.Rotation180 => 180,
+                    SurfaceOrientation.Rotation270 => 270,
+                    _ => 0
+                };
+                var yaw =  await FaceDetectorService.Instance.DetectYawAsyncFromImage(image, rotationDegrees);
                 // ML Kit InputImage로 변환 시작
+                if (yaw.HasValue)
+                {
+                    MainThread.BeginInvokeOnMainThread(() =>
+                    {
+
+                    });
+                }
                 var planes = image.GetPlanes();
                 var buffer = planes[0].Buffer;
                 var data = new byte[buffer.Remaining()];
@@ -166,7 +195,7 @@ namespace MauiApp1.Platforms.Android
 
                 int width = image.Width;
                 int height = image.Height;
-
+                 
                 // 여기서 ML Kit 처리 시작
                
                 System.Diagnostics.Debug.WriteLine($"[프레임 수신] {data.Length} bytes, {width}x{height}");

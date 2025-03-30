@@ -12,15 +12,24 @@ namespace Camera2View.Platforms.Android
 {
     public class MyCameraPreviewHandler : ViewHandler<MyCameraPreview, Camera2Preview>
     {
+ 
         public MyCameraPreviewHandler() : base(Mapper)
         {
+       
         }
 
         public static IPropertyMapper<MyCameraPreview, MyCameraPreviewHandler> Mapper =
         new PropertyMapper<MyCameraPreview, MyCameraPreviewHandler>(ViewHandler.ViewMapper);
         protected override Camera2Preview CreatePlatformView()
         {
-            return new Camera2Preview(Context);
+            var nativeView = new Camera2Preview(Context);
+            nativeView.OnYawDetected = VirtualView.OnYawDetected; // 이게 핵심
+            return nativeView;
+        }
+
+        public static void MapOnYawDetected(MyCameraPreview view, MyCameraPreviewHandler handler)
+        {
+            handler.PlatformView.OnYawDetected = view.OnYawDetected;
         }
     }
 }

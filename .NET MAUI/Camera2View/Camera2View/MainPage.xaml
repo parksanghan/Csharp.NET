@@ -26,7 +26,13 @@
                     Clicked="OnCounterClicked"
                     HorizontalOptions="Fill" />
 
-            <local:MyCameraPreview/>
+            <local:MyCameraPreview
+                x:Name="MyCameraPreview"/>
+            <Label
+                Text="degree"
+               x:Name="degreeLabel"
+                
+                />
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

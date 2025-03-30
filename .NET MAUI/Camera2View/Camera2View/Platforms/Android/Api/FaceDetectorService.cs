@@ -10,9 +10,12 @@ namespace Camera2View.Platforms.Android.Api
 {
     public class FaceDetectorService
     {
-        private static IFaceDetector faceDetector;
-        public static FaceDetectorService getInstance => faceDetector ?? =  new FaceDetectorService();  
-        public FaceDetectorService()
+
+        private static FaceDetectorService _instance;   
+        public static FaceDetectorService Instance=>_instance ??= new FaceDetectorService();
+        private IFaceDetector faceDetector;
+        
+        private FaceDetectorService()
         {
             var faceOpt =  new FaceDetectorOptions.Builder().
                 SetPerformanceMode(FaceDetectorOptions.PerformanceModeFast).Build();
