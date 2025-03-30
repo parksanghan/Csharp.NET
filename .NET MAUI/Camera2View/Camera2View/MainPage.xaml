@@ -26,8 +26,11 @@
                     Clicked="OnCounterClicked"
                     HorizontalOptions="Fill" />
 
-            <local:MyCameraPreview
-                x:Name="MyCameraPreview"/>
+            HeightRequest = 600,
+    WidthRequest = 400,
+    BackgroundColor = Colors.Black,
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
             <Label
                 Text="degree"
                x:Name="degreeLabel"

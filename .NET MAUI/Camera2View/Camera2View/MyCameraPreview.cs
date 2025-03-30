@@ -9,5 +9,10 @@ namespace Camera2View
     public class MyCameraPreview:View
     {
         public Action<float>? OnYawDetected { get; set; }
+        public void StartCamera()
+        {
+            Handler?.Invoke(nameof(StartCamera));
+        }
     }
+    
 }

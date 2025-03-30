@@ -15,7 +15,7 @@ namespace Camera2View
                 handlers.AddHandler<MyCameraPreview, MyCameraPreviewHandler>();
 #endif
 
-                ;
+                
             })
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
