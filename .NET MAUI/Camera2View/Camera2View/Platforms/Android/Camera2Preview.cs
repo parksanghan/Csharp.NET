@@ -32,7 +32,7 @@ namespace Camera2View.Platforms.Android
         public Camera2Preview(Context conttext):base(conttext)  
         {
             this.context = conttext;
-            this.SurfaceTextureListener = this;// 생성 시 싱글톤 인스턴스 준비만 해놓기 (딱 한 번만 실행됨)
+            SurfaceTextureListener = this;// 생성 시 싱글톤 인스턴스 준비만 해놓기 (딱 한 번만 실행됨)
             var _=  FaceDetectorService.Instance;
 
         }

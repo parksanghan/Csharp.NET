@@ -25,12 +25,11 @@
                     SemanticProperties.Hint="Counts the number of times you click"
                     Clicked="OnCounterClicked"
                     HorizontalOptions="Fill" />
-
-            HeightRequest = 600,
-    WidthRequest = 400,
-    BackgroundColor = Colors.Black,
-    HorizontalOptions = LayoutOptions.Center,
-    VerticalOptions = LayoutOptions.Center
+            <local:MyCameraPreview 
+                x:Name="myCameraPreview"
+    WidthRequest="400" 
+    HeightRequest="600"
+      />
             <Label
                 Text="degree"
                x:Name="degreeLabel"

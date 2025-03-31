@@ -64,4 +64,9 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Platforms\Android\Controls\" />
+	  <Folder Include="Platforms\Android\NewFolder\" />
+	</ItemGroup>
+
 </Project>
