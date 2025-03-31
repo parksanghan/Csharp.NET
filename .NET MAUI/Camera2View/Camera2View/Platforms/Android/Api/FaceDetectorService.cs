@@ -51,5 +51,33 @@ namespace Camera2View.Platforms.Android.Api
             }
             return null;
         }
+        public async Task<float?> DetectYawAsyncFromImage(InputImage image)
+        {
+            if (faceDetector == null)
+            {
+                System.Diagnostics.Debug.WriteLine("❗ faceDetector is null - 아직 초기화되지 않음");
+                return null;
+            }
+
+            try
+            {
+                var res = await faceDetector.Process(image) as IList<Face?>;
+
+                if (res == null || !res.Any())
+                {
+                    System.Diagnostics.Debug.WriteLine("❗ 얼굴을 감지하지 못했습니다.");
+                    return null;
+                }
+
+                var yaw = res.First()?.HeadEulerAngleY;
+                System.Diagnostics.Debug.WriteLine($"✅ 얼굴 감지 성공 - Yaw: {yaw}");
+                return yaw;
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"❌ 예외 발생: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

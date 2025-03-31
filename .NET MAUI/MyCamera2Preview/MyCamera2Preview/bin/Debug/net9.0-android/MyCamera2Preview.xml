@@ -4,6 +4,9 @@
         <name>MyCamera2Preview</name>
     </assembly>
     <members>
+        <member name="M:MyCamera2Preview.Platforms.Android.Camera2Preview.ImageAvailableListener.Yuv420ToNv21(Android.Media.Image)">
+            *
+        </member>
         <member name="T:MyCamera2Preview.Resource">
             <summary>
             Android Resource Designer class.

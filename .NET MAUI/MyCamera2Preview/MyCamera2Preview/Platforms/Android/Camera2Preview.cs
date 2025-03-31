@@ -5,11 +5,13 @@ using Android.Hardware.Camera2.Params;
 using Android.Media;
 using Android.OS;
 using Android.Runtime;
+using Android.Telecom;
 using Android.Views;
 using Java.Lang; // ← 이거 추가!
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Google.MLKit.Vision.Common;
@@ -214,58 +216,201 @@ namespace MyCamera2Preview.Platforms.Android
             //        image.Close();
             //    }
             //}
+            //            public  void OnImageAvailable(ImageReader reader)
+            //            {
+            //                Image? image = reader.AcquireLatestImage();
 
-            public  void OnImageAvailable(ImageReader reader)
+            //                try
+            //                {
+
+            //                    if (image == null) return;
+
+            //                    var windowManager = context.GetSystemService(Context.WindowService) as IWindowManager;
+            //                    if (windowManager == null) return;
+
+            //                    var rotation = windowManager.DefaultDisplay?.Rotation ?? SurfaceOrientation.Rotation0;
+            //                    int rotationDegrees = rotation switch
+            //                    {
+            //                        SurfaceOrientation.Rotation0 => 0,
+            //                        SurfaceOrientation.Rotation90 => 90,
+            //                        SurfaceOrientation.Rotation180 => 180,
+            //                        SurfaceOrientation.Rotation270 => 270,
+            //                        _ => 0
+            //                    };
+
+            //                    // ML Kit InputImage로 변환 시작
+
+            //                    var planes = image.GetPlanes();
+            //                    if (planes == null || planes.Length == 0)
+            //                    {
+            //                        System.Diagnostics.Debug.WriteLine("❗ image.GetPlanes() 실패");
+            //                        return;
+            //                    }
+            //                    var buffer = planes[0].Buffer;
+            //                    var data = new byte[buffer.Remaining()];
+            //                    buffer.Get(data);
+
+            //                    int width = image.Width;
+            //                    int height = image.Height;
+
+            //                    // 여기서 ML Kit 처리 시작
+            //                    var imagedel = InputImage.FromMediaImage(image, rotationDegrees);
+            //                    //image.Close(); // 바로 닫음 (최대 buffer 문제 방지)
+            //                    System.Diagnostics.Debug.WriteLine($"[프레임 수신] {data.Length} bytes, {width}x{height}");
+            //                    _ = Task.Run(async () =>
+            //                    {
+
+            //                        //var yaw = await FaceDetectorService.Instance.DetectYawAsyncFromImage(imagedel);
+            //                        //if (yaw.HasValue)
+            //                        //{
+            //                        //    System.Diagnostics.Debug.WriteLine($"[Yaw] {yaw.Value}도");
+            //                        //}
+            //                        //image.Close(); // 바로 닫음 (최대 buffer 문제 방지)
+            //                        try
+            //                        {
+            //                            var yaw = await FaceDetectorService.Instance.DetectYawAsyncFromImage(imagedel);
+            //                            if (yaw.HasValue)
+            //                            {
+            //                                System.Diagnostics.Debug.WriteLine($"[Yaw] {yaw.Value}도");
+            //                            }
+            //                        }
+            //                        catch (System.Exception ex)
+            //                        {
+            //                            System.Diagnostics.Debug.WriteLine($"❌ 예외 발생(Task 내부): {ex.Message}");
+            //                        }
+            //                        finally
+            //                        {
+            //                            image.Close(); // Task 안에서 닫아야 함!!
+            //                        }
+            //                    });
+            //                }
+            //                finally
+            //                {
+            //                    image.Close();
+            //                }
+            //                // 현재 상황
+            ///*
+            //                Image 객체가 이미 다른쓰레드에서  Close된뒤에 바로 
+            //                InputImage.FromMediaImage()에 전달됨.
+            //                InputImage.FromMediaImage(image, rotation) 호출 전에 image.Close() 를 하지 않아야 함.
+            //                Task.Run() 으로 ML Kit을 비동기 처리하더라도, 
+            //                내부에서 처리 중인 이미지가 동시에 처리되는 경우 충돌 발생 가능
+            // */
+
+
+            //            }
+            private byte[] Yuv420ToNv21(Image image)
             {
+                var yPlane = image.GetPlanes()[0];
+                var uPlane = image.GetPlanes()[1];
+                var vPlane = image.GetPlanes()[2];
+
+                int ySize = yPlane.Buffer.Remaining();
+                int uSize = uPlane.Buffer.Remaining();
+                int vSize = vPlane.Buffer.Remaining();
+
+                byte[] nv21 = new byte[ySize + uSize + vSize];
+
+                // Y 채널 복사
+                yPlane.Buffer.Get(nv21, 0, ySize);
+
+                // VU 채널을 NV21 순서로 복사
+                byte[] uBytes = new byte[uSize];
+                byte[] vBytes = new byte[vSize];
+                uPlane.Buffer.Get(uBytes);
+                vPlane.Buffer.Get(vBytes);
+
+                // NV21은 VU 순서여야 함 (VU VU VU...)
+                for (int i = 0; i < uSize; i++)
+                {
+                    nv21[ySize + (i * 2)] = vBytes[i];
+                    nv21[ySize + (i * 2) + 1] = uBytes[i];
+                }
+
+                return nv21;
+            }
+            private long lastProcessedTime = 0;
+            public void OnImageAvailable(ImageReader reader)
+            {
+
+                long now = JavaSystem.CurrentTimeMillis();
+                if (now - lastProcessedTime < 700)
+                {
+                    reader.AcquireLatestImage()?.Close(); // 프레임 무시 + 리소스 누수 방지
+                    return;
+                }
+                lastProcessedTime = now;
                 Image? image = reader.AcquireLatestImage();
- 
 
-                    if (image == null) return;
 
-                    var windowManager = context.GetSystemService(Context.WindowService) as IWindowManager;
-                    if (windowManager == null) return;
 
-                    var rotation = windowManager.DefaultDisplay?.Rotation ?? SurfaceOrientation.Rotation0;
-                    int rotationDegrees = rotation switch
+                if (image == null) return;
+
+                var windowManager = context.GetSystemService(Context.WindowService) as IWindowManager;
+                if (windowManager == null) return;
+
+                var rotation = windowManager.DefaultDisplay?.Rotation ?? SurfaceOrientation.Rotation0;
+                int rotationDegrees = rotation switch
+                {
+                    SurfaceOrientation.Rotation0 => 0,
+                    SurfaceOrientation.Rotation90 => 90,
+                    SurfaceOrientation.Rotation180 => 180,
+                    SurfaceOrientation.Rotation270 => 270,
+                    _ => 0
+                };
+
+                // ML Kit InputImage로 변환 시작
+                var inputImage = InputImage.FromMediaImage(image, rotationDegrees);//
+                var planes = image.GetPlanes();
+                if (planes == null || planes.Length == 0)
+                {
+                    System.Diagnostics.Debug.WriteLine("❗ image.GetPlanes() 실패");
+                    return;
+                }
+                var buffer = planes[0].Buffer;
+                var data = new byte[buffer.Remaining()];
+                buffer.Get(data);
+                byte[] nv21bytes = Yuv420ToNv21(image);
+                int width = image.Width;
+                int height = image.Height;
+                image.Close();
+                // 여기서 ML Kit 처리 시작
+
+                //image.Close(); // 바로 닫음 (최대 buffer 문제 방지)
+                System.Diagnostics.Debug.WriteLine($"[프레임 수신] {data.Length} bytes, {width}x{height}");
+                _ = Task.Run(async () =>
+                {
+                    try
                     {
-                        SurfaceOrientation.Rotation0 => 0,
-                        SurfaceOrientation.Rotation90 => 90,
-                        SurfaceOrientation.Rotation180 => 180,
-                        SurfaceOrientation.Rotation270 => 270,
-                        _ => 0
-                    };
-                  
-                    // ML Kit InputImage로 변환 시작
-                   
-                    var planes = image.GetPlanes();
-                    if (planes == null || planes.Length == 0)
-                    {
-                        System.Diagnostics.Debug.WriteLine("❗ image.GetPlanes() 실패");
-                        return;
-                    }
-                    var buffer = planes[0].Buffer;
-                    var data = new byte[buffer.Remaining()];
-                    buffer.Get(data);
-
-                    int width = image.Width;
-                    int height = image.Height;
-
-                    // 여기서 ML Kit 처리 시작
-                    var imagedel = InputImage.FromMediaImage(image, rotationDegrees);
-                    image.Close(); // 바로 닫음 (최대 buffer 문제 방지)
-                    System.Diagnostics.Debug.WriteLine($"[프레임 수신] {data.Length} bytes, {width}x{height}");
-                    _ = Task.Run(async () =>
-                    {
-
-                        var yaw = await FaceDetectorService.Instance.DetectYawAsyncFromImage(imagedel);
+                        //var yaw = await FaceDetectorService.Instance.DetectYawAsyncFromByte(nv21bytes, width, height, rotationDegrees);
+                        var yaw = await FaceDetectorService.Instance.DetectYawAsyncFromImage(inputImage);
                         if (yaw.HasValue)
                         {
-                            System.Diagnostics.Debug.WriteLine($"[Yaw] {yaw.Value}도");
+                            System.Diagnostics.Debug.WriteLine($"{yaw} degree");
+                         
                         }
-                    });
- 
-              
+                        else
+                        {
+                            System.Diagnostics.Debug.WriteLine("❗ 얼굴을 감지하지 못했습니다.");
+                          
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"❌ 예외 발생: {ex.Message}");
+                
+                    }
+                    finally
+                    {
+                       
+                    }
+                });
             }
+
+            
+
+
+
         }
     }
 }

@@ -87,5 +87,6 @@ namespace MyCamera2Preview.Platforms.Android
                 return null;
             }
         }
+
     }
 }
