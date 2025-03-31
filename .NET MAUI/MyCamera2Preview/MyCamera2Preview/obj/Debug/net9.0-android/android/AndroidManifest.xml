@@ -13,6 +13,7 @@
   <permission android:name="com.companyname.mycamera2preview.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" android:protectionLevel="signature" />
   <uses-permission android:name="com.companyname.mycamera2preview.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
   <application android:name="crc648a54903833431470.MainApplication" android:allowBackup="true" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:debuggable="true" android:extractNativeLibs="true" android:icon="@mipmap/appicon" android:label="MyCamera2Preview" android:roundIcon="@mipmap/appicon_round" android:supportsRtl="true">
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
     <activity android:name="crc648a54903833431470.MainActivity" android:configChanges="density|orientation|smallestScreenSize|screenLayout|screenSize|uiMode" android:exported="true" android:launchMode="singleTop" android:theme="@style/Maui.SplashTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -50,5 +51,18 @@
     </receiver>
     <uses-library android:name="androidx.window.extensions" android:required="false" />
     <uses-library android:name="androidx.window.sidecar" android:required="false" />
+    <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+      <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct" />
+    </service>
+    <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:exported="false" android:permission="android.permission.BIND_JOB_SERVICE"></service>
+    <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false" />
+    <provider android:name="com.google.mlkit.common.internal.MlKitInitProvider" android:authorities="com.companyname.mycamera2preview.mlkitinitprovider" android:exported="false" android:initOrder="99" />
+    <service android:name="com.google.mlkit.common.internal.MlKitComponentDiscoveryService" android:directBootAware="true" android:exported="false" tools:targetApi="n">
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+      <meta-data android:name="com.google.firebase.components:com.google.mlkit.vision.face.internal.FaceRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+    </service>
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
   </application>
 </manifest>

@@ -4,6 +4,7 @@ using Android.OS;
 using Android;
 using AndroidX.Core.App;
 using AndroidX.Core.Content;
+using MyCamera2Preview.Platforms.Android;
 namespace MyCamera2Preview
 {
     [Activity(Theme = "@style/Maui.SplashTheme", MainLauncher = true, LaunchMode = LaunchMode.SingleTop, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.Density)]
@@ -11,6 +12,7 @@ namespace MyCamera2Preview
     {
         protected override void OnCreate(Bundle? savedInstanceState)
         {
+            _ = FaceDetectorService.Instance;
             base.OnCreate(savedInstanceState);
             Platform.Init(this, savedInstanceState);
             // ✅ 카메라 권한 체크 및 요청

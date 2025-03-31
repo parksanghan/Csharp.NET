@@ -24,6 +24,14 @@ public class Camera2Preview_ImageAvailableListener
 		}
 	}
 
+	public Camera2Preview_ImageAvailableListener (android.content.Context p0)
+	{
+		super ();
+		if (getClass () == Camera2Preview_ImageAvailableListener.class) {
+			mono.android.TypeManager.Activate ("MyCamera2Preview.Platforms.Android.Camera2Preview+ImageAvailableListener, MyCamera2Preview", "Android.Content.Context, Mono.Android", this, new java.lang.Object[] { p0 });
+		}
+	}
+
 	public void onImageAvailable (android.media.ImageReader p0)
 	{
 		n_onImageAvailable (p0);

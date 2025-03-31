@@ -1,6 +1,7 @@
 ﻿using Android.Content;
 using Android.Graphics;
 using Android.Hardware.Camera2;
+using Android.Hardware.Camera2.Params;
 using Android.Media;
 using Android.OS;
 using Android.Runtime;
@@ -11,12 +12,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Google.MLKit.Vision.Common;
 using static Android.Views.TextureView;
-
+using Image = Android.Media.Image;
 namespace MyCamera2Preview.Platforms.Android
 {
     public class Camera2Preview : TextureView, TextureView.ISurfaceTextureListener
     {
+      
         private readonly Context context;
         private CameraDevice? cameraDevice;
         private CameraCaptureSession? captureSession;
@@ -28,6 +31,7 @@ namespace MyCamera2Preview.Platforms.Android
         {
             this.context = conttext;
             SurfaceTextureListener = this;
+            
 
         }
 
@@ -54,7 +58,14 @@ namespace MyCamera2Preview.Platforms.Android
         public void StartCamera()
         {
             StartBackgroundThread();
-
+            // 여기서부터
+            //var manager = (CameraManager)context.GetSystemService(Context.CameraService)!;
+            //var characteristics = manager.GetCameraCharacteristics(cameraId);
+            //var configMap = (StreamConfigurationMap)characteristics.Get(CameraCharacteristics.ScalerStreamConfigurationMap);
+            //var outputSizes =  configMap.GetOutputSizes((int)ImageFormatType.Jpeg);
+            //var maxSize = outputSizes.OrderByDescending(s => s.Width * s.Height).First();
+            //System.Diagnostics.Debug.WriteLine($"🟢 최대 해상도: {maxSize.Width} x {maxSize.Height}");
+            // 여기까지
             var cameraManager = (CameraManager)context.GetSystemService(Context.CameraService)!;
             cameraId = cameraManager.GetCameraIdList().First(id =>
             {
@@ -104,8 +115,8 @@ namespace MyCamera2Preview.Platforms.Android
 
             var surface = new Surface(texture);
 
-            imageReader = ImageReader.NewInstance(640, 480, ImageFormatType.Yuv420888, 2);
-            imageReader.SetOnImageAvailableListener(new ImageAvailableListener(), backgroundHandler);
+            imageReader = ImageReader.NewInstance(640, 480, ImageFormatType.Yuv420888, 5);
+            imageReader.SetOnImageAvailableListener(new ImageAvailableListener(context), backgroundHandler);
 
             var surfaces = new List<Surface> { surface, imageReader.Surface! };
 
@@ -142,27 +153,118 @@ namespace MyCamera2Preview.Platforms.Android
                 // 실패 처리
             }
         }
-
+        
         private class ImageAvailableListener : Java.Lang.Object, ImageReader.IOnImageAvailableListener
         {
-            public void OnImageAvailable(ImageReader reader)
+            private readonly Context context; // **
+            private bool isProcessing = false;
+
+            public ImageAvailableListener(Context context )
             {
-                using var image = reader.AcquireLatestImage();
-                if (image == null) return;
+                this.context = context;
 
-                // ML Kit InputImage로 변환 시작
-                var planes = image.GetPlanes();
-                var buffer = planes[0].Buffer;
-                var data = new byte[buffer.Remaining()];
-                buffer.Get(data);
+            }
 
-                int width = image.Width;
-                int height = image.Height;
+            //public async void OnImageAvailable(ImageReader reader)
+            //{
+            //    Image? image = null;
 
-                // 여기서 ML Kit 처리 시작
-                System.Diagnostics.Debug.WriteLine($"[프레임 수신] {data.Length} bytes, {width}x{height}");
+            //    try
+            //    {
+            //        image = reader.AcquireLatestImage();
 
-                image.Close();
+            //        if (image == null) return;
+
+            //        var windowManager = context.GetSystemService(Context.WindowService) as IWindowManager;
+            //        if (windowManager == null) return;
+
+            //        var rotation = windowManager.DefaultDisplay?.Rotation ?? SurfaceOrientation.Rotation0;
+            //        int rotationDegrees = rotation switch
+            //        {
+            //            SurfaceOrientation.Rotation0 => 0,
+            //            SurfaceOrientation.Rotation90 => 90,
+            //            SurfaceOrientation.Rotation180 => 180,
+            //            SurfaceOrientation.Rotation270 => 270,
+            //            _ => 0
+            //        };
+            //        var yaw = await FaceDetectorService.Instance.DetectYawAsyncFromImage(image, rotationDegrees);
+            //        // ML Kit InputImage로 변환 시작
+            //        if (yaw.HasValue)
+            //        {
+            //            System.Diagnostics.Debug.WriteLine($"[Yaw] {yaw.Value}도");
+            //        }
+            //        var planes = image.GetPlanes();
+            //        if (planes == null || planes.Length == 0)
+            //        {
+            //            System.Diagnostics.Debug.WriteLine("❗ image.GetPlanes() 실패");
+            //            return;
+            //        }
+            //        var buffer = planes[0].Buffer;
+            //        var data = new byte[buffer.Remaining()];
+            //        buffer.Get(data);
+
+            //        int width = image.Width;
+            //        int height = image.Height;
+
+            //        // 여기서 ML Kit 처리 시작
+            //        System.Diagnostics.Debug.WriteLine($"[프레임 수신] {data.Length} bytes, {width}x{height}");
+            //    }
+            //    finally
+            //    {
+            //        image.Close();
+            //    }
+            //}
+
+            public  void OnImageAvailable(ImageReader reader)
+            {
+                Image? image = reader.AcquireLatestImage();
+ 
+
+                    if (image == null) return;
+
+                    var windowManager = context.GetSystemService(Context.WindowService) as IWindowManager;
+                    if (windowManager == null) return;
+
+                    var rotation = windowManager.DefaultDisplay?.Rotation ?? SurfaceOrientation.Rotation0;
+                    int rotationDegrees = rotation switch
+                    {
+                        SurfaceOrientation.Rotation0 => 0,
+                        SurfaceOrientation.Rotation90 => 90,
+                        SurfaceOrientation.Rotation180 => 180,
+                        SurfaceOrientation.Rotation270 => 270,
+                        _ => 0
+                    };
+                  
+                    // ML Kit InputImage로 변환 시작
+                   
+                    var planes = image.GetPlanes();
+                    if (planes == null || planes.Length == 0)
+                    {
+                        System.Diagnostics.Debug.WriteLine("❗ image.GetPlanes() 실패");
+                        return;
+                    }
+                    var buffer = planes[0].Buffer;
+                    var data = new byte[buffer.Remaining()];
+                    buffer.Get(data);
+
+                    int width = image.Width;
+                    int height = image.Height;
+
+                    // 여기서 ML Kit 처리 시작
+                    var imagedel = InputImage.FromMediaImage(image, rotationDegrees);
+                    image.Close(); // 바로 닫음 (최대 buffer 문제 방지)
+                    System.Diagnostics.Debug.WriteLine($"[프레임 수신] {data.Length} bytes, {width}x{height}");
+                    _ = Task.Run(async () =>
+                    {
+
+                        var yaw = await FaceDetectorService.Instance.DetectYawAsyncFromImage(imagedel);
+                        if (yaw.HasValue)
+                        {
+                            System.Diagnostics.Debug.WriteLine($"[Yaw] {yaw.Value}도");
+                        }
+                    });
+ 
+              
             }
         }
     }
