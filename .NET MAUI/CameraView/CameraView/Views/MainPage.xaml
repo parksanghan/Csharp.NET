@@ -45,11 +45,7 @@
                     />
            
             </Grid>
-            <toolkit:CameraView
-                x:Name="cameraView2"
-      
-                
-                />
+     
             <Label
                 x:Name="directionLabel"
                 Text="얼굴 방향 표시"
