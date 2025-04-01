@@ -13,9 +13,15 @@ namespace MyCamera2Preview.Platforms.Android
         public static FaceDetectorService Instance => _instance ??= new FaceDetectorService();   
         private IFaceDetector faceDetector;
         public FaceDetectorService() {
-            var opt  =  new FaceDetectorOptions.Builder().
-                SetPerformanceMode(FaceDetectorOptions.PerformanceModeFast).Build ();
-            faceDetector = FaceDetection.GetClient(opt);
+            var options = new FaceDetectorOptions.Builder()
+         .SetPerformanceMode(FaceDetectorOptions.PerformanceModeAccurate)
+         .SetLandmarkMode(FaceDetectorOptions.LandmarkModeAll)
+         .SetContourMode(FaceDetectorOptions.ContourModeNone)
+         .SetClassificationMode(FaceDetectorOptions.ClassificationModeNone)
+         .SetMinFaceSize(0.1f)
+         .EnableTracking()
+         .Build();
+            faceDetector = FaceDetection.GetClient(options);
         }
         public async Task<float?> DetectYawAsyncFromByte
           (byte[] bytearr, int width, int height, int rot)

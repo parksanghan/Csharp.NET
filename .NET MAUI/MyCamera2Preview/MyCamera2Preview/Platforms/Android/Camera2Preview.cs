@@ -60,14 +60,7 @@ namespace MyCamera2Preview.Platforms.Android
         public void StartCamera()
         {
             StartBackgroundThread();
-            // 여기서부터
-            //var manager = (CameraManager)context.GetSystemService(Context.CameraService)!;
-            //var characteristics = manager.GetCameraCharacteristics(cameraId);
-            //var configMap = (StreamConfigurationMap)characteristics.Get(CameraCharacteristics.ScalerStreamConfigurationMap);
-            //var outputSizes =  configMap.GetOutputSizes((int)ImageFormatType.Jpeg);
-            //var maxSize = outputSizes.OrderByDescending(s => s.Width * s.Height).First();
-            //System.Diagnostics.Debug.WriteLine($"🟢 최대 해상도: {maxSize.Width} x {maxSize.Height}");
-            // 여기까지
+      
             var cameraManager = (CameraManager)context.GetSystemService(Context.CameraService)!;
             cameraId = cameraManager.GetCameraIdList().First(id =>
             {
@@ -112,12 +105,22 @@ namespace MyCamera2Preview.Platforms.Android
 
         private void CreateCameraPreviewSession()
         {
-            var texture = SurfaceTexture!;
-            texture.SetDefaultBufferSize(640, 480); // 프리뷰 해상도
+            //var characteristics = ((CameraManager)context.GetSystemService(Context.CameraService)!)
+            //.GetCameraCharacteristics(cameraId);
+            //var configMap = (StreamConfigurationMap)characteristics.Get(CameraCharacteristics.ScalerStreamConfigurationMap);
 
+            //// YUV_420_888 포맷에서 지원하는 해상도 목록 가져오기
+            //var outputSizes = configMap.GetOutputSizes((int)ImageFormatType.Yuv420888);
+
+            //// 최대 해상도 선택
+            //var maxSize = outputSizes.OrderByDescending(s => s.Width * s.Height).First();
+            //System.Diagnostics.Debug.WriteLine($"📸 최대 해상도: {maxSize.Width}x{maxSize.Height}");
+            var texture = SurfaceTexture!;
+            texture.SetDefaultBufferSize(1280, 720);
+            //texture.SetDefaultBufferSize(640, 480);
             var surface = new Surface(texture);
 
-            imageReader = ImageReader.NewInstance(640, 480, ImageFormatType.Yuv420888, 5);
+            imageReader = ImageReader.NewInstance(1280, 720, ImageFormatType.Yuv420888, 5);
             imageReader.SetOnImageAvailableListener(new ImageAvailableListener(context), backgroundHandler);
 
             var surfaces = new List<Surface> { surface, imageReader.Surface! };
@@ -330,7 +333,7 @@ namespace MyCamera2Preview.Platforms.Android
                 return nv21;
             }
             private long lastProcessedTime = 0;
-            public void OnImageAvailable(ImageReader reader)
+            public void OnImageAvailable1(ImageReader reader)
             {
 
                 long now = JavaSystem.CurrentTimeMillis();
@@ -407,7 +410,56 @@ namespace MyCamera2Preview.Platforms.Android
                 });
             }
 
-            
+            public async void OnImageAvailable(ImageReader reader)
+            {
+                long now = JavaSystem.CurrentTimeMillis();
+                if (now - lastProcessedTime < 700)
+                {
+                    reader.AcquireLatestImage()?.Close();
+                    return;
+                }
+                lastProcessedTime = now;
+
+                Image? image = reader.AcquireLatestImage();
+                if (image == null) return;
+
+                var windowManager = context.GetSystemService(Context.WindowService) as IWindowManager;
+                if (windowManager == null) return;
+
+                var rotation = windowManager.DefaultDisplay?.Rotation ?? SurfaceOrientation.Rotation0;
+                int rotationDegrees = rotation switch
+                {
+                    SurfaceOrientation.Rotation0 => 0,
+                    SurfaceOrientation.Rotation90 => 90,
+                    SurfaceOrientation.Rotation180 => 180,
+                    SurfaceOrientation.Rotation270 => 270,
+                    _ => 0
+                };
+                System.Diagnostics.Debug.WriteLine($"[DEBUG] 회전 각도: {rotationDegrees}, 이미지 크기: {image.Width}x{image.Height}");
+                var inputImage = InputImage.FromMediaImage(image, 270);
+
+                try
+                {
+                    var yaw = await FaceDetectorService.Instance.DetectYawAsyncFromImage(inputImage);
+                    if (yaw.HasValue)
+                    {
+                        System.Diagnostics.Debug.WriteLine($"✅ Yaw: {yaw.Value}도");
+                    }
+                    else
+                    {
+                        System.Diagnostics.Debug.WriteLine("❗ 얼굴을 감지하지 못했습니다.");
+                    }
+                }
+                catch (System.Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"❌ 예외 발생: {ex.Message}");
+                }
+                finally
+                {
+                    image.Close(); // 동기라서 안전하게 닫힘
+                }
+            }
+
 
 
 
