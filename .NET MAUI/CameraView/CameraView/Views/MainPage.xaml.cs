@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Threading;
 using CommunityToolkit.Maui.Core;
 using CommunityToolkit.Maui.Core.Primitives;
+ 
+
 #if ANDROID
 using CameraView.Platforms.Android.Api;
 #endif
@@ -136,52 +138,53 @@ public partial class MainPage : ContentPage
         cameraView.SelectedCamera = SelectedCamera;
         await cameraView.StartCameraPreview(CancellationToken.None);
     }
-
+    // cameraView.CaptureImage() 시 호출됨
     private async void cameraView_MediaCaptured(object sender, MediaCapturedEventArgs e)
     {
+        Console.WriteLine("📸 MediaCaptured 이벤트 호출됨");
+
+        Console.WriteLine("📸 MediaCaptured 이벤트 호출됨");
+
         try
         {
-            await DisplayAlert("Debug", "MediaCaptured 호출됨!", "OK");
-
-            if (e.Media == null)
-            {
-                await DisplayAlert("오류", "Media가 null입니다", "확인");
-                return;
-            }
-
             using var memoryStream = new MemoryStream();
             await e.Media.CopyToAsync(memoryStream);
             var imageBytes = memoryStream.ToArray();
-            if (imageBytes == null || imageBytes.Length == 0)
-            {
-                await DisplayAlert("오류", "이미지 데이터가 비어있습니다", "확인");
-                return;
-            }
+
+            Console.WriteLine($"[DEBUG] 이미지 바이트 크기: {imageBytes.Length}");
 
 #if ANDROID
-            var yaw = await FaceDetectionService.DetectYawAsync2(imageBytes, 480, 640, 0);
-            if (yaw.HasValue)
-            {
-                string direction = yaw switch
-                {
-                    < -30 => "왼쪽 30도 이상",
-                    < -15 => "왼쪽 15도",
-                    > 30 => "오른쪽 30도 이상",
-                    > 15 => "오른쪽 15도",
-                    _ => "정면"
-                };
+           
+            var dcimDir = Android.OS.Environment.GetExternalStoragePublicDirectory(Android.OS.Environment.DirectoryDcim);
+            var cameraDir = new Java.IO.File(dcimDir, "Camera");
+            if (!cameraDir.Exists())cameraDir.Mkdir();
+            var filePath = System.IO.Path.Combine(cameraDir.AbsolutePath, $"captured_{DateTime.Now:yyyyMMdd_HHmmss}.jpg");
 
-                await MainThread.InvokeOnMainThreadAsync(() =>
-                {
-                    directionLabel.Text = $"얼굴 방향: {direction}";
-                });
-            }
+
+            await File.WriteAllBytesAsync(filePath, imageBytes);
+            Console.WriteLine($"✅ 이미지 저장됨: {filePath}");
+            // ✅ 저장 후 MediaScanner 호출
+            Android.Content.Context context = Android.App.Application.Context;
+            Android.Content.Intent mediaScanIntent = new(Android.Content.Intent.ActionMediaScannerScanFile);
+            var contentUri = Android.Net.Uri.FromFile(new Java.IO.File(filePath));
+            mediaScanIntent.SetData(contentUri);
+            context.SendBroadcast(mediaScanIntent);
+            await MainThread.InvokeOnMainThreadAsync(async () =>
+            {
+                await DisplayAlert("저장 완료", $"이미지가 저장되었습니다.\n{filePath}", "확인");
+            });
 #endif
         }
         catch (Exception ex)
         {
-            await DisplayAlert("MediaCaptured 예외 발생", $"예외: {ex.Message}\n{ex.InnerException?.Message}", "확인");
+            Console.WriteLine($"❌ 예외 발생: {ex}");
+
+            await MainThread.InvokeOnMainThreadAsync(async () =>
+            {
+                await DisplayAlert("예외 발생", $"메시지: {ex.Message}\n스택: {ex.StackTrace}", "확인");
+            });
         }
+
     }
 #if ANDROID
 private async void InitializeMLKit()
@@ -204,6 +207,49 @@ private async void InitializeMLKit()
         System.Diagnostics.Debug.WriteLine($"❌ MLKit 초기화 실패: {ex.Message}");
     }
 }
+ 
 #endif
+    //try
+    //{
+    //    await DisplayAlert("Debug", "MediaCaptured 호출됨!", "OK");
 
+    //    if (e.Media == null)
+    //    {
+    //        await DisplayAlert("오류", "Media가 null입니다", "확인");
+    //        return;
+    //    }
+
+    //    using var memoryStream = new MemoryStream();
+    //    await e.Media.CopyToAsync(memoryStream);
+    //    var imageBytes = memoryStream.ToArray();
+    //    if (imageBytes == null || imageBytes.Length == 0)
+    //    {
+    //        await DisplayAlert("오류", "이미지 데이터가 비어있습니다", "확인");
+    //        return;
+    //    }
+
+
+    //    var yaw = await FaceDetection.DetectYawAsync2(imageBytes, 480, 640, 0);
+    //    if (yaw.HasValue)
+    //    {
+    //        string direction = yaw switch
+    //        {
+    //            < -30 => "왼쪽 30도 이상",
+    //            < -15 => "왼쪽 15도",
+    //            > 30 => "오른쪽 30도 이상",
+    //            > 15 => "오른쪽 15도",
+    //            _ => "정면"
+    //        };
+
+    //        await MainThread.InvokeOnMainThreadAsync(() =>
+    //        {
+    //            directionLabel.Text = $"얼굴 방향: {direction}";
+    //        });
+    //    }
+
+    //}
+    //catch (Exception ex)
+    //{
+    //    await DisplayAlert("MediaCaptured 예외 발생", $"예외: {ex.Message}\n{ex.InnerException?.Message}", "확인");
+    //}
 }

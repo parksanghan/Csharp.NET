@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="exo_download_completed">Ukulanda kuqedile</string>
-    <string name="exo_download_description">Landa</string>
-    <string name="exo_download_downloading">Iyalanda</string>
-    <string name="exo_download_failed">Ukulanda kuhlulekile</string>
-    <string name="exo_download_notification_channel_name">Ukulandwa</string>
-    <string name="exo_download_paused">Okulandwayo kumiswe isikhashana</string>
-    <string name="exo_download_paused_for_network">Ukulanda kulinde inethiwekhi</string>
-    <string name="exo_download_paused_for_wifi">Ukulanda kulinde i-WiFi</string>
-    <string name="exo_download_removing">Kususwa okulandiwe</string>
+    <string name="default_notification_channel_name">Okudlala manje</string>
+    <string name="error_message_authentication_expired">Ngena ngemvume ukuze usebenzise le app</string>
+    <string name="error_message_bad_value">Idatha yokufakwayo engalungile</string>
+    <string name="error_message_concurrent_stream_limit">Ilalele emadivayisini amaningi kakhulu</string>
+    <string name="error_message_content_already_playing">Isivele idlala lokho okuqukethwe</string>
+    <string name="error_message_disconnected">Kunqanyuliwe ku-app yemidiya</string>
+    <string name="error_message_end_of_playlist">Akukho okunye okufakwe olayinini</string>
+    <string name="error_message_fallback">Kukhona okungalungile. Zama emuva kwesikhathi.</string>
+    <string name="error_message_info_cancelled">Ayikwazanga ukuqeda. Zama futhi.</string>
+    <string name="error_message_invalid_state">Ayikwazi ukwenza lokho khona manje</string>
+    <string name="error_message_io">Iphutha lokufakwayo/lomphumela</string>
+    <string name="error_message_not_available_in_region">Ayikwazi ukuletha lokho okuqukethwe lapha</string>
+    <string name="error_message_not_supported">Le app ayikwazi ukwenza lokho</string>
+    <string name="error_message_parental_control_restricted">Lokho okuqukethwe kuvinjiwe</string>
+    <string name="error_message_permission_denied">Ukufinyelelwa kunqatshiwe</string>
+    <string name="error_message_premium_account_required">Ukufinyelela kwepremium kuyadingeka</string>
+    <string name="error_message_setup_required">Kudingeka ukusetha</string>
+    <string name="error_message_skip_limit_reached">Ayikwazi ukweqa amanye amathrekhi amaningi</string>
+    <string name="media3_controls_pause_description">Phumula</string>
+    <string name="media3_controls_play_description">Dlala</string>
+    <string name="media3_controls_seek_back_description">Funa okwangemuva</string>
+    <string name="media3_controls_seek_forward_description">Funa uye phambili</string>
+    <string name="media3_controls_seek_to_next_description">Funa into elandelayo</string>
+    <string name="media3_controls_seek_to_previous_description">Funa into yangaphambilini</string>
 </resources>

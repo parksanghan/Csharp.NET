@@ -9,6 +9,10 @@ Microsoft.Maui.Controls.Xaml.dll
 Microsoft.Maui.dll
 Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
+SkiaSharp.dll
+SkiaSharp.Views.Android.dll
+SkiaSharp.Views.Maui.Controls.dll
+SkiaSharp.Views.Maui.Core.dll
 Xamarin.Android.Glide.Annotations.dll
 Xamarin.Android.Glide.DiskLruCache.dll
 Xamarin.Android.Glide.dll
@@ -231,6 +235,7 @@ Microsoft.Maui.Controls.aar
 maui.aar
 Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
+SkiaSharp.Views.Android.aar
 Xamarin.Firebase.Annotations.aar
 firebase-components.aar
 Xamarin.Firebase.Encoders.aar

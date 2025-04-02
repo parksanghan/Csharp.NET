@@ -1,20 +1,12 @@
-# Proguard rules specific to the extractor module.
+# Proguard rules specific to the DataSource module.
 
-# Methods accessed via reflection in DefaultExtractorsFactory
--dontnote androidx.media3.decoder.flac.FlacExtractor
--keepclassmembers class androidx.media3.decoder.flac.FlacExtractor {
-  <init>(int);
+# Constant folding for resource integers may mean that a resource passed to this method appears to be unused. Keep the method to prevent this from happening.
+-keepclassmembers class androidx.media3.datasource.RawResourceDataSource {
+  public static android.net.Uri buildRawResourceUri(int);
 }
--dontnote androidx.media3.decoder.flac.FlacLibrary
--keepclassmembers class androidx.media3.decoder.flac.FlacLibrary {
-  public static boolean isAvailable();
-}
--dontnote androidx.media3.decoder.midi.MidiExtractor
--keepclassmembers class androidx.media3.decoder.midi.MidiExtractor {
+
+# Constructors accessed via reflection in DefaultDataSource
+-dontnote androidx.media3.datasource.rtmp.RtmpDataSource
+-keepclassmembers class androidx.media3.datasource.rtmp.RtmpDataSource {
   <init>();
 }
-
-# Don't warn about checkerframework and Kotlin annotations
--dontwarn org.checkerframework.**
--dontwarn kotlin.annotations.jvm.**
--dontwarn javax.annotation.**

@@ -1,4 +1,4 @@
-# Copyright (C) 2020 The Android Open Source Project
+# Copyright (C) 2023 The Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,5 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This is necessary for default initialization using Camera2Config
--keep public class androidx.camera.camera2.Camera2Config$DefaultProvider { *; }
+# Keeps the quirk classes to prevent them from being merged incorrectly. For more information,
+# please see b/278818703. Preserve Quirk subclasses and their names for correct name mapping in
+# QuirkSettings.
+-keep,allowshrinking class ** extends androidx.camera.core.impl.Quirk

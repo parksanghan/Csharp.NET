@@ -55,7 +55,6 @@
                 Text="진단"
                 Clicked="Button_Clicked3"
                 HorizontalOptions="Center"
-                
                 />
             <Button 
                 Text="카메라 후면"
@@ -67,6 +66,18 @@
                 Clicked="Button_Clicked2"
                 HorizontalOptions="Center"
       />
+            <Button
+               Text="캡처"
+               Clicked="Button_Clicked3"
+               HorizontalOptions="Center"
+     />
+            <Button
+                Text="갤러리"
+                Clicked="Button_Gallary"
+                HorizontalOptions="Center"
+                />
+            
+
 
 
         </VerticalStackLayout>
