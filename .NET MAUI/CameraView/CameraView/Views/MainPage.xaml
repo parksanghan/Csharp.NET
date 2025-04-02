@@ -73,7 +73,7 @@
      />
             <Button
                 Text="갤러리"
-                Clicked="Button_Gallary"
+                Clicked="Button_Gallery"
                 HorizontalOptions="Center"
                 />
             
