@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyCamera2Preview")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+4011a66ad597143b8cf5587089489130edbe8628")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+278e545a1a5ff7a6a5494ffdd66dec2b3366137d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyCamera2Preview")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyCamera2Preview")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

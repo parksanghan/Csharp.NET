@@ -34,43 +34,7 @@ public partial class MainPage : ContentPage
     }
     private async void Button_Gallery(object sender, EventArgs e)
     {
-        try
-        {
-            var status = await Permissions.RequestAsync<Permissions.Photos>();
-            if (status != PermissionStatus.Granted)
-            {
-                await DisplayAlert("권한 부족", "갤러리 접근 권한이 필요합니다.", "확인");
-                return;
-            }
-            var photo = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
-            {
-                Title = "갤러리에서 이미지 선택"
-            });
-            if (photo == null)
-            {
-                await DisplayAlert("취소됨", "이미지 선택이 취소되었습니다.", "확인");
-                return;
-            }
-            using var stream  = await photo.OpenReadAsync();
-            using var ms = new MemoryStream();
-            await stream.CopyToAsync(ms);
-            var imageBytes = ms.ToArray();
-            var content = new MultipartFormDataContent();
-            var byteContent =  new ByteArrayContent(imageBytes);
-            byteContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
-            string username = "dd";
-            content.Add(byteContent, "file",username);
-            using var client = new HttpClient();
-            Console.WriteLine($"[DEBUG] 파일명: {username}");
-            Console.WriteLine($"[DEBUG] Content-Type: {byteContent.Headers.ContentType}");
-            Console.WriteLine($"[DEBUG] Byte 크기: {imageBytes.Length}");
-
-            // 전송 하는 코드
-            await DisplayAlert("성공", "이미지를 성공적으로 가져왔습니다!", "확인");
-        }
-        catch (Exception ex){
-            await DisplayAlert("에러", $"예외 발생: {ex.Message}", "확인");
-        }
+       
     }
     private async void Button_Clicked3(object sender, EventArgs e)
     {
@@ -227,6 +191,46 @@ public partial class MainPage : ContentPage
             });
         }
 
+    }
+    public async void MediaPicker()
+    {
+        try
+        {
+            var status = await Permissions.RequestAsync<Permissions.Photos>();
+            if (status != PermissionStatus.Granted)
+            {
+                await DisplayAlert("권한 부족", "갤러리 접근 권한이 필요합니다.", "확인");
+                return;
+            }
+            var photo = await MediaPicker.pci(new MediaPickerOptions
+            {
+                Title = "갤러리에서 이미지 선택"
+            });
+            if (photo == null)
+            {
+                await DisplayAlert("취소됨", "이미지 선택이 취소되었습니다.", "확인");
+                return;
+            }
+            using var stream = await photo.OpenReadAsync();
+            using var ms = new MemoryStream();
+            await stream.CopyToAsync(ms);
+            var imageBytes = ms.ToArray();
+            var content = new MultipartFormDataContent();
+            var byteContent = new ByteArrayContent(imageBytes);
+            byteContent.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+            string username = "dd"; content.Add(byteContent, "file", username);
+            using var client = new HttpClient();
+            Console.WriteLine($"[DEBUG] 파일명: {username}");
+            Console.WriteLine($"[DEBUG] Content-Type: {byteContent.Headers.ContentType}");
+            Console.WriteLine($"[DEBUG] Byte 크기: {imageBytes.Length}");
+
+            // 전송 하는 코드
+            await DisplayAlert("성공", "이미지를 성공적으로 가져왔습니다!", "확인");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("에러", $"예외 발생: {ex.Message}", "확인");
+        }
     }
 #if ANDROID
 private async void InitializeMLKit()
