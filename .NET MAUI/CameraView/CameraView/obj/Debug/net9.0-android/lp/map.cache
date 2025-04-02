@@ -9,6 +9,7 @@ Microsoft.Maui.Controls.Xaml.dll
 Microsoft.Maui.dll
 Microsoft.Maui.Essentials.dll
 Microsoft.Maui.Graphics.dll
+NativeMedia.dll
 SkiaSharp.dll
 SkiaSharp.Views.Android.dll
 SkiaSharp.Views.Maui.Controls.dll
@@ -149,6 +150,7 @@ Xamarin.KotlinX.Serialization.Core.Jvm.dll
 androidx.versionedparcelable.versionedparcelable.aar
 androidx.tracing.tracing.aar
 androidx.startup.startup-runtime.aar
+androidx.security.security-crypto.aar
 androidx.profileinstaller.profileinstaller.aar
 androidx.arch.core.core-runtime.aar
 androidx.lifecycle.lifecycle-runtime-android.aar
@@ -156,6 +158,7 @@ androidx.lifecycle.lifecycle-runtime.aar
 androidx.interpolator.interpolator.aar
 androidx.annotation.annotation-experimental.aar
 androidx.core.core.aar
+androidx.browser.browser.aar
 androidx.customview.customview.aar
 androidx.viewpager.viewpager.aar
 androidx.savedstate.savedstate.aar
@@ -195,7 +198,6 @@ androidx.window.window.aar
 androidx.tracing.tracing-ktx.aar
 androidx.swiperefreshlayout.swiperefreshlayout.aar
 androidx.slidingpanelayout.slidingpanelayout.aar
-androidx.security.security-crypto.aar
 androidx.savedstate.savedstate-ktx.aar
 androidx.lifecycle.lifecycle-viewmodel-ktx.aar
 androidx.lifecycle.lifecycle-runtime-ktx-android.aar
@@ -226,7 +228,6 @@ androidx.camera.camera-video.aar
 androidx.camera.camera-lifecycle.aar
 androidx.camera.camera-view.aar
 androidx.camera.camera-camera2.aar
-androidx.browser.browser.aar
 gifdecoder.aar
 glide.aar
 GoogleGson.aar
@@ -235,6 +236,7 @@ Microsoft.Maui.Controls.aar
 maui.aar
 Microsoft.Maui.aar
 Microsoft.Maui.Essentials.aar
+NativeMedia.aar
 SkiaSharp.Views.Android.aar
 Xamarin.Firebase.Annotations.aar
 firebase-components.aar

@@ -112,6 +112,10 @@
             "Xamarin.GooglePlayServices.MLKit.FaceDetection": {
               "target": "Package",
               "version": "[117.1.0.13, )"
+            },
+            "Xamarin.MediaGallery": {
+              "target": "Package",
+              "version": "[3.0.0-preview, )"
             }
           },
           "imports": [
@@ -171,6 +175,10 @@
             "SkiaSharp.Views.Maui.Controls": {
               "target": "Package",
               "version": "[3.118.0-preview.2.3, )"
+            },
+            "Xamarin.MediaGallery": {
+              "target": "Package",
+              "version": "[3.0.0-preview, )"
             }
           },
           "imports": [

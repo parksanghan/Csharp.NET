@@ -83,6 +83,15 @@
 	  <PackageReference Include="Xamarin.GooglePlayServices.MLKit.FaceDetection">
 	    <Version>117.1.0.13</Version>
 	  </PackageReference>
+	  <PackageReference Include="Xamarin.MediaGallery">
+	    <Version>3.0.0-preview</Version>
+	  </PackageReference>
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net9.0-ios'">
+	  <PackageReference Include="Xamarin.MediaGallery">
+	    <Version>3.0.0-preview</Version>
+	  </PackageReference>
 	</ItemGroup>
 
 </Project>

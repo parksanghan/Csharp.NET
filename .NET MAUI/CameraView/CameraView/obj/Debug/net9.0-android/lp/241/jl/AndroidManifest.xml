@@ -13,10 +13,8 @@
 <!-- See the License for the specific language governing permissions and -->
 <!-- limitations under the License. -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.firebase.encoders.json" > <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-    <!-- <uses-sdk android:minSdkVersion="14"/> -->
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="29" />
+    package="com.google.firebase.components" > <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+    <!-- <uses-sdk android:minSdkVersion="21"/> -->
+    <uses-sdk android:minSdkVersion="21" />
 
 </manifest>

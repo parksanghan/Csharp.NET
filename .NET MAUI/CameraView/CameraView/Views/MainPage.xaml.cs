@@ -27,14 +27,80 @@ public partial class MainPage : ContentPage
     {
         InitializeComponent();
         BindingContext = this;
-
-#if ANDROID
-    InitializeMLKit(); // 👈 이 줄 추가
-#endif
+    }
+    private async Task<bool> RequestGalleryPermissionAsync()
+    {
+ 
+    if (DeviceInfo.Version.Major >= 13)
+    {
+        var status = await Permissions.RequestAsync<Permissions.Media>();
+        return status == PermissionStatus.Granted;
+    }
+    else
+    {
+        var status = await Permissions.RequestAsync<Permissions.StorageRead>();
+        return status == PermissionStatus.Granted;
+    }
+        return true;
     }
     private async void Button_Gallery(object sender, EventArgs e)
     {
-       
+        try
+        {
+            if (!await RequestGalleryPermissionAsync())
+            {
+                await DisplayAlert("권한 거부", "갤러리 접근 권한이 필요합니다.", "확인");
+                return;
+            }
+
+            var results = await FilePicker.PickMultipleAsync(new PickOptions
+            {
+                PickerTitle = "이미지 선택",
+                FileTypes = FilePickerFileType.Images
+            });
+
+            if (results == null || !results.Any())
+                return;
+
+            using var form = new MultipartFormDataContent();
+            int i = 0;
+            foreach (var file in results)
+            {
+                var stream = await file.OpenReadAsync();
+
+                // 바이트 크기 측정용 메모리 스트림 복사
+                using var memory = new MemoryStream();
+                await stream.CopyToAsync(memory);
+                var imageBytes = memory.ToArray();
+
+                var byteContent = new ByteArrayContent(imageBytes);
+                byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("image/jpeg");
+
+                // 디버깅 출력
+                Console.WriteLine($"{i}+[DEBUG] 파일 이름: {file.FileName}");
+                Console.WriteLine($"{i}[DEBUG] Content-Type: {byteContent.Headers.ContentType}");
+                Console.WriteLine($"{i}[DEBUG] Byte 크기: {imageBytes.Length}");
+
+                form.Add(byteContent, "files", file.FileName);
+                i++;
+            }
+            //var httpClient = new HttpClient();
+            //var response = await httpClient.PostAsync("http://192.168.0.10:8080/upload", form); // 서버 URL로 수정
+
+            //if (response.IsSuccessStatusCode)
+            //{
+            //    var result = await response.Content.ReadAsStringAsync();
+            //    await DisplayAlert("업로드 완료", result, "확인");
+            //}
+            //else
+            //{
+            //    await DisplayAlert("업로드 실패", $"서버 오류: {response.StatusCode}", "확인");
+            //}
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("예외", ex.Message, "확인");
+        }
     }
     private async void Button_Clicked3(object sender, EventArgs e)
     {
@@ -192,7 +258,7 @@ public partial class MainPage : ContentPage
         }
 
     }
-    public async void MediaPicker()
+    public async void MediaPicker1()
     {
         try
         {
@@ -202,7 +268,7 @@ public partial class MainPage : ContentPage
                 await DisplayAlert("권한 부족", "갤러리 접근 권한이 필요합니다.", "확인");
                 return;
             }
-            var photo = await MediaPicker.pci(new MediaPickerOptions
+            var photo = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
             {
                 Title = "갤러리에서 이미지 선택"
             });

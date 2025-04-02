@@ -161,6 +161,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.KotlinX.Coroutines.Core.Jvm.dll",
 		"Xamarin.KotlinX.Serialization.Core.dll",
 		"Xamarin.KotlinX.Serialization.Core.Jvm.dll",
+		"NativeMedia.dll",
 		"Microsoft.Maui.Controls.resources.dll",
 		"Microsoft.Maui.Controls.resources.dll",
 		"Microsoft.Maui.Controls.resources.dll",

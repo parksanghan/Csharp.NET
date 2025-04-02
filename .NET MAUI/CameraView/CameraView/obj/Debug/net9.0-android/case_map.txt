@@ -20,4 +20,5 @@ values\attrs;platform\Android\Resources\values\attrs
 values\colors;values\colors
 values\strings;values\strings
 values\styles;values\styles
+xml\file_provider_paths;xml\file_provider_paths
 xml\microsoft_maui_essentials_fileprovider_file_paths;resources\xml\microsoft_maui_essentials_fileprovider_file_paths

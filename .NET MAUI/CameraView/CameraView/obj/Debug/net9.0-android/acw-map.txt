@@ -7264,3 +7264,6 @@ kotlinx.serialization.encoding.Encoder;kotlinx.serialization.encoding.Encoder
 KotlinX.Serialization.Descriptors.ISerialDescriptor, Xamarin.KotlinX.Serialization.Core.Jvm;kotlinx.serialization.descriptors.SerialDescriptor
 KotlinX.Serialization.Descriptors.ISerialDescriptor;kotlinx.serialization.descriptors.SerialDescriptor
 kotlinx.serialization.descriptors.SerialDescriptor;kotlinx.serialization.descriptors.SerialDescriptor
+NativeMedia.MediaFileProvider, NativeMedia;nativeMedia.fileProvider
+NativeMedia.MediaFileProvider;nativeMedia.fileProvider
+nativeMedia.fileProvider;nativeMedia.fileProvider
