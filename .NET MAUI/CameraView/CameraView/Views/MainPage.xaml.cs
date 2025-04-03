@@ -202,8 +202,10 @@ public partial class MainPage : ContentPage
         var cameras = await cameraView.GetAvailableCameras(CancellationToken.None);
         if (cameras == null || cameras.Count == 0)
         {
+          
             await DisplayAlert("경고", "카메라가 없습니다", "확인");
             return;
+             
         }
 
         SelectedCamera = cameras.FirstOrDefault(c => c.Position == CameraPosition.Rear);
