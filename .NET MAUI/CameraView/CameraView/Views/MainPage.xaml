@@ -43,7 +43,6 @@
                     MediaCaptured="cameraView_MediaCaptured"
                 
                     />
-           
             </Grid>
      
             <Label
