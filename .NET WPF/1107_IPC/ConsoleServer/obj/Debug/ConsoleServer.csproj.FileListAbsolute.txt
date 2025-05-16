@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\닷넷예제\1107_IPC\ConsoleServer\bin\Debug\ConsoleServer.exe.config
+C:\Users\user\Desktop\닷넷예제\1107_IPC\ConsoleServer\bin\Debug\ConsoleServer.exe
+C:\Users\user\Desktop\닷넷예제\1107_IPC\ConsoleServer\bin\Debug\ConsoleServer.pdb
+C:\Users\user\Desktop\닷넷예제\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.exe
+C:\Users\user\Desktop\닷넷예제\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.pdb
+C:\Users\snagh\Desktop\WPF\1107_IPC\ConsoleServer\bin\Debug\ConsoleServer.exe.config
+C:\Users\snagh\Desktop\WPF\1107_IPC\ConsoleServer\bin\Debug\ConsoleServer.exe
+C:\Users\snagh\Desktop\WPF\1107_IPC\ConsoleServer\bin\Debug\ConsoleServer.pdb
+C:\Users\snagh\Desktop\WPF\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.csproj.AssemblyReference.cache
+C:\Users\snagh\Desktop\WPF\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\snagh\Desktop\WPF\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.csproj.CoreCompileInputs.cache
+C:\Users\snagh\Desktop\WPF\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.exe
+C:\Users\snagh\Desktop\WPF\1107_IPC\ConsoleServer\obj\Debug\ConsoleServer.pdb
