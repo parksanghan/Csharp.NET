@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebView.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <WebView x:Name="MapWebView"
+         HeightRequest="500"
+         WidthRequest="320"
+         InputTransparent="False"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
