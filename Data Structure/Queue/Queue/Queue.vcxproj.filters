@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\NewFilter1">
+      <UniqueIdentifier>{163d3a7a-f7c7-4f5a-aeb5-a73319b2feb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\NewFilter2">
+      <UniqueIdentifier>{98ae5be0-b924-46ee-874d-c2b680197e23}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Queue.cpp">

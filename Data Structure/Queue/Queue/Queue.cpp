@@ -2,7 +2,14 @@
 //
 
 #include <iostream>
+class DD {
 
+public:int dd;
+public:void dd(int dd) {
+
+}
+
+};
 int main()
 {
     std::cout << "Hello World!\n";

@@ -1,7 +1,40 @@
 ﻿// Stack.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
 //
 
-#include <stdio.h>
+#include <iostream>
+#define MAX 100
+class Stack {
+private:
+    int top;
+    int arr[MAX];
+public:
+    Stack() {
+        top = -1;
+    }
+    bool is_empty() {
+        return top == -1;
+    }
+    bool is_full() {,,
+        return top == MAX - 1;
+    }
+    bool push(int val) {
+        if (is_empty() && is_full()== true)return false;
+        top++;
+        arr[top] = val;
+        return true;
+    }
+    bool peek() {
+        if (is_empty() && is_full() == true) return false;
+        arr[top] = 0;
+        top--;
+        std::cout << "d" << std::endl;
+        return true;
+        
+    }
+};
+
+ 
+
 
 int main()
 {
