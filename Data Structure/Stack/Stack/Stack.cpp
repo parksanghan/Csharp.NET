@@ -14,7 +14,7 @@ public:
     bool is_empty() {
         return top == -1;
     }
-    bool is_full() {,,
+    bool is_full() {
         return top == MAX - 1;
     }
     bool push(int val) {
@@ -29,6 +29,19 @@ public:
         top--;
         std::cout << "d" << std::endl;
         return true;
+    }
+
+    void Vpush(int val) {
+        if (is_empty() && is_full() == true)return;//
+        top++;
+        arr[top] = val;
+     
+    }
+    void Vpeek() {
+        if (is_empty() && is_full() == true) return;
+        arr[top] = 0;
+        top--;
+        std::cout << "d" << std::endl;
         
     }
 };
