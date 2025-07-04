@@ -18,13 +18,13 @@ public:
         return top == MAX - 1;
     }
     bool push(int val) {
-        if (is_empty() && is_full()== true)return false;
+        if ( is_full()== true)return false;
         top++;
         arr[top] = val;
         return true;
     }
     bool peek() {
-        if (is_empty() && is_full() == true) return false;
+        if (is_empty() == true) return false;
         arr[top] = 0;
         top--;
         std::cout << "d" << std::endl;
