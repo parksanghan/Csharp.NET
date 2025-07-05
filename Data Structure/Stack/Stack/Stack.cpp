@@ -23,9 +23,11 @@ public:
         arr[top] = val;
         return true;
     }
-    bool pop() {
+    bool pop(int &out) {
         if (is_empty() == true) return false;
+        out = arr[top];
         arr[top] = 0;
+
         top--;
         std::cout << "d" << std::endl;
         return true;
@@ -61,7 +63,7 @@ int main()
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
-// 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴
+// 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴  
 
 // 시작을 위한 팁: 
 //   1. [솔루션 탐색기] 창을 사용하여 파일을 추가/관리합니다.
