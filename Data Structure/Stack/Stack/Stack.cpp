@@ -23,11 +23,16 @@ public:
         arr[top] = val;
         return true;
     }
-    bool peek() {
+    bool pop() {
         if (is_empty() == true) return false;
         arr[top] = 0;
         top--;
         std::cout << "d" << std::endl;
+        return true;
+    }
+    bool peek(int &out)  {
+        if(is_empty())return false;
+        out = arr[top];
         return true;
     }
 
