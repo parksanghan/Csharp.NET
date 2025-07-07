@@ -11,10 +11,13 @@ public:
     Stack() {
         top = -1;
     }
-    int t_idx() {
+    int capacity() const {
+        return MAX;
+    }
+    int t_idx() const {
         return top;
     }
-    int size() {
+    int size() const {
         return top + 1;
     }
     void clear() {
