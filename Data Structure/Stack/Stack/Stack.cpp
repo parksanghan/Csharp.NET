@@ -38,19 +38,8 @@ public:
         return true;
     }
 
-    void Vpush(int val) {
-        if (is_empty() && is_full() == true)return;//
-        top++;
-        arr[top] = val;
-     
-    }
-    void Vpeek() {
-        if (is_empty() && is_full() == true) return;
-        arr[top] = 0;
-        top--;
-        std::cout << "d" << std::endl;
-        
-    }
+ 
+    
 };
 
  
