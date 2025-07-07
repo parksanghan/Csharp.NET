@@ -11,6 +11,15 @@ public:
     Stack() {
         top = -1;
     }
+    int t_idx() {
+        return top;
+    }
+    int size() {
+        return top + 1;
+    }
+    void clear() {
+        top = -1;
+    }
     bool is_empty() {
         return top == -1;
     }
