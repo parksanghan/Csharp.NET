@@ -23,11 +23,16 @@ public:
     void clear() {
         top = -1;
     }
-    bool is_empty() {
+    bool is_empty()const {
         return top == -1;
     }
-    bool is_full() {
+    bool is_full() const {
         return top == MAX - 1;
+    }
+    bool t_idx_val(int& out) const {
+        if (is_empty() == true) return  false;
+        out = arr[top];
+        return true;
     }
     bool push(int val) {
         if ( is_full()== true)return false;
@@ -48,6 +53,15 @@ public:
         if(is_empty())return false;
         out = arr[top];
         return true;
+    }
+    void print_all() const {
+        std::cout << "top = " + top << std::endl;
+        for (size_t i = 0; i < top; i++)
+        {
+            std::cout << arr[i] << std::endl;
+            
+        }
+
     }
 
  
