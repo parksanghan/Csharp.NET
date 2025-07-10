@@ -7,12 +7,12 @@ class Queue {
 private:
     int front; // first
     int rear; // current
-    int arr[MAX];
+    int arr[MAX] = {};
 public:
     Queue() {
         front = 0;
         rear = 0;
-        arr = {};
+     
     };
 
 
