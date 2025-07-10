@@ -2,19 +2,27 @@
 //
 
 #include <iostream>
-class DD {
+#define MAX 100
+class Queue {
+private:
+    int front; // first
+    int rear; // current
+    int arr[MAX];
+public:
+    Queue() {
+        front = 0;
+        rear = 0;
+        arr = {};
+    };
 
-public:int dd;
-public:void dd(int dd) {
-
-}
 
 };
+
 int main()
 {
     std::cout << "Hello World!\n";
 }
-
+    
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
 // 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴
 
