@@ -56,7 +56,7 @@ public:
     }
     void print_all() const {
         std::cout << "top = " << top << std::endl;
-        for (size_t i = 0; i < top; i++)
+        for (size_t i = 0; i <= top; i++)
         {
             std::cout << arr[i] << std::endl;
             
