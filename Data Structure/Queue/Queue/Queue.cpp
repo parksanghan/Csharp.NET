@@ -12,8 +12,13 @@ public:
     Queue() {
         front = 0;
         rear = 0;
-     
     };
+    bool is_empty() const {
+        return front == rear;
+    }
+    bool is_empty()const {
+        return rear == MAX;
+    }
 
 
 };
