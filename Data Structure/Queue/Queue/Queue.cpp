@@ -46,7 +46,7 @@ public:
     void print_all() const{
         for (size_t i = front; i < rear; i++)
         {
-
+            std::cout << arr[i] << std::endl;
         }
     }
 
