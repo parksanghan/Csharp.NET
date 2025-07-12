@@ -16,8 +16,38 @@ public:
     bool is_empty() const {
         return front == rear;
     }
-    bool is_empty()const {
+    bool is_full()const {
         return rear == MAX;
+    }
+    int size()const {
+        rear - front;
+    }
+    void clear() {
+        front = rear = 0;
+    }
+    int capacity() {
+        return MAX;
+    }
+    bool enqueue(int value) {
+        if (is_full)return false;
+        arr[rear++] =  value;
+        return true;
+    }
+    bool dequeue(int &out)  {
+        if (is_empty()) return false;
+        out = arr[front++];
+        return true;
+    }
+    bool peek(int& out) const {
+        if (is_empty())return false;
+        out = arr[front];
+        return true;
+    }
+    void print_all() const{
+        for (size_t i = front; i < rear; i++)
+        {
+
+        }
     }
 
 
