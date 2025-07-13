@@ -20,16 +20,16 @@ public:
         return rear == MAX;
     }
     int size()const {
-        rear - front;
+        return rear - front;
     }
     void clear() {
         front = rear = 0;
     }
-    int capacity() {
+    int capacity() const {
         return MAX;
     }
     bool enqueue(int value) {
-        if (is_full)return false;
+        if (is_full())return false;
         arr[rear++] =  value;
         return true;
     }
@@ -44,7 +44,7 @@ public:
         return true;
     }
     void print_all() const{
-        for (size_t i = front; i < rear; i++)
+        for (int i = front; i < rear; i++)
         {
             std::cout << arr[i] << std::endl;
         }
