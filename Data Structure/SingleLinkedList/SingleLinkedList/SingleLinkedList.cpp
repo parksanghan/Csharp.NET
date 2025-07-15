@@ -3,6 +3,16 @@
 
 #include <iostream>
 
+class Node {
+public:
+    int data;
+    Node* next;
+    Node(int val) {
+        data = val;
+        next = nullptr;
+    }
+};
+
 int main()
 {
     std::cout << "Hello World!\n";
