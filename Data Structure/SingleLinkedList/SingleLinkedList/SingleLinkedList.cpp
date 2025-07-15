@@ -11,6 +11,14 @@ public:
         data = val;
         next = nullptr;
     }
+    // 같음
+    Node(int val) :data(val), next(nullptr){}
+};
+class LinkedList {
+private:
+    Node* head;
+public:
+    LinkedList():
 };
 
 int main()
