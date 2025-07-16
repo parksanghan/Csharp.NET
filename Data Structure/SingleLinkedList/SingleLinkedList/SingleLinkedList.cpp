@@ -18,10 +18,20 @@ class LinkedList {
 private:
     Node* head;
 public:
-    LinkedList():
+    LinkedList(): head(nullptr){}
+    ~LinkedList(){}
+    bool is_empty() const {
+        return head == nullptr;
+    }
+    void insert_front(int val) {
+        Node* newNode = new Node(val);
+        newNode->next = head; // newNode -> head
+        head = newNode; // head(newNode) -> prevhead
+    }
 };
 
 int main()
+
 {
     std::cout << "Hello World!\n";
 }
