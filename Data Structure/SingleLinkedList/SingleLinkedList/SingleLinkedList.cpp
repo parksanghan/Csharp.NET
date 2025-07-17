@@ -72,6 +72,24 @@ public:
         }
         return count;
     }
+    void clear()  {
+        Node* curr = head;
+        while (curr != nullptr) {
+            Node* temp = curr;
+            curr = curr->next;
+            delete temp;
+        }
+        head = nullptr;
+    }
+    void print_all() {
+        Node* curr = head;
+        while (curr!= nullptr)
+        {
+            std::cout << curr->data << std::endl;
+            curr = curr->next;
+        }
+        std::cout << "Nullptr" << std::endl;
+    }
 };
 
 int main()
