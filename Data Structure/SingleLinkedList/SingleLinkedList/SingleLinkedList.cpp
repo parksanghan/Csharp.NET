@@ -14,6 +14,8 @@ public:
     // 같음
     Node(int val) :data(val), next(nullptr){}
 };
+// head  -> insert   => newNode - > head
+// -> head(newNode) -> prevHeadNode
 class LinkedList {
 private:
     Node* head;
@@ -27,6 +29,16 @@ public:
         Node* newNode = new Node(val);
         newNode->next = head; // newNode -> head
         head = newNode; // head(newNode) -> prevhead
+    }
+    bool delete_value(int val) {
+        if (is_empty()) return false;
+        if (head->data ==val)
+        {
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+            return true;
+        }
     }
 };
 
