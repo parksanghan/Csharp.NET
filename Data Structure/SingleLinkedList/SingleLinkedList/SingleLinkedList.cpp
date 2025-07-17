@@ -54,8 +54,23 @@ public:
             curr = curr->next;
             return false;
         }
-
-
+    }
+    bool search(int val) {
+        Node* curr = head;
+        while (curr != nullptr) {
+            if (curr->data == val)return true;
+            curr = curr->next;
+        }
+        return false;
+    }
+    int size()const {
+        int count = 0;
+        Node* curr = head;
+        while (curr != nullptr) {
+            ++count;
+            curr = curr->next;
+        }
+        return count;
     }
 };
 
