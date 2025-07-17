@@ -32,13 +32,30 @@ public:
     }
     bool delete_value(int val) {
         if (is_empty()) return false;
-        if (head->data ==val)
+        if (head->data ==val) // 바로 찾은 경우
         {
             Node* temp = head;
             head = head->next;
             delete temp;
             return true;
         }
+        // 없다면 게속 진입
+        // 가장 왼쪽이 head 
+        // head -> next -> next 진입
+        Node* prev = head;
+        Node* curr = head->next;
+        while (curr != nullptr) {
+            if (curr->data == val) {
+                prev->next = curr->next;
+                delete curr;
+                return true;
+            }
+            prev = curr;
+            curr = curr->next;
+            return false;
+        }
+
+
     }
 };
 
