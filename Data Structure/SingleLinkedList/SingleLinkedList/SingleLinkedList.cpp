@@ -48,12 +48,13 @@ public:
             if (curr->data == val) {
                 prev->next = curr->next;
                 delete curr;
-                return true;
+                 return true;
             }
             prev = curr;
             curr = curr->next;
-            return false;
+         
         }
+        return false;
     }
     bool search(int val) {
         Node* curr = head;
