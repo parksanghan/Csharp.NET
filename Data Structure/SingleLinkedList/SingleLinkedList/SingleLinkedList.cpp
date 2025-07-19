@@ -82,6 +82,18 @@ public:
         }
         head = nullptr;
     }
+    //head -> next1 ->next2 를  null -> next 2 ->next1 -> head   
+    void reverse() {
+        Node* prev = nullptr;
+        Node* next = nullptr;
+        Node* curr = head;
+        // head -> 10 -> 20 -> 30 
+        while (curr != nullptr) {
+            next = curr->next; // 다음 노드 복사  저장
+            curr->next = prev; //  curr 의 다음 노드 반대로 설정
+            prev = curr;
+        }
+    }
     void print_all() {
         Node* curr = head;
         while (curr!= nullptr)
