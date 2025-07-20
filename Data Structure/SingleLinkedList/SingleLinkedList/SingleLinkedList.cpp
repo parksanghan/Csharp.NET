@@ -87,12 +87,14 @@ public:
         Node* prev = nullptr;
         Node* next = nullptr;
         Node* curr = head;
-        // head -> 10 -> 20 -> 30 
+        // head = 10 -> 20 -> 30 
         while (curr != nullptr) {
-            next = curr->next; // 다음 노드 복사  저장
-            curr->next = prev; //  curr 의 다음 노드 반대로 설정
-            prev = curr;
-        }
+            next = curr->next; // 다음 노드 복사  저장  next = 10
+            curr->next = prev; //  curr 의 다음 노드 반대로 설정 curr-> nullptr
+            prev = curr; // 이전 노드  현재로 이동 prev = curr  prev =head;
+            curr = next;  // 다음 노드 이동 
+        } // 1. next 노드  curr(head)->next 저장 =>  20
+          // 2. prev 
     }
     void print_all() {
         Node* curr = head;
