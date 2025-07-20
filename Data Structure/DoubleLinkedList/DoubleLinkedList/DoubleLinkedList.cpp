@@ -10,7 +10,14 @@ public:
     Node(int val) : data(val), prev(nullptr), next(nullptr){}
 };
 class DoubleLinkedList {
-
+private:
+    Node* head;
+    Node* tail;
+public:
+    DoubleLinkedList():head(nullptr), tail(nullptr){}
+    ~DoubleLinkedList() {
+         
+    }
 };
 int main()
 {
