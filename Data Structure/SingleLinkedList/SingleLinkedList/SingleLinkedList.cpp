@@ -93,8 +93,11 @@ public:
             curr->next = prev; //  curr 의 다음 노드 반대로 설정 curr-> nullptr
             prev = curr; // 이전 노드  현재로 이동 prev = curr  prev =head;
             curr = next;  // 다음 노드 이동 
-        } // 1. next 노드  curr(head)->next 저장 =>  20
-          // 2. prev 
+        }
+        // curr(head) 가 이동할때 마다 앞에노드가 없어지는 구조이며 
+        // prev가 처음 헤드이며  curr 이 이동할때마다 반전으로 게속 추가됨.
+        head = prev;
+
     }
     void print_all() {
         Node* curr = head;
