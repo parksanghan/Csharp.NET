@@ -45,6 +45,17 @@ public:
             tail = newNode;
         }
     }
+    bool delete_front() {
+        if (is_empty())return false;
+        Node* temp = head;
+        if (head == tail)head = tail = nullptr;// 1개만있는 경우
+        else {
+
+        }
+    }
+    bool delete_back() {
+
+    }
 };
 int main()
 {
