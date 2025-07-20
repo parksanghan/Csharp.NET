@@ -16,7 +16,34 @@ private:
 public:
     DoubleLinkedList():head(nullptr), tail(nullptr){}
     ~DoubleLinkedList() {
-         
+    }
+    bool is_empty()const {
+        return head == nullptr;
+    }
+
+    void insert_front(int val) {
+        //head → [10] ↔ [20] ↔ [30] → tail
+        // 앞에 추가시  newNode-> next 는 head가 되고
+        // 이전 head->prev는   
+        Node* newNode = new Node(val);
+        if (is_empty()) head = tail = newNode;
+        else {
+            newNode->next = head; //  새노드 -> 기존 헤드 노드 
+            head->prev = newNode; // 이중 연결이니  -> 에서 < ->
+            head = newNode; // 헤드 위치 변경 
+        }
+    }
+    void insert_back(int  val) {
+        Node* newNode = new Node(val);
+        if (is_empty())
+        {
+            head= tail =newNode;
+        }
+        else {
+            tail->next = newNode;
+            newNode->prev = tail;
+            tail = newNode;
+        }
     }
 };
 int main()
