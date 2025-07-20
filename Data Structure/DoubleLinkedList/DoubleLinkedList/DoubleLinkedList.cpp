@@ -50,11 +50,22 @@ public:
         Node* temp = head;
         if (head == tail)head = tail = nullptr;// 1개만있는 경우
         else {
-
+            head = head->next;
+            head->prev = nullptr;
         }
+        delete temp;
+        return true;
     }
     bool delete_back() {
-
+        if (is_empty())return false;
+        Node* temp = tail;
+        if (head == tail)head = tail = nullptr;
+        else {
+            tail = tail->prev;
+            tail->next = nullptr;
+        }
+        delete temp;
+        return true;
     }
 };
 int main()
