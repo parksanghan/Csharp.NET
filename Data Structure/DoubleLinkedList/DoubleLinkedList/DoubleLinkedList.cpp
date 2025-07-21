@@ -67,6 +67,23 @@ public:
         delete temp;
         return true;
     }
+    void printAll_forward()const {
+        Node* curr = head;
+        std::cout << "front" << std::endl;
+        while (curr != nullptr) {
+            std::cout << curr->data << std::endl;
+            curr = curr->next;   
+        }
+    }
+    void printAll_backward()const {
+        Node* curr = tail;
+        std::cout << "backward" << std::endl;
+        while (curr != nullptr) {
+            std::cout << curr->data << std::endl;
+            curr = curr->prev;
+        }
+    }
+
 };
 int main()
 {
