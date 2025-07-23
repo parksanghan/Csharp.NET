@@ -29,9 +29,19 @@ public:
             tail = newNode;
         }
         else {
-
+            newNode->next = tail->next; //tail->next = head임
+            tail->next = newNode;  // newNode -> next => head  / tail->next =>newNode
         }
-       
+        // tail->next(newNode)=> 초기(head)
+    }
+    // 10(head)-> 20 ->30(tail)
+    void insert_back(int val) { //val - 5
+        insert_front(val);
+        // newNode -> next = 10  => 10-> 20 -> 30(tail) -> head(10) =>   newNode(5) -> 10 ->20 ->30(tail)->10(head)    
+        // tail->next  = 5  => 5(newNode) -> 10 -> 20->30(tail) -> 10(head)-> 20 반복
+        // => 위 수행후   5(newNode)->10->20->30(tail)->newNode(5) -> 10 ->20 -> 30 반복
+        //
+        tail = tail->next;
     }
 };
 int main()
