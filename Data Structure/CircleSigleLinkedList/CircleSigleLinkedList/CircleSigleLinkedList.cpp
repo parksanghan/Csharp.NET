@@ -37,11 +37,34 @@ public:
     // 10(head)-> 20 ->30(tail)
     void insert_back(int val) { //val - 5
         insert_front(val);
-        // newNode -> next = 10  => 10-> 20 -> 30(tail) -> head(10) =>   newNode(5) -> 10 ->20 ->30(tail)->10(head)    
-        // tail->next  = 5  => 5(newNode) -> 10 -> 20->30(tail) -> 10(head)-> 20 반복
-        // => 위 수행후   5(newNode)->10->20->30(tail)->newNode(5) -> 10 ->20 -> 30 반복
-        //
-        tail = tail->next;
+        //10 -> 20 -30->10
+        // => val =5 이면  tail->next 
+        tail = tail->next; 
+        // 이전에 연결 끊어버리고  ->10으로 연결 
+        // 최종 10->20->30->newNode(5)
+        // 매번 front는 tail뒤에만 추가 
+    }
+    void print_all()const {
+        if (is_empty()) { std::cout << "EMPTY" << std::endl; return; }
+        Node* curr = tail->next;//head;
+        while (curr != tail) {
+            std::cout << curr->data << std::endl;
+            curr = curr->next;
+        }
+        std::cout << curr->data << std::endl;
+        
+    }
+    void clear() {
+        if (is_empty())return;
+        Node* curr = tail->next;//head
+        while (curr!= tail) {
+            std::cout << curr->data << std::endl;
+            Node* nextNode = curr->next;
+            delete curr;
+            curr = nextNode;
+        }
+        delete tail;
+        tail = nullptr;
     }
 };
 int main()
