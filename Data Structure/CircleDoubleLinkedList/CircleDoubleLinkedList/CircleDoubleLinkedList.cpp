@@ -14,7 +14,7 @@ private:
     Node* tail;
 public:
     CircleDoubleLinkedList():tail(nullptr){}
-    ~CircleDoubleLinkedList(){}
+    ~CircleDoubleLinkedList() { clear(); }
     bool is_empty() const {
         return tail == nullptr;
     }
@@ -39,16 +39,63 @@ public:
         tail = tail->next;
     }
     void delete_front() {
-
+        //head 삭제
+        if (is_empty())return;
+        Node* head = tail->next;
+        if (head == tail) {
+            delete tail;
+            tail = nullptr;
+        }
+        else {
+            Node* newHead = head->next;
+            tail->next = newHead;
+            newHead->prev = tail;
+            delete head;
+        }
     }
+
     void delete_back() {
+        //tail 삭제
+        if (is_empty())return;
+        if (tail == tail->next)// 단일 노드인경우 
+        {
+            delete tail;
+            tail = nullptr;
+        }
+        else {
+            Node* newTail = tail->prev;
+            newTail->next = tail->next;
+            tail->next->prev = newTail; // 기존 head의 prev 노드 갱신
+            delete tail;
+            tail = newTail;
+        }
+
 
     }
     
     void print_all()const {
-
+        if (is_empty())
+        {
+            std::cout << "EMPTY" << std::endl;
+            return;
+        }
+        Node* curr = tail->next;// head 부터 시작
+        while (curr != tail) {
+            std::cout << curr->data << std::endl;
+            curr = curr->next;
+        }
+        std::cout << curr->data << std::endl;
     }
     void clear() {
+        if (is_empty())return;
+        Node* curr = tail->next;
+        while (curr != tail) {
+            Node* temp = curr;
+            curr = curr->next;
+            delete temp;
+        }
+        delete tail;
+        tail = nullptr;
 
     }
 
