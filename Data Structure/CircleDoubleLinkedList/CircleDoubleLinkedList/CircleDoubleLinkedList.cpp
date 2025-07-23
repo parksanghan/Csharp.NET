@@ -2,7 +2,58 @@
 //
 
 #include <iostream>
+class Node {
+public:
+    int data;
+    Node* prev;
+    Node* next;
+    Node(int val):data(val),prev(nullptr),next(nullptr){}
+};
+class CircleDoubleLinkedList {
+private:
+    Node* tail;
+public:
+    CircleDoubleLinkedList():tail(nullptr){}
+    ~CircleDoubleLinkedList(){}
+    bool is_empty() const {
+        return tail == nullptr;
+    }
+    void insert_front(int val) {
+        Node* newNode = new Node(val);
+        if (is_empty())
+        {
+            newNode->next = newNode;
+            newNode->prev = newNode;
+            tail = newNode;
+        }
+        else {
+            Node* head = tail->next;
+            newNode->next = head;
+            newNode->prev = tail;
+            head->prev = newNode;
+            tail->next = newNode;
+        }
+    }
+    void insert_back(int val) {
+        insert_front(val);
+        tail = tail->next;
+    }
+    void delete_front() {
 
+    }
+    void delete_back() {
+
+    }
+    
+    void print_all()const {
+
+    }
+    void clear() {
+
+    }
+
+
+};
 int main()
 {
     std::cout << "Hello World!\n";
