@@ -2,7 +2,48 @@
 //
 
 #include <iostream>
+class Node {
+public:
+    int data;
+    Node* prev;
+    Node* next;
+    Node(int val):data(val),prev(nullptr),next(nullptr){}
+};
+class Dequeue {
+private:
+    Node* tail;
+public:
+    Dequeue():tail(nullptr){}
+    ~Dequeue() { clear(); }
 
+    bool is_empty() {
+        return tail == nullptr;
+    }
+    void push_front(int val) {
+        Node* newNode = new Node(val);
+        if (is_empty) {
+            newNode->next = newNode;
+            newNode->prev = newNode;
+            tail = newNode;
+        }
+        else {
+            Node* head = tail->next;
+            newNode->next = head;
+            newNode->prev = tail;
+            head->prev = newNode;
+            tail->next = newNode;
+        }
+    }
+    void push_back(int val) {
+        push_front(val);
+        tail = tail->next;
+    }
+    bool pop
+
+    void clear() {
+
+    }
+};
 int main()
 {
     std::cout << "Hello World!\n";
