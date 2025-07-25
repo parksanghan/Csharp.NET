@@ -35,10 +35,29 @@ public:
         }
     }
     void push_back(int val) {
+        //20 -> 30 -> 10 -> 20  (순환)
+        // -> tail->tail->next;  = 30 (tail)
         push_front(val);
         tail = tail->next;
     }
-    bool pop
+    bool pop_front(int &out) {
+        if (is_empty())return false;
+        Node* head = tail->next;
+        out = head->data;
+        if (tail == tail->next) {
+            // 1개인 경우 
+            delete tail;
+            tail = nullptr;
+        }
+        else {
+            Node* newHead = head->next;
+            tail->next= newHead;
+            newHead->prev = tail;
+            delete head;
+        }
+        return true;
+
+    }
 
     void clear() {
 
