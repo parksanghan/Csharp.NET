@@ -21,7 +21,7 @@ public:
     }
     void push_front(int val) {
         Node* newNode = new Node(val);
-        if (is_empty) {
+        if (is_empty()) {
             newNode->next = newNode;
             newNode->prev = newNode;
             tail = newNode;
@@ -78,9 +78,9 @@ public:
         
     }
     void print_all()const {
-        if (is_empty()) { std::cout << "EMPTY" << std::endl; }
+        if (is_empty()) { std::cout << "EMPTY" << std::endl; return; }
         Node* curr = tail->next; //head
-        while (curr !=tail->next) {
+        while (curr !=tail) {
            std::cout<< curr->data << std::endl;
            curr = curr->next;
         }
