@@ -16,7 +16,7 @@ public:
     Dequeue():tail(nullptr){}
     ~Dequeue() { clear(); }
 
-    bool is_empty() {
+    bool is_empty()const {
         return tail == nullptr;
     }
     void push_front(int val) {
@@ -56,11 +56,49 @@ public:
             delete head;
         }
         return true;
-
+    }
+    bool pop_back(int& out) {
+        // tail 제거 
+        if (is_empty())return false;
+        Node* oldTail =tail;
+        out = oldTail->data;
+        if (tail == tail->next) { // 1개인 경우
+            delete tail;
+            tail = nullptr;
+        }
+        else {
+            // 10 -> 20  ->30  .. ->10 =>    10 -> 20 -> ..10
+            Node* newTail = tail->prev;
+            newTail->next = tail->next;
+            tail->next->prev = newTail;
+            delete oldTail;
+            tail = newTail;
+        }
+        return true;
+        
+    }
+    void print_all()const {
+        if (is_empty()) { std::cout << "EMPTY" << std::endl; }
+        Node* curr = tail->next; //head
+        while (curr !=tail->next) {
+           std::cout<< curr->data << std::endl;
+           curr = curr->next;
+        }
+        //마지막 노드 
+        std::cout << curr->data << std::endl;
     }
 
+ 
     void clear() {
-
+        if (is_empty())return;
+        Node* curr = tail->next;
+        while (curr != tail){
+            Node* temp = curr;
+            curr = curr->next;
+            delete temp;
+        }
+        delete tail;
+        tail = nullptr;
     }
 };
 int main()
