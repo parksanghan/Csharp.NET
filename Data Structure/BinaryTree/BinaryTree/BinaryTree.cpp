@@ -7,7 +7,42 @@ int main()
 {
     std::cout << "Hello World!\n";
 }
+class Node {
+public:
 
+    int data;
+    Node* left;
+    Node* right;
+    Node(int val):data(val),left(nullptr),right(nullptr){}
+};
+class BinaryTree {
+private:
+    Node* root;
+public:
+    BinaryTree():root(nullptr){}
+    // 전위 순회 root left right
+    //    1 
+    //  2   3
+    void preorder(Node* node)  const{
+        if (!node)return;
+        std::cout << node->data;
+        preorder(node->left);
+        preorder(node->right);
+    }
+    void inorder(Node* node) const{
+        if (!node)return;
+        inorder(node->left);
+        std::cout << node->data << std::endl;
+        inorder(node->right);
+    }
+    void postorder(Node* node)const {
+        if (!node)return;
+        postorder(node->left);
+        postorder(node->right);
+        std::cout << node->data << std::endl;
+
+    }
+};
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
 // 프로그램 디버그: <F5> 키 또는 [디버그] > [디버깅 시작] 메뉴
 
