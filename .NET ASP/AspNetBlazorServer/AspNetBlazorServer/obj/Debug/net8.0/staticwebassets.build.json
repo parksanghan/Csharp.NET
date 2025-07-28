@@ -1,0 +1,640 @@
+{
+  "Version": 1,
+  "Hash": "I0dXr9Ax6RHjtdkSwgoTrJ8aa5N5THN+a+gczHzoJVI=",
+  "Source": "AspNetBlazorServer",
+  "BasePath": "_content/AspNetBlazorServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "AspNetBlazorServer\\wwwroot",
+      "Source": "AspNetBlazorServer",
+      "ContentRoot": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\",
+      "BasePath": "_content/AspNetBlazorServer",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AspNetBlazorServer.styles.css",
+      "SourceId": "AspNetBlazorServer",
+      "SourceType": "Computed",
+      "ContentRoot": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/AspNetBlazorServer",
+      "RelativePath": "AspNetBlazorServer#[.{fingerprint}]?.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "Fingerprint": "x021qeqz57",
+      "Integrity": "f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AspNetBlazorServer.styles.css"
+    },
+    {
+      "Identity": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AspNetBlazorServer.bundle.scp.css",
+      "SourceId": "AspNetBlazorServer",
+      "SourceType": "Computed",
+      "ContentRoot": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/AspNetBlazorServer",
+      "RelativePath": "AspNetBlazorServer#[.{fingerprint}]!.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "Fingerprint": "x021qeqz57",
+      "Integrity": "f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AspNetBlazorServer.bundle.scp.css"
+    },
+    {
+      "Identity": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\app.css",
+      "SourceId": "AspNetBlazorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\",
+      "BasePath": "_content/AspNetBlazorServer",
+      "RelativePath": "app#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "da95v2qkru",
+      "Integrity": "u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.css"
+    },
+    {
+      "Identity": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "SourceId": "AspNetBlazorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\",
+      "BasePath": "_content/AspNetBlazorServer",
+      "RelativePath": "bootstrap/bootstrap.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bpk8xqwxhs",
+      "Integrity": "z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Identity": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "SourceId": "AspNetBlazorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\",
+      "BasePath": "_content/AspNetBlazorServer",
+      "RelativePath": "bootstrap/bootstrap.min.css#[.{fingerprint}]?.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "8inm30yfxf",
+      "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\favicon.png",
+      "SourceId": "AspNetBlazorServer",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\",
+      "BasePath": "_content/AspNetBlazorServer",
+      "RelativePath": "favicon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ifv42okdf2",
+      "Integrity": "4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon.png"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "app.css",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 03:00:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "app.da95v2qkru.css",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\app.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 03:00:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "da95v2qkru"
+        },
+        {
+          "Name": "label",
+          "Value": "app.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-u9qEka1auR7E3rd3/8/j8hkQdSOYj9bRJ4nYiFDR1sE="
+        }
+      ]
+    },
+    {
+      "Route": "AspNetBlazorServer.bundle.scp.css",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AspNetBlazorServer.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Jul 2025 05:50:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM="
+        }
+      ]
+    },
+    {
+      "Route": "AspNetBlazorServer.styles.css",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AspNetBlazorServer.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Jul 2025 05:50:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM="
+        }
+      ]
+    },
+    {
+      "Route": "AspNetBlazorServer.x021qeqz57.bundle.scp.css",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AspNetBlazorServer.bundle.scp.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Jul 2025 05:50:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x021qeqz57"
+        },
+        {
+          "Name": "label",
+          "Value": "AspNetBlazorServer.bundle.scp.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM="
+        }
+      ]
+    },
+    {
+      "Route": "AspNetBlazorServer.x021qeqz57.styles.css",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AspNetBlazorServer.styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "5919"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 28 Jul 2025 05:50:51 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x021qeqz57"
+        },
+        {
+          "Name": "label",
+          "Value": "AspNetBlazorServer.styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-f40E9oyHzyzoOyTywXvex+4PYij23mHP3cRPJ8jzRnM="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.bpk8xqwxhs.css",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 03:00:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bpk8xqwxhs"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "162720"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 03:00:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z8OR40MowJ8GgK6P89Y+hiJK5+cclzFHzLhFQLL92bg="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.8inm30yfxf.map",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 03:00:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "8inm30yfxf"
+        },
+        {
+          "Name": "label",
+          "Value": "bootstrap/bootstrap.min.css.map"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "bootstrap/bootstrap.min.css.map",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449111"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/plain"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 03:00:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ifv42okdf2.png",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 03:00:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ifv42okdf2"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.png",
+      "AssetFile": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\wwwroot\\favicon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1148"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 27 Jul 2025 03:00:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4mWsDy3aHl36ZbGt8zByK7Pvd4kRUoNgTYzRnwmPHwg="
+        }
+      ]
+    }
+  ]
+}
