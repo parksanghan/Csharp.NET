@@ -19,12 +19,19 @@ private:
     Node* root;
   
 public:
- 
+    BinarySearchTree() :root(nullptr){}
+    ~BinarySearchTree() { clear(root); }
     Node* insert(Node* node, int val) {
         if (!node)return new Node(val);
         else if (val < node->data)node->left = insert(node->left, val);
         else if (val > node->data)node->right = insert(node->right, val);
         return node;
+    }
+    void clear(Node* node) {
+        if (!node)return;
+        clear(node->left);
+        clear(node->right);
+        delete node;
     }
     bool search(Node* node, int val)const {
         if (!node)return false;
@@ -35,11 +42,55 @@ public:
     }
     Node* remove(Node* node, int val) {
         if (!node) return nullptr;
-        else if (val < node->data) {
-            node->left = remove(node, val);
-        
+        else if (val < node->data) node->left = remove(node, val);
         else if (val > node->data)node->right = remove(node, val);
-         
+        else {
+            // 삭제  노드 탐색 시
+            if (!node->left && !node->right) {
+                // 리프
+                delete node;
+                return nullptr;
+            }
+            else if (!node->left) {
+                // 오른쪽 자식 노드만 
+                Node* temp = node->right;
+                delete node;
+                return temp;
+            }
+            else if (!node->right) {
+                // 왼쪽 자식 노드만
+                Node* temp = node->left;
+                delete node;
+                return temp;
+            }
+            else {
+                // 양쪽 노드 
+                Node* succ = node->right;
+                while (succ->left) succ = succ->left;//오른쪽 서브 트리의 최솟값
+                node->data = succ->data;
+                node->right = remove(node->right, succ->data);
+            }
+        }
+        return node;
+    }
+    // 전위
+    void preorder(Node* node) const {
+        if (!node) return;
+        std::cout << node->data << " ";
+        preorder(node->left);
+        preorder(node->right);
+    }
+    void inorder(Node* node) const {
+        if (!node) return;
+        preorder(node->left);
+        std::cout << node->data << " ";
+        preorder(node->right);
+    }
+    void postorder(Node* node) const {
+        if (!node) return;
+        preorder(node->left);
+        preorder(node->right);
+        std::cout << node->data << " ";
     }
  
 };
