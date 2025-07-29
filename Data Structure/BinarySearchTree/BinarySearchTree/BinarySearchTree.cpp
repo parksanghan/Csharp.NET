@@ -36,14 +36,14 @@ public:
     bool search(Node* node, int val)const {
         if (!node)return false;
         else if (val == node->data)return true;
-        else if (val >= node->data)return search(node, val);
-        else if (val <= node->data)return search(node, val);
+        else if (val < node->data)return search(node->left, val);
+        else if (val > node->data)return search(node->right, val);
         return node;
     }
     Node* remove(Node* node, int val) {
         if (!node) return nullptr;
-        else if (val < node->data) node->left = remove(node, val);
-        else if (val > node->data)node->right = remove(node, val);
+        else if (val < node->data) node->left = remove(node->left, val);
+        else if (val > node->data)node->right = remove(node->right, val);
         else {
             // 삭제  노드 탐색 시
             if (!node->left && !node->right) {
@@ -82,14 +82,14 @@ public:
     }
     void inorder(Node* node) const {
         if (!node) return;
-        preorder(node->left);
+        inorder(node->left);
         std::cout << node->data << " ";
-        preorder(node->right);
+        inorder(node->right);
     }
     void postorder(Node* node) const {
         if (!node) return;
-        preorder(node->left);
-        preorder(node->right);
+        postorder(node->left);
+        postorder(node->right);
         std::cout << node->data << " ";
     }
  
