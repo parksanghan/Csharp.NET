@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "dSifHYsKo0s=",
+  "success": true,
+  "projectFilePath": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetCoreBlazorEmpty\\AspNetCoreBlazorEmpty\\AspNetCoreBlazorEmpty.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\박상한\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512"
+  ],
+  "logs": []
+}
