@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Gr5jb8FJHYtSPmo2scFqiTfC1Uib2MMbzU843OcTXLM=",
+  "Source": "AspNetCoreBlazorEmpty",
+  "BasePath": "_content/AspNetCoreBlazorEmpty",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
