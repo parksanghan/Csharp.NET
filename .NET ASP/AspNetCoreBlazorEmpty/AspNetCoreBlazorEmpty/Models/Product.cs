@@ -16,8 +16,9 @@ public partial class Product
     public int? ProductCategoryId { get; set; }
 
     public int? ProductManufacturerId { get; set; }
-
-    public virtual Category ProductCategory { get; set; }
+    // 프록시가짜 자식 클래스 동적으로 사용하기 위해 
+    // 
+    public virtual Category ProductCategory { get; set; } // 명명 규칙
 
     public virtual Manufacturer ProductManufacturer { get; set; }
 }

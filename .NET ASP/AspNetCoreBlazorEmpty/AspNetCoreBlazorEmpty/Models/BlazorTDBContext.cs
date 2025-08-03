@@ -5,13 +5,15 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace AspNetCoreBlazorEmpty.Models;
-
+// DbContext 상속으로 DI 주입 의존성
 public partial class BlazorTDBContext : DbContext
 {
     public BlazorTDBContext(DbContextOptions<BlazorTDBContext> options)
         : base(options)
-    {
+    {//여기서 options 에서 연결 문자열과 DB 제공자 정보 담김
     }
+    
+
 
     public virtual DbSet<Category> Categories { get; set; }
 
@@ -19,6 +21,12 @@ public partial class BlazorTDBContext : DbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        optionsBuilder.UseLazyLoadingProxies();
+        base.OnConfiguring(optionsBuilder);
+    }
+    // 테이블과 엔티티 클래스의 매핑 규칙 생성 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Category>(entity =>
@@ -28,8 +36,9 @@ public partial class BlazorTDBContext : DbContext
             entity.Property(e => e.CategoryName)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-                
+
         });
+
 
         modelBuilder.Entity<Manufacturer>(entity =>
         {
@@ -50,7 +59,7 @@ public partial class BlazorTDBContext : DbContext
             entity.Property(e => e.ProductName)
                 .HasMaxLength(50)
                 .IsUnicode(false);
-
+            // Product -> Category N:1 관계 
             entity.HasOne(d => d.ProductCategory).WithMany(p => p.Products)
                 .HasForeignKey(d => d.ProductCategoryId)
                 .HasConstraintName("FK_Product_Category");
@@ -62,6 +71,5 @@ public partial class BlazorTDBContext : DbContext
 
         OnModelCreatingPartial(modelBuilder);
     }
-
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AspNetCoreBlazorEmpty")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+644a54bc89707183514fb10794af472166c39ea5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8671e37f7e4eb6e0064efe576a37205e5ca9b1a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AspNetCoreBlazorEmpty")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AspNetCoreBlazorEmpty")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
