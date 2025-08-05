@@ -19,5 +19,4 @@ app.MapControllerRoute("controllers", "controllers/{controller=Home}/{action=Ind
 // MVC 라우팅 집적 지정
 app.MapRazorPages();// Pages 기반  Razor 라우팅 활성
 //@page 디렉티브를 가진 .cshtml 파일 처리됨
-app.Run();
-// 빈프로젝트 
+app.Run();  
