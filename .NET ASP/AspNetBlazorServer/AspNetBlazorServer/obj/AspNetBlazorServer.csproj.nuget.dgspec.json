@@ -10,7 +10,7 @@
         "projectUniqueName": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\AspNetBlazorServer.csproj",
         "projectName": "AspNetBlazorServer",
         "projectPath": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\AspNetBlazorServer.csproj",
-        "packagesPath": "C:\\Users\\박상한\\.nuget\\packages\\",
+        "packagesPath": "F:\\NuGetPackages",
         "outputPath": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\AspNetBlazorServer\\AspNetBlazorServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
