@@ -28,7 +28,7 @@ namespace AspNetCoreBlazorEmpty.Controllers
                 Manufacturer = _context.Manufacturers.Select(m=>m.ManufacturerName).Distinct(),
                 // 모든 제조사에 대해중복 없이 
                 SelectedManufacturer =  selectedManufacturer    
-                // 인자로 들어온 현재 제조사값을 할당
+                // 인자로 들어온 현재 제조사값을 할당*
             }); 
         }
         // views에 Home에 index.cshtml에 찾아 랜더링 

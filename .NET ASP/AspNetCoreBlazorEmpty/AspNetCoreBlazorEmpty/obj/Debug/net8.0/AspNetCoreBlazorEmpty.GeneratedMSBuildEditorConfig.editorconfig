@@ -28,6 +28,22 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[F:/Csharp.NET/Csharp.NET/.NET ASP/AspNetCoreBlazorEmpty/AspNetCoreBlazorEmpty/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Csharp.NET/Csharp.NET/.NET ASP/AspNetCoreBlazorEmpty/AspNetCoreBlazorEmpty/Pages/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Csharp.NET/Csharp.NET/.NET ASP/AspNetCoreBlazorEmpty/AspNetCoreBlazorEmpty/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/Csharp.NET/Csharp.NET/.NET ASP/AspNetCoreBlazorEmpty/AspNetCoreBlazorEmpty/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Csharp.NET/Csharp.NET/.NET ASP/AspNetCoreBlazorEmpty/AspNetCoreBlazorEmpty/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

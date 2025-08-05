@@ -1,0 +1,41 @@
+﻿@page "/pages"
+@model AspNetCoreBlazorEmpty.Pages.IndexModel
+
+<h4 class="bg-primary text-white text-center p-2">Product</h4>
+<table class="table table-sm table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Name (Price)</th>
+			<th>Category</th>
+			<th>Manufacturer</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (Product p in Model?.Product ?? Enumerable.Empty<Product>())
+		{
+			<tr class="@Model?.GetClass(p.ProductManufacturer?.ManufacturerName)">
+				<td>@p.ProductId</td>
+				<td>@p.ProductName, @p.ProductPrice?.ToString("#,##0")</td>
+				<td>@p.ProductCategory.CategoryName</td>
+				<td>@p.ProductManufacturer?.ManufacturerName</td>
+			</tr>
+		}
+	</tbody>
+</table>
+
+<form asp-action="Index" method="get">
+	<div class="form-group">
+		<label for="selectedManufacturer">Manufacturer</label>
+		<select name="selectedManufacturer" class="form-control">
+			<option disabled selected>Select Manufacturer</option>
+			@foreach (string Manufacturer in Model?.Manufacturer ?? Enumerable.Empty<string>())
+			{
+				<option selected="@(Manufacturer == Model?.SelectedManufacturer)">
+					@Manufacturer
+				</option>
+			}
+		</select>
+	</div>
+	<button class="btn btn-primary mt-2" type="submit">Select</button>
+</form>
