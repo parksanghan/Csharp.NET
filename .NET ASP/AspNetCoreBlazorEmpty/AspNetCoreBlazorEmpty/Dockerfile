@@ -12,7 +12,23 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["AspNetCoreBlazorEmpty/AspNetCoreBlazorEmpty.csproj", "AspNetCoreBlazorEmpty/"]
+COPY ["AspNetCoreBlazorEmpty/AspNetCwarn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {1d3e8043-35ca-4908-8ef7-00f8056bd454} may be persisted to storage in unencrypted form.
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://[::]:8080
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: https://[::]:8081
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: /app
+oreBlazorEmpty.csproj", "AspNetCoreBlazorEmpty/"]
 RUN dotnet restore "./AspNetCoreBlazorEmpty/AspNetCoreBlazorEmpty.csproj"
 COPY . .
 WORKDIR "/src/AspNetCoreBlazorEmpty"

@@ -21,7 +21,7 @@ namespace AspNetCoreBlazorEmpty.Pages
 
         [FromQuery]
         public string SelectedManufacturer { get; set; } = String.Empty;
-
+            
         public void OnGet()
         {
             Product = context.Products.Include(p => p.ProductCategory).Include(p => p.ProductManufacturer);

@@ -14,11 +14,11 @@
 	<tbody>
 		@foreach (Product p in Model?.Product ?? Enumerable.Empty<Product>())
 		{
-			<tr class="@Model?.GetClass(p.ProductManufacturer?.ManufacturerName)">
-				<td>@p.ProductId</td>
-				<td>@p.ProductName, @p.ProductPrice?.ToString("#,##0")</td>
-				<td>@p.ProductCategory.CategoryName</td>
-				<td>@p.ProductManufacturer?.ManufacturerName</td>
+			<tr>
+				<td class="@Model?.GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductId</td>
+				<td class="@Model?.GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductName, @p.ProductPrice?.ToString("#,##0")</td>
+				<td class="@Model?.GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductCategory.CategoryName</td>
+				<td class="@Model?.GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductManufacturer?.ManufacturerName</td>
 			</tr>
 		}
 	</tbody>
