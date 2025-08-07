@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="Category" Category="EntityType" Annotations="NavigationAccessMode: Field Relational:Schema: Relational:TableName: Category RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="20.0000000000001,339.8,252.76,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Category" Name="Category" />
+    <Node Id="Category.CategoryId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40,435.76,105.01,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="CategoryId (int)" MaxLength="None" Name="CategoryId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Category.CategoryName" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50 Unicode: False" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="40.0000000000001,491.72,143.613333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="CategoryName (string)" MaxLength="(50)" Name="CategoryName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Category.LazyLoader" Category="Navigation Property" Bounds="154.08,379.8,98.68,25.96" Dependent="" Field="" Inverse="" Label="LazyLoader (1)" Name="LazyLoader" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="n" />
+    <Node Id="Category.Products" Category="Navigation Collection" Bounds="40,379.8,84.08,25.96" Dependent="Product" Field="" Inverse="ProductCategory" Label="Products (*)" Name="Products" Principal="" PropertyAccessMode="PropertyAccessMode.Field" Type="ICollection&lt;Product&gt;" />
+    <Node Id="IModel" Category="Model" Annotations="BaseTypeDiscoveryConvention:DerivedTypes: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.List`1[Microsoft.EntityFrameworkCore.Metadata.IConventionEntityType]] Proxies:ChangeTracking: False Proxies:CheckEquality: False Proxies:LazyLoading: True Relational:MaxIdentifierLength: 128 RelationshipDiscoveryConvention:InverseNavigationCandidates: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.SortedSet`1[System.Type]] SqlServer:ValueGenerationStrategy: IdentityColumn" Bounds="0,0,698.286666666667,557.68" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" Label="BlazorTDBContext" ProductVersion="8.0.17" PropertyAccessMode="PropertyAccessMode.Default" />
+    <Node Id="Manufacturer" Category="EntityType" Annotations="NavigationAccessMode: Field Relational:Schema: Relational:TableName: Manufacturer RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" BaseClass="" Bounds="303.521666666667,339.8,349.716666666667,197.88" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Manufacturer" Name="Manufacturer" />
+    <Node Id="Manufacturer.LazyLoader" Category="Navigation Property" Bounds="437.601666666667,379.8,98.6800000000001,25.96" Dependent="" Field="" Inverse="" Label="LazyLoader (1)" Name="LazyLoader" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="n" />
+    <Node Id="Manufacturer.ManufacturerId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="323.521666666667,435.76,128.833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ManufacturerId (int)" MaxLength="None" Name="ManufacturerId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Manufacturer.ManufacturerInc" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50 Unicode: False" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="482.355,435.76,150.883333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ManufacturerInc (string)" MaxLength="(50)" Name="ManufacturerInc" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Manufacturer.ManufacturerName" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50 Unicode: False" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="323.521666666667,491.72,167.436666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ManufacturerName (string)" MaxLength="(50)" Name="ManufacturerName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Manufacturer.Products" Category="Navigation Collection" Bounds="323.521666666667,379.8,84.08,25.96" Dependent="Product" Field="" Inverse="ProductManufacturer" Label="Products (*)" Name="Products" Principal="" PropertyAccessMode="PropertyAccessMode.Field" Type="ICollection&lt;Product&gt;" />
+    <Node Id="Product" Category="EntityType" Annotations="" BaseClass="" Bounds="278.473333333333,40,399.813333333333,253.84" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Product" Name="Product" />
+    <Node Id="Product.LazyLoader" Category="Navigation Property" Bounds="426.75,80,98.6800000000001,25.96" Dependent="" Field="" Inverse="" Label="LazyLoader (1)" Name="LazyLoader" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="n" />
+    <Node Id="Product.ProductCategory" Category="Navigation Property" Bounds="447.95,135.96,129.383333333333,25.96" Dependent="" Field="" Inverse="Products" Label="ProductCategory (1)" Name="ProductCategory" Principal="Category" PropertyAccessMode="PropertyAccessMode.Field" Type="Category" />
+    <Node Id="Product.ProductCategoryId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="465.353333333333,191.92,152.783333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ProductCategoryId (int?)" MaxLength="None" Name="ProductCategoryId" PropertyAccessMode="PropertyAccessMode.Default" Type="int?" ValueGenerated="None" />
+    <Node Id="Product.ProductId" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="298.473333333333,80,98.2766666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ProductId (int)" MaxLength="None" Name="ProductId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Product.ProductManufacturer" Category="Navigation Property" Bounds="298.473333333333,247.88,153.206666666667,25.96" Dependent="" Field="" Inverse="Products" Label="ProductManufacturer (1)" Name="ProductManufacturer" Principal="Manufacturer" PropertyAccessMode="PropertyAccessMode.Field" Type="Manufacturer" />
+    <Node Id="Product.ProductManufacturerId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="481.68,247.88,176.606666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ProductManufacturerId (int?)" MaxLength="None" Name="ProductManufacturerId" PropertyAccessMode="PropertyAccessMode.Default" Type="int?" ValueGenerated="None" />
+    <Node Id="Product.ProductName" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="MaxLength: 50 Unicode: False" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="298.473333333333,191.92,136.88,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ProductName (string)" MaxLength="(50)" Name="ProductName" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Product.ProductPrice" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="298.473333333333,135.96,119.476666666667,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="ProductPrice (int?)" MaxLength="None" Name="ProductPrice" PropertyAccessMode="PropertyAccessMode.Default" Type="int?" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+    <Link Source="Category" Target="Category.CategoryId" Category="Contains" />
+    <Link Source="Category" Target="Category.CategoryName" Category="Contains" />
+    <Link Source="Category" Target="Category.LazyLoader" Category="Contains" />
+    <Link Source="Category" Target="Category.Products" Category="Contains" />
+    <Link Source="IModel" Target="Category" Category="Contains" />
+    <Link Source="IModel" Target="Manufacturer" Category="Contains" />
+    <Link Source="IModel" Target="Product" Category="Contains" />
+    <Link Source="Manufacturer" Target="Manufacturer.LazyLoader" Category="Contains" />
+    <Link Source="Manufacturer" Target="Manufacturer.ManufacturerId" Category="Contains" />
+    <Link Source="Manufacturer" Target="Manufacturer.ManufacturerInc" Category="Contains" />
+    <Link Source="Manufacturer" Target="Manufacturer.ManufacturerName" Category="Contains" />
+    <Link Source="Manufacturer" Target="Manufacturer.Products" Category="Contains" />
+    <Link Source="Product" Target="Category" Category="Foreign Key" Annotations="Relational:Name: FK_Product_Category" Bounds="274.188690185547,293.839996337891,49.1716613769531,40.258544921875" From="Product.ProductCategoryId" IsUnique="False" Label="1:*" LabelBounds="295.292662791553,308.84,14.3333333333334,15.96" Name="Product -&gt; Category" To="Category.CategoryId" />
+    <Link Source="Product" Target="Manufacturer" Category="Foreign Key" Annotations="Relational:Name: FK_Product_Manufacturer" Bounds="478.380004882813,293.839996337891,0,36.9599914550781" From="Product.ProductManufacturerId" IsUnique="False" Label="1:*" LabelBounds="464.046666666667,308.84,14.3333333333333,15.96" Name="Product -&gt; Manufacturer" To="Manufacturer.ManufacturerId" />
+    <Link Source="Product" Target="Product.LazyLoader" Category="Contains" />
+    <Link Source="Product" Target="Product.ProductCategory" Category="Contains" />
+    <Link Source="Product" Target="Product.ProductCategoryId" Category="Contains" />
+    <Link Source="Product" Target="Product.ProductId" Category="Contains" />
+    <Link Source="Product" Target="Product.ProductManufacturer" Category="Contains" />
+    <Link Source="Product" Target="Product.ProductManufacturerId" Category="Contains" />
+    <Link Source="Product" Target="Product.ProductName" Category="Contains" />
+    <Link Source="Product" Target="Product.ProductPrice" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="포함" Description="링크 소스에 대상 개체가 포함되는지 여부입니다." CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="포함 위치" IsContainment="True" OutgoingActionLabel="포함" />
+    <Category Id="EntityType" />
+    <Category Id="Foreign Key" />
+    <Category Id="Model" />
+    <Category Id="Navigation Collection" />
+    <Category Id="Navigation Property" />
+    <Category Id="Property Foreign" />
+    <Category Id="Property Optional" />
+    <Category Id="Property Primary" />
+  </Categories>
+  <Properties>
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass" Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Field" Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="그룹" Description="그룹으로 노드가 표시됩니다." DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsAbstract" Label="IsAbstract" Description="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="Label" Label="레이블" Description="Annotatable 개체의 표시 가능 레이블입니다." DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxLength" DataType="System.String" />
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type" Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
