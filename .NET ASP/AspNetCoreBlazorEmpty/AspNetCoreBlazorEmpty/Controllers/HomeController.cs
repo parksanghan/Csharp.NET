@@ -7,6 +7,7 @@ using System.Diagnostics;
 
 namespace AspNetCoreBlazorEmpty.Controllers
 {
+    // {}Controller 로 작명시  : Controller를 상속받은 클래스는 
     public class HomeController : Controller
     {
         private BlazorTDBContext context;

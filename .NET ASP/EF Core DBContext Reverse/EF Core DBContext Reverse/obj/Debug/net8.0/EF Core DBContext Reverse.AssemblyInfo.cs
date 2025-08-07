@@ -11,13 +11,13 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("c31664c5-a2d1-4a0f-a2ff-62755b4a08ca")]
-[assembly: System.Reflection.AssemblyCompanyAttribute("AspNetCoreBlazorEmpty")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("e5a08a7d-3a1d-4121-98f7-638fa12bbcd2")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("EF Core DBContext Reverse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98670632702010d5d13a7e61ee2057716712901b")]
-[assembly: System.Reflection.AssemblyProductAttribute("AspNetCoreBlazorEmpty")]
-[assembly: System.Reflection.AssemblyTitleAttribute("AspNetCoreBlazorEmpty")]
+[assembly: System.Reflection.AssemblyProductAttribute("EF Core DBContext Reverse")]
+[assembly: System.Reflection.AssemblyTitleAttribute("EF Core DBContext Reverse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // MSBuild WriteCodeFragment 클래스에서 생성되었습니다.
