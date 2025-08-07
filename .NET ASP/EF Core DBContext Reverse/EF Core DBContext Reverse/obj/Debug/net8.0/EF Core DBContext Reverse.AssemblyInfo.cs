@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EF Core DBContext Reverse")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67e01569cbcca7fc82af90e794e78250b81234f7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd2d109b300559cd5053a9c327df7b912ed4128a")]
 [assembly: System.Reflection.AssemblyProductAttribute("EF Core DBContext Reverse")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EF Core DBContext Reverse")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
