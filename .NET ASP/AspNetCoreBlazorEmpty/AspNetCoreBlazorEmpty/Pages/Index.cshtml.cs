@@ -18,7 +18,6 @@ namespace AspNetCoreBlazorEmpty.Pages
 
         public IEnumerable<Product> Product { get; set; } = Enumerable.Empty<Product>();
         public IEnumerable<string> Manufacturer { get; set; } = Enumerable.Empty<string>();
-
         [FromQuery]
         public string SelectedManufacturer { get; set; } = String.Empty;
             

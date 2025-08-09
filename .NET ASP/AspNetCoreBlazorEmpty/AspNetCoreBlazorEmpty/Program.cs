@@ -11,8 +11,8 @@ builder.Services.AddRazorPages(); // Razor Pages 사용 설정  .cshtml
 
 var app = builder.Build(); // 빌더 설정으로 app 객체 생성
 
-app.MapGet("/", () => "Hello World!"); // MapControllers  , MapGet 둘다 공존해도도힘
-
+app.MapGet("/", () => "Hello World!"); // MapControllers  , MapGet 둘다 공존해도도힘    
+app.Views
 app.UseStaticFiles();// 정적 라우팅 설정 
 app.MapControllers(); // 컨트롤러 기반 요청 처리 설정
 app.MapControllerRoute("controllers", "controllers/{controller=Home}/{action=Index}/{id?}");
