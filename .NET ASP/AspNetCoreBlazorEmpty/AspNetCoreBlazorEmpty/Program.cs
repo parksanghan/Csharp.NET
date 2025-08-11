@@ -3,20 +3,20 @@ using AspNetCoreBlazorEmpty.Models;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BlazorTDBContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration["ConnectionStrings:ProductConnection"]); // db¿¬°á
+    opts.UseSqlServer(builder.Configuration["ConnectionStrings:ProductConnection"]); // dbï¿½ï¿½ï¿½ï¿½
     opts.EnableSensitiveDataLogging(true);
 });
-builder.Services.AddControllersWithViews(); // Controller +view »ç¿ë ¼³Á¤
-builder.Services.AddRazorPages(); // Razor Pages »ç¿ë ¼³Á¤  .cshtml
+builder.Services.AddControllersWithViews(); // Controller +view ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+builder.Services.AddRazorPages(); // Razor Pages ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½  .cshtml
 
-var app = builder.Build(); // ºô´õ ¼³Á¤À¸·Î app °´Ã¼ »ý¼º
+var app = builder.Build(); // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ app ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½
 
-app.MapGet("/", () => "Hello World!"); // MapControllers  , MapGet µÑ´Ù °øÁ¸ÇØµµµµÈû    
+app.MapGet("/", () => "Hello World!"); // MapControllers  , MapGet ï¿½Ñ´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½    
  
-app.UseStaticFiles();// Á¤Àû ¶ó¿ìÆÃ ¼³Á¤ 
-app.MapControllers(); // ÄÁÆ®·Ñ·¯ ±â¹Ý ¿äÃ» Ã³¸® ¼³Á¤
+app.UseStaticFiles();// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ 
+app.MapControllers(); // ï¿½ï¿½Æ®ï¿½Ñ·ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½Ã» Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 app.MapControllerRoute("controllers", "controllers/{controller=Home}/{action=Index}/{id?}");
-// MVC ¶ó¿ìÆÃ ÁýÀû ÁöÁ¤
-app.MapRazorPages();// Pages ±â¹Ý  Razor ¶ó¿ìÆÃ È°¼º
-//@page µð·ºÆ¼ºê¸¦ °¡Áø .cshtml ÆÄÀÏ Ã³¸®µÊ
+// MVC ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+app.MapRazorPages();// Pages ï¿½ï¿½ï¿½  Razor ï¿½ï¿½ï¿½ï¿½ï¿½ È°ï¿½ï¿½
+//@page ï¿½ï¿½Æ¼ï¿½ê¸¦ ï¿½ï¿½ï¿½ï¿½ .cshtml ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½
 app.Run();  
