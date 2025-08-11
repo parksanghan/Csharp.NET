@@ -8,8 +8,7 @@ namespace EF_Core_Entity_DBContext.DbContexts
         public FirstAppContext(DbContextOptions<FirstAppContext> options)
             : base(options) { }
 
-        public DbSet<LogHistory> LogHistories { get; set; }
-
+        public DbSet<LogHistory> LogHistories => Set<LogHistory>();
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<LogHistory>()

@@ -10,7 +10,7 @@ namespace EF_Core_Entity_DBContext.Entities
         }
         [Key]
         public int Seq { get; set; }    
-        public string? Detail { get; set; }
+        public string Detail { get; set; }
         public DateTime CreateTime { get; set; } = DateTime.Now;
 
         

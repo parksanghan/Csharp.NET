@@ -5,9 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<FirstAppContext>(opts =>
 {
-    opts.UseSqlServer(builder.Configuration["ConnectionStrings:ProductConnection"]); // db¿¬°á
+    opts.UseSqlServer(builder.Configuration["ConnectionStrings:ProductConnection"]);  
     opts.EnableSensitiveDataLogging(true);
 });
+// db context ì„¸íŒ…    
 var app = builder.Build();
 app.MapGet("/", () => "Hello World!");
 app.Run();
