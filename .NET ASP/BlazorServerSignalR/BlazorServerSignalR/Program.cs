@@ -1,10 +1,12 @@
+using BlazorServerSignalR.Models;
+using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
-builder.Services.AddDbContext<NorthwindContext>(opts => {
-    opts.UseSqlServer(builder.Configuration["ConnectionStrings:NorthwindConnection"]);
+builder.Services.AddDbContext<BlazorTDBContext>(opts => {
+    opts.UseSqlServer(builder.Configuration["ConnectionStrings:NorthwindConnection"]);  
     opts.EnableSensitiveDataLogging(true);
 });
 
