@@ -1,0 +1,569 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\bootstrap\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_accordion.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_accordion.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_alert.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_alert.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_badge.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_badge.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_breadcrumb.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_button-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_button-group.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_buttons.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_buttons.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_card.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_card.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_carousel.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_carousel.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_close.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_close.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_containers.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_containers.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_dropdown.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_dropdown.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_forms.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_forms.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_functions.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_functions.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_grid.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_helpers.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_helpers.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_images.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_images.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_list-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_list-group.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_maps.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_maps.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_modal.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_modal.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_nav.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_nav.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_navbar.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_navbar.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_offcanvas.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_offcanvas.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_pagination.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_pagination.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_placeholders.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_placeholders.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_popover.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_popover.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_progress.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_progress.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_reboot.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_reboot.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_root.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_root.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_spinners.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_spinners.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_tables.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_tables.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_toasts.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_toasts.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_tooltip.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_tooltip.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_transitions.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_transitions.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_type.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_type.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_utilities.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_variables-dark.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_variables-dark.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\_variables.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\_variables.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\bootstrap-grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-grid.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\bootstrap-reboot.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-reboot.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\bootstrap-utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap-utilities.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\bootstrap.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\bootstrap.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_floating-labels.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_floating-labels.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_form-check.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-check.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_form-control.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-control.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_form-range.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-range.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_form-select.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-select.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_form-text.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_form-text.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_input-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_input-group.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_labels.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_labels.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\forms\\_validation.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\forms\\_validation.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_clearfix.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_color-bg.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_color-bg.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_colored-links.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_colored-links.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_focus-ring.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_focus-ring.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_icon-link.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_icon-link.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_position.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_position.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_ratio.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_ratio.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_stacks.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_stacks.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_stretched-link.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_stretched-link.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_text-truncation.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_text-truncation.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_visually-hidden.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\helpers\\_vr.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\helpers\\_vr.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_alert.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_alert.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_backdrop.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_backdrop.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_banner.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_banner.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_border-radius.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_border-radius.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_box-shadow.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_box-shadow.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_breakpoints.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_breakpoints.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_buttons.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_buttons.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_caret.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_caret.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_clearfix.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_clearfix.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_color-mode.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_color-mode.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_color-scheme.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_color-scheme.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_container.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_container.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_deprecate.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_deprecate.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_forms.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_forms.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_gradients.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_gradients.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_grid.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_grid.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_image.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_image.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_list-group.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_list-group.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_lists.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_lists.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_pagination.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_pagination.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_reset-text.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_reset-text.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_resize.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_resize.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_table-variants.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_table-variants.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_text-truncate.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_text-truncate.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_transition.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_transition.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_utilities.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_utilities.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\mixins\\_visually-hidden.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\mixins\\_visually-hidden.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\utilities\\_api.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\utilities\\_api.scss"
+    },
+    {
+      "Id": "F:\\Csharp.NET\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\wwwroot\\bootstrap\\scss\\vendor\\_rfs.scss",
+      "PackagePath": "staticwebassets\\bootstrap\\scss\\vendor\\_rfs.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorServerSignalR.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BlazorServerSignalR.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BlazorServerSignalR.props",
+      "PackagePath": "build\\BlazorServerSignalR.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorServerSignalR.props",
+      "PackagePath": "buildMultiTargeting\\BlazorServerSignalR.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorServerSignalR.props",
+      "PackagePath": "buildTransitive\\BlazorServerSignalR.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

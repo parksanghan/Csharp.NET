@@ -12,7 +12,7 @@ builder.Services.AddDbContext<BlazorTDBContext>(opts => {
 
 var app = builder.Build();
 
-//app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Hello World!");
 
 app.UseStaticFiles();
 app.MapControllers();
