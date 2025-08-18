@@ -1,0 +1,16 @@
+﻿@page "/pages/blazor"
+
+<script type="text/javascript">
+	window.addEventListener("DOMContentLoaded", () => {
+		document.getElementById("markElems").addEventListener("click", () => {
+			document.querySelectorAll("td:first-child").forEach(elem => {
+				elem.innerText = `M:${elem.innerText}`
+				elem.classList.add("border", "border-dark");
+			});
+		});
+	});
+</script>
+
+<h4 class="bg-primary text-white text-center p-2">Blazor Product</h4>
+<button id="markElems" class="btn btn-outline-primary mb-2">Mark Elements</button>
+<component type="typeof(MyBlazorApp.Blazor.ProductList)" render-mode="Server" />
