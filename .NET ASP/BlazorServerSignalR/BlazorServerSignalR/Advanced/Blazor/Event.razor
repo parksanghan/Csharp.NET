@@ -1,0 +1,11 @@
+﻿<div class="m-2 p-2 border">
+	<button class="btn btn-primary" @onclick="IncrementCounter">Increment</button>
+	<span class="p-2">Counter Value: @Counter</span>
+</div>
+@code {
+	public int Counter { get; set; } = 1;
+	public void IncrementCounter(MouseEventArgs e)
+	{
+		Counter++;
+	}
+}

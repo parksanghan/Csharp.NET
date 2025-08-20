@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
+[F:/Csharp.NET/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/Event.razor]
+build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXEV2ZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Csharp.NET/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/ProductList.razor]
 build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFByb2R1Y3RMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
