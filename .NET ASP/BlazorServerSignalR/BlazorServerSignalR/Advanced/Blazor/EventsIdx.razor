@@ -1,0 +1,18 @@
+﻿<h3>EventsIdx</h3>
+<div class="m-2 p-2 border">
+    <button class="btn btn-primary" @onclick=@(e=>IncrementCounter(e,0))></button>
+    <span class="p-2">Count value @Counter[0]</span>
+</div>
+<div class="m-2 p-2 border">
+    <button class="btn btn-primary" @onclick=@(e=>IncrementCounter(e,1))></button>
+    <span class="p-2">Count value @Counter[1]</span>
+</div>
+
+@code {
+    public int[] Counter { get; set; } = new int[] { 1, 1 };
+
+    public void IncrementCounter(MouseEventArgs args, int idx)
+    {
+        Counter[idx]++;
+    }
+}
