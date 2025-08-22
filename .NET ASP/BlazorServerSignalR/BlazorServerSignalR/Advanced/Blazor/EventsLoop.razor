@@ -1,0 +1,19 @@
+﻿<h3>EventsLoop</h3>
+@for(int i = 0; i<ElementCount; i++)
+{
+    int temp = i;
+    <div class="m-2 p-2 border">
+        <button class="btn btn-primary" @onclick="@(()=>IncrementCounter(temp))">Increment Counter #@(i+1)</button>
+        <span class="p-2">Counter Value : @GetCounter(temp)</span>
+    </div>
+}
+
+@* dd *@
+@code {
+    // @for 표현식을 통해 handle Method 매개변수로 loop 변수 사용  , EventArgs 매개변수 제거  자동으로 매핑해줌;
+    public int ElementCount { get; set; } = 4;
+    public Dictionary<int, int> Counters { get; } = new Dictionary<int, int>();
+
+    public int GetCounter(int idx) => Counters.ContainsKey(idx) ? Counters[idx] : 0;
+    public void IncrementCounter(int idx) => Counters[idx]=GetCounter(idx) + 1;
+}
