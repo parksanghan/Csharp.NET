@@ -4,11 +4,25 @@
     {
         int temp = i;
         <div class="m-2 p-2 border">
-            <<button @onclick="I"></button>
+            <button class="btn btn-primary" @onclick="@(()=>IncrementCounter(temp))" @onclick:preventDefault="EnableEventArgsParams">
+                Increment Counter #@(i + 1) EnableEventParams 값 : #@(EnableEventArgsParams)</button>
+            <button class="btn btn-primary" @onclick="@(()=>Counters.Remove(temp))">
+                 Reset Button
+             </button>
+             <span class="p-2">Counter Value @GetCounter(i)</span>
         </div>
     }
-
 </form>
+<div class="m-2" @onclick="@(()=>IncrementCounter(1))">
+    <button class="btn btn-primary" @onclick="@(()=>IncrementCounter(0))" @onclick:stopPropagation="EnableEventArgsParams"> 
+        Propagation Button
+    </button>
+</div>
+<div class="form-check m-2">
+    <input class="form-check-input" @onchange="@(()=>EnableEventArgsParams= !EnableEventArgsParams)"/>
+    <label class="form-check-label" >Enable Event Parameters</label>
+
+</div>
 @code {
     public int ElementCount { get; set; } = 4;
     public Dictionary<int, int> Counters { get; } = new Dictionary<int, int>();
