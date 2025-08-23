@@ -1,0 +1,19 @@
+﻿<h3>Reset</h3>
+<form action="/pages/blazor" method="get">
+    @for (int i = 0; i < ElementCount; i++)
+    {
+        int temp = i;
+        <div class="m-2 p-2 border">
+            <<button @onclick="I"></button>
+        </div>
+    }
+
+</form>
+@code {
+    public int ElementCount { get; set; } = 4;
+    public Dictionary<int, int> Counters { get; } = new Dictionary<int, int>();
+
+    public int GetCounter(int idx) => Counters.ContainsKey(idx) ? Counters[idx] : 0;
+    public void IncrementCounter(int idx) => Counters[idx] = GetCounter(idx) + 1;
+    public bool EnableEventArgsParams { get; set; } = false;
+}

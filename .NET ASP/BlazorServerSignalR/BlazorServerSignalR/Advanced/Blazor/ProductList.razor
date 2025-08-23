@@ -40,6 +40,7 @@
 
 @code {
 	[Inject]
+	// 이런식으로 생성자 주입함
 	public BlazorTDBContext? Context { get; set; }
 
 	public IEnumerable<Product>? Product => Context?.Products.Include(p => p.ProductCategory).Include(p => p.ProductManufacturer);

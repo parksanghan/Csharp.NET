@@ -3,16 +3,32 @@
     <button class="btn btn-primary" @onclick=@(e=>IncrementCounter(e,0))></button>
     <span class="p-2">Count value @Counter[0]</span>
 </div>
+@* Blazor 바인딩 방식  *@
 <div class="m-2 p-2 border">
     <button class="btn btn-primary" @onclick=@(e=>IncrementCounter(e,1))></button>
+    <button @onclick="e=>IncrementCounter(e,1)"></button>
+    <button @onclick="@(() => IIncrementCounter(1))"></button>
+    <button @onclick=NonIncrementCounter></button>
+
     <span class="p-2">Count value @Counter[1]</span>
 </div>
 
 @code {
     public int[] Counter { get; set; } = new int[] { 1, 1 };
-
+    // 대두분의 방식과 같으며 "(인자)=>함수명(인자)" 또는  @(인자=>함수명(인자))
+    // @onclick="(e) => IncrementCounter(e, 0)"
+    // @onclick=@(e => IncrementCounter(e, 0))
     public void IncrementCounter(MouseEventArgs args, int idx)
     {
         Counter[idx]++;
+    }
+    //  이벤트 인자를 제외하고 인자가 있는 경우 람다식에 인자값 넣지 않고  함수인자에만 넣음()=>함수명(매개인자)
+    public void IIncrementCounter(int idx)
+    {
+        Counter[idx]++;
+    }
+    public void NonIncrementCounter()
+    {
+        
     }
 }
