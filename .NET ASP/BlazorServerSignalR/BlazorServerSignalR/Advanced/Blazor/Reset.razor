@@ -4,6 +4,7 @@
     {
         int temp = i;
         <div class="m-2 p-2 border">
+            @* preventDefault 는  form에서 발생 하는 submit  새로고침 막아줌  새로고침없이 blazor  만 실행 *@
             <button class="btn btn-primary" @onclick="@(()=>IncrementCounter(temp))" @onclick:preventDefault="EnableEventArgsParams">
                 Increment Counter #@(i + 1) EnableEventParams 값 : #@(EnableEventArgsParams)</button>
             <button class="btn btn-primary" @onclick="@(()=>Counters.Remove(temp))">
@@ -13,6 +14,7 @@
         </div>
     }
 </form>
+    StopProgation은 이벤트요소가 
 <div class="m-2" @onclick="@(()=>IncrementCounter(1))">
     <button class="btn btn-primary" @onclick="@(()=>IncrementCounter(0))" @onclick:stopPropagation="EnableEventArgsParams"> 
         Propagation Button
