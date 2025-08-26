@@ -1,0 +1,16 @@
+﻿<h3>Binding</h3> 
+<div class="form-group">
+    <label>Manufacturer:</label>
+    <input class="form-control" value="@Manufacturer" />
+    <button class="btn btn-primary" @onclick="@(()=>Manufacturer = "SAM")">SAM</button>
+    <button class="btn btn-primary" @onclick="@(()=>Manufacturer = "HY")">HY</button>
+</div>
+
+@code {
+    public string? Manufacturer { get; set; } = "INT";
+    public void UpdateManufacturer(ChangeEventArgs e)
+    {
+        this.Manufacturer = e.Value as string;
+    }
+
+}
