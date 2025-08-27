@@ -1,0 +1,23 @@
+﻿@using System.Globalization
+
+<h3>DateTimeBinding</h3>
+<div class="form-group m-2">
+    <label>Time: </label>
+    <input class="form-control my-1" @bind="Time" @bind:culture="Culture" @bind:format="MMM-dd" />
+    <input class="form-control my-1" @bind="Time" @bind:culture="Culture"/>
+    <input class="form-control my-1" type="date" @bind="Time"/>
+</div>
+<div class="p-2 mb-2">Time Value : @Time</div>
+<div class="form-group">
+    <label>Culture: </label>
+    <select class="form-control" @bind="Culture">
+        <option value="@CultureInfo.GetCultureInfo("ko-kr")">KR</option>
+        <option value="@CultureInfo.GetCultureInfo("en-us")">EN</option>
+        <option value="@CultureInfo.GetCultureInfo("en-gb")">EN-GB</option>
+    </select>
+</div>
+@code {
+    public string? Manufacturer { get; set; } = "INT";
+    public DateTime Time { get; set; } = DateTime.Parse("2025/08/27 08:00");
+    public CultureInfo Culture { get; set; } = CultureInfo.GetCultureInfo("en-us");
+}
