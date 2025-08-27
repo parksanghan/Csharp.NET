@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXEJpbmRpbmdzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/Csharp.NET/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/Bindings2.razor]
+build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXEJpbmRpbmdzMi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/Csharp.NET/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/Event.razor]
 build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXEV2ZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 

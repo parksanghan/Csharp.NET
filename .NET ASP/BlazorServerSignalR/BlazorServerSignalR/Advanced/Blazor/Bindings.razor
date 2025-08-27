@@ -1,9 +1,11 @@
 ﻿<h3>Binding</h3> 
 <div class="form-group">
     <label>Manufacturer:</label>
-    <input class="form-control" value="@Manufacturer" />
+    <div class="p-2 mb-2">Manufacturer Value :  @Manufacturer</div>
+    <input class="form-control" value="@Manufacturer" @onchange="@UpdateManufacturer" />
     <button class="btn btn-primary" @onclick="@(()=>Manufacturer = "SAM")">SAM</button>
     <button class="btn btn-primary" @onclick="@(()=>Manufacturer = "HY")">HY</button>
+
 </div>
 
 @code {

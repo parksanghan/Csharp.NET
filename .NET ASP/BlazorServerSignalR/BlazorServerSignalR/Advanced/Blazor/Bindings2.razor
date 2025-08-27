@@ -1,0 +1,19 @@
+﻿<h3>Bindings2</h3>
+<div class="form-group">
+    <label>Manufacturer : </label>
+    <div class="p-2 mb-2">Manufacturer Value @Manufacturer1</div>
+    @* value=  ,  @Onchange 와 동일  *@
+    <input class="form-control" @bind="Manufacturer1"/>
+    <input class="form-control" @bind-value="Manufacturer2"/>
+    @* bind-value:event =oninput  *@
+    <input class="form-control" @bind-value="Manufacturer3" @bind-value:event="oninput" />
+
+   
+    <button class="btn btn-primary" @onclick="@(()=>Manufacturer1="SAM")">SAM</button>
+    <button class="btn btn-primary" @onclick="@(()=>Manufacturer1="HY")">HY</button>
+</div>
+@code {
+    public string Manufacturer1 { get; set; } = "INT";
+    public string Manufacturer2{ get; set; } = "INT";
+    public string Manufacturer3 { get; set; } = "INT";
+}
