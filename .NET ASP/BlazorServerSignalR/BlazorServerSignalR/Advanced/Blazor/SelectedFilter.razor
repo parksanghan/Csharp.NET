@@ -1,0 +1,18 @@
+﻿<h3>SelectedFilter</h3>
+<div class="form-group">
+    <label for="Selected-value: @Title"></label>
+    <select name="select-@Title" class="form-control" @bind="SelectedValue">
+        <option disabled selected value="">Select @Title</option>
+        @foreach (string val in Values)
+        {
+            <option value="@val" selected="@(val==SelectedValue)">
+                @val
+            </option>
+        }
+    </select>
+</div>
+@code {
+    public IEnumerable<string> Values { get; set; } = Enumerable.Empty<string>();
+    public string? SelectedValue{ get;set; }
+    public string Title { get; set; } = "Placeholder";
+}

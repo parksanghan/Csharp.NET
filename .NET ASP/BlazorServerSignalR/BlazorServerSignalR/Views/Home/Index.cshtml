@@ -1,10 +1,7 @@
-﻿ @* program.cs에서 MVC controller 설정으로 *@
- @*Controller에서 메서드 이름으로 경로 자동설정*@
-@*_Layout.cshtml에서 Layout = _Layout 설정을 통해 RenderBody 에 각 View에 있는 본문 삽입*@
+﻿ 
 <h4 class="bg-primary text-white text-center p-2">Product</h4>
-
+ 
 <component type="typeof(BlazorServerSignalR.Advanced.Blazor.ProductList)" render-mode="Server" />
-@* 또는  버튼 컴포넌트  호출 시 에는 아래 주석 해제 *@
-< 
+ 
 <component type="typeof(BlazorServerSignalR.Advanced.Blazor.Event)"render-mode="Server" />
  

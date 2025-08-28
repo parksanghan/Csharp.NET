@@ -6,18 +6,18 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 
 builder.Services.AddDbContext<BlazorTDBContext>(opts => {
-    opts.UseSqlServer(builder.Configuration["ConnectionStrings:NorthwindConnection"]);  
+    opts.UseSqlServer(builder.Configuration["ConnectionStrings:ProductConnection"]);  
     opts.EnableSensitiveDataLogging(true);
 });
 
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
+//app.MapGet("/", () => "Hello World!");
 
 app.UseStaticFiles();
 app.MapControllers();
 app.MapControllerRoute("controllers", "controllers/{controller=Home}/{action=Index}/{id?}");
 app.MapRazorPages();
 app.MapBlazorHub();
-
+ 
 app.Run();

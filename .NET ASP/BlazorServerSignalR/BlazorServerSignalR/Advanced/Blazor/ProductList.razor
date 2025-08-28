@@ -13,10 +13,10 @@
 		@foreach (Product p in Product ?? Enumerable.Empty<Product>())
 		{
 			<tr class="@GetClass(p.ProductManufacturer?.ManufacturerName)">
-				<td>@p.ProductId</td>
-				<td>@p.ProductName, @p.ProductPrice?.ToString("#,##0")</td>
-				<td>@p.ProductCategory.CategoryName</td>
-				<td>@p.ProductManufacturer?.ManufacturerName</td>
+				<td class="@GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductId</td>
+				<td class="@GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductName, @p.ProductPrice?.ToString("#,##0")</td>
+				<td> class="@GetClass(p.ProductManufacturer?.ManufacturerName)"@p.ProductCategory.CategoryName</td>
+				<td class="@GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductManufacturer?.ManufacturerName</td>
 			</tr>
 		}
 	</tbody>
