@@ -12,7 +12,12 @@
     </select>
 </div>
 @code {
+    [Parameter]
     public IEnumerable<string> Values { get; set; } = Enumerable.Empty<string>();
     public string? SelectedValue{ get;set; }
+    [Parameter]
     public string Title { get; set; } = "Placeholder";
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string,object> Attrs { get; set; }
 }
+    
