@@ -19,5 +19,13 @@
     public string Title { get; set; } = "Placeholder";
     [Parameter(CaptureUnmatchedValues = true)]
     public Dictionary<string,object> Attrs { get; set; }
+    [Parameter]
+    public EventCallback<string> CustomEvent { get; set; }
+
+    public async Task HandleSelect(ChangeEventArgs e)
+    {
+        SelectedValue = e.Value as string; // 내부 상태 갱신
+        await CustomEvent.InvokeAsync(SelectedValue);
+    }
 }
     
