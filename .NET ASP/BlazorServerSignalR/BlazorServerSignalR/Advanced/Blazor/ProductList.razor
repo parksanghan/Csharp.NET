@@ -36,7 +36,7 @@
 		</select>
 		@*위와 아래는 같은코드*@
 
-		<SelectedFilter title="Manufacturer" values="@Manufacturer" autofocus="true" name="Manufacturer" required ="true">
+		<SelectedFilter title="Manufacturer" values="@Manufacturer" autofocus="true" name="Manufacturer" required ="true" CustomEvent="">
 
 		</SelectedFilter>
 	</div>
@@ -56,4 +56,8 @@
 	public int ItemCount {get;set;}=4;
 	[Parameter]
 	public string? SelectTitle  { get; set; }
+	public void handleCustom(string value)
+	{
+		SelectedManufacturer = value;	
+	}
 }

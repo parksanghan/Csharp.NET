@@ -8,6 +8,70 @@
         "Children": {
           "css": {
             "Children": {
+              "bootstrap.css": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/css/bootstrap.css"
+                },
+                "Patterns": null
+              },
+              "bootstrap.css.map": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/css/bootstrap.css.map"
+                },
+                "Patterns": null
+              },
+              "bootstrap.min.css": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/css/bootstrap.min.css"
+                },
+                "Patterns": null
+              },
+              "bootstrap.min.css.map": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/css/bootstrap.min.css.map"
+                },
+                "Patterns": null
+              },
+              "bootstrap.rtl.css": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/css/bootstrap.rtl.css"
+                },
+                "Patterns": null
+              },
+              "bootstrap.rtl.css.map": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/css/bootstrap.rtl.css.map"
+                },
+                "Patterns": null
+              },
+              "bootstrap.rtl.min.css": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/css/bootstrap.rtl.min.css"
+                },
+                "Patterns": null
+              },
+              "bootstrap.rtl.min.css.map": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/css/bootstrap.rtl.min.css.map"
+                },
+                "Patterns": null
+              },
               "bootstrap-grid.css": {
                 "Children": null,
                 "Asset": {
@@ -199,70 +263,6 @@
                   "SubPath": "bootstrap/css/bootstrap-utilities.rtl.min.css.map"
                 },
                 "Patterns": null
-              },
-              "bootstrap.css": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/css/bootstrap.css"
-                },
-                "Patterns": null
-              },
-              "bootstrap.css.map": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/css/bootstrap.css.map"
-                },
-                "Patterns": null
-              },
-              "bootstrap.min.css": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/css/bootstrap.min.css"
-                },
-                "Patterns": null
-              },
-              "bootstrap.min.css.map": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/css/bootstrap.min.css.map"
-                },
-                "Patterns": null
-              },
-              "bootstrap.rtl.css": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/css/bootstrap.rtl.css"
-                },
-                "Patterns": null
-              },
-              "bootstrap.rtl.css.map": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/css/bootstrap.rtl.css.map"
-                },
-                "Patterns": null
-              },
-              "bootstrap.rtl.min.css": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/css/bootstrap.rtl.min.css"
-                },
-                "Patterns": null
-              },
-              "bootstrap.rtl.min.css.map": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/css/bootstrap.rtl.min.css.map"
-                },
-                "Patterns": null
               }
             },
             "Asset": null,
@@ -372,6 +372,318 @@
           },
           "scss": {
             "Children": {
+              "_accordion.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_accordion.scss"
+                },
+                "Patterns": null
+              },
+              "_alert.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_alert.scss"
+                },
+                "Patterns": null
+              },
+              "_badge.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_badge.scss"
+                },
+                "Patterns": null
+              },
+              "_breadcrumb.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_breadcrumb.scss"
+                },
+                "Patterns": null
+              },
+              "_button-group.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_button-group.scss"
+                },
+                "Patterns": null
+              },
+              "_buttons.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_buttons.scss"
+                },
+                "Patterns": null
+              },
+              "_card.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_card.scss"
+                },
+                "Patterns": null
+              },
+              "_carousel.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_carousel.scss"
+                },
+                "Patterns": null
+              },
+              "_close.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_close.scss"
+                },
+                "Patterns": null
+              },
+              "_containers.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_containers.scss"
+                },
+                "Patterns": null
+              },
+              "_dropdown.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_dropdown.scss"
+                },
+                "Patterns": null
+              },
+              "_forms.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_forms.scss"
+                },
+                "Patterns": null
+              },
+              "_functions.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_functions.scss"
+                },
+                "Patterns": null
+              },
+              "_grid.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_grid.scss"
+                },
+                "Patterns": null
+              },
+              "_helpers.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_helpers.scss"
+                },
+                "Patterns": null
+              },
+              "_images.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_images.scss"
+                },
+                "Patterns": null
+              },
+              "_list-group.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_list-group.scss"
+                },
+                "Patterns": null
+              },
+              "_maps.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_maps.scss"
+                },
+                "Patterns": null
+              },
+              "_mixins.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_mixins.scss"
+                },
+                "Patterns": null
+              },
+              "_modal.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_modal.scss"
+                },
+                "Patterns": null
+              },
+              "_nav.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_nav.scss"
+                },
+                "Patterns": null
+              },
+              "_navbar.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_navbar.scss"
+                },
+                "Patterns": null
+              },
+              "_offcanvas.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_offcanvas.scss"
+                },
+                "Patterns": null
+              },
+              "_pagination.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_pagination.scss"
+                },
+                "Patterns": null
+              },
+              "_placeholders.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_placeholders.scss"
+                },
+                "Patterns": null
+              },
+              "_popover.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_popover.scss"
+                },
+                "Patterns": null
+              },
+              "_progress.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_progress.scss"
+                },
+                "Patterns": null
+              },
+              "_reboot.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_reboot.scss"
+                },
+                "Patterns": null
+              },
+              "_root.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_root.scss"
+                },
+                "Patterns": null
+              },
+              "_spinners.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_spinners.scss"
+                },
+                "Patterns": null
+              },
+              "_tables.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_tables.scss"
+                },
+                "Patterns": null
+              },
+              "_toasts.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_toasts.scss"
+                },
+                "Patterns": null
+              },
+              "_tooltip.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_tooltip.scss"
+                },
+                "Patterns": null
+              },
+              "_transitions.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_transitions.scss"
+                },
+                "Patterns": null
+              },
+              "_type.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_type.scss"
+                },
+                "Patterns": null
+              },
+              "_utilities.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_utilities.scss"
+                },
+                "Patterns": null
+              },
+              "_variables.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_variables.scss"
+                },
+                "Patterns": null
+              },
+              "_variables-dark.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/_variables-dark.scss"
+                },
+                "Patterns": null
+              },
+              "bootstrap.scss": {
+                "Children": null,
+                "Asset": {
+                  "ContentRootIndex": 0,
+                  "SubPath": "bootstrap/scss/bootstrap.scss"
+                },
+                "Patterns": null
+              },
               "bootstrap-grid.scss": {
                 "Children": null,
                 "Asset": {
@@ -393,14 +705,6 @@
                 "Asset": {
                   "ContentRootIndex": 0,
                   "SubPath": "bootstrap/scss/bootstrap-utilities.scss"
-                },
-                "Patterns": null
-              },
-              "bootstrap.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/bootstrap.scss"
                 },
                 "Patterns": null
               },
@@ -832,310 +1136,6 @@
                   }
                 },
                 "Asset": null,
-                "Patterns": null
-              },
-              "_accordion.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_accordion.scss"
-                },
-                "Patterns": null
-              },
-              "_alert.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_alert.scss"
-                },
-                "Patterns": null
-              },
-              "_badge.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_badge.scss"
-                },
-                "Patterns": null
-              },
-              "_breadcrumb.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_breadcrumb.scss"
-                },
-                "Patterns": null
-              },
-              "_button-group.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_button-group.scss"
-                },
-                "Patterns": null
-              },
-              "_buttons.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_buttons.scss"
-                },
-                "Patterns": null
-              },
-              "_card.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_card.scss"
-                },
-                "Patterns": null
-              },
-              "_carousel.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_carousel.scss"
-                },
-                "Patterns": null
-              },
-              "_close.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_close.scss"
-                },
-                "Patterns": null
-              },
-              "_containers.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_containers.scss"
-                },
-                "Patterns": null
-              },
-              "_dropdown.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_dropdown.scss"
-                },
-                "Patterns": null
-              },
-              "_forms.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_forms.scss"
-                },
-                "Patterns": null
-              },
-              "_functions.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_functions.scss"
-                },
-                "Patterns": null
-              },
-              "_grid.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_grid.scss"
-                },
-                "Patterns": null
-              },
-              "_helpers.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_helpers.scss"
-                },
-                "Patterns": null
-              },
-              "_images.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_images.scss"
-                },
-                "Patterns": null
-              },
-              "_list-group.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_list-group.scss"
-                },
-                "Patterns": null
-              },
-              "_maps.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_maps.scss"
-                },
-                "Patterns": null
-              },
-              "_mixins.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_mixins.scss"
-                },
-                "Patterns": null
-              },
-              "_modal.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_modal.scss"
-                },
-                "Patterns": null
-              },
-              "_nav.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_nav.scss"
-                },
-                "Patterns": null
-              },
-              "_navbar.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_navbar.scss"
-                },
-                "Patterns": null
-              },
-              "_offcanvas.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_offcanvas.scss"
-                },
-                "Patterns": null
-              },
-              "_pagination.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_pagination.scss"
-                },
-                "Patterns": null
-              },
-              "_placeholders.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_placeholders.scss"
-                },
-                "Patterns": null
-              },
-              "_popover.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_popover.scss"
-                },
-                "Patterns": null
-              },
-              "_progress.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_progress.scss"
-                },
-                "Patterns": null
-              },
-              "_reboot.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_reboot.scss"
-                },
-                "Patterns": null
-              },
-              "_root.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_root.scss"
-                },
-                "Patterns": null
-              },
-              "_spinners.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_spinners.scss"
-                },
-                "Patterns": null
-              },
-              "_tables.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_tables.scss"
-                },
-                "Patterns": null
-              },
-              "_toasts.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_toasts.scss"
-                },
-                "Patterns": null
-              },
-              "_tooltip.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_tooltip.scss"
-                },
-                "Patterns": null
-              },
-              "_transitions.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_transitions.scss"
-                },
-                "Patterns": null
-              },
-              "_type.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_type.scss"
-                },
-                "Patterns": null
-              },
-              "_utilities.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_utilities.scss"
-                },
-                "Patterns": null
-              },
-              "_variables-dark.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_variables-dark.scss"
-                },
-                "Patterns": null
-              },
-              "_variables.scss": {
-                "Children": null,
-                "Asset": {
-                  "ContentRootIndex": 0,
-                  "SubPath": "bootstrap/scss/_variables.scss"
-                },
                 "Patterns": null
               }
             },
