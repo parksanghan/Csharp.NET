@@ -52,12 +52,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFByb2R1Y3RMaXN0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/ProductList2.razor]
+build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFByb2R1Y3RMaXN0Mi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/Reset.razor]
 build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFJlc2V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/SelectedFilter.razor]
 build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFNlbGVjdGVkRmlsdGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/SelectedFilter2.razor]
+build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFNlbGVjdGVkRmlsdGVyMi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/Split.razor]

@@ -36,9 +36,10 @@
 		</select>
 		@*위와 아래는 같은코드*@
 
-		<SelectedFilter title="Manufacturer" values="@Manufacturer" autofocus="true" name="Manufacturer" required="true" CustomEvent="handleCustom">
+		<SelectedFilter2 title="Manufacturer" values="@Manufacturer" autofocus="true" name="Manufacturer"
+						 required="true" @bind-SelectedValue="SelectedManufacturer">
 
-		</SelectedFilter>
+		</SelectedFilter2>
 	</div>
 	<button class="btn btn-primary mt-2" type="submit">Select</button>
 </form>
@@ -53,11 +54,11 @@
 	public string SelectedManufacturer { get; set; } = string.Empty;
 	public string GetClass(string? Manufacturer) => SelectedManufacturer == Manufacturer ? "bg-info text-white" : "";
 	[Parameter]
-	public int ItemCount {get;set;}=4;
+	public int ItemCount { get; set; } = 4;
 	[Parameter]
-	public string? SelectTitle  { get; set; }
-	public void handleCustom(string value)
-	{
-		SelectedManufacturer = value;	
-	}
+	public string? SelectTitle { get; set; }
+	// public void handleCustom(string value)
+	// {
+	// 	SelectedManufacturer = value;
+	// }
 }

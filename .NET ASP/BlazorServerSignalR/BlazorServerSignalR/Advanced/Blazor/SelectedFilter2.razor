@@ -1,0 +1,33 @@
+﻿<h3>SelectedFilter</h3>
+<div class="form-group">
+    <label for="Selected-value: @Title"></label>
+    <select name="select-@Title" class="form-control" value="@SelectedValue" @onchange="HandleSelect">
+        <option disabled selected value="">Select @Title</option>
+        @foreach (string val in Values)
+        {
+            <option value="@val" selected="@(val == SelectedValue)">
+                @val
+            </option>
+        }
+    </select>
+</div>
+@* Value , onchange 속성 바인딩으로 값을 SelectedValue로 초기화 시키고 onchnage 시 마다 handleselect 호출 *@
+@code {
+    [Parameter]
+    public IEnumerable<string> Values { get; set; } = Enumerable.Empty<string>();
+    [Parameter]
+    public string? SelectedValue { get; set; }
+    [Parameter]
+    public string Title { get; set; } = "Placeholder";
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> Attrs { get; set; }
+    // 커스텀 이벤트 콜백 : 파라미터 인자를 통해 부모에서 CustomEvent에 메서드 바인딩하여 string 변경 값 수신가능
+    [Parameter]
+    public EventCallback<string> CustomEvent { get; set; }
+
+    public async Task HandleSelect(ChangeEventArgs e)
+    {
+        SelectedValue = e.Value as string; // 내부 상태 갱신
+        await CustomEvent.InvokeAsync(SelectedValue);
+    }
+}
