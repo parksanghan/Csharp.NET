@@ -20,7 +20,7 @@
     public string Title { get; set; } = "Placeholder";
     [Parameter(CaptureUnmatchedValues = true)]
     public Dictionary<string,object> Attrs { get; set; }
-    // 커스텀 이벤트 콜백 : 파라미터 인자를 통해 부모에서 CustomEvent에 메서드 바인딩 가능
+    // 커스텀 이벤트 콜백 : 파라미터 인자를 통해 부모에서 CustomEvent에 메서드 바인딩하여 string 변경 값 수신가능
     [Parameter]
     public EventCallback<string> CustomEvent { get; set; }
 
