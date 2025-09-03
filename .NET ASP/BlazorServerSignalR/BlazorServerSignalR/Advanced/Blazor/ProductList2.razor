@@ -40,6 +40,13 @@
 						 required="true" @bind-SelectedValue="SelectedManufacturer">
 
 		</SelectedFilter2>
+		<ThemeWrapper Theme="info" Title="Location Selector">
+			<SelectedFilter2 values="@Manufacturer" title="@SelectTitle" @bind-SelectedValue="SelectedManufacturer" />
+
+			<button class="btn btn-primary mt-2" @onclick="@(() => SelectedManufacturer = "INT")">
+				Change
+			</button>
+		</ThemeWrapper>
 	</div>
 	<button class="btn btn-primary mt-2" type="submit">Select</button>
 </form>
