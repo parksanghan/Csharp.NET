@@ -76,6 +76,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFNwbGl0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/TableTemplate.razor]
+build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFRhYmxlVGVtcGxhdGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Csharp.NET/.NET ASP/BlazorServerSignalR/BlazorServerSignalR/Advanced/Blazor/ThemeWrapper.razor]
 build_metadata.AdditionalFiles.TargetPath = QWR2YW5jZWRcQmxhem9yXFRoZW1lV3JhcHBlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

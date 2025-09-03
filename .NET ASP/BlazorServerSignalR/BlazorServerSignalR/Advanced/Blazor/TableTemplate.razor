@@ -1,0 +1,14 @@
+﻿<h3>TableTemplate</h3>
+<table class="table table-sm table-bordered table-striped">
+	@if (Header != null)
+	{
+		<thead>@Header</thead>
+	}
+	<tbody>@Body</tbody>
+</table>
+@code {
+    [Parameter]
+    public RenderFragment? Header{ get; set; }
+    [Parameter]
+    public RenderFragment? Body { get; set; }   
+}
