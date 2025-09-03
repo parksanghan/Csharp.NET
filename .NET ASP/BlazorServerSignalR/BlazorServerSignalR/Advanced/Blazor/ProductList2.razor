@@ -47,6 +47,30 @@
 				Change
 			</button>
 		</ThemeWrapper>
+
+		<TableTemplate>
+			<TableTemplate>
+				<Header>
+				<tr>
+					<th>ID</th>
+					<th>Name (Price)</th>
+					<th>Category</th>
+					<th>Manufacturer</th>
+				</tr>
+				</Header>
+				<Body>
+					@foreach (Product p in Product ?? Enumerable.Empty<Product>())
+					{
+					<tr>
+						<td class="@GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductId</td>
+						<td class="@GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductName, @p.ProductPrice?.ToString("#,##0")</td>
+						<td class="@GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductCategory.CategoryName</td>
+						<td class="@GetClass(p.ProductManufacturer?.ManufacturerName)">@p.ProductManufacturer?.ManufacturerName</td>
+					</tr>
+				}
+				</Body>
+			</TableTemplate>
+		</TableTemplate>
 	</div>
 	<button class="btn btn-primary mt-2" type="submit">Select</button>
 </form>
