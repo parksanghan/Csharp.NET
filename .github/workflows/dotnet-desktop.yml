@@ -1,45 +1,73 @@
-name: ASP.NET (Blazor Server) CI
+name: .NET Multi Solutions
 
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - ".NET ASP/**"
-      - ".github/workflows/dotnet-asp.yml"
   pull_request:
     branches: [ "main" ]
-    paths:
-      - ".NET ASP/**"
-  workflow_dispatch:
+
+concurrency:
+  group: dotnet-ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
-    runs-on: windows-2022   # runner 환경 고정 (windows-latest 변동 이슈 회피)
+    runs-on: windows-2022
 
     steps:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Setup .NET (8.0)
+    - name: Setup .NET SDKs (6/7/8)
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: |
+          8.0.x
+          7.0.x
+          6.0.x
 
-    - name: Restore
-      run: dotnet restore "./.NET ASP/AspNetBlazorServer/AspNetBlazorServer.sln"
+    - name: Cache NuGet
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-
 
-    - name: Build (Release)
-      run: dotnet build "./.NET ASP/AspNetBlazorServer/AspNetBlazorServer.sln" --configuration Release --no-restore
+    # (선택) MAUI가 있다면 워크로드 설치 – 없어도 통과하도록 설정
+    - name: Install .NET MAUI workload (optional)
+      run: dotnet workload install maui --ignore-failed-sources
+      continue-on-error: true
 
-     
-    - name: Test (if any)
+    - name: Restore all solutions
       shell: pwsh
       run: |
-        $tests = Get-ChildItem -Recurse -Filter *.csproj | Where-Object { $_.Name -match '\.Tests?\.csproj$' }
-        if ($tests) {
-          foreach ($p in $tests) {
-            dotnet test $p.FullName --configuration Release --no-build --verbosity normal
+        $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object { $_.FullName -notmatch '\\(bin|obj)\\' }
+        if (-not $solutions) { throw "No .sln files found." }
+        foreach ($sln in $solutions) {
+          Write-Host "==> Restoring $($sln.FullName)"
+          dotnet restore "$($sln.FullName)"
+        }
+
+    - name: Build all solutions (Release)
+      shell: pwsh
+      run: |
+        $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object { $_.FullName -notmatch '\\(bin|obj)\\' }
+        foreach ($sln in $solutions) {
+          Write-Host "==> Building $($sln.FullName)"
+          dotnet build "$($sln.FullName)" --configuration Release --no-restore
+        }
+
+    - name: Test all *Test*.csproj (if any)
+      shell: pwsh
+      run: |
+        $testProjects = Get-ChildItem -Recurse -Filter *.csproj | Where-Object { $_.Name -match '\.Tests?\.csproj$' }
+        if ($testProjects) {
+          foreach ($proj in $testProjects) {
+            Write-Host "==> Testing $($proj.FullName)"
+            dotnet test "$($proj.FullName)" --configuration Release --no-build --verbosity normal
           }
         } else {
-          Write-Host "No test projects found – skipping."
+          Write-Host "No test projects found – skipping tests."
         }
