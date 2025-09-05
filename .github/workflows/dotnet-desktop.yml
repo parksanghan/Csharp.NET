@@ -1,4 +1,4 @@
-name: .NET Multi Solutions (mixed)
+name: .NET Multi Solutions (mixed, whole repo)
 
 on:
   push:
@@ -37,7 +37,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nuget-
 
-    # MAUI가 있다면 선택 설치 (없어도 통과)
+    # (선택) MAUI가 있다면 설치, 없어도 통과
     - name: Install .NET MAUI workload (optional)
       run: dotnet workload install maui --ignore-failed-sources
       continue-on-error: true
@@ -74,7 +74,7 @@ jobs:
         $tests = Get-ChildItem -Recurse -Filter *.csproj |
           Where-Object {
             $_.Name -match '\.Tests?\.csproj$' -and
-            (Select-String -Path $_.FullName -Pattern '<TargetFramework>net(6\.0|7\.0|8\.0)') 
+            (Select-String -Path $_.FullName -Pattern '<TargetFramework>net(6\.0|7\.0|8\.0)')
           }
         if ($tests) {
           foreach ($p in $tests) {
