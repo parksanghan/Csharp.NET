@@ -1,10 +1,11 @@
-name: .NET Multi Solutions
+name: .NET Multi Solutions (mixed)
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+  workflow_dispatch:
 
 concurrency:
   group: dotnet-ci-${{ github.ref }}
@@ -18,6 +19,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    # SDK 스타일(.NET 6/7/8) 프로젝트 및 test 실행용
     - name: Setup .NET SDKs (6/7/8)
       uses: actions/setup-dotnet@v4
       with:
@@ -35,39 +37,50 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nuget-
 
-    # (선택) MAUI가 있다면 워크로드 설치 – 없어도 통과하도록 설정
+    # MAUI가 있다면 선택 설치 (없어도 통과)
     - name: Install .NET MAUI workload (optional)
       run: dotnet workload install maui --ignore-failed-sources
       continue-on-error: true
 
-    - name: Restore all solutions
+    # 고전 .NET Framework / C++까지 모두 빌드하려면 MSBuild 사용
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    # 모든 .sln Restore (MSBuild가 NuGet restore 트리거)
+    - name: MSBuild Restore all solutions
       shell: pwsh
       run: |
         $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object { $_.FullName -notmatch '\\(bin|obj)\\' }
         if (-not $solutions) { throw "No .sln files found." }
         foreach ($sln in $solutions) {
-          Write-Host "==> Restoring $($sln.FullName)"
-          dotnet restore "$($sln.FullName)"
+          Write-Host "==> RESTORE $($sln.FullName)"
+          msbuild "$($sln.FullName)" /t:Restore /m
         }
 
-    - name: Build all solutions (Release)
+    # 모든 .sln Build (Release)
+    - name: MSBuild Build all solutions (Release)
       shell: pwsh
       run: |
         $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object { $_.FullName -notmatch '\\(bin|obj)\\' }
         foreach ($sln in $solutions) {
-          Write-Host "==> Building $($sln.FullName)"
-          dotnet build "$($sln.FullName)" --configuration Release --no-restore
+          Write-Host "==> BUILD $($sln.FullName)"
+          msbuild "$($sln.FullName)" /p:Configuration=Release /m
         }
 
-    - name: Test all *Test*.csproj (if any)
+    # SDK 스타일 Test만 실행 (예: *.Test.csproj / *.Tests.csproj, net6/7/8)
+    - name: dotnet test for SDK-style tests (if any)
       shell: pwsh
       run: |
-        $testProjects = Get-ChildItem -Recurse -Filter *.csproj | Where-Object { $_.Name -match '\.Tests?\.csproj$' }
-        if ($testProjects) {
-          foreach ($proj in $testProjects) {
-            Write-Host "==> Testing $($proj.FullName)"
-            dotnet test "$($proj.FullName)" --configuration Release --no-build --verbosity normal
+        $tests = Get-ChildItem -Recurse -Filter *.csproj |
+          Where-Object {
+            $_.Name -match '\.Tests?\.csproj$' -and
+            (Select-String -Path $_.FullName -Pattern '<TargetFramework>net(6\.0|7\.0|8\.0)') 
+          }
+        if ($tests) {
+          foreach ($p in $tests) {
+            Write-Host "==> TEST $($p.FullName)"
+            dotnet test "$($p.FullName)" --configuration Release --no-build --verbosity normal
           }
         } else {
-          Write-Host "No test projects found – skipping tests."
+          Write-Host "No SDK-style test projects found – skipping."
         }
