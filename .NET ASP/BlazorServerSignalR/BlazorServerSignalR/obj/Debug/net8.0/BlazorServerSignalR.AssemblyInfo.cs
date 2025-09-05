@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BlazorServerSignalR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+042c2fc910a0242c1cbf97e8b32e160c165fceae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5501b34c02af18789be6c202703ec84edee046d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BlazorServerSignalR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BlazorServerSignalR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
