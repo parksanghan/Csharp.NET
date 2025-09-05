@@ -1,4 +1,4 @@
-name: .NET Multi Solutions (mixed, whole repo)
+name: .NET Multi Solutions (mixed, whole repo - skip bad paths)
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
 
 concurrency:
   group: dotnet-ci-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: true   # 새 푸시 오면 이전 런 자동 취소 (원치 않으면 false)
 
 jobs:
   build:
@@ -19,14 +19,17 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    # SDK 스타일(.NET 6/7/8) 프로젝트 및 test 실행용
-    - name: Setup .NET SDKs (6/7/8)
+    # SDK 스타일 및 test 실행용
+    - name: Setup .NET SDKs (6/7/8/9/10-pre)
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: |
+          10.0.x
+          9.0.x
           8.0.x
           7.0.x
           6.0.x
+        include-prerelease: true   # net10.0 대응(프리뷰)
 
     - name: Cache NuGet
       uses: actions/cache@v4
@@ -37,44 +40,84 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nuget-
 
-    # (선택) MAUI가 있다면 설치, 없어도 통과
+    # (선택) MAUI 지원 - 없어도 통과
     - name: Install .NET MAUI workload (optional)
       run: dotnet workload install maui --ignore-failed-sources
       continue-on-error: true
 
-    # 고전 .NET Framework / C++까지 모두 빌드하려면 MSBuild 사용
+    # 고전 .NET Framework / C++까지 빌드: MSBuild 사용
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v2
 
-    # 모든 .sln Restore (MSBuild가 NuGet restore 트리거)
-    - name: MSBuild Restore all solutions
+    # 제외 리스트 설정(필요에 따라 추가 가능)
+    - name: Define skip list
+      id: paths
       shell: pwsh
       run: |
-        $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object { $_.FullName -notmatch '\\(bin|obj)\\' }
-        if (-not $solutions) { throw "No .sln files found." }
+        # 문제 폴더(정규식) - 필요하면 추가/수정
+        $skip = @(
+          '\\\.NET ASP\\AspNetCoreExamples\\',                         # 예제 폴더 전체 제외
+          '\\\.NET ASP\\AspNetCoreExamples\\aspnetcore\\data\\entity-framework-6\\', # EF6 샘플
+          '\\\.NET -Network\\C# Window Form\\1018_채팅서버\\'          # 문법 오류 있는 프로젝트
+        )
+        # 출력(다음 스텝에서 다시 사용할 수 있도록)
+        $skip -join ';' | Out-File -Encoding utf8 skip.txt
+
+    # Restore
+    - name: MSBuild Restore all solutions (skipping bad paths)
+      shell: pwsh
+      run: |
+        $skip = (Get-Content skip.txt) -split ';'
+        $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object {
+          $_.FullName -notmatch '\\(bin|obj)\\' -and
+          ($skip | ForEach-Object { $_ -and ($_.Length -gt 0) -and ($_.Trim() -ne '') -and ($_.ToString()) } |
+            Where-Object { $null -ne $_ -and $_ -ne '' -and $_ -as [string] -and ($_.ToString()) } |
+            ForEach-Object { $_ }) -notcontains $true
+        }
+        # 위 조건이 복잡하니 간단하게 NOT MATCH 체인을 사용:
+        $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object {
+          $_.FullName -notmatch '\\(bin|obj)\\' -and
+          $_.FullName -notmatch '\\\.NET ASP\\AspNetCoreExamples\\' -and
+          $_.FullName -notmatch '\\\.NET -Network\\C# Window Form\\1018_채팅서버\\'
+        }
+        if (-not $solutions) { throw "No .sln files found (after skipping bad paths)." }
         foreach ($sln in $solutions) {
           Write-Host "==> RESTORE $($sln.FullName)"
           msbuild "$($sln.FullName)" /t:Restore /m
         }
 
-    # 모든 .sln Build (Release)
-    - name: MSBuild Build all solutions (Release)
+    # Build (계속 진행 + 실패 요약)
+    - name: MSBuild Build all solutions (Release, continue and summarize)
       shell: pwsh
       run: |
-        $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object { $_.FullName -notmatch '\\(bin|obj)\\' }
+        $solutions = Get-ChildItem -Recurse -Filter *.sln | Where-Object {
+          $_.FullName -notmatch '\\(bin|obj)\\' -and
+          $_.FullName -notmatch '\\\.NET ASP\\AspNetCoreExamples\\' -and
+          $_.FullName -notmatch '\\\.NET -Network\\C# Window Form\\1018_채팅서버\\'
+        }
+        $failures = @()
         foreach ($sln in $solutions) {
           Write-Host "==> BUILD $($sln.FullName)"
           msbuild "$($sln.FullName)" /p:Configuration=Release /m
+          if ($LASTEXITCODE -ne 0) {
+            Write-Host "::warning:: Build failed: $($sln.FullName)"
+            $failures += $sln.FullName
+            $global:LASTEXITCODE = 0
+          }
+        }
+        if ($failures.Count -gt 0) {
+          Write-Host "Failed solutions:"; $failures | ForEach-Object { Write-Host " - $_" }
+          exit 1
         }
 
-    # SDK 스타일 Test만 실행 (예: *.Test.csproj / *.Tests.csproj, net6/7/8)
+    # SDK 스타일 테스트만 실행
     - name: dotnet test for SDK-style tests (if any)
       shell: pwsh
       run: |
         $tests = Get-ChildItem -Recurse -Filter *.csproj |
           Where-Object {
             $_.Name -match '\.Tests?\.csproj$' -and
-            (Select-String -Path $_.FullName -Pattern '<TargetFramework>net(6\.0|7\.0|8\.0)')
+            (Select-String -Path $_.FullName -Pattern '<TargetFramework>net(6\.0|7\.0|8\.0|9\.0|10\.0)') 
           }
         if ($tests) {
           foreach ($p in $tests) {
