@@ -16,7 +16,7 @@
         <Label Content="숫자 결과" HorizontalAlignment="Left" Margin="404,108,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.376,-1.756"/>
         <TextBox Text="{Binding Model.Num1, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="60,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <TextBox Text="{Binding Model.Num2, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="23" Margin="374,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" Command="{Binding btn_cmd}" HorizontalAlignment="Left" Margin="233,158,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Button" Command="{Binding btn_cmd}" HorizontalAlignment="Left" Margin="233,158,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>
