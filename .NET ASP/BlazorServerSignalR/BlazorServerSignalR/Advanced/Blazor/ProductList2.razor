@@ -42,12 +42,21 @@
 		</SelectedFilter2>
 		<ThemeWrapper Theme="info" Title="Location Selector">
 			<SelectedFilter2 values="@Manufacturer" title="@SelectTitle" @bind-SelectedValue="SelectedManufacturer" />
-
+			@* 이런식으로 ChildContent 를 지정해야만 넣을수 있음*@
 			<button class="btn btn-primary mt-2" @onclick="@(() => SelectedManufacturer = "INT")">
 				Change
 			</button>
 		</ThemeWrapper>
+		<Component>
+			<SelectFilter values="@Manufacturer"
+						  title="@SelectTitle"
+						  @bind-SelectedValue="SelectedManufacturer" />
 
+			<button class="btn btn-primary mt-2"
+					@onclick="@(() => SelectedManufacturer = "INT")">
+				Change
+			</button>
+		</Component>
 		<TableTemplate>
 			<TableTemplate>
 				<Header>
