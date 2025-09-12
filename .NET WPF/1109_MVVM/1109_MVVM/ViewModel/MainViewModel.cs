@@ -4,12 +4,12 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using _1109_MVVM.Model;
 namespace _1109_MVVM.ViewModel
 { // control 의 역할 
     class MainViewModel 
     {
-        public Model.MainModel Model { get; set; } // 모델객체를 생성해서 가지고 있음  => 아까 위의 메인 모델 
+        public MainModel Model { get; set; } // 모델객체를 생성해서 가지고 있음  => 아까 위의 메인 모델 
         // ="{Binding Model.Num1, 이거와 연결되어 바인딩됨 
         // trigger는 WPF 동기화처리때문에   필요없지만  직역하자면  데이터 소스가 수정되었을때의 상황자체를 야기함.
         public Command btn_cmd { get; set; }  // 재활용 객체  특정 버튼이 눌렸을때 재활용할 수 있게 만든 객체 

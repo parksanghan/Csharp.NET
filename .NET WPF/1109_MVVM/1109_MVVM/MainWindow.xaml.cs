@@ -24,5 +24,10 @@ namespace _1109_MVVM
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
