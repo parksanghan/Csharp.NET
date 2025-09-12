@@ -1,0 +1,110 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\snagh\\source\\repos\\DXApplication4\\DXApplication4\\DXApplication4.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\snagh\\source\\repos\\DXApplication4\\DXApplication4\\DXApplication4.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\snagh\\source\\repos\\DXApplication4\\DXApplication4\\DXApplication4.csproj",
+        "projectName": "DXApplication4",
+        "projectPath": "C:\\Users\\snagh\\source\\repos\\DXApplication4\\DXApplication4\\DXApplication4.csproj",
+        "packagesPath": "C:\\Users\\snagh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\snagh\\source\\repos\\DXApplication4\\DXApplication4\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\snagh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 25.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 25.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0-windows7.0": {
+            "targetAlias": "net8.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "DevExpress.Mvvm": {
+              "target": "Package",
+              "version": "[25.1.*, )"
+            },
+            "DevExpress.Mvvm.CodeGenerators": {
+              "target": "Package",
+              "version": "[22.1.1, )"
+            },
+            "DevExpress.Wpf": {
+              "target": "Package",
+              "version": "[25.1.*, )"
+            },
+            "DevExpress.Wpf.Core": {
+              "target": "Package",
+              "version": "[25.1.4, )"
+            },
+            "DevExpress.Wpf.Grid": {
+              "target": "Package",
+              "version": "[25.1.4, )"
+            },
+            "DevExpress.Wpf.Themes.Office2019Colorful": {
+              "target": "Package",
+              "version": "[25.1.4, )"
+            },
+            "DevExpress.Wpf.ThemesLW": {
+              "target": "Package",
+              "version": "[25.1.*, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

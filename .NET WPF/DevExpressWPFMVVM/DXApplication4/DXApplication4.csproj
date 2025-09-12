@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+      <OutputType>WinExe</OutputType>
+      <TargetFramework>net8.0-windows</TargetFramework>
+      <UseWPF>true</UseWPF>
+      <Nullable>enable</Nullable>
+      <ImplicitUsings>disable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DevExpress.Wpf" Version="25.1.*" />
+      <PackageReference Include="DevExpress.Mvvm.CodeGenerators" Version="22.1.1" />
+      <PackageReference Include="DevExpress.Mvvm" Version="25.1.*" />
+      <PackageReference Include="DevExpress.Wpf.Core" Version="25.1.4" />
+      <PackageReference Include="DevExpress.Wpf.Grid" Version="25.1.4" />
+      <PackageReference Include="DevExpress.Wpf.Themes.Office2019Colorful" Version="25.1.4" />
+      <PackageReference Include="DevExpress.Wpf.ThemesLW" Version="25.1.*" />
+    </ItemGroup>
+
+</Project>

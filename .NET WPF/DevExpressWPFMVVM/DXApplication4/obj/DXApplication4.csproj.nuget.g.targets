@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="C:\Program Files\DevExpress 25.1\Components\Offline Packages\devexpress.reporting.core\25.1.4\buildTransitive\DevExpress.Reporting.Core.targets" Condition="Exists('C:\Program Files\DevExpress 25.1\Components\Offline Packages\devexpress.reporting.core\25.1.4\buildTransitive\DevExpress.Reporting.Core.targets')" />
+    <Import Project="C:\Program Files\DevExpress 25.1\Components\Offline Packages\devexpress.win.navigation\25.1.4\build\net8.0-windows\DevExpress.Win.Navigation.targets" Condition="Exists('C:\Program Files\DevExpress 25.1\Components\Offline Packages\devexpress.win.navigation\25.1.4\build\net8.0-windows\DevExpress.Win.Navigation.targets')" />
+  </ImportGroup>
+</Project>
