@@ -1,30 +1,66 @@
-﻿<UserControl x:Class="DXApplication4.Views.UsersView"
+﻿<!-- Views/UsersView.xaml -->
+<UserControl x:Class="DXApplication4.Views.UsersView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
              xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
              xmlns:vm="clr-namespace:DXApplication4.ViewModels"
              xmlns:infr="clr-namespace:DXApplication4.Infrastructure">
 
+    <!-- DI 주입 -->
     <UserControl.DataContext>
         <infr:DISource Type="{x:Type vm:UsersViewModel}"/>
     </UserControl.DataContext>
 
+    <!-- 로드시 데이터 로드 -->
     <dxmvvm:Interaction.Behaviors>
         <dxmvvm:EventToCommand EventName="Loaded" Command="{Binding LoadAsyncCommand}"/>
     </dxmvvm:Interaction.Behaviors>
 
     <dxg:GridControl ItemsSource="{Binding Users}"
-                   SelectedItem="{Binding Selected}"
-                   ShowLoadingPanel="{Binding IsBusy}">
+                     SelectedItem="{Binding Selected}"
+                     ShowLoadingPanel="{Binding IsBusy}">
         <dxg:GridControl.View>
             <dxg:TableView ShowGroupPanel="False"
-                     ShowSearchPanelMode="Always"
-                     AutoWidth="True"/>
+                           ShowSearchPanelMode="Always"
+                           AutoWidth="True"
+                           NewItemRowPosition="Top"
+                           AllowEditing="True"/>
         </dxg:GridControl.View>
 
+        <!-- ID는 읽기 전용 -->
         <dxg:GridColumn FieldName="User_Id" Header="ID" ReadOnly="True" Width="80"/>
+
         <dxg:GridColumn FieldName="Username" Header="Username" Width="240"/>
-        <dxg:GridColumn FieldName="Password" Header="Password" Width="240"/>
+
+        <!-- Password: 편집시 마스킹, 표시도 마스킹 -->
+        <dxg:GridColumn FieldName="Password" Header="Password" Width="240">
+            <dxg:GridColumn.EditSettings>
+                <dxe:PasswordBoxEditSettings PasswordChar="●"/>
+            </dxg:GridColumn.EditSettings>
+           
+        </dxg:GridColumn>
+
+        <!-- 행 별 작업 버튼: Save / Delete -->
+        <dxg:GridColumn Header="Ops" Width="160" AllowEditing="False">
+            <dxg:GridColumn.CellTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button Content="Save"
+                                Command="{Binding DataContext.SaveAsyncCommand, RelativeSource={RelativeSource AncestorType=dxg:GridControl}}"
+                                CommandParameter="{Binding}"/>
+                        <Button Content="Delete" Margin="8,0,0,0"
+                                Command="{Binding DataContext.DeleteAsyncCommand, RelativeSource={RelativeSource AncestorType=dxg:GridControl}}"
+                                CommandParameter="{Binding}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </dxg:GridColumn.CellTemplate>
+        </dxg:GridColumn>
+
+        <!-- 기본 정렬: ID 내림차순(선택) -->
+        <dxg:GridControl.SortInfo>
+            <dxg:GridSortInfo FieldName="User_Id" SortOrder="Descending"/>
+        </dxg:GridControl.SortInfo>
     </dxg:GridControl>
 </UserControl>

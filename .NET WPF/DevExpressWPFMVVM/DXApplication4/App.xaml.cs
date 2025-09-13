@@ -39,11 +39,7 @@ namespace DXApplication4
 
 // 수정된 코드
             ApplicationThemeHelper.ApplicationThemeName = Theme.VS2019Blue.Name;
-
-            var palette = new ThemePalette("MyOrange");
-            palette.SetColor("Accent", (Color)ColorConverter.ConvertFromString("#FFDC5B01")); // 포커스/강조
-            palette.SetColor("Primary", (Color)ColorConverter.ConvertFromString("#FFDC5B01")); // 프라이머리 계열(선택)
-
+ 
             Configuration = new ConfigurationBuilder()
          .SetBasePath(AppContext.BaseDirectory)
          .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)

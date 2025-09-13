@@ -24,6 +24,7 @@ namespace DXApplication4
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = "SkinMate DataBase";
 
         }
     }
