@@ -1,0 +1,53 @@
+﻿<UserControl x:Class="DXApplication4.Views.ChatLogsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+             xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+             xmlns:vm="clr-namespace:DXApplication4.ViewModels"
+             xmlns:infr="clr-namespace:DXApplication4.Infrastructure">
+
+    <UserControl.DataContext>
+        <infr:DISource Type="{x:Type vm:ChatLogsViewModel}"/>
+    </UserControl.DataContext>
+
+    <dxmvvm:Interaction.Behaviors>
+        <dxmvvm:EventToCommand EventName="Loaded" Command="{Binding InitializeAsyncCommand}"/>
+    </dxmvvm:Interaction.Behaviors>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,8">
+            <ComboBox Width="220" ItemsSource="{Binding UsersForFilter}"
+                SelectedValuePath="User_Id" DisplayMemberPath="Username"
+                SelectedValue="{Binding SelectedUserId}"/>
+            <ComboBox Width="180" ItemsSource="{Binding LogTypes}"
+                SelectedItem="{Binding SelectedLogType}" Margin="8,0,0,0"/>
+            <DatePicker Width="160" SelectedDate="{Binding From}" Margin="8,0,0,0"/>
+            <DatePicker Width="160" SelectedDate="{Binding To}" Margin="8,0,0,0"/>
+            <Button Content="적용" Command="{Binding ApplyAsyncCommand}" Margin="8,0,0,0"/>
+            <Button Content="초기화" Command="{Binding ResetAsyncCommand}" Margin="8,0,0,0"/>
+        </StackPanel>
+
+        <dxg:GridControl Grid.Row="1"
+                     ItemsSource="{Binding Items}"
+                     SelectedItem="{Binding Selected}"
+                     ShowLoadingPanel="{Binding IsBusy}">
+            <dxg:GridControl.View>
+                <dxg:TableView ShowGroupPanel="False"
+                       ShowSearchPanelMode="Always"
+                       AutoWidth="True"/>
+            </dxg:GridControl.View>
+
+            <dxg:GridColumn FieldName="Chat_Id" Header="ChatId" Width="80" ReadOnly="True"/>
+            <dxg:GridColumn FieldName="Username" Header="Username" Width="180"/>
+            <dxg:GridColumn FieldName="Log_Type" Header="LogType" Width="120"/>
+            <dxg:GridColumn FieldName="Timestamp" Header="Timestamp" Width="170"/>
+            <dxg:GridColumn FieldName="Message_Preview" Header="Message (preview)" Width="350"/>
+            <dxg:GridColumn FieldName="Response_Preview" Header="Response (preview)" Width="350"/>
+        </dxg:GridControl>
+    </Grid>
+</UserControl>

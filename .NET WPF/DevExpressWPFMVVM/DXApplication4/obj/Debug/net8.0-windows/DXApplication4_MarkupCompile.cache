@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\snagh\source\repos\DXApplication4\DXApplication4\obj\Debug\net8.0-windows\
+C:\Csharp.NET\.NET WPF\DevExpressWPFMVVM\DXApplication4\obj\Debug\net8.0-windows\
 DXApplication4
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\snagh\source\repos\DXApplication4\DXApplication4\App.xaml
-2-1631076219
+C:\Csharp.NET\.NET WPF\DevExpressWPFMVVM\DXApplication4\App.xaml
+42037865254
 
-7-68770827
-298696138751
-MainWindow.xaml;Views\MainView.xaml;
+14454424352
+3271916737792
+MainWindow.xaml;Views\ChatLogsView.xaml;Views\MainView.xaml;Views\UsersView.xaml;
 
 False
 

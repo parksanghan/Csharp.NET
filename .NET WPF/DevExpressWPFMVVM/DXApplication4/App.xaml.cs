@@ -8,9 +8,10 @@ using System.Windows;
 using DevExpress.Xpf.Core;
 using DXApplication4.Infrastructure;
 using DXApplication4.ViewModels;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
  
- 
+ using System.Windows.Media;    
 namespace DXApplication4
 {
     /// <summary>
@@ -18,6 +19,7 @@ namespace DXApplication4
     /// </summary>
     public partial class App : Application
     {
+        public static IConfiguration Configuration { get; private set; } = null!;
         static App()
         {
             CompatibilitySettings.UseLightweightThemes = true;
@@ -29,17 +31,35 @@ namespace DXApplication4
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            Theme.RegisterPredefinedPaletteThemes();
-            ApplicationThemeHelper.ApplicationThemeName =
-                PredefinedThemePalettes.Office2019Colorful.Orange.Name;
+            
+           
+// 기존 코드
+// ApplicationThemeHelper.ApplicationThemeName =
+//     PredefinedThemePalettes.Office2016SEPalettes.Blue.Name;
 
+// 수정된 코드
+            ApplicationThemeHelper.ApplicationThemeName = Theme.VS2019Blue.Name;
+
+            var palette = new ThemePalette("MyOrange");
+            palette.SetColor("Accent", (Color)ColorConverter.ConvertFromString("#FFDC5B01")); // 포커스/강조
+            palette.SetColor("Primary", (Color)ColorConverter.ConvertFromString("#FFDC5B01")); // 프라이머리 계열(선택)
+
+            Configuration = new ConfigurationBuilder()
+         .SetBasePath(AppContext.BaseDirectory)
+         .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+         .Build();
             services = new ServiceCollection()
+                  .AddSingleton<IConfiguration>(Configuration)        
+                .AddSingleton<ISqlConnectionFactory, SqlConnectionFactory>()
                 .AddTransient<IDataService, DataService>()
                 .AddTransient<MainViewModel>()
-                .BuildServiceProvider();
+                 .AddTransient<DXApplication4.Services.IUsersService, DXApplication4.Services.UsersService>()
+                 .AddTransient<DXApplication4.Services.IChatLogsService, DXApplication4.Services.ChatLogsService>()
+                 .AddTransient<DXApplication4.ViewModels.UsersViewModel>()
+                  .AddTransient<DXApplication4.ViewModels.ChatLogsViewModel>()
 
-            DISource.Resolver = (type) =>
-                type != null ? services.GetRequiredService(type) : null!;
+                .BuildServiceProvider();
+            DISource.Resolver = t => t != null ? services.GetRequiredService(t) : null;
         }
     }
 }
