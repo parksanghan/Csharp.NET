@@ -2,7 +2,7 @@
 ## .NET C# 저장소
 [![WIN32 API](https://img.shields.io/badge/.NET-API-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/.NET-API)
 &nbsp;
-[![WIN32 API README](https://img.shields.io/badge/.NET%20API-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/NET%20API.md)
+[![WIN32 API README](https://img.shields.io/badge/.NET%20API-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/WIN32%20API.md)
 
 
 [![WIN32 SYSTEM](https://img.shields.io/badge/.NET-SYSTEM-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/.NET%20System) 
