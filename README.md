@@ -11,7 +11,7 @@
 
 [![.NET NETWORK](https://img.shields.io/badge/WIN32-NETWORK-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/WIN-32%20Network) 
 &nbsp;
-[![.NET NETWORK README](https://img.shields.io/badge/.NET%20NETWORK-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/WIN32%20NETWORK.md)
+[![.NET NETWORK README](https://img.shields.io/badge/WIN32%20NETWORK-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/WIN32%20NETWORK.md)
  
 [![.NET WINFORM](https://img.shields.io/badge/.NET%20WinForm-Project-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/.NET%20C%23%20Win%20Form)
 &nbsp;
