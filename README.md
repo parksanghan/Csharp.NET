@@ -1,31 +1,17 @@
 # c# .NET Framework
 ## .NET C# 저장소
-<<<<<<< HEAD
 [![.NET API](https://img.shields.io/badge/WIN32-API-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/WIN-32%20API)
 &nbsp;
-[![.NET API README](https://img.shields.io/badge/WIN32%20API-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/NET%20API.md)
+[![.NET API README](https://img.shields.io/badge/WIN32API%20API-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/WIN32%20API.md)
 
-    
+
 [![.NET SYSTEM](https://img.shields.io/badge/WIN32-SYSTEM-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/WIN-32%20System) 
 &nbsp;
-[![.NET SYSTEM README](https://img.shields.io/badge/WIN32%20SYSTEM-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/NET%20SYSTEM.md)
+[![.NET SYSTEM README](https://img.shields.io/badge/WIN32%20SYSTEM-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/WIN32%20SYSTEM.md)
 
-[![.NET NETWORK](https://img.shields.io/badge/WIN32-NETWORK-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/WIN-32%20-Network) 
-======= 
-[![WIN32 API](https://img.shields.io/badge/WIN32-API-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/WIN32-API)
+[![.NET NETWORK](https://img.shields.io/badge/WIN32-NETWORK-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/WIN-32%20Network) 
 &nbsp;
-[![WIN32 API README](https://img.shields.io/badge/WIN32-API-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/WIN32-API.md)
-
-
-
-[![WIN32 SYSTEM](https://img.shields.io/badge/.NET-SYSTEM-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/.NET%20System) 
->>>>>>> eb8b62eadb809bb2818a66f56d81450fafb95161
-&nbsp;
-[![WIN32 SYSTEM README](https://img.shields.io/badge/.NET%20SYSTEM-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/NET%20SYSTEM.md)
-
-[![WIN32 NETWORK](https://img.shields.io/badge/.NET-NETWORK-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/.NET%20-Network) 
-&nbsp;
-[![WIN32 NETWORK README](https://img.shields.io/badge/.NET%20NETWORK-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/NET%20NETWORK.md)
+[![.NET NETWORK README](https://img.shields.io/badge/.NET%20NETWORK-README-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/blob/main/README/WIN32%20NETWORK.md)
  
 [![.NET WINFORM](https://img.shields.io/badge/.NET%20WinForm-Project-%238A2BE2.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)](https://github.com/parksanghan/Csharp.NET/tree/main/.NET%20C%23%20Win%20Form)
 &nbsp;
