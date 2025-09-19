@@ -27,8 +27,8 @@ namespace MVVM_ToolKit
             // 해당 시점에서 WPF 창이 생성
             main.DataContext = _host.Services.GetRequiredService<MainViewModel>();
             // MainViewModel 인스턴스를 DataContext로  컨테이너에서 꺼내서 주입
-           
-            main.Show();
+            this.MainWindow = main;
+            this.MainWindow.Show();
 
             base.OnStartup(e);
         }

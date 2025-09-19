@@ -21,9 +21,6 @@ namespace MVVM_ToolKit
             InitializeComponent();
         }
 
-        private void ListBox_Selected(object sender, RoutedEventArgs e)
-        {
-
-        }
+   
     }
 }
