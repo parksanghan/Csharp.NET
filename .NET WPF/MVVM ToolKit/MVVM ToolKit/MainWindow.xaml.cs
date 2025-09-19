@@ -17,8 +17,13 @@ namespace MVVM_ToolKit
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+        { 
             InitializeComponent();
+        }
+
+        private void ListBox_Selected(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

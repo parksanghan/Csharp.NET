@@ -1,0 +1,59 @@
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\MVVM ToolKit.exe
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\MVVM ToolKit.deps.json
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\MVVM ToolKit.runtimeconfig.json
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\MVVM ToolKit.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\MVVM ToolKit.pdb
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.csproj.AssemblyReference.cache
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\App.g.cs
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit_MarkupCompile.cache
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit_MarkupCompile.lref
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.g.resources
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.AssemblyInfoInputs.cache
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.AssemblyInfo.cs
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.csproj.CoreCompileInputs.cache
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.sourcelink.json
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM Too.0456AE0B.Up2Date
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\refint\MVVM ToolKit.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.pdb
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\MVVM ToolKit.genruntimeconfig.cache
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\obj\Debug\net8.0-windows\ref\MVVM ToolKit.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Console.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\Microsoft.Extensions.Primitives.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\System.Diagnostics.DiagnosticSource.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\System.Text.Encodings.Web.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\System.Text.Json.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Csharp.NET\.NET WPF\MVVM ToolKit\MVVM ToolKit\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
