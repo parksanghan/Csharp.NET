@@ -1,2 +1,0 @@
-xml/file_provider_paths.xml;xml/file_provider_paths.xml
-xml/file_provider_paths.xml;xml/file_provider_paths.xml

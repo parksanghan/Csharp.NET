@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\EF Core Entity DBContext.props" />
-</Project>
