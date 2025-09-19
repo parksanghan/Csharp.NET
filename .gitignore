@@ -1,38 +1,37 @@
-# 빌드 산출물
-[Bb]in/
-[Oo]bj/
-[Dd]ebug/
-[Rr]elease/
-x64/
-x86/
-*.exe
-*.dll
-*.pdb
-*.appx
-*.log
+# ---- .NET* 폴더에만 적용 ----
+/.NET*/**/[Bb]in/
+/.NET*/**/[Oo]bj/
+/.NET*/**/[Dd]ebug/
+/.NET*/**/[Rr]elease/
+/.NET*/**/x64/
+/.NET*/**/x86/
+/.NET*/**/*.exe
+/.NET*/**/*.dll
+/.NET*/**/*.pdb
+/.NET*/**/*.appx
+/.NET*/**/*.log
 
 # VS/사용자 환경
-.vs/
-.vscode/
-*.user
-*.suo
+/.NET*/**/.vs/
+/.NET*/**/.vscode/
+/.NET*/**/*.user
+/.NET*/**/*.suo
 
 # NuGet
-packages/
-*.nupkg
-*.snupkg
+/.NET*/**/packages/
+/.NET*/**/*.nupkg
+/.NET*/**/*.snupkg
 
 # 로그/캐시
-*.log
-*.dbmdl
-*.cache
+/.NET*/**/*.dbmdl
+/.NET*/**/*.cache
 
-# EF Core 마이그레이션 (필요 없으면 유지, 공유 원하면 제거)
-[Mm]igrations/
+# EF Core 마이그레이션
+/.NET*/**/[Mm]igrations/
 
 # ASP.NET Core 정적 리소스 빌드 산출물
-wwwroot/
+/.NET*/**/wwwroot/
 
-# 환경별 설정 (공유 불필요한 것만 무시)
-appsettings.Development.json
-appsettings.Local.json
+# 환경별 설정
+/.NET*/**/appsettings.Development.json
+/.NET*/**/appsettings.Local.json
