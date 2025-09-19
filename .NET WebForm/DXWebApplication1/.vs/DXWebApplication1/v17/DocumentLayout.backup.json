@@ -1,0 +1,618 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\main.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\main.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\main.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|c:\\users\\snagh\\source\\repos\\dxwebapplication1\\dxwebapplication1\\root.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\root.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\model1.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\model1.context.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\webform1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\webform1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\root.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\root.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\webform1.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\webform1.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\account\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\account\\register.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\account\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\account\\login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\account\\login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\account\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\account\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\migrations\\202509110203201_syncafterenable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\migrations\\202509110203201_syncafterenable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\migrations\\202509110041134_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\migrations\\202509110041134_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\account\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\account\\register.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\account\\managelogins.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\account\\managelogins.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\account\\registersuccess.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\account\\registersuccess.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\htmlpage1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\htmlpage1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\light.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\light.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\model1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\root.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\root.master.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\model1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\model1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\model1.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\model1.context.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\models\\identitymodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\dxwebapplication1\\model1.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{736B45D6-98F4-4ECB-BC7C-A009BD6CFF2E}|DXWebApplication1\\DXWebApplication1.csproj|solutionrelative:dxwebapplication1\\model1.edmx.diagram||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Model1.Context.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.Context.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Model1.Context.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.Context.cs",
+              "RelativeToolTip": "DXWebApplication1\\Model1.Context.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswBsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:28:37.916Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Manufacturer.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Manufacturer.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Manufacturer.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Manufacturer.cs",
+              "RelativeToolTip": "DXWebApplication1\\Manufacturer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:37:25.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Product.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Product.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Product.cs",
+              "RelativeToolTip": "DXWebApplication1\\Product.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:17:56.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Users.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Users.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Users.cs",
+              "RelativeToolTip": "DXWebApplication1\\Users.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:34:33.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Model1.tt",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.tt",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Model1.tt",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.tt",
+              "RelativeToolTip": "DXWebApplication1\\Model1.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-10T06:33:29.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main.master",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Main.master",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Main.master",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Main.master*",
+              "RelativeToolTip": "DXWebApplication1\\Main.master*",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-10T06:13:39.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Root.master",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Root.master",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Root.master",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Root.master",
+              "RelativeToolTip": "DXWebApplication1\\Root.master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-10T06:57:53.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main.master.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Main.master.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Main.master.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Main.master.cs",
+              "RelativeToolTip": "DXWebApplication1\\Main.master.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:57:40.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Category.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Category.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Category.cs",
+              "RelativeToolTip": "DXWebApplication1\\Category.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:34:18.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WebForm1.aspx",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\WebForm1.aspx",
+              "RelativeDocumentMoniker": "DXWebApplication1\\WebForm1.aspx",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\WebForm1.aspx",
+              "RelativeToolTip": "DXWebApplication1\\WebForm1.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-10T08:06:31.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WebForm1.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\WebForm1.aspx.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\WebForm1.aspx.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\WebForm1.aspx.cs",
+              "RelativeToolTip": "DXWebApplication1\\WebForm1.aspx.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAEwB4AAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:05:36.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Root.master.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Root.master.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Root.master.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Root.master.cs*",
+              "RelativeToolTip": "DXWebApplication1\\Root.master.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:01:32.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "WebForm1.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\WebForm1.aspx.designer.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\WebForm1.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\WebForm1.aspx.designer.cs*",
+              "RelativeToolTip": "DXWebApplication1\\WebForm1.aspx.designer.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:54:57.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Register.aspx",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Register.aspx",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Account\\Register.aspx",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Register.aspx",
+              "RelativeToolTip": "DXWebApplication1\\Account\\Register.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-11T00:40:18.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Login.aspx.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Account\\Login.aspx.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Login.aspx.cs",
+              "RelativeToolTip": "DXWebApplication1\\Account\\Login.aspx.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAzwBcAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T01:12:16.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Login.aspx",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Login.aspx",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Account\\Login.aspx",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Login.aspx",
+              "RelativeToolTip": "DXWebApplication1\\Account\\Login.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-11T00:40:07.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Web.config",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Web.config",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Web.config",
+              "RelativeToolTip": "DXWebApplication1\\Web.config",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAQwH0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-09-10T06:34:31.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "202509110203201_SyncAfterEnable.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Migrations\\202509110203201_SyncAfterEnable.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Migrations\\202509110203201_SyncAfterEnable.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Migrations\\202509110203201_SyncAfterEnable.cs",
+              "RelativeToolTip": "DXWebApplication1\\Migrations\\202509110203201_SyncAfterEnable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T02:03:25.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Login.aspx.designer.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Login.aspx.designer.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Account\\Login.aspx.designer.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Login.aspx.designer.cs",
+              "RelativeToolTip": "DXWebApplication1\\Account\\Login.aspx.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAlwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T02:43:21.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "202509110041134_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Migrations\\202509110041134_InitialCreate.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Migrations\\202509110041134_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Migrations\\202509110041134_InitialCreate.cs",
+              "RelativeToolTip": "DXWebApplication1\\Migrations\\202509110041134_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T02:02:09.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Default.aspx",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Default.aspx",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Default.aspx",
+              "RelativeToolTip": "DXWebApplication1\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-10T06:28:45.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "DXWebApplication1\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T02:01:56.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Register.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Register.aspx.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Account\\Register.aspx.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\Register.aspx.cs",
+              "RelativeToolTip": "DXWebApplication1\\Account\\Register.aspx.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-11T01:42:17.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ManageLogins.aspx",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\ManageLogins.aspx",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Account\\ManageLogins.aspx",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\ManageLogins.aspx",
+              "RelativeToolTip": "DXWebApplication1\\Account\\ManageLogins.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-11T01:13:07.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HtmlPage1.aspx",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\HtmlPage1.aspx",
+              "RelativeDocumentMoniker": "DXWebApplication1\\HtmlPage1.aspx",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\HtmlPage1.aspx",
+              "RelativeToolTip": "DXWebApplication1\\HtmlPage1.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-10T07:34:15.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "RegisterSuccess.aspx",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\RegisterSuccess.aspx",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Account\\RegisterSuccess.aspx",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Account\\RegisterSuccess.aspx",
+              "RelativeToolTip": "DXWebApplication1\\Account\\RegisterSuccess.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-11T00:40:12.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.edmx",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Model1.edmx",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "DXWebApplication1\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-09-10T06:19:43.912Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Light.master",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Light.master",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Light.master",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Light.master",
+              "RelativeToolTip": "DXWebApplication1\\Light.master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-09-10T06:13:38.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Model1.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Model1.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.cs",
+              "RelativeToolTip": "DXWebApplication1\\Model1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:29:12.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Root.master.designer.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Root.master.designer.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Root.master.designer.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Root.master.designer.cs",
+              "RelativeToolTip": "DXWebApplication1\\Root.master.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwv30AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T08:01:45.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Startup.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Startup.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Startup.cs",
+              "RelativeToolTip": "DXWebApplication1\\Startup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:34:34.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Model1.Context.tt",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.Context.tt",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Model1.Context.tt",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.Context.tt",
+              "RelativeToolTip": "DXWebApplication1\\Model1.Context.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-09-10T06:33:27.862Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Model1.edmx.diagram",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.edmx.diagram",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Model1.edmx.diagram",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.edmx.diagram",
+              "RelativeToolTip": "DXWebApplication1\\Model1.edmx.diagram",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-10T06:33:24.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Model1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.Designer.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Model1.Designer.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Model1.Designer.cs",
+              "RelativeToolTip": "DXWebApplication1\\Model1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:29:01.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "IdentityModels.cs",
+              "DocumentMoniker": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Models\\IdentityModels.cs",
+              "RelativeDocumentMoniker": "DXWebApplication1\\Models\\IdentityModels.cs",
+              "ToolTip": "C:\\Users\\snagh\\source\\repos\\DXWebApplication1\\DXWebApplication1\\Models\\IdentityModels.cs",
+              "RelativeToolTip": "DXWebApplication1\\Models\\IdentityModels.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T06:26:12.638Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,1 +1,33 @@
-.vs/
+    # 빌드 산출물
+    [Bb]in/
+    [Oo]bj/
+    [Dd]ebug/
+    [Rr]elease/
+    x64/
+    x86/
+    *.exe
+    *.dll
+    *.pdb
+    *.appx
+    *.log
+
+    # VS/사용자 환경
+    .vs/
+    .vscode/
+    *.user
+    *.suo
+
+    # NuGet
+    packages/
+    *.nupkg
+
+    # EF Core 마이그레이션 자동 파일
+    [Mm]igrations/
+
+    # wwwroot 빌드 결과물 (ASP.NET)
+    wwwroot/
+
+    # 기타
+    *.dbmdl
+    *.cache
+    *.snupkg

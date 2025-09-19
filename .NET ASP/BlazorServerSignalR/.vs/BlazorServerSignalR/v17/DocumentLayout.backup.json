@@ -1,0 +1,350 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\models\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\models\\manufacturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\blazortdbcontext.dgml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\blazortdbcontext.dgml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\pages\\blazor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\pages\\blazor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\advanced\\blazor\\productlist2.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\advanced\\blazor\\productlist2.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\advanced\\blazor\\tabletemplate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\advanced\\blazor\\tabletemplate.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\advanced\\blazor\\selectedfilter2.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\advanced\\blazor\\selectedfilter2.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\advanced\\blazor\\selectedfilter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\advanced\\blazor\\selectedfilter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\advanced\\blazor\\selectfilter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\advanced\\blazor\\selectfilter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\advanced\\blazor\\themewrapper.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\advanced\\blazor\\themewrapper.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\advanced\\blazor\\productlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\advanced\\blazor\\productlist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|c:\\csharp.net\\.net asp\\blazorserversignalr\\blazorserversignalr\\blazorserversignalr.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{5BD98B22-2618-4C22-A0E3-5B03FE5FDE03}|BlazorServerSignalR\\BlazorServerSignalR.csproj|solutionrelative:blazorserversignalr\\blazorserversignalr.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Program.cs",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Program.cs",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Program.cs",
+              "RelativeToolTip": "BlazorServerSignalR\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T15:04:29.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Manufacturer.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Models\\Manufacturer.cs",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Models\\Manufacturer.cs",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Models\\Manufacturer.cs",
+              "RelativeToolTip": "BlazorServerSignalR\\Models\\Manufacturer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-05T14:37:26.16Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\appsettings.json",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\appsettings.json",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\appsettings.json",
+              "RelativeToolTip": "BlazorServerSignalR\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-05T14:37:15.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BlazorTDBContext.dgml",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\BlazorTDBContext.dgml",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\BlazorTDBContext.dgml",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\BlazorTDBContext.dgml",
+              "RelativeToolTip": "BlazorServerSignalR\\BlazorTDBContext.dgml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000968|",
+              "WhenOpened": "2025-09-04T13:05:03.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "BlazorServerSignalR\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T13:03:17.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "BlazorServerSignalR\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T13:03:16.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "blazor.cshtml",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Pages\\blazor.cshtml",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Pages\\blazor.cshtml",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Pages\\blazor.cshtml",
+              "RelativeToolTip": "BlazorServerSignalR\\Pages\\blazor.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T13:03:01.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "BlazorServerSignalR\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-04T13:03:00.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BlazorServerSignalR\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-04T13:02:46.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SelectedFilter2.razor",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\SelectedFilter2.razor",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Advanced\\Blazor\\SelectedFilter2.razor",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\SelectedFilter2.razor",
+              "RelativeToolTip": "BlazorServerSignalR\\Advanced\\Blazor\\SelectedFilter2.razor",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowBIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T11:47:37.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SelectedFilter.razor",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\SelectedFilter.razor",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Advanced\\Blazor\\SelectedFilter.razor",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\SelectedFilter.razor",
+              "RelativeToolTip": "BlazorServerSignalR\\Advanced\\Blazor\\SelectedFilter.razor",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAMAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T10:43:24.339Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SelectFilter.razor",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\SelectFilter.razor",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Advanced\\Blazor\\SelectFilter.razor",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\SelectFilter.razor",
+              "RelativeToolTip": "BlazorServerSignalR\\Advanced\\Blazor\\SelectFilter.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T03:24:20.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ThemeWrapper.razor",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\ThemeWrapper.razor",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Advanced\\Blazor\\ThemeWrapper.razor",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\ThemeWrapper.razor",
+              "RelativeToolTip": "BlazorServerSignalR\\Advanced\\Blazor\\ThemeWrapper.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-02T12:39:58.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BlazorServerSignalR\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T10:42:16.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TableTemplate.razor",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\TableTemplate.razor",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Advanced\\Blazor\\TableTemplate.razor",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\TableTemplate.razor",
+              "RelativeToolTip": "BlazorServerSignalR\\Advanced\\Blazor\\TableTemplate.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-03T03:27:01.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductList2.razor",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\ProductList2.razor",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Advanced\\Blazor\\ProductList2.razor",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\ProductList2.razor",
+              "RelativeToolTip": "BlazorServerSignalR\\Advanced\\Blazor\\ProductList2.razor",
+              "ViewState": "AgIAADQAAAAAAAAAAAAowEMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T12:13:04.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\_Imports.razor",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\_Imports.razor",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\_Imports.razor",
+              "RelativeToolTip": "BlazorServerSignalR\\_Imports.razor",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T10:42:12.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProductList.razor",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\ProductList.razor",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Advanced\\Blazor\\ProductList.razor",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Advanced\\Blazor\\ProductList.razor",
+              "RelativeToolTip": "BlazorServerSignalR\\Advanced\\Blazor\\ProductList.razor",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAuwCYAAACMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-01T10:39:03.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Dockerfile",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\Dockerfile",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\Dockerfile",
+              "RelativeToolTip": "BlazorServerSignalR\\Dockerfile",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvx0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-01T10:13:39.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BlazorServerSignalR.csproj",
+              "DocumentMoniker": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\BlazorServerSignalR.csproj",
+              "RelativeDocumentMoniker": "BlazorServerSignalR\\BlazorServerSignalR.csproj",
+              "ToolTip": "C:\\Csharp.NET\\.NET ASP\\BlazorServerSignalR\\BlazorServerSignalR\\BlazorServerSignalR.csproj",
+              "RelativeToolTip": "BlazorServerSignalR\\BlazorServerSignalR.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-08-31T11:02:42.905Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
