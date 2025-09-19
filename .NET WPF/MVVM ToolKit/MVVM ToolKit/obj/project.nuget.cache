@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "74kYqgPD4+8=",
+  "success": true,
+  "projectFilePath": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\MVVM ToolKit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\snagh\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.0\\communitytoolkit.mvvm.8.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
