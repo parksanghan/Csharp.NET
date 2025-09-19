@@ -1,33 +1,38 @@
-    # 빌드 산출물
-    [Bb]in/
-    [Oo]bj/
-    [Dd]ebug/
-    [Rr]elease/
-    x64/
-    x86/
-    *.exe
-    *.dll
-    *.pdb
-    *.appx
-    *.log
+# 빌드 산출물
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+*.exe
+*.dll
+*.pdb
+*.appx
+*.log
 
-    # VS/사용자 환경
-    .vs/
-    .vscode/
-    *.user
-    *.suo
+# VS/사용자 환경
+.vs/
+.vscode/
+*.user
+*.suo
 
-    # NuGet
-    packages/
-    *.nupkg
+# NuGet
+packages/
+*.nupkg
+*.snupkg
 
-    # EF Core 마이그레이션 자동 파일
-    [Mm]igrations/
+# 로그/캐시
+*.log
+*.dbmdl
+*.cache
 
-    # wwwroot 빌드 결과물 (ASP.NET)
-    wwwroot/
+# EF Core 마이그레이션 (필요 없으면 유지, 공유 원하면 제거)
+[Mm]igrations/
 
-    # 기타
-    *.dbmdl
-    *.cache
-    *.snupkg
+# ASP.NET Core 정적 리소스 빌드 산출물
+wwwroot/
+
+# 환경별 설정 (공유 불필요한 것만 무시)
+appsettings.Development.json
+appsettings.Local.json
