@@ -1,0 +1,10 @@
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\bin\Debug\1023_시험.exe.config
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\bin\Debug\1023_시험.exe
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\bin\Debug\1023_시험.pdb
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\obj\Debug\1023_시험.csproj.AssemblyReference.cache
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\obj\Debug\_1023_시험.Form1.resources
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\obj\Debug\_1023_시험.Properties.Resources.resources
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\obj\Debug\1023_시험.csproj.GenerateResource.cache
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\obj\Debug\1023_시험.csproj.CoreCompileInputs.cache
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\obj\Debug\1023_시험.exe
+C:\Users\dl184\OneDrive\바탕 화면\Hyun\비트고급\win32(프로그램 파일)\1023_시험\1023_시험\obj\Debug\1023_시험.pdb

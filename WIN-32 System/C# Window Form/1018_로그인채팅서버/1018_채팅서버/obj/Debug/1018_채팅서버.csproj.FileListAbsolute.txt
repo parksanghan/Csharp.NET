@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\닷넷예제\1018_채팅서버\1018_채팅서버\bin\Debug\1018_채팅서버.exe.config
+C:\Users\user\Desktop\닷넷예제\1018_채팅서버\1018_채팅서버\bin\Debug\1018_채팅서버.exe
+C:\Users\user\Desktop\닷넷예제\1018_채팅서버\1018_채팅서버\bin\Debug\1018_채팅서버.pdb
+C:\Users\user\Desktop\닷넷예제\1018_채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1018_채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1018_채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1018_채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.exe
+C:\Users\user\Desktop\닷넷예제\1018_채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.pdb
+C:\Users\user\Desktop\닷넷예제\1018_로그인채팅서버\1018_채팅서버\bin\Debug\1018_채팅서버.exe.config
+C:\Users\user\Desktop\닷넷예제\1018_로그인채팅서버\1018_채팅서버\bin\Debug\1018_채팅서버.exe
+C:\Users\user\Desktop\닷넷예제\1018_로그인채팅서버\1018_채팅서버\bin\Debug\1018_채팅서버.pdb
+C:\Users\user\Desktop\닷넷예제\1018_로그인채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\닷넷예제\1018_로그인채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.csproj.SuggestedBindingRedirects.cache
+C:\Users\user\Desktop\닷넷예제\1018_로그인채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\닷넷예제\1018_로그인채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.exe
+C:\Users\user\Desktop\닷넷예제\1018_로그인채팅서버\1018_채팅서버\obj\Debug\1018_채팅서버.pdb

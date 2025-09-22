@@ -16,9 +16,9 @@ namespace MVVM_ToolKit.ViewModel
         [ObservableProperty]
         // 속성에 대한 변경 알림을 자동으로 구현해줌 
         // 아마 change이벤트 invoke하는 걸 자동으로 해주는듯
-        public string title = "TITLE";
+        public string title   = "TITLE";
         [ObservableProperty]
-        public Person? selectedPerson;
+        public Person? selectedPerson { get; set; }
 
         public string? MyStr;
 
