@@ -1,35 +1,81 @@
 ﻿<Window x:Class="MVVM_ToolKit.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="clr-namespace:MVVM_ToolKit.ViewModel"
-        Title="MVVM Toolkit Demo" Height="300" Width="400">
+        Title="{Binding Title}" Height="420" Width="520">
+ 
+    <DockPanel Margin="12">
 
-    <!--DI 주입시 불필요
-    DI 없는 경우 아래 활성화-->
-    <!--<Window.DataContext>
-        <vm:MainViewModel/>
-    </Window.DataContext>-->
-
-    <DockPanel Margin="10">
-        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 10">
-            <TextBox Width="100" Margin="0 0 10 0"
-                     Text="{Binding NewPersonName}"
-                     ></TextBox>
-            
-            <Button Content="추가" Command="{Binding AddPersonCommand}" Margin="0 0 10 0"/>
-            <Button Content="삭제" Command="{Binding RemovePersonCommand}"/>
+        <!-- 상단: 제목/상태 -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 0 0 8">
+            <TextBlock Text="제목: " VerticalAlignment="Center" FontWeight="SemiBold"/>
+            <TextBlock Text="{Binding Title}" VerticalAlignment="Center" />
+            <Button Content="제목 업데이트"
+                    Margin="12 0 0 0"
+                    Command="{Binding UpdateTitleCommand}"/>
         </StackPanel>
 
-        <ListBox ItemsSource="{Binding People}" 
-                 SelectedItem="{Binding SelectedPerson}" 
-              
-                
-                 
-                 DisplayMemberPath="Name" Height="180"/>
+        <!-- 좌측: 사람 목록 -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
 
-        <TextBlock Text="{Binding Title}" 
-                   FontSize="16" 
-                   HorizontalAlignment="Center" 
-                   Margin="0 10 0 0"/>
+            <GroupBox Header="People" Grid.Column="0" Margin="0 0 8 0">
+                <DockPanel>
+                    <ListBox ItemsSource="{Binding People}"
+                             SelectedItem="{Binding SelectedPerson}"
+                             DisplayMemberPath="Name"
+                             MinHeight="240"
+                             Margin="0 0 0 8"/>
+                    <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+                        <Button Content="추가" Command="{Binding AddPersonCommand}" Margin="0 0 8 0" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <Button Content="삭제"
+                                Command="{Binding RemovePersonCommand}" Margin="0 0 8 0" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        <!-- CanRemovePerson에 의해 자동 Enable/Disable -->
+                        <Button Content="비동기 추가"
+         Command="{Binding LoadPeopleCommand}" Margin="0 0 8 0" Height="30" VerticalAlignment="Top" Width="28" />
+                    </StackPanel>
+                </DockPanel>
+            </GroupBox>
+
+            <!-- 우측: 선택 인물 이름 변경 -->
+            <GroupBox Header="선택 인물 편집" Grid.Column="1">
+                <Grid Margin="8">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="선택된 사람" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding SelectedPerson.Name}" Grid.Row="0" Grid.Column="1" FontWeight="SemiBold"/>
+
+                    <TextBlock Text="First Name" Grid.Row="1" Grid.Column="0" Margin="0,8,0,0" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding PersonFirstName, UpdateSourceTrigger=PropertyChanged}"
+                             Grid.Row="1" Grid.Column="1" Margin="0,8,0,0"/>
+
+                    <TextBlock Text="Last Name" Grid.Row="2" Grid.Column="0" Margin="0,8,0,0" VerticalAlignment="Center"/>
+                    <TextBox Text="{Binding PersonLastName, UpdateSourceTrigger=PropertyChanged}"
+                             Grid.Row="2" Grid.Column="1" Margin="0,8,0,0"/>
+
+                    <TextBlock Text="Full Name 미리보기" Grid.Row="3" Grid.Column="0" Margin="0,8,0,0" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding FullName}" Grid.Row="3" Grid.Column="1" Margin="0,8,0,0" FontWeight="SemiBold"/>
+
+                    <StackPanel Orientation="Horizontal" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" Margin="0,12,0,0">
+                        <Button Content="이름 업데이트"
+                                Command="{Binding UpdatePersonNameCommand}" Margin="0 0 8 0" Height="30" Width="130" VerticalAlignment="Top" />
+                        <!-- CanUpdatePersonName에 의해 자동 Enable/Disable -->
+                        
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+        </Grid>
     </DockPanel>
 </Window>

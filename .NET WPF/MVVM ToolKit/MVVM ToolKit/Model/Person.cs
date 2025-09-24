@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace MVVM_ToolKit.Model
 {
-    public class Person
+    public partial class Person: ObservableObject
     {
-        public string Name { get; set; } = "";
-        public int Age { get; set; } = 0;   
+        [ObservableProperty] private string name = string.Empty;
+        [ObservableProperty] private int age;
     }
 }

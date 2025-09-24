@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -29,6 +13,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\model\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|c:\\csharp.net\\.net wpf\\mvvm toolkit\\mvvm toolkit\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD01674F-AE3A-40CB-8A8B-856568B1A8A0}|MVVM ToolKit\\MVVM ToolKit.csproj|solutionrelative:mvvm toolkit\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +46,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\App.xaml",
               "RelativeDocumentMoniker": "MVVM ToolKit\\App.xaml",
@@ -58,20 +58,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\App.xaml.cs",
               "RelativeDocumentMoniker": "MVVM ToolKit\\App.xaml.cs",
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\App.xaml.cs",
               "RelativeToolTip": "MVVM ToolKit\\App.xaml.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAADwvyYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwBcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-19T17:37:36.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "MVVM ToolKit\\AssemblyInfo.cs",
@@ -84,33 +84,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "MVVM ToolKit\\ViewModel\\MainViewModel.cs",
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "MVVM ToolKit\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAYwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAD4v1MAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T08:02:41.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Person.cs",
               "DocumentMoniker": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\Model\\Person.cs",
               "RelativeDocumentMoniker": "MVVM ToolKit\\Model\\Person.cs",
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\Model\\Person.cs",
               "RelativeToolTip": "MVVM ToolKit\\Model\\Person.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T08:01:13.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MVVM ToolKit\\MainWindow.xaml",
@@ -122,13 +122,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MVVM ToolKit\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\MainWindow.xaml.cs",
               "RelativeToolTip": "MVVM ToolKit\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAEwBQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T07:54:34.955Z",
               "EditorCaption": ""

@@ -4,6 +4,7 @@ using MVVM_ToolKit.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,12 +17,36 @@ namespace MVVM_ToolKit.ViewModel
         [ObservableProperty]
         // 속성에 대한 변경 알림을 자동으로 구현해줌 
         // 아마 change이벤트 invoke하는 걸 자동으로 해주는듯
-        public string title   = "TITLE";
+        private string title = "TITLE";
         [ObservableProperty]
-        public Person? selectedPerson { get; set; }
+        [NotifyCanExecuteChangedFor(nameof(UpdatePersonNameCommand))]
+        [NotifyCanExecuteChangedFor(nameof(RemovePersonCommand))]
+        private Person? selectedPerson;
 
-        public string? MyStr;
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(FullName))]
+        [NotifyCanExecuteChangedFor(nameof(UpdatePersonNameCommand))]
+        public string? personFirstName;
 
+        [ObservableProperty]
+        [NotifyPropertyChangedFor(nameof(FullName))]
+        [NotifyCanExecuteChangedFor(nameof(UpdatePersonNameCommand))]
+        public string? personLastName;
+ 
+        
+        public String FullName => $"{PersonFirstName} {PersonLastName}";    
+
+        [RelayCommand (CanExecute = nameof(CanUpdatePersonName))]
+        public void UpdatePersonName()
+        {
+            if (SelectedPerson != null)
+            {
+                SelectedPerson.Name = $"{PersonFirstName} {PersonLastName}";
+                // SelectedPerson 속성 변경시 자동으로 PropertyChanged 이벤트 발생
+           
+            }
+        }
+        public bool CanUpdatePersonName() => SelectedPerson != null && !string.IsNullOrWhiteSpace(PersonFirstName) && !string.IsNullOrWhiteSpace(PersonLastName);   
         // ObservableCollection - 컬렉션에 대한 변경 알림을 제공
         //추가되거나 변경되거나 삭제되거나 할때 자동알림
         public ObservableCollection<Person> People { get; } = new()
@@ -30,13 +55,24 @@ namespace MVVM_ToolKit.ViewModel
         new Person { Name = "김철수", Age = 30 }
     };
         // ObervableCollection<Person> 로 생성시 자동으로 INotifyCollectionChanged 구현   
+        [RelayCommand]
+        private void UpdateTitle()
+        {
+            Title = "Updated Title " + DateTime.Now.ToString("HH:mm:ss");
+            // Title 속성 변경시 자동으로 PropertyChanged 이벤트 발생
+        }
 
         [RelayCommand]
         private void AddPerson()
         {
             People.Add(new Person { Name = "새로운 사람", Age = 20 });
+            Debug.WriteLine("AddPerson completed");
         }
         // RelayCommand - ICommand 인터페이스 구현을 자동으로 해줌
+
+
+       
+
 
         [RelayCommand(CanExecute = nameof(CanRemovePerson))]
         // CanExecute 속성으로 명령이 실행될 수 있는지 여부를 결정하는 메서드 지정    
@@ -45,9 +81,26 @@ namespace MVVM_ToolKit.ViewModel
             if (SelectedPerson != null)
             {
                 People.Remove(SelectedPerson);
+                
+
+
+
             }
         }
+        
         private bool CanRemovePerson()=> SelectedPerson != null;
 
+        [RelayCommand]
+        private async Task LoadPeopleAsync()
+        {
+            Title = "로딩 중…";              
+            await Task.Delay(2000);
+            People.Clear();
+            People.Add(new Person { Name = "비동기 사람1", Age = 28 });
+            People.Add(new Person { Name = "비동기 사람2", Age = 35 });
+            Title = "로딩 완료";
+            Debug.WriteLine("LoadPeopleAsync completed" ); 
+
+        }
     }
 }
