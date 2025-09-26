@@ -13,7 +13,10 @@ using System.Threading.Tasks;
 namespace MVVM_ToolKit.ViewModel
 {
     // partal 로선언 - 다른 파일에서 같은 이름의 partial class 를 선언하여 기능을 분리할 수 있다.
-    partial class MainViewModel: ObservableObject
+    // ObservableObject - INotifyPropertyChanged 인터페이스 구현을 자동으로 해줌
+    // ObservableValidator - INotifyDataErrorInfo 인터페이스 구현을 자동으로 해줌 
+    // ObservableValidator 는 기본적으로  ObservableObject  상속함
+    partial class MainViewModel :  ObservableValidator
     {       
         // 속성에 대한 변경 알림을 자동으로 구현해줌 
         // 아마 change이벤트 invoke하는 걸 자동으로 해주는듯
@@ -105,6 +108,13 @@ namespace MVVM_ToolKit.ViewModel
             Title = "로딩 완료";
             Debug.WriteLine("LoadPeopleAsync completed" ); 
 
+        }
+        [RelayCommand]
+        private void Save()
+        {
+            ValidateAllProperties();
+            if (HasErrors) return; // 에러 있으면 저장 막기
+ 
         }
     }
 }
