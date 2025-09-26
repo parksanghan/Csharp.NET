@@ -1,5 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm.Messaging;
+using MVVM_Tool_K.ViewModel.Messages;
 using MVVM_ToolKit.Model;
 using System;
 using System.Collections.Generic;
@@ -29,6 +31,16 @@ namespace MVVM_ToolKit.ViewModel
         [NotifyCanExecuteChangedFor(nameof(UpdatePersonNameCommand))]
         [NotifyCanExecuteChangedFor(nameof(RemovePersonCommand))]
         private Person? selectedPerson;
+
+        // [ObservableProperty0] 속성이 자동으로 해당메서드를 찾음
+        partial void OnSelectedPersonChanged (Person? value)
+        {
+            if (value != null)
+            {
+                WeakReferenceMessenger.Default.Send(new PersonSelectedMessage(value));
+            }
+           
+        }
 
         [ObservableProperty]
         [NotifyPropertyChangedFor(nameof(FullName))]
