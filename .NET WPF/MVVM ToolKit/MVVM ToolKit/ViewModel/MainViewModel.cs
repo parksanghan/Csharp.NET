@@ -37,6 +37,7 @@ namespace MVVM_ToolKit.ViewModel
         {
             if (value != null)
             {
+                //
                 WeakReferenceMessenger.Default.Send(new PersonSelectedMessage(value));
             }
            
