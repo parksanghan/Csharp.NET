@@ -33,7 +33,7 @@ namespace MVVM_ToolKit.ViewModel
         private Person? selectedPerson;
 
         // [ObservableProperty0] 속성이 자동으로 해당메서드를 찾음
-        partial void OnSelectedPersonChanged (Person? value)
+        partial void OnSelectedPersonChanged(Person? value)
         {
             if (value != null)
             {

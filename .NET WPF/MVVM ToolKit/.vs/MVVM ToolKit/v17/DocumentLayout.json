@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "MVVM ToolKit\\ViewModel\\DetailViewModel.cs",
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\ViewModel\\DetailViewModel.cs",
               "RelativeToolTip": "MVVM ToolKit\\ViewModel\\DetailViewModel.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwCEAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwCAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T15:04:10.056Z",
               "EditorCaption": ""
@@ -73,7 +73,7 @@
               "RelativeDocumentMoniker": "MVVM ToolKit\\ViewModel\\Messages\\PersonSelectedMessage.cs",
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\ViewModel\\Messages\\PersonSelectedMessage.cs",
               "RelativeToolTip": "MVVM ToolKit\\ViewModel\\Messages\\PersonSelectedMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwwAAABfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T14:55:50.381Z",
               "EditorCaption": ""
@@ -87,8 +87,7 @@
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\App.xaml",
               "RelativeToolTip": "MVVM ToolKit\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-19T17:55:22.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T17:55:22.467Z"
             },
             {
               "$type": "Document",
@@ -100,8 +99,7 @@
               "RelativeToolTip": "MVVM ToolKit\\App.xaml.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAIwBcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T17:37:36.446Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T17:37:36.446Z"
             },
             {
               "$type": "Document",
@@ -113,8 +111,7 @@
               "RelativeToolTip": "MVVM ToolKit\\AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-19T16:00:56.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-19T16:00:56.835Z"
             },
             {
               "$type": "Document",
@@ -124,7 +121,7 @@
               "RelativeDocumentMoniker": "MVVM ToolKit\\ViewModel\\MainViewModel.cs",
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "MVVM ToolKit\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAiwCcAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAADgvzEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-18T08:02:41.01Z",
               "EditorCaption": ""
@@ -139,8 +136,7 @@
               "RelativeToolTip": "MVVM ToolKit\\Model\\Person.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T08:01:13.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T08:01:13.483Z"
             },
             {
               "$type": "Document",
@@ -151,8 +147,7 @@
               "ToolTip": "C:\\Csharp.NET\\.NET WPF\\MVVM ToolKit\\MVVM ToolKit\\MainWindow.xaml",
               "RelativeToolTip": "MVVM ToolKit\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-18T07:54:39.341Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T07:54:39.341Z"
             },
             {
               "$type": "Document",
@@ -164,8 +159,7 @@
               "RelativeToolTip": "MVVM ToolKit\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAEwBQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-18T07:54:34.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-18T07:54:34.955Z"
             }
           ]
         }
