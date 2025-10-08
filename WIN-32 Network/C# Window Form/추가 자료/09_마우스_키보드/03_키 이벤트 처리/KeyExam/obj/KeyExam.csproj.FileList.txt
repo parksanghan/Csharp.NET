@@ -1,5 +1,0 @@
-obj\Debug\ResolveAssemblyReference.cache
-bin\Debug\KeyExam.exe
-bin\Debug\KeyExam.pdb
-obj\Debug\KeyExam.exe
-obj\Debug\KeyExam.pdb
