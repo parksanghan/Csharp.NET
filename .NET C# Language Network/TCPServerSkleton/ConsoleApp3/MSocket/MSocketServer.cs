@@ -1,0 +1,98 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3.MSocket
+{
+    public class MSocketServer
+    {
+        private readonly   Socket serverSocket;
+        private CancellationTokenSource? cts; // 비동기 관리 객체 
+        public MSocketServer(Socket serverSocket)
+        {
+            this.serverSocket =  serverSocket ?? throw new ArgumentNullException(nameof(serverSocket)); 
+            
+            
+        }   
+        public static MSocketServer Create()
+        {
+            Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            return new MSocketServer(serverSocket);
+        }
+        public void SocketInit(string address)
+        {
+            serverSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
+            serverSocket.SetSocketOption(SocketOptionLevel.Tcp, SocketOptionName.NoDelay, true);
+            serverSocket.Bind(System.Net.IPEndPoint.Parse(address));
+        }
+        public void StartListening(int backlog=100                  )
+        {
+            serverSocket.Listen(backlog);
+            Console.WriteLine("Server is listening...");
+            cts = new CancellationTokenSource();// 비동기 관리 객체 초기화
+
+            Task.Run(() =>AcceptLoopClient(cts.Token));
+        }
+        public void AcceptLoopClient(CancellationToken token)
+        {
+
+            while (!token.IsCancellationRequested)
+            {
+                try
+                {
+                    Socket clientSocket = serverSocket.Accept();
+                    Console.WriteLine("Client connected.");
+                    // 호출 뒤에 각 쓰레드에 할당
+                    Thread thread = new Thread(() => HandleClient(clientSocket));   
+                }
+                catch (SocketException ex)
+                {
+                    Console.WriteLine($"Socket exception: {ex.Message}");
+                }
+                catch (ObjectDisposedException)
+                {
+                    // 서버 소켓이 닫혔을 때 발생할 수 있음
+                    break;
+                }
+            }
+          
+        }
+        private void HandleClient(Socket clientSocket)
+        {
+            try
+            {
+                byte[] buffer = new byte[1024];
+                while (true)
+                {
+                    int received = clientSocket.Receive(buffer);
+                    if (received == 0) break;
+
+                    string msg = Encoding.UTF8.GetString(buffer, 0, received);
+                    Console.WriteLine($"[Client {clientSocket.RemoteEndPoint}] {msg}");
+
+                    // 에코 응답
+                    byte[] data = Encoding.UTF8.GetBytes("Echo: " + msg);
+                    clientSocket.Send(data);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[WARN] Client error: {ex.Message}");
+            }
+            finally
+            {
+                Console.WriteLine($"[INFO] Client disconnected: {clientSocket.RemoteEndPoint}");
+                clientSocket.Close();
+            }
+        }
+
+        public void Stop()
+        {
+            serverSocket.Close();
+            Console.WriteLine("Server stopped.");
+        }
+    }
+}
