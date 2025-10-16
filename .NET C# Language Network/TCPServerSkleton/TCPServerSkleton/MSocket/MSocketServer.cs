@@ -11,11 +11,37 @@ namespace ConsoleApp3.MSocket
     {
         private readonly   Socket serverSocket;
         private CancellationTokenSource? cts; // 비동기 관리 객체 
+        private readonly List<Socket> clients;
+        private delegate void LogDelegate(Socket clientSocket);
+        private delegate void ErrorDelegate(Socket clientSocket, Exception ex);
+
         public MSocketServer(Socket serverSocket)
         {
-            this.serverSocket =  serverSocket ?? throw new ArgumentNullException(nameof(serverSocket)); 
-            
-            
+            this.serverSocket = serverSocket ?? throw new ArgumentNullException(nameof(serverSocket));
+
+            clients = new List<Socket>();   
+        }
+        public void RemoveClient(Socket socket)
+        {
+            lock (clients)
+            {
+                if (clients.Contains(socket))
+                {
+                    clients.Remove(socket);
+                    socket.Close();
+                }
+            }
+        }
+        public void AddClient(Socket socket)
+        {
+            lock (clients)
+            {
+                if (!clients.Contains(socket))
+                {
+                    clients.Add(socket);
+                }
+            }
+
         }   
         public static MSocketServer Create()
         {
@@ -44,13 +70,19 @@ namespace ConsoleApp3.MSocket
                 try
                 {
                     Socket clientSocket = serverSocket.Accept();
+                    AddClient(clientSocket);
                     Console.WriteLine("Client connected.");
                     // 호출 뒤에 각 쓰레드에 할당
-                    Thread thread = new Thread(() => HandleClient(clientSocket));   
+                    Thread thread = new Thread(() => HandleClient(clientSocket))
+                    {
+                        IsBackground = true
+                    };
+                    thread.Start();
                 }
                 catch (SocketException ex)
                 {
                     Console.WriteLine($"Socket exception: {ex.Message}");
+
                 }
                 catch (ObjectDisposedException)
                 {
@@ -81,6 +113,7 @@ namespace ConsoleApp3.MSocket
             catch (Exception ex)
             {
                 Console.WriteLine($"[WARN] Client error: {ex.Message}");
+                RemoveClient(clientSocket);
             }
             finally
             {
@@ -93,6 +126,7 @@ namespace ConsoleApp3.MSocket
         {
             serverSocket.Close();
             Console.WriteLine("Server stopped.");
+            clients.Clear();
         }
     }
 }
