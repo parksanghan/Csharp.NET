@@ -14,12 +14,12 @@ namespace ConsoleApp3.MSocket
         private readonly   Socket serverSocket;
         private CancellationTokenSource? cts; // 비동기 관리 객체 
         private readonly List<Socket> clients;
-        public delegate void LogDelegate(Socket clientSocket , MSocketProperty mSocketProperty ); //  일반로그 대리자
-        public delegate void ErrorDelegate(Socket clientSocket, Exception ex, MSocketProperty mSocketProperty); // 에러로그 대리자
+        private delegate void LogDelegate(Socket clientSocket , MSocketProperty mSocketProperty ); //  일반로그 대리자
+        private delegate void ErrorDelegate(Socket clientSocket, Exception ex, MSocketProperty mSocketProperty); // 에러로그 대리자
                                                                                 
         // 대리자 인스턴스 선언
-        public required LogDelegate logDelegate;
-        public required ErrorDelegate errorDelegate;
+        private   LogDelegate logDelegate;
+        private   ErrorDelegate errorDelegate;
 
         // 함수포인터 대리자 외부 초기화
         public void SetDelegate(Action<Socket, MSocketProperty> logAction, Action<Socket, Exception , MSocketProperty>? errAction)
