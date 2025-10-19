@@ -4,17 +4,34 @@ using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using TCPServerSkleton.MSocket;
 
 namespace ConsoleApp3.MSocket
 {
+   
     public class MSocketServer
     {
         private readonly   Socket serverSocket;
         private CancellationTokenSource? cts; // 비동기 관리 객체 
         private readonly List<Socket> clients;
-        private delegate void LogDelegate(Socket clientSocket);
-        private delegate void ErrorDelegate(Socket clientSocket, Exception ex);
+        public delegate void LogDelegate(Socket clientSocket , MSocketProperty mSocketProperty ); //  일반로그 대리자
+        public delegate void ErrorDelegate(Socket clientSocket, Exception ex, MSocketProperty mSocketProperty); // 에러로그 대리자
+                                                                                
+        // 대리자 인스턴스 선언
+        public LogDelegate logDelegate;
+        public ErrorDelegate errorDelegate;
 
+        // 함수포인터 대리자 외부 초기화
+        public void SetDelegate(Action<Socket, MSocketProperty> logAction, Action<Socket, Exception , MSocketProperty> errAction)
+        {
+            this.logDelegate = (sock,state) => logAction(sock, state);
+            this.errorDelegate = (sock, ex, state) => errAction(sock, ex, state);
+        }
+        // 함수포인터 대리자 내부 초기화 
+        private  void SetDelegate()
+        {   
+
+        }
         public MSocketServer(Socket serverSocket)
         {
             this.serverSocket = serverSocket ?? throw new ArgumentNullException(nameof(serverSocket));
