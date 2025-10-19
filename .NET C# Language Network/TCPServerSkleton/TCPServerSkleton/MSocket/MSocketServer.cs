@@ -18,25 +18,33 @@ namespace ConsoleApp3.MSocket
         public delegate void ErrorDelegate(Socket clientSocket, Exception ex, MSocketProperty mSocketProperty); // 에러로그 대리자
                                                                                 
         // 대리자 인스턴스 선언
-        public LogDelegate logDelegate;
-        public ErrorDelegate errorDelegate;
+        public required LogDelegate logDelegate;
+        public required ErrorDelegate errorDelegate;
 
         // 함수포인터 대리자 외부 초기화
-        public void SetDelegate(Action<Socket, MSocketProperty> logAction, Action<Socket, Exception , MSocketProperty> errAction)
+        public void SetDelegate(Action<Socket, MSocketProperty> logAction, Action<Socket, Exception , MSocketProperty>? errAction)
         {
             this.logDelegate = (sock,state) => logAction(sock, state);
-            this.errorDelegate = (sock, ex, state) => errAction(sock, ex, state);
+            if(errAction != null)this.errorDelegate = (sock, ex, state) => errAction(sock, ex, state);
         }
         // 함수포인터 대리자 내부 초기화 
         private  void SetDelegate()
         {   
-
+            this.logDelegate = (sock, state) =>
+            {
+               Console.WriteLine($"[LOG] Client {sock.RemoteEndPoint} - State: {state.ToString()}");
+            };
+            this.errorDelegate = (sock, ex, state) =>
+            {
+                Console.WriteLine($"[ERROR] Client {sock.RemoteEndPoint} - State: {state.ToString()} - ErrorType: {ex.Message}");
+            };
         }
         public MSocketServer(Socket serverSocket)
         {
             this.serverSocket = serverSocket ?? throw new ArgumentNullException(nameof(serverSocket));
 
-            clients = new List<Socket>();   
+            clients = new List<Socket>();  
+            SetDelegate(); // 기본 로그 대리자 설정
         }
         public void RemoveClient(Socket socket)
         {
