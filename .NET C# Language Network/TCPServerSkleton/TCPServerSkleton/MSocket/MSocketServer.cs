@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
@@ -14,6 +15,7 @@ namespace ConsoleApp3.MSocket
         private readonly   Socket serverSocket;
         private CancellationTokenSource? cts; // 비동기 관리 객체 
         private readonly List<Socket> clients;
+        // 대리자 타입 정의
         private delegate void LogDelegate(Socket clientSocket , MSocketProperty mSocketProperty ); //  일반로그 대리자
         private delegate void ErrorDelegate(Socket clientSocket, Exception ex, MSocketProperty mSocketProperty); // 에러로그 대리자
                                                                                 
@@ -37,14 +39,18 @@ namespace ConsoleApp3.MSocket
             this.errorDelegate = (sock, ex, state) =>
             {
                 Console.WriteLine($"[ERROR] Client {sock.RemoteEndPoint} - State: {state.ToString()} - ErrorType: {ex.Message}");
+                
             };
         }
         public MSocketServer(Socket serverSocket)
         {
             this.serverSocket = serverSocket ?? throw new ArgumentNullException(nameof(serverSocket));
-
-            clients = new List<Socket>();  
             SetDelegate(); // 기본 로그 대리자 설정
+            clients = new List<Socket>();  
+           
+            logDelegate(serverSocket, MSocketProperty.Init);
+
+
         }
         public void RemoveClient(Socket socket)
         {
@@ -54,6 +60,8 @@ namespace ConsoleApp3.MSocket
                 {
                     clients.Remove(socket);
                     socket.Close();
+                    logDelegate(socket, MSocketProperty.Disconnect);
+
                 }
             }
         }
@@ -64,6 +72,7 @@ namespace ConsoleApp3.MSocket
                 if (!clients.Contains(socket))
                 {
                     clients.Add(socket);
+                    logDelegate(socket, MSocketProperty.Connect);
                 }
             }
 
@@ -78,6 +87,7 @@ namespace ConsoleApp3.MSocket
             serverSocket.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, true);
             serverSocket.SetSocketOption(SocketOptionLevel.Tcp, SocketOptionName.NoDelay, true);
             serverSocket.Bind(System.Net.IPEndPoint.Parse(address));
+
         }
         public void StartListening(int backlog=100                  )
         {
@@ -89,14 +99,14 @@ namespace ConsoleApp3.MSocket
         }
         public void AcceptLoopClient(CancellationToken token)
         {
-
+            logDelegate(serverSocket, MSocketProperty.Accept);
             while (!token.IsCancellationRequested)
             {
                 try
                 {
                     Socket clientSocket = serverSocket.Accept();
+                    logDelegate(clientSocket, MSocketProperty.Accept);
                     AddClient(clientSocket);
-                    Console.WriteLine("Client connected.");
                     // 호출 뒤에 각 쓰레드에 할당
                     Thread thread = new Thread(() => HandleClient(clientSocket))
                     {
@@ -125,6 +135,7 @@ namespace ConsoleApp3.MSocket
                 while (true)
                 {
                     int received = clientSocket.Receive(buffer);
+                    logDelegate(clientSocket, MSocketProperty.Receive); 
                     if (received == 0) break;
 
                     string msg = Encoding.UTF8.GetString(buffer, 0, received);
@@ -133,6 +144,7 @@ namespace ConsoleApp3.MSocket
                     // 에코 응답
                     byte[] data = Encoding.UTF8.GetBytes("Echo: " + msg);
                     clientSocket.Send(data);
+                    logDelegate(clientSocket, MSocketProperty.Send);
                 }
             }
             catch (Exception ex)
@@ -142,16 +154,26 @@ namespace ConsoleApp3.MSocket
             }
             finally
             {
-                Console.WriteLine($"[INFO] Client disconnected: {clientSocket.RemoteEndPoint}");
+                logDelegate(clientSocket, MSocketProperty.Disconnect);
                 clientSocket.Close();
             }
         }
 
         public void Stop()
         {
-            serverSocket.Close();
-            Console.WriteLine("Server stopped.");
-            clients.Clear();
-        }
+            try
+            {
+                serverSocket.Close();
+                Console.WriteLine("Server stopped.");
+                clients.Clear();
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+
+            }
     }
 }

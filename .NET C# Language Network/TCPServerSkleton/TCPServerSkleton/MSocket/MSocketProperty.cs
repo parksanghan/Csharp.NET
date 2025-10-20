@@ -8,9 +8,11 @@ namespace TCPServerSkleton.MSocket
 {
     public enum MSocketProperty
     {
+        Init=0,
         Connect=1,
         Disconnect=2,
         Send=3,
-        Receive=4
+        Receive=4,
+        Accept=5,
     }
 }
