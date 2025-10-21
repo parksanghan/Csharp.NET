@@ -14,5 +14,6 @@ namespace TCPServerSkleton.MSocket
         Send=3,
         Receive=4,
         Accept=5,
+        Stop=6
     }
 }
