@@ -43,11 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DATA\DBControl.cs" />
+    <Compile Include="DATA\DBManager.cs" />
+    <Compile Include="DATA\XMLManager.cs" />
+    <Compile Include="DDSModule\Participant.cs" />
+    <Compile Include="DDSModule\Publisher.cs" />
+    <Compile Include="DDSModule\Subscriber.cs" />
+    <Compile Include="DDSPacket\PacketFactory.cs" />
+    <Compile Include="DDSPacket\PacketTypeSupport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DDSPacket\RE\" />
+    <Folder Include="DDSPacket\SE\" />
+    <Folder Include="Log\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

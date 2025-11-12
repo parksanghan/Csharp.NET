@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DDS.DDSPacket
 {
-    internal class DDSFactory
+    internal class PacketFactory
     {
     }
 }
