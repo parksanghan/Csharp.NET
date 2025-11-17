@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLIIB", "PLIIB\PLIIB.csproj", "{5B5D3DB6-2FF8-4B53-B02E-7E2826D275B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B5D3DB6-2FF8-4B53-B02E-7E2826D275B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B5D3DB6-2FF8-4B53-B02E-7E2826D275B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B5D3DB6-2FF8-4B53-B02E-7E2826D275B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B5D3DB6-2FF8-4B53-B02E-7E2826D275B0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3ADD5D3A-7AEA-4D72-9B64-1A81EC9E7F6C}
+	EndGlobalSection
+EndGlobal
