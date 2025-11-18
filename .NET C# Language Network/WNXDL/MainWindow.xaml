@@ -3,20 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
         xmlns:nxPlanet="clr-namespace:Pixoneer.NXDL.NXPlanet;assembly=NXPlanet"
+      
         xmlns:local="clr-namespace:WNXDL"
-        mc:Ignorable="d"
+        mc:Ignorable="d" 
         Title="MainWindow" Height="725" Width="1015">
     <Grid>
         <CheckBox Content="InverseBtn" HorizontalAlignment="Left" Margin="65,89,0,0" VerticalAlignment="Top"/>
         <CheckBox Content="InverseMouseWheel" HorizontalAlignment="Left" Margin="68,134,0,0" VerticalAlignment="Top"/>
         <CheckBox Content="Rotable" HorizontalAlignment="Left" Margin="63,174,0,0" VerticalAlignment="Top"/>
         <ComboBox HorizontalAlignment="Left" Margin="45,269,0,0" VerticalAlignment="Top" Width="120"/>
-        <WindowsFormsHost Grid.Column="2" Margin="3,0,0,3">
-            <nxPlanet:NXPlanetView x:Name="nxPlanetView1">
-
-            </nxPlanet:NXPlanetView>
-        </WindowsFormsHost>
+        <wfi:WindowsFormsHost Grid.Column="2" Margin="3,0,0,3">
+            
+        </wfi:WindowsFormsHost>
     </Grid>
    
 </Window>

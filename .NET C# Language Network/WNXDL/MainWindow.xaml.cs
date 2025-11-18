@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pixoneer.NXDL.NXPlanet;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,9 @@ namespace WNXDL
     /// </summary>
     public partial class MainWindow : Window
     {
+        private NXPlanetView dd =  new NXPlanetView();
         public MainWindow()
+
         {
             InitializeComponent();
         }
