@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WNXDL", "WNXDL.csproj", "{4AD692E8-4673-4901-8EAC-72E5982D4BBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4AD692E8-4673-4901-8EAC-72E5982D4BBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD692E8-4673-4901-8EAC-72E5982D4BBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD692E8-4673-4901-8EAC-72E5982D4BBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD692E8-4673-4901-8EAC-72E5982D4BBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86FA1BFE-435E-483E-92E0-F65F74680C36}
+	EndGlobalSection
+EndGlobal
