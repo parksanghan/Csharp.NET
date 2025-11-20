@@ -1,0 +1,59 @@
+﻿<Window x:Class="XDL_PlanetView2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XDL_PlanetView2"
+        xmlns:nxPlanet="clr-namespace:Pixoneer.NXDL.NXPlanet;assembly=NXPlanet"
+        mc:Ignorable="d"
+        Title="PlanetView2" Height="650" Width="925" MinWidth="925" MinHeight="650" Loaded="Window_Loaded" Closed="Window_Closed" Icon="pixonnerimage1_qCH_icon.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Margin="0,5,0,0">
+            <MenuItem Header="_2D Measurement">
+                <MenuItem x:Name="Measure2DLineMenuItem" Header="거리(단선)측정" Click="Measure2DLineMenuItem_Click"/>
+                <MenuItem x:Name="Measure2DPolyLineMenuItem" Header="거리(폴리라인)측정" Click="Measure2DPolyLineMenuItem_Click"/>
+                <MenuItem x:Name="Measure2DAreaMenuItem" Header="면적 측정" Click="Measure2DAreaMenuItem_Click"/>
+                <MenuItem x:Name="Measure2DAnglepMenuItem" Header="각도 측정(진북방향)" Click="Measure2DAngleMenuItem_Click"/>
+                <MenuItem x:Name="Measure2DAngle3PtMenuItem" Header="각도 측정(3점 이용)" Click="Measure2DAngle3PtMenuItem_Click"/>
+                <MenuItem x:Name="Measure2DCircleMenuItem" Header="원형 측정" Click="Measure2DCircleMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="_3D Measurement">
+                <MenuItem x:Name="Measure3DLineMenuItem" Header="거리(단선)측정" Click="Measure3DLineMenuItem_Click"/>
+                <MenuItem x:Name="Measure3DPolyLineMenuItem" Header="거리(폴리라인)측정" Click="Measure3DPolyLineMenuItem_Click"/>
+                <MenuItem x:Name="Measure3DAreaMenuItem" Header="면적 측정" Click="Measure3DAreaMenuItem_Click"/>
+                <MenuItem x:Name="Measure3DAngleMenuItem" Header="각도 측정(진북방향)" Click="Measure3DAngleMenuItem_Click"/>
+                <MenuItem x:Name="Measure3DAngle3PtMenuItem" Header="각도 측정(3점 이용)" Click="Measure3DAngle3PtMenuItem_Click"/>
+                <MenuItem x:Name="Measure3DCircleMenuItem" Header="원형 측정" Click="Measure3DCircleMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="사용자 정의">
+                <MenuItem x:Name="UserDefinedMeasureMenuItem" Header="거리 및 각도 측정" Click="UserDefinedMeasureMenuItem_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <WindowsFormsHost>
+                    <nxPlanet:NXPlanetView x:Name="nxPlanetView2D">
+                        <nxPlanet:NXPlanetView.Controls>
+                            <nxPlanet:NXPlanetLayer x:Name="nxPlanetLayer2D" OnRender="nxPlanetLayer2D_OnRender" OnWndProc="nxPlanetLayer2D_OnWndProc"/>
+                        </nxPlanet:NXPlanetView.Controls>
+                    </nxPlanet:NXPlanetView>
+                </WindowsFormsHost>
+            </Grid>
+            <GridSplitter Grid.Column="1" Width="5" x:Name="splitContainter1"/>
+            <Grid Grid.Column="2">
+                <WindowsFormsHost>
+                    <nxPlanet:NXPlanetView x:Name="nxPlanetView3D" EarthMode="Planet3D"/>
+                </WindowsFormsHost>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

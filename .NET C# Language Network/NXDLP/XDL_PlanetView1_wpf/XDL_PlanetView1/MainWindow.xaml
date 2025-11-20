@@ -1,0 +1,61 @@
+﻿<Window x:Class="XDL_PlanetView1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XDL_PlanetView1"
+        xmlns:nxPlanet="clr-namespace:Pixoneer.NXDL.NXPlanet;assembly=NXPlanet"
+        mc:Ignorable="d"
+        Title="PlanetView1" Height="700" Width="1100" MinHeight="700" MinWidth="1100" Loaded="Window_Loaded" Closed="Window_Closed" Icon="pixonnerimage1_qCH_icon.ico">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="210"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <GroupBox x:Name="groupBox" Header="Mouse" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="100" Width="194">
+                <Grid Margin="0,0,0,-3">
+                    <CheckBox x:Name="checkBoxInverseMouseButton" Content="InverseMouseButton" Margin="3,6,21,56" Checked="checkBoxInverseMouseButton_Checked" Unchecked="checkBoxInverseMouseButton_UnChecked"/>
+                    <CheckBox x:Name="checkBoxInverseMouseWheel" Content="InverseMouseWheel" Margin="3,25,21,38" RenderTransformOrigin="0.394,1.389" Checked="checkBoxInverseMouseWheel_Checked" Unchecked="checkBoxInverseMouseWheel_Unchecked"/>
+                    <CheckBox x:Name="checkBoxRotatable" Content="Rotatable" Margin="0,58,44,0" RenderTransformOrigin="0.394,1.389" HorizontalAlignment="Right" Width="135" Checked="checkBoxRotatable_Checked" Unchecked="checkBoxRotatable_Unchecked"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="groupBox1" Header="Grid" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Height="75" Width="194">
+                <ComboBox Name="comboBoxGrid" SelectionChanged="comboBoxGrid_SelectionChanged" HorizontalAlignment="Left" Margin="11,14,0,0" VerticalAlignment="Top" Width="155">
+                    <ComboBoxItem Content="None"/>
+                    <ComboBoxItem Content="Degree"/>
+                    <ComboBoxItem Content="GARS"/>
+                </ComboBox>
+            </GroupBox>
+            <GroupBox x:Name="groupBox2" Header="Scale" HorizontalAlignment="Left" Margin="10,195,0,0" VerticalAlignment="Top" Width="194" Height="75">
+                <Grid>
+                    <Label x:Name="label" Content="1 :" HorizontalAlignment="Left" Margin="0,14,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="comboBoxScale" HorizontalAlignment="Left" Margin="28,18,0,0" VerticalAlignment="Top" Width="84" SelectedIndex="0">
+                        <ComboBoxItem Content="1000000"/>
+                        <ComboBoxItem Content="500000"/>
+                        <ComboBoxItem Content="100000"/>
+                        <ComboBoxItem Content="50000"/>
+                        <ComboBoxItem Content="10000"/>
+                    </ComboBox>
+                    <Button x:Name="buttonScaleApply" Content="Apply" HorizontalAlignment="Left" Margin="117,18,0,0" VerticalAlignment="Top" Width="57" Click="buttonScaleApply_Click"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox x:Name="groupBox3" Header="" HorizontalAlignment="Left" Margin="10,275,0,0" VerticalAlignment="Top" Height="97" Width="194">
+                <Grid>
+                    <CheckBox x:Name="checkBoxShowPBP" Content="Show PBP" HorizontalAlignment="Left" Margin="3,10,0,0" VerticalAlignment="Top" Checked="checkBoxShowPBP_Checked" Unchecked="checkBoxShowPBP_Unchecked"/>
+                    <CheckBox x:Name="checkBoxShowStar" Content="Show Star" HorizontalAlignment="Left" Margin="3,30,0,0" VerticalAlignment="Top" Checked="checkBoxShowStar_Checked" Unchecked="checkBoxShowStar_Unchecked"/>
+                    <CheckBox x:Name="checkBoxStatusInfo" Content="Show StatusInfo" HorizontalAlignment="Left" Margin="3,50,0,0" VerticalAlignment="Top" Checked="checkBoxStatusInfo_Checked" Unchecked="checkBoxStatusInfo_Unchecked"/>
+                </Grid>
+            </GroupBox>
+        </Grid>
+        <GridSplitter Grid.Column="1" Width="5" />
+        <WindowsFormsHost Grid.Column="2" Margin="3,0,0,0">
+            <nxPlanet:NXPlanetView x:Name="nxPlanetView1">
+                <nxPlanet:NXPlanetView.Controls>
+                    <nxPlanet:NXPlanetLayer x:Name="nxPlanetLayer1" OnOrthoRender="nxPlanetLayer1_OnOrthoRender" OnWndProc="nxPlanetLayer1_OnWndProc" />
+                </nxPlanet:NXPlanetView.Controls>
+            </nxPlanet:NXPlanetView>
+        </WindowsFormsHost>
+    </Grid>
+</Window>

@@ -1,0 +1,46 @@
+﻿<Window x:Class="XDL_PlanetView3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XDL_PlanetView3"
+        xmlns:nxPlanet="clr-namespace:Pixoneer.NXDL.NXPlanet;assembly=NXPlanet"
+        mc:Ignorable="d"
+        Title="PlanetView3" Height="650" Width="825" MinHeight="650" MinWidth="825" Loaded="Window_Loaded" Closed="Window_Closed" Icon="pixonnerimage1_qCH_icon.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ToolBar x:Name="toolBar" Grid.Row="0" >
+            <Button Content="2D Add :"/>
+            <Button x:Name="pointToolBarButton" Content="Point" Click="pointToolBarButton_Click" />
+            <Button x:Name="polylineToolBarButton" Content="Polyline" Click="polylineToolBarButton_Click"/>
+            <Button x:Name="polygonToolBarButton" Content="Polygon" Click="polygonToolBarButton_Click"/>
+            <Button x:Name="circleToolBarButton" Content="Circle" Click="circleToolBarButton_Click"/>
+            <Button x:Name="symbolToolBarButon" Content="Symbol" Click="symbolToolBarButon_Click"/>
+            <Separator/>
+            <Button x:Name="File" Content="File : "/>
+            <Button x:Name="saveToFileToolBarButton" Content="Save to File" Click="saveToFileToolBarButton_Click" />
+            <Button x:Name="loadFileToolBarButton" Content="Load into 3D View" Click="loadFileToolBarButton_Click"/>
+        </ToolBar>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <WindowsFormsHost>
+                    <nxPlanet:NXPlanetView x:Name="nxPlanetView2D" EarthMode="Planet2D"/>
+                </WindowsFormsHost>
+            </Grid>
+            <Separator x:Name="gridSplitter1" Grid.Column="1"/>
+            <Grid Grid.Column="2">
+                <WindowsFormsHost>
+                    <nxPlanet:NXPlanetView x:Name="nxPlanetView3D" EarthMode="Planet3D"/>
+                </WindowsFormsHost>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
