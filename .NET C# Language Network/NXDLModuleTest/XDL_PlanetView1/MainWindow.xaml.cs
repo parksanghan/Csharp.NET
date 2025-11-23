@@ -17,6 +17,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -553,7 +554,7 @@ namespace XDL_PlanetView1
             if (b) return true;
             else
             {
-                MessageBox.Show("invalid Mode");
+                System.Windows.Forms.MessageBox.Show("invalid Mode");
                 return false;
             }
         }
@@ -563,7 +564,7 @@ namespace XDL_PlanetView1
             if (b) return true;
             else
             {
-                MessageBox.Show("invalid Mode");
+                System.Windows.Forms.MessageBox.Show("invalid Mode");
                 return false;
             }
         }
@@ -653,15 +654,36 @@ namespace XDL_PlanetView1
         private void saveMenu_Click(object sender, RoutedEventArgs e)
         {
             XScene sc_root= nxPlanetLayerEditor.GetScene();
-            SaveFileDialog saveFileDialog = new SaveFileDialog();   
+            System.Windows.Forms.SaveFileDialog saveFileDialog = new System.Windows.Forms.SaveFileDialog();   
             saveFileDialog.Filter = "XDL Scene file(*.sml)|*.sml;||"; // 포멧필터 
-            if (saveFileDialog.ShowDialog() !=  ) return;
+            if (saveFileDialog.ShowDialog() != System.Windows.Forms.DialogResult.OK  ) return;
+
+            if(XScene.SaveScene(sc_root,saveFileDialog.FileName,sc_root.SR))System.Windows.Forms.MessageBox.Show("Save Success");
+            else System.Windows.Forms.MessageBox.Show("Save Fail");
 
         }
 
         private void openMenu_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
+            System.Windows.Forms.OpenFileDialog ofd = new System.Windows.Forms.OpenFileDialog();
+            ofd.Filter = "XDL Scene file(*.sml)|*.sml;||";
+            if (ofd.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
+
+            // NXPlanetLayerSceneDisplay의 Open 함수를 이용하여 scene 객체 로딩
+            if (nxPlanetLayerDisplay.Open(ofd.FileName))
+            {
+                XScene scene = nxPlanetLayerDisplay.GetScene();
+                // Scene 객체 도시 방법을 추가되는 순서대로 도시하도록 설정한다.
+                // 기본값은 XScene.eDisplayOrder.OrderNone이다.
+                scene.DisplayOrder = XScene.eDisplayOrder.OrderByAddSequence;
+
+                System.Windows.Forms.MessageBox.Show("PlanetView 3D의 scene 객체를 갱신하겠습니다");
+                nxPlanetView1.RefreshScreen();
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("scene 파일을 로딩할 수 없습니다.");
+            }
         }
 
         private void createPointMenu_Click(object sender, RoutedEventArgs e)
