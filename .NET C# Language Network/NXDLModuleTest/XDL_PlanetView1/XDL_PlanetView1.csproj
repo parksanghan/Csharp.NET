@@ -129,6 +129,7 @@
     </Compile>
     <Compile Include="Lib\Events.cs" />
     <Compile Include="Lib\Delegates.cs" />
+    <Compile Include="Lib\FileManager.cs" />
     <Compile Include="Lib\Singleton.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
