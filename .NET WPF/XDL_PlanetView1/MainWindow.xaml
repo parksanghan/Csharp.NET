@@ -1,0 +1,245 @@
+﻿<Window x:Class="XDL_PlanetView1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XDL_PlanetView1"
+        xmlns:nxPlanet="clr-namespace:Pixoneer.NXDL.NXPlanet;assembly=NXPlanet"
+        xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        mc:Ignorable="d"
+        Title="PlanetView1"
+        Height="700" Width="1100"
+        MinHeight="700" MinWidth="1100"
+        Loaded="Window_Loaded"
+        Closed="Window_Closed"
+        Icon="pixonnerimage1_qCH_icon.ico"
+         
+        >
+
+    <Grid>
+        <!-- 위: 메뉴 / 아래: 본문 -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- ===== 상단 메뉴 ===== -->
+        <Menu Grid.Row="0" Background="#FFF7C3C3">
+            <MenuItem Header="_File">
+                <MenuItem Header="Open" Click="openMenu_Click"/>
+                <MenuItem Header="Save" Click="saveMenu_Click"/>
+            </MenuItem>
+            <!--<MenuItem Header="_Edit">
+                <MenuItem Header="Copy"/>
+                <MenuItem Header="Paste"/>
+            </MenuItem>-->
+            <MenuItem Header="_View">
+                <MenuItem Header="_2D View" Click="view2D_Selected"/>
+                <MenuItem Header="_3D View" Click="view3D_Selected"/>
+            </MenuItem>
+            <MenuItem Header="_Create Objects">
+                <MenuItem Header="Point" Click="createPointMenu_Click"/>
+                <MenuItem Header="PolyLine" Click="createPolyLineMenu_Click"/>
+                <MenuItem Header="Polygon" Click="createPolygonMenu_Click"/>
+                <MenuItem Header="Circle" Click="createCircleMenu_Click"/>
+                <MenuItem Header="Symbol" Click="createSymbolMenu_Click"/>
+                <MenuItem Header="Point" Click="createPointMenu_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Tool">
+                <MenuItem Header="_거리측정" Click="measure_Dist"/>
+    
+            </MenuItem>
+
+            <MenuItem Header="_Tool_2D">
+                <MenuItem Header="거리 측정(단선)" Click="Measure2DLineToolStripMenuItem_Click"/>
+                <MenuItem Header="거리 측정(폴리리안)" Click="Measure2DPolyLineToolStripMenuItem_Click"/>
+                <MenuItem Header="_면적 측정" Click="Measure2DAreaToolStripMenuItem_Click"/>
+                <MenuItem Header="_각도 측정(진북방향)" Click="Measure2DAngleToolStripMenuItem_Click"/>
+                <MenuItem Header="_각도 측정(3점 이용)" Click="Measure2DAngle3PtToolStripMenu_Click"/>
+                <MenuItem Header="_원형 측정" Click="Measure2DCircleToolStripMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Tool_3D">
+                <MenuItem Header="거리 측정(단선)" Click="Measure3DLineToolStripMenuItem_Click"/>
+                <MenuItem Header="거리 측정(폴리리안)" Click="Measure3DPolyLineToolStripMenuItem_Click"/>
+                <MenuItem Header="_면적 측정" Click="Measure3DAreaToolStripMenuItem_Click"/>
+                <MenuItem Header="_각도 측정(진북방향)" Click="Measure3DAngleToolStripMenuItem_Click"/>
+                <MenuItem Header="_각도 측정(3점 이용)" Click="Measure3DAngle3PtToolStripMenu_Click"/>
+                <MenuItem Header="_원형 측정" Click="Measure3DCircleToolStripMenuItem_Click"/>
+            </MenuItem>
+         
+        </Menu>
+
+        <!-- ===== 아래 본문: 왼쪽 패널 / 스플리터 / NXPlanetView ===== -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="140"/>
+                <ColumnDefinition Width="9"/>
+                <ColumnDefinition Width="61"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- 왼쪽 패널 -->
+            <Grid Grid.Column="0" Margin="0,-10,0,10" Grid.ColumnSpan="3">
+                <GroupBox x:Name="groupBox"
+                          Header="Mouse"
+                          HorizontalAlignment="Left"
+                          Margin="10,10,0,0"
+                          VerticalAlignment="Top"
+                          Height="100"
+                          Width="194">
+                    <Grid Margin="0,0,0,-3">
+                        <CheckBox x:Name="checkBoxInverseMouseButton"
+                                  Content="InverseMouseButton"
+                                  Margin="3,6,21,56"
+                                  Checked="checkBoxInverseMouseButton_Checked"
+                                  Unchecked="checkBoxInverseMouseButton_UnChecked"/>
+                        <CheckBox x:Name="checkBoxInverseMouseWheel"
+                                  Content="InverseMouseWheel"
+                                  Margin="3,25,21,38"
+                                  RenderTransformOrigin="0.394,1.389"
+                                  Checked="checkBoxInverseMouseWheel_Checked"
+                                  Unchecked="checkBoxInverseMouseWheel_Unchecked"/>
+                        <CheckBox x:Name="checkBoxRotatable"
+                                  Content="Rotatable"
+                                  Margin="0,58,44,0"
+                                  RenderTransformOrigin="0.394,1.389"
+                                  HorizontalAlignment="Right"
+                                  Width="135"
+                                  Checked="checkBoxRotatable_Checked"
+                                  Unchecked="checkBoxRotatable_Unchecked"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox x:Name="groupBox1"
+                          Header="Grid"
+                          HorizontalAlignment="Left"
+                          Margin="10,115,0,0"
+                          VerticalAlignment="Top"
+                          Height="75"
+                          Width="194">
+                    <ComboBox Name="comboBoxGrid"
+                              SelectionChanged="comboBoxGrid_SelectionChanged"
+                              HorizontalAlignment="Left"
+                              Margin="11,14,0,0"
+                              VerticalAlignment="Top"
+                              Width="155">
+                        <ComboBoxItem Content="None"/>
+                        <ComboBoxItem Content="Degree"/>
+                        <ComboBoxItem Content="GARS"/>
+                    </ComboBox>
+                </GroupBox>
+
+                <GroupBox x:Name="groupBox2"
+                          Header="Scale"
+                          HorizontalAlignment="Left"
+                          Margin="10,195,0,0"
+                          VerticalAlignment="Top"
+                          Width="194"
+                          Height="75">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="53*"/>
+                            <ColumnDefinition Width="38*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label x:Name="label"
+                               Content="1 :"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                        <ComboBox x:Name="comboBoxScale"
+                                  HorizontalAlignment="Left"
+                                  Margin="28,18,0,0"
+                                  VerticalAlignment="Top"
+                                  Width="84"
+                                  SelectedIndex="0"
+                                  IsSynchronizedWithCurrentItem="True"
+                                  Grid.ColumnSpan="2"
+                                  Text="">
+                            <ComboBoxItem Content="1000000"/>
+                            <ComboBoxItem Content="500000"/>
+                            <ComboBoxItem Content="100000"/>
+                            <ComboBoxItem Content="50000"/>
+                            <ComboBoxItem Content="10000"/>
+                        </ComboBox>
+                        <Button x:Name="buttonScaleApply"
+                                Content="Apply"
+                                HorizontalAlignment="Left"
+                                Margin="11,18,0,0"
+                                VerticalAlignment="Top"
+                                Width="57"
+                                Click="buttonScaleApply_Click"
+                                Grid.Column="1"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox x:Name="groupBox3"
+                          Header=""
+                          HorizontalAlignment="Left"
+                          Margin="10,275,0,0"
+                          VerticalAlignment="Top"
+                          Height="97"
+                          Width="194">
+                    <Grid>
+                        <CheckBox x:Name="checkBoxShowPBP"
+                                  Content="Show PBP"
+                                  HorizontalAlignment="Left"
+                                  Margin="3,10,0,0"
+                                  VerticalAlignment="Top"
+                                  Checked="checkBoxShowPBP_Checked"
+                                  Unchecked="checkBoxShowPBP_Unchecked"/>
+                        <CheckBox x:Name="checkBoxShowStar"
+                                  Content="Show Star"
+                                  HorizontalAlignment="Left"
+                                  Margin="3,30,0,0"
+                                  VerticalAlignment="Top"
+                                  Checked="checkBoxShowStar_Checked"
+                                  Unchecked="checkBoxShowStar_Unchecked"/>
+                        <CheckBox x:Name="checkBoxStatusInfo"
+                                  Content="Show StatusInfo"
+                                  HorizontalAlignment="Left"
+                                  Margin="3,50,0,0"
+                                  VerticalAlignment="Top"
+                                  Checked="checkBoxStatusInfo_Checked"
+                                  Unchecked="checkBoxStatusInfo_Unchecked"/>
+                    </Grid>
+                </GroupBox>
+
+                <GroupBox Header="2D/3D MODE"
+                          HorizontalAlignment="Left"
+                          Margin="10,377,0,0"
+                          VerticalAlignment="Top"
+                          Width="194"
+                          Height="70">
+                    <ComboBox x:Name="comboBoxMode"
+                              HorizontalAlignment="Left"
+                              SelectionChanged="comboBoxMode_SelectionChanged"
+                              Margin="10,20,0,0"
+                              VerticalAlignment="Top"
+                              SelectedIndex="0"
+                              IsSynchronizedWithCurrentItem="True"
+                              Width="120"
+                              Text="모드선택">
+                        <ComboBoxItem Content="2D MODE"/>
+                        <ComboBoxItem Content="3D MODE"/>
+                    </ComboBox>
+                </GroupBox>
+            </Grid>
+
+            <!-- 스플리터 -->
+            <GridSplitter Grid.Column="3" Width="5" HorizontalAlignment="Center"/>
+
+            <!-- NXPlanetView (WinFormsHost) -->
+            <wfi:WindowsFormsHost Grid.Column="4" Margin="3,0,0,0">
+                <nxPlanet:NXPlanetView x:Name="nxPlanetView1" >
+                    <nxPlanet:NXPlanetView.Controls>
+                        <nxPlanet:NXPlanetLayer x:Name="nxPlanetLayer1"
+                                                OnRender="nxPlanetLayer1_OnRender"
+                                                OnOrthoRender="nxPlanetLayer1_OnOrthoRender"
+                                      
+                                                />
+                    </nxPlanet:NXPlanetView.Controls>
+                </nxPlanet:NXPlanetView>
+            </wfi:WindowsFormsHost>
+        </Grid>
+    </Grid>
+</Window>
