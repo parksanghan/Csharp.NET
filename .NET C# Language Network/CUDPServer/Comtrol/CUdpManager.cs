@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ namespace CUDPServer.Comtrol
             {
                 try
                 {
+                    server.SendMessage(message, client.Client.RemoteEndPoint.ToString().Split(':')[0], ((IPEndPoint)client.Client.RemoteEndPoint).Port);
                     client.Send(data, data.Length);
                 }
                 catch (Exception ex)
@@ -36,6 +38,6 @@ namespace CUDPServer.Comtrol
                 }
             }
         }
-
+        public void sendToAll(string message,bool is_)
     }
 }
