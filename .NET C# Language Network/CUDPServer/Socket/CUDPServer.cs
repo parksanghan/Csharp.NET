@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace CUDPServer.Socket
 {
-    internal class UDPServer
+    internal class CUDPServer
     {
         private UdpClient _server;
         private IPEndPoint _endPoint;
         private int _port;
 
 
-        public UDPServer(int port)
+        public CUDPServer(int port)
         {
             _port = port;
             _server = new UdpClient(port);          // 포트 바인딩

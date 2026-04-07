@@ -14,9 +14,11 @@ namespace CUDPServer.Data
         public ProtocolType Protocol { get; set; }
         public IPAddress SourceIP { get; set; }
         public IPAddress DestinationIP { get; set; }    
-        public Packet()
+        public Packet(IPAddress sender,IPAddress Recv)
         {
-            
+            Protocol = ProtocolType.Udp;
+            SourceIP =  sender;
+            DestinationIP = sender;
         }
 
     }

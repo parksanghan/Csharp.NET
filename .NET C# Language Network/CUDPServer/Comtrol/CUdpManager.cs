@@ -12,7 +12,7 @@ namespace CUDPServer.Comtrol
     internal class CUdpManager
     {
         public List<UdpClient> clients { get; set; } = new List<UdpClient>();
-        public CUDPServer.Socket.UDPServer server { get; set; }
+        public CUDPServer.Socket.CUDPServer server { get; set; }
         public CUdpManager()
         {
         }
