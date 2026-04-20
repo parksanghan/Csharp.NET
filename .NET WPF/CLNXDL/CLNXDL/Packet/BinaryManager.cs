@@ -20,7 +20,7 @@ namespace CLNXDL.Packet
             writer.Write((byte)(value >> 8));
             writer.Write(((byte)value));
         }
-        public static void WriteUInt32BE(this BinaryWriter writer, ushort value)
+        public static void WriteUInt32BE(this BinaryWriter writer, uint value)
         {
             writer.Write((byte)(value) >> 24);
             writer.Write((byte)(value) >> 16);
@@ -29,10 +29,24 @@ namespace CLNXDL.Packet
         }
         #endregion
 
-        #region Little Endian Writer
-        public static void ReadUInt16BE(this BinaryReader reader)
+        #region Little Endian reader
+        public static ushort ReadUInt16BE(this BinaryReader reader)
         {
-
+            byte b1 = reader.ReadByte();
+            byte b2 = reader.ReadByte();
+            return (ushort)((b1 << 8) | b2);
+        }
+        public static uint ReadUInt32BE(this BinaryReader reeaer)
+        {
+            byte b1 = reeaer.ReadByte();
+            byte b2 = reeaer.ReadByte(); 
+            byte b3 = reeaer.ReadByte();
+            byte b4 = reeaer.ReadByte();
+            return (uint)(
+               (b1 << 24) |
+               (b2 << 16) |
+               (b3 << 8) |
+               b4);
         }
         #endregion
         /// <summary>
