@@ -24,5 +24,10 @@ namespace UnitConverter
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Test1.Start();
+        }
     }
 }
