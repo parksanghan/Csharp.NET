@@ -44,15 +44,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Comtrol\CUdpManager.cs" />
+    <Compile Include="Comtrol\UDPSessionManager.cs" />
+    <Compile Include="Data\Packet.cs" />
+    <Compile Include="Data\PakcetBuilder.cs" />
+    <Compile Include="Data\RVData.cs" />
+    <Compile Include="Data\SEData.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Socket\CUDPServer.cs" />
+    <Compile Include="Socket\SocketType.cs" />
+    <Compile Include="Socket\UDPServer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
