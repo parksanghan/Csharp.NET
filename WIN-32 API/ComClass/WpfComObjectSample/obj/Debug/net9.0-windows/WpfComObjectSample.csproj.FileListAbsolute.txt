@@ -1,0 +1,9 @@
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\MainWindow.baml
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\MainWindow.g.cs
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\App.g.cs
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\WpfComObjectSample_MarkupCompile.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\WpfComObjectSample.g.resources
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\WpfComObjectSample.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\WpfComObjectSample.AssemblyInfoInputs.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\WpfComObjectSample.AssemblyInfo.cs
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\WpfComObjectSample\obj\Debug\net9.0-windows\WpfComObjectSample.csproj.CoreCompileInputs.cache
