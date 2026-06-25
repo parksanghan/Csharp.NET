@@ -1,0 +1,14 @@
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\bin\Debug\net9.0-windows\GraphComServer.comhost.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\bin\Debug\net9.0-windows\GraphComServer.deps.json
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\bin\Debug\net9.0-windows\GraphComServer.runtimeconfig.json
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\bin\Debug\net9.0-windows\GraphComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\bin\Debug\net9.0-windows\GraphComServer.pdb
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\GraphComServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\GraphComServer.AssemblyInfoInputs.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\GraphComServer.AssemblyInfo.cs
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\GraphComServer.csproj.CoreCompileInputs.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\GraphComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\refint\GraphComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\GraphComServer.pdb
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\GraphComServer.genruntimeconfig.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\GraphComServer\obj\Debug\net9.0-windows\ref\GraphComServer.dll
