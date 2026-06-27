@@ -1,0 +1,14 @@
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\bin\Debug\net9.0-windows\VideoComServer.comhost.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\bin\Debug\net9.0-windows\VideoComServer.deps.json
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\bin\Debug\net9.0-windows\VideoComServer.runtimeconfig.json
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\bin\Debug\net9.0-windows\VideoComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\bin\Debug\net9.0-windows\VideoComServer.pdb
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\VideoComServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\VideoComServer.AssemblyInfoInputs.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\VideoComServer.AssemblyInfo.cs
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\VideoComServer.csproj.CoreCompileInputs.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\VideoComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\refint\VideoComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\VideoComServer.pdb
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\VideoComServer.genruntimeconfig.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\VideoComServer\obj\Debug\net9.0-windows\ref\VideoComServer.dll
