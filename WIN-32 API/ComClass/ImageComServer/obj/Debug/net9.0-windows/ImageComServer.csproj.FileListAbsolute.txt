@@ -1,0 +1,14 @@
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\bin\Debug\net9.0-windows\ImageComServer.comhost.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\bin\Debug\net9.0-windows\ImageComServer.deps.json
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\bin\Debug\net9.0-windows\ImageComServer.runtimeconfig.json
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\bin\Debug\net9.0-windows\ImageComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\bin\Debug\net9.0-windows\ImageComServer.pdb
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\ImageComServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\ImageComServer.AssemblyInfoInputs.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\ImageComServer.AssemblyInfo.cs
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\ImageComServer.csproj.CoreCompileInputs.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\ImageComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\refint\ImageComServer.dll
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\ImageComServer.pdb
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\ImageComServer.genruntimeconfig.cache
+C:\Users\snagh\OneDrive\Desktop\Desktop (1)\ImageComServer\obj\Debug\net9.0-windows\ref\ImageComServer.dll
