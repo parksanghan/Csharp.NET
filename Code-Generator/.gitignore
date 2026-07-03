@@ -1,0 +1,14 @@
+# Visual Studio / IDE cache
+.vs/
+
+# Build output
+bin/
+obj/
+
+# Local dependency junction used by the workbook builder
+tools/node_modules/
+
+# Diagnostic logs generated while testing
+outputs/**/*.log
+outputs/**/*.ndjson
+
