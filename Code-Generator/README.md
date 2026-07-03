@@ -36,7 +36,7 @@ generator package, prefer targeting `netstandard2.0` and referencing
 ## Try It
 
 ```powershell
-dotnet build .\CodeGenerator.sln
+dotnet build .\CodeGenerator.sln -m:1
 
 dotnet build .\src\Project1.App\Project1.App.csproj
 dotnet run --project .\src\Project1.App\Project1.App.csproj
@@ -45,9 +45,9 @@ dotnet build .\src\Project2.App\Project2.App.csproj
 dotnet run --project .\src\Project2.App\Project2.App.csproj
 ```
 
-`Directory.Solution.props` disables solution-level parallel restore for this
-sample. The `.sln` also marks the app projects as dependent on the generator
-project, so the analyzer assembly is built before the apps compile.
+The solution marks the app projects as dependent on the generator project.
+`-m:1` keeps this analyzer sample on a single MSBuild node so the generator
+assembly is not touched by multiple projects at the same time.
 
 After build, generated files are written under each app's `obj/generated`
 directory because `EmitCompilerGeneratedFiles` is enabled.
