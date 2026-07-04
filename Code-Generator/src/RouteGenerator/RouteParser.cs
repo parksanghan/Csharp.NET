@@ -70,14 +70,9 @@ internal static class RouteParser
                 }
             }
 
-            if (protocol == "TCP" && port is null)
+            if ((protocol == "TCP" || protocol == "UDP") && port is null)
             {
-                errors.Add($"Line {i + 1}: TCP route requires a port.");
-            }
-
-            if (protocol == "UDP" && port is not null)
-            {
-                errors.Add($"Line {i + 1}: UDP route should leave Port empty in this sample.");
+                errors.Add($"Line {i + 1}: {protocol} route requires a port.");
             }
 
             routes.Add(new RouteDefinition(from, to, protocol, host, port, description));
