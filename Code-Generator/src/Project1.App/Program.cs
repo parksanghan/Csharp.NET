@@ -2,50 +2,32 @@ using Generated.Communication;
 
 Console.WriteLine($"Generated routes for {CommunicationRoutes.ProjectName}");
 Console.WriteLine();
-Console.WriteLine("Outgoing routes");
+Console.WriteLine("Generated routes");
 
-foreach (var route in CommunicationRoutes.Outgoing)
+foreach (var route in CommunicationRoutes.All)
 {
     Console.WriteLine($"{route.Target} -> {route.Endpoint} | {route.Description}");
 }
 
 Console.WriteLine();
-Console.WriteLine("Incoming routes");
+Console.WriteLine("Direct generated API examples");
 
-foreach (var route in CommunicationRoutes.Incoming)
-{
-    Console.WriteLine($"{route.Source} -> {route.Endpoint} | {route.Description}");
-}
+Route tcpRoute = CommunicationRoutes.Project2;
+Route udpRoute = CommunicationRoutes.DeviceA;
 
+Console.WriteLine("CommunicationRoutes.Project2.Connect();");
+Console.WriteLine("CommunicationRoutes.Project2.Send(\"hello\");");
+Console.WriteLine("var reply = CommunicationRoutes.Project2.Recv();");
+Console.WriteLine("CommunicationRoutes.Project2.Disconnect();");
 Console.WriteLine();
-Console.WriteLine("Generated network API examples");
+Console.WriteLine("CommunicationRoutes.DeviceA.Connect();");
+Console.WriteLine("CommunicationRoutes.DeviceA.Send(\"heartbeat\");");
+Console.WriteLine("var datagram = CommunicationRoutes.DeviceA.Recv();");
+Console.WriteLine("CommunicationRoutes.DeviceA.Disconnect();");
 
-foreach (var route in CommunicationRoutes.Outgoing)
-{
-    if (route.Protocol == Protocol.Tcp)
-    {
-        Console.WriteLine($"await CommunicationNetwork.ConnectAsync(\"{route.Target}\");");
-        Console.WriteLine($"await CommunicationNetwork.SendAsync(\"{route.Target}\", \"hello\");");
-        Console.WriteLine($"var reply = await CommunicationNetwork.ReceiveAsync(\"{route.Target}\");");
-        Console.WriteLine($"CommunicationNetwork.Disconnect(\"{route.Target}\");");
-    }
-    else
-    {
-        Console.WriteLine($"await CommunicationNetwork.SendUdpAsync(\"{route.Target}\", \"hello\");");
-    }
-}
-
-foreach (var route in CommunicationRoutes.Incoming)
-{
-    if (route.Protocol == Protocol.Tcp)
-    {
-        Console.WriteLine($"await CommunicationNetwork.StartReceiveServerAsync(\"{route.Source}\");");
-        Console.WriteLine($"var message = await CommunicationNetwork.ReceiveFromAsync(\"{route.Source}\");");
-        Console.WriteLine($"CommunicationNetwork.StopReceiveServer(\"{route.Source}\");");
-    }
-    else
-    {
-        Console.WriteLine($"var message = await CommunicationNetwork.ReceiveUdpFromAsync(\"{route.Source}\");");
-    }
-}
+// Real usage:
+// tcpRoute.Connect();
+// tcpRoute.Send("hello");
+// var reply = tcpRoute.Recv();
+// tcpRoute.Disconnect();
 

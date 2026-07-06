@@ -14,26 +14,18 @@ src/RouteGenerator
         |
         v
 Generated.Communication.CommunicationRoutes
-Generated.Communication.CommunicationNetwork
 ```
 
 `Project1.App` and `Project2.App` both reference the same generator and the same
 CSV file. During compilation, the generator reads `MSBuildProjectName` and emits
-both outgoing routes whose `From` column matches the current project and incoming
-routes whose `To` column matches the current project.
+outgoing routes whose `From` column matches the current project.
 
-The generated network helper includes:
+Each generated `Route` includes:
 
-- `ConnectAsync`
+- `Connect`
+- `Send`
+- `Recv`
 - `Disconnect`
-- `SendAsync`
-- `ReceiveAsync`
-- `StartReceiveServerAsync`
-- `ReceiveFromAsync`
-- `ReplyAsync`
-- `StopReceiveServer`
-- `SendUdpAsync`
-- `ReceiveUdpFromAsync`
 
 The app projects expose their names through `CommunicationRouteProjectName` using
 `CompilerVisibleProperty`, because source generators only receive MSBuild
@@ -70,27 +62,37 @@ directory because `EmitCompilerGeneratedFiles` is enabled.
 
 ## Generated TCP Example
 
-On the receiving PC/project:
+The generator emits route objects like this:
 
 ```csharp
-await CommunicationNetwork.StartReceiveServerAsync("Project1.App");
-var message = await CommunicationNetwork.ReceiveFromAsync("Project1.App");
-await CommunicationNetwork.ReplyAsync("Project1.App", "received");
-CommunicationNetwork.StopReceiveServer("Project1.App");
+namespace Generated.Communication
+{
+    public static class CommunicationRoutes
+    {
+        public static readonly Route Project2 = new Route(
+            "Project2.App",
+            "127.0.0.1",
+            Protocol.Tcp,
+            5000,
+            "Project1 sends commands to Project2");
+    }
+}
 ```
 
-On the sending PC/project:
+Use the generated object directly:
 
 ```csharp
-await CommunicationNetwork.ConnectAsync("Project2.App");
-await CommunicationNetwork.SendAsync("Project2.App", "hello");
-var reply = await CommunicationNetwork.ReceiveAsync("Project2.App");
-CommunicationNetwork.Disconnect("Project2.App");
+CommunicationRoutes.Project2.Connect();
+CommunicationRoutes.Project2.Send("hello");
+var reply = CommunicationRoutes.Project2.Recv();
+CommunicationRoutes.Project2.Disconnect();
 ```
 
 ## Generated UDP Example
 
 ```csharp
-await CommunicationNetwork.SendUdpAsync("Project1.App", "heartbeat");
-var datagram = await CommunicationNetwork.ReceiveUdpFromAsync("Project2.App");
+CommunicationRoutes.DeviceA.Connect();
+CommunicationRoutes.DeviceA.Send("heartbeat");
+var datagram = CommunicationRoutes.DeviceA.Recv();
+CommunicationRoutes.DeviceA.Disconnect();
 ```
