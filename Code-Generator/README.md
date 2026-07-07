@@ -41,6 +41,9 @@ This local sample references the Roslyn assemblies that ship with the installed
 generator package, prefer targeting `netstandard2.0` and referencing
 `Microsoft.CodeAnalysis.CSharp` through NuGet.
 
+`global.json` pins this sample to the installed .NET 9 SDK so the generator and
+the SDK-provided Roslyn assemblies target the same runtime.
+
 ## Try It
 
 ```powershell
