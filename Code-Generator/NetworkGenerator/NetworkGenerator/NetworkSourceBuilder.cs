@@ -133,7 +133,9 @@ namespace Generated.Network
         NetworkEndpointKind Kind { get; }
         bool IsConnected { get; }
         void Connect();
-        void Recv();
+        object Recv();
+        bool TryRecv(out object data);
+        void SendData(object data);
         void SendData(byte[] data);
         void SendData(string text);
         void Disconnect();
@@ -142,6 +144,7 @@ namespace Generated.Network
     public sealed class TcpClientEndpoint : INetworkEndpoint
     {
         private readonly object _sync = new object();
+        private BlockingCollection<object> _receivedData = new BlockingCollection<object>();
         private SocketConnection _connection;
         private int _recvStarted;
 
@@ -152,10 +155,6 @@ namespace Generated.Network
             Port = port;
             Description = description ?? string.Empty;
         }
-
-        public event Action<byte[]> DataReceived;
-        public event Action<Exception> Error;
-        public event Action Disconnected;
 
         public string Name { get; private set; }
         public string Host { get; private set; }
@@ -173,6 +172,7 @@ namespace Generated.Network
                     return;
                 }
 
+                _receivedData = new BlockingCollection<object>();
                 var client = new TcpClient();
                 client.Connect(Host, Port);
                 _connection = new SocketConnection(1, client);
@@ -180,42 +180,36 @@ namespace Generated.Network
             }
         }
 
-        public void Recv()
+        public object Recv()
         {
-            if (_connection == null)
-            {
-                throw new InvalidOperationException(""Call Connect() before Recv()."");
-            }
-
-            if (Interlocked.Exchange(ref _recvStarted, 1) == 0)
-            {
-                ThreadPool.QueueUserWorkItem(ReceiveLoop, _connection);
-            }
+            EnsureReceiveLoop();
+            return NetworkReceiveQueue.Take(_receivedData);
         }
 
-        public void Recv(Action<byte[]> onData)
+        public bool TryRecv(out object data)
         {
-            if (onData != null)
-            {
-                DataReceived += onData;
-            }
-
-            Recv();
+            EnsureReceiveLoop();
+            return NetworkReceiveQueue.TryTake(_receivedData, out data);
         }
 
-        public void SendData(byte[] data)
+        public void SendData(object data)
         {
             if (_connection == null)
             {
                 throw new InvalidOperationException(""Call Connect() before SendData()."");
             }
 
-            _connection.SendData(data);
+            _connection.SendData(NetworkPayload.ToBytes(data));
+        }
+
+        public void SendData(byte[] data)
+        {
+            SendData((object)data);
         }
 
         public void SendData(string text)
         {
-            SendData(Encoding.UTF8.GetBytes(text ?? string.Empty));
+            SendData((object)text);
         }
 
         public void Disconnect()
@@ -229,6 +223,20 @@ namespace Generated.Network
                 }
 
                 _recvStarted = 0;
+                NetworkReceiveQueue.Complete(_receivedData);
+            }
+        }
+
+        private void EnsureReceiveLoop()
+        {
+            if (_connection == null)
+            {
+                throw new InvalidOperationException(""Call Connect() before Recv()."");
+            }
+
+            if (Interlocked.Exchange(ref _recvStarted, 1) == 0)
+            {
+                ThreadPool.QueueUserWorkItem(ReceiveLoop, _connection);
             }
         }
 
@@ -241,29 +249,16 @@ namespace Generated.Network
                 while (connection.IsConnected)
                 {
                     var payload = NetworkFrame.Read(connection.Stream);
-                    var handler = DataReceived;
-                    if (handler != null)
-                    {
-                        handler(payload);
-                    }
+                    NetworkReceiveQueue.Add(_receivedData, NetworkPayload.ToObject(payload));
                 }
             }
             catch (Exception ex)
             {
-                var error = Error;
-                if (error != null)
-                {
-                    error(ex);
-                }
+                NetworkReceiveQueue.Add(_receivedData, new NetworkReceiveError(ex));
             }
             finally
             {
                 Disconnect();
-                var disconnected = Disconnected;
-                if (disconnected != null)
-                {
-                    disconnected();
-                }
             }
         }
     }
@@ -273,6 +268,7 @@ namespace Generated.Network
         private readonly object _sync = new object();
         private readonly ConcurrentDictionary<int, SocketConnection> _connections = new ConcurrentDictionary<int, SocketConnection>();
         private readonly ConcurrentDictionary<int, byte> _receiveLoops = new ConcurrentDictionary<int, byte>();
+        private BlockingCollection<object> _receivedData = new BlockingCollection<object>();
         private TcpListener _listener;
         private int _nextConnectionId;
         private volatile bool _running;
@@ -286,11 +282,6 @@ namespace Generated.Network
             MaxConnections = maxConnections < 1 ? 1 : maxConnections;
             Description = description ?? string.Empty;
         }
-
-        public event Action<SocketConnection> ClientConnected;
-        public event Action<SocketConnection> ClientDisconnected;
-        public event Action<SocketConnection, byte[]> DataReceived;
-        public event Action<Exception> Error;
 
         public string Name { get; private set; }
         public string Host { get; private set; }
@@ -310,6 +301,7 @@ namespace Generated.Network
                     return;
                 }
 
+                _receivedData = new BlockingCollection<object>();
                 var address = Host == ""0.0.0.0"" ? IPAddress.Any : IPAddress.Parse(Host);
                 _listener = new TcpListener(address, Port);
                 _listener.Start(MaxConnections);
@@ -318,40 +310,38 @@ namespace Generated.Network
             }
         }
 
-        public void Recv()
+        public object Recv()
         {
-            _recvEnabled = true;
-
-            foreach (var connection in _connections.Values)
-            {
-                QueueReceiveLoop(connection);
-            }
+            StartReceiveLoops();
+            return NetworkReceiveQueue.Take(_receivedData);
         }
 
-        public void Recv(Action<SocketConnection, byte[]> onData)
+        public bool TryRecv(out object data)
         {
-            if (onData != null)
-            {
-                DataReceived += onData;
-            }
+            StartReceiveLoops();
+            return NetworkReceiveQueue.TryTake(_receivedData, out data);
+        }
 
-            Recv();
+        public void SendData(object data)
+        {
+            var payload = NetworkPayload.ToBytes(data);
+            foreach (var connection in _connections.Values)
+            {
+                connection.SendData(payload);
+            }
         }
 
         public void SendData(byte[] data)
         {
-            foreach (var connection in _connections.Values)
-            {
-                connection.SendData(data);
-            }
+            SendData((object)data);
         }
 
         public void SendData(string text)
         {
-            SendData(Encoding.UTF8.GetBytes(text ?? string.Empty));
+            SendData((object)text);
         }
 
-        public void SendData(int connectionId, byte[] data)
+        public void SendData(int connectionId, object data)
         {
             SocketConnection connection;
             if (!_connections.TryGetValue(connectionId, out connection))
@@ -359,12 +349,17 @@ namespace Generated.Network
                 throw new InvalidOperationException(""No connection with id "" + connectionId + "" exists."");
             }
 
-            connection.SendData(data);
+            connection.SendData(NetworkPayload.ToBytes(data));
+        }
+
+        public void SendData(int connectionId, byte[] data)
+        {
+            SendData(connectionId, (object)data);
         }
 
         public void SendData(int connectionId, string text)
         {
-            SendData(connectionId, Encoding.UTF8.GetBytes(text ?? string.Empty));
+            SendData(connectionId, (object)text);
         }
 
         public void Disconnect()
@@ -387,6 +382,22 @@ namespace Generated.Network
 
                 _connections.Clear();
                 _receiveLoops.Clear();
+                NetworkReceiveQueue.Complete(_receivedData);
+            }
+        }
+
+        private void StartReceiveLoops()
+        {
+            if (!_running)
+            {
+                throw new InvalidOperationException(""Call Connect() before Recv()."");
+            }
+
+            _recvEnabled = true;
+
+            foreach (var connection in _connections.Values)
+            {
+                QueueReceiveLoop(connection);
             }
         }
 
@@ -406,12 +417,6 @@ namespace Generated.Network
                         continue;
                     }
 
-                    var connected = ClientConnected;
-                    if (connected != null)
-                    {
-                        connected(connection);
-                    }
-
                     if (_recvEnabled)
                     {
                         QueueReceiveLoop(connection);
@@ -421,7 +426,7 @@ namespace Generated.Network
                 {
                     if (_running)
                     {
-                        RaiseError(ex);
+                        NetworkReceiveQueue.Add(_receivedData, new NetworkReceiveError(ex));
                     }
                 }
                 catch (ObjectDisposedException)
@@ -432,7 +437,7 @@ namespace Generated.Network
                 {
                     if (_running)
                     {
-                        RaiseError(ex);
+                        NetworkReceiveQueue.Add(_receivedData, new NetworkReceiveError(ex));
                     }
                 }
             }
@@ -455,18 +460,15 @@ namespace Generated.Network
                 while (_running && connection.IsConnected)
                 {
                     var payload = NetworkFrame.Read(connection.Stream);
-                    var handler = DataReceived;
-                    if (handler != null)
-                    {
-                        handler(connection, payload);
-                    }
+                    var data = NetworkPayload.ToObject(payload);
+                    NetworkReceiveQueue.Add(_receivedData, new NetworkReceivedData(connection, data));
                 }
             }
             catch (Exception ex)
             {
                 if (_running)
                 {
-                    RaiseError(ex);
+                    NetworkReceiveQueue.Add(_receivedData, new NetworkReceiveError(ex));
                 }
             }
             finally
@@ -476,22 +478,31 @@ namespace Generated.Network
                 byte ignored;
                 _receiveLoops.TryRemove(connection.Id, out ignored);
                 connection.Disconnect();
-
-                var disconnected = ClientDisconnected;
-                if (disconnected != null)
-                {
-                    disconnected(connection);
-                }
             }
         }
+    }
 
-        private void RaiseError(Exception ex)
+    public sealed class NetworkReceivedData
+    {
+        public NetworkReceivedData(SocketConnection connection, object data)
         {
-            var handler = Error;
-            if (handler != null)
-            {
-                handler(ex);
-            }
+            Connection = connection;
+            Data = data;
+        }
+
+        public SocketConnection Connection { get; private set; }
+        public int ConnectionId { get { return Connection.Id; } }
+        public object Data { get; private set; }
+
+        public byte[] GetBytes()
+        {
+            return NetworkPayload.ToBytes(Data);
+        }
+
+        public string GetString()
+        {
+            var bytes = Data as byte[];
+            return bytes == null ? Convert.ToString(Data) : Encoding.UTF8.GetString(bytes);
         }
     }
 
@@ -515,6 +526,11 @@ namespace Generated.Network
         public NetworkStream Stream { get; private set; }
         public bool IsConnected { get { return _client != null && _client.Connected; } }
 
+        public void SendData(object data)
+        {
+            SendData(NetworkPayload.ToBytes(data));
+        }
+
         public void SendData(byte[] data)
         {
             lock (_sendLock)
@@ -525,7 +541,7 @@ namespace Generated.Network
 
         public void SendData(string text)
         {
-            SendData(Encoding.UTF8.GetBytes(text ?? string.Empty));
+            SendData((object)text);
         }
 
         public void Disconnect()
@@ -541,6 +557,46 @@ namespace Generated.Network
             {
                 _client.Close();
             }
+        }
+    }
+
+    internal sealed class NetworkReceiveError
+    {
+        public NetworkReceiveError(Exception exception)
+        {
+            Exception = exception;
+        }
+
+        public Exception Exception { get; private set; }
+    }
+
+    internal static class NetworkPayload
+    {
+        public static byte[] ToBytes(object data)
+        {
+            if (data == null)
+            {
+                return new byte[0];
+            }
+
+            var bytes = data as byte[];
+            if (bytes != null)
+            {
+                return bytes;
+            }
+
+            var text = data as string;
+            if (text != null)
+            {
+                return Encoding.UTF8.GetBytes(text);
+            }
+
+            return Encoding.UTF8.GetBytes(data.ToString());
+        }
+
+        public static object ToObject(byte[] payload)
+        {
+            return payload;
         }
     }
 
@@ -598,7 +654,68 @@ namespace Generated.Network
             return buffer;
         }
     }
+
+    internal static class NetworkReceiveQueue
+    {
+        public static object Take(BlockingCollection<object> queue)
+        {
+            var item = queue.Take();
+            var error = item as NetworkReceiveError;
+            if (error != null)
+            {
+                throw new InvalidOperationException(""Network receive failed."", error.Exception);
+            }
+
+            return item;
+        }
+
+        public static bool TryTake(BlockingCollection<object> queue, out object data)
+        {
+            object item;
+            if (!queue.TryTake(out item))
+            {
+                data = null;
+                return false;
+            }
+
+            var error = item as NetworkReceiveError;
+            if (error != null)
+            {
+                throw new InvalidOperationException(""Network receive failed."", error.Exception);
+            }
+
+            data = item;
+            return true;
+        }
+
+        public static void Add(BlockingCollection<object> queue, object data)
+        {
+            try
+            {
+                if (!queue.IsAddingCompleted)
+                {
+                    queue.Add(data);
+                }
+            }
+            catch (InvalidOperationException)
+            {
+            }
+        }
+
+        public static void Complete(BlockingCollection<object> queue)
+        {
+            try
+            {
+                if (!queue.IsAddingCompleted)
+                {
+                    queue.CompleteAdding();
+                }
+            }
+            catch (InvalidOperationException)
+            {
+            }
+        }
+    }
 }
 ";
 }
-
