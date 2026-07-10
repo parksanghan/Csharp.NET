@@ -290,7 +290,7 @@ namespace Generated.Network
         public string Description { get; private set; }
         public NetworkEndpointKind Kind { get { return NetworkEndpointKind.Server; } }
         public bool IsConnected { get { return _running; } }
-        public ICollection<SocketConnection> Connections { get { return _connections.Values; } }
+        public IReadOnlyCollection<SocketConnection> Connections { get { return _connections.Values; } }
 
         public void Connect()
         {

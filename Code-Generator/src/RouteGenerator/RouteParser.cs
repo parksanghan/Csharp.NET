@@ -118,7 +118,17 @@ internal static class RouteParser
     }
 }
 
-internal sealed record ParseResult(
-    IReadOnlyList<RouteDefinition> Routes,
-    IReadOnlyList<string> Errors);
+internal sealed class ParseResult
+{
+    public ParseResult(
+        IReadOnlyList<RouteDefinition> routes,
+        IReadOnlyList<string> errors)
+    {
+        Routes = routes;
+        Errors = errors;
+    }
+
+    public IReadOnlyList<RouteDefinition> Routes { get; }
+    public IReadOnlyList<string> Errors { get; }
+}
 

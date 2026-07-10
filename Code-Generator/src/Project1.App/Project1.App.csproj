@@ -6,14 +6,10 @@
     <Nullable>enable</Nullable>
     <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
     <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)generated</CompilerGeneratedFilesOutputPath>
-    <CommunicationRouteProjectName>$(MSBuildProjectName)</CommunicationRouteProjectName>
   </PropertyGroup>
 
   <ItemGroup>
-    <CompilerVisibleProperty Include="CommunicationRouteProjectName" />
-    <ProjectReference Include="..\RouteGenerator\RouteGenerator.csproj"
-                      OutputItemType="Analyzer"
-                      ReferenceOutputAssembly="false" />
-    <AdditionalFiles Include="..\..\config\communication-routes.csv" />
+    <ProjectReference Include="..\..\NetworkGenerator\NetworkGenerator\NetworkGenerator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <AdditionalFiles Include="network-endpoints.csv" />
   </ItemGroup>
 </Project>

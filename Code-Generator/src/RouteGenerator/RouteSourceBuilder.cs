@@ -346,7 +346,7 @@ internal static class RouteSourceBuilder
     {
         const string appSuffix = ".App";
         return value.EndsWith(appSuffix, StringComparison.OrdinalIgnoreCase)
-            ? value[..^appSuffix.Length]
+            ? value.Substring(0, value.Length - appSuffix.Length)
             : value;
     }
 }
