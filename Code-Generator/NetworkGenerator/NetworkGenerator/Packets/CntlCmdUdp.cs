@@ -10,11 +10,12 @@ namespace NetworkGenerator.Packets
     {
 
         public const ushort MessageType = 65505;
-        public const int MessageSize = 3;
-            public EMessageID MessageID;
+        public const int MessageSize = 3; //데이터 송신에 사용할 패킷 헤더 
+        public EMessageID MessageID; // 데이터 송신에 사용할 패킷 헤더
+
         // 실제 전송 데이터(구조체)
-        public CntlCmdUdpData m_Data;
-        public CntlCmdUdpData[] m_datalist;
+        public CntlCmdUdpData m_Data;// 단일 데이터
+        public CntlCmdUdpData[] m_datalist; //복합 데이터
       
         // Resoultion 딕셔너리 
         public Dictionary<string,int> m_Resolutions = new Dictionary<string, int>(); 
@@ -45,14 +46,14 @@ namespace NetworkGenerator.Packets
             int offset = 0;
                 byte command = bytes[offset];
                 offset += sizeof(byte);
-                Uint8 
+                 
             return new CntlCmdUdp
             {
                 m_Data = new CntlCmdUdpData
                 {
                     UvhfCommand = bytes[0],
                     PttStatus = bytes[1],
-                    RadioRxVolStatus = bytes[2]
+                    RadioRxVolStatus = bytes[2] // #해당부분은 모든 필드값이 다 1바이트에 할당되는 것이 아니기에 2바이트 4바이트 이런것도 역직렬화 하는 과정에서 추가 역직렬화 추가 
                 }
             };
         }
