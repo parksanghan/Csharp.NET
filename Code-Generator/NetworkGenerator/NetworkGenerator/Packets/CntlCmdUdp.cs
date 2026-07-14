@@ -10,6 +10,7 @@ namespace NetworkGenerator.Packets
     {
 
         public const ushort MessageType = 65505;
+        public const int HeaderSize = 4;
         public const int MessageSize = 3; //데이터 송신에 사용할 패킷 헤더 
         public EMessageID MessageID; // 데이터 송신에 사용할 패킷 헤더
 
@@ -85,7 +86,7 @@ namespace NetworkGenerator.Packets
                     var value = fieldInfo.GetValue(m_Data);
                     double res_value = m_Resolutions[fieldInfo.Name] * Convert.ToDouble(value);
                     fieldInfo.SetValue(m_Data, res_value);
-                }
+                    }
              
         }
 }
