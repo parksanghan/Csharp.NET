@@ -23,6 +23,10 @@ namespace NetworkGenerator.Packets
         Timer m_TRecvTimer = new Timer();
 
         protected List<Socket> Sockets = new List<Socket>();    
+        
+
+
+
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)

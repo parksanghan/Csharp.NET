@@ -19,4 +19,8 @@
     <EmbeddedResource Remove="NetworkGenerator\**" />
     <None Remove="NetworkGenerator\**" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Sockets\" />
+  </ItemGroup>
 </Project>
