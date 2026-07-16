@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Numerics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -86,7 +87,7 @@ namespace NetworkGenerator.Packets
             {
                 // 헤더
                 WriteUInt16BigEndian(writer, MessageType);
-                WriteUInt16BigEndian(writer, (ushort)MessageID);
+                WriteUInt16BigEndian(writer, (ushort)MessageId);
 
                 // Payload
                 writer.Write(ToRawByte(
@@ -163,7 +164,7 @@ namespace NetworkGenerator.Packets
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         private void Validate()
         {
-            if (m_Data.UvhfCommand > 2) 
+            if (m_Data.UvhfCommand > 2) // 필드에 등록된 MAX 값
                 throw new ArgumentOutOfRangeException(nameof(m_Data.UvhfCommand));
 
             if (m_Data.PttStatus > 2)
@@ -197,6 +198,18 @@ namespace NetworkGenerator.Packets
             };
             
         }
-        private MESSAGETAIL GetMessageTail(int idx,)
+        // 메시지 Tail 가져오기 Serealize 하기전에 Tail 
+        private MESSAGETAIL GetMessageTail(int idx)
+        {
+            return new MESSAGETAIL()
+            {
+                isresolutioned = isResolutioned,
+                snyc = MessageType
+            };
+        }
+        //public byte[] GetObjects(int idx)
+        //{
+        //    var bodyPay
+        //}
 }
 }
