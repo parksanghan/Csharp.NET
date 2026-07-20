@@ -7,10 +7,13 @@ namespace NetworkGenerator.Packets
 {
     public class CntlCmdUdp1
     {
+        // 필요하다면 이런형태로 메세지 고유 식별 번호?
         public const ushort MessageType = 65505;
-
+        // 헤더 사이즈 선언
         public const int HeaderSize = 4;
+        // 메세지 바이트수 가져와서 선언
         public const int PayloadSize = 3;
+        // 메세지 크기 총 합산
         public const int TotalSize = HeaderSize + PayloadSize;
 
         public EMessageID MessageID;
@@ -19,6 +22,7 @@ namespace NetworkGenerator.Packets
 
         public CntlCmdUdpData[] m_DataList;
 
+        // 미리 Resolutions 데이터를 정의하거나 - 기존에 설정파일에서 정의된 항목들
         public Dictionary<string, double> m_Resolutions =
         new Dictionary<string, double>
         {
@@ -27,6 +31,7 @@ namespace NetworkGenerator.Packets
         { nameof(CntlCmdUdpData.RadioRxVolStatus), 0.1 }
         };
 
+        // 생성자 자체에서 Resolutions 데이터 초기화 하거나 
         public CntlCmdUdp1()
         {
             // 해당 필드는 명령·상태 코드이므로 일반적으로 Resolution 1

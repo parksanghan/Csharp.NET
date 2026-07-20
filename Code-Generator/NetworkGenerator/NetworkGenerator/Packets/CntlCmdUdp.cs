@@ -184,7 +184,7 @@ namespace NetworkGenerator.Packets
                     var value = fieldInfo.GetValue(m_Data);
                     double res_value = m_Resolutions[fieldInfo.Name] * Convert.ToDouble(value);
                     fieldInfo.SetValue(m_Data, res_value);
-                    }
+                }
              
         }
         // 메세지 헤더 가져오기 Serialize 하기전에  헤더랑 
