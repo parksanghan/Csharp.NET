@@ -17,6 +17,16 @@ namespace NetworkGenerator.Binary
         private static Dictionary<Type, MemberInfo[]> m_memberdic = new Dictionary<Type, MemberInfo[]>();
         // Csv 파일을 읽어 모든 메세지에 대한 Struct 구조로 해당 니모닉 데이터에 대한 구조체로 각 필드를 정의하는 코드 생성하는 기능 추가
         #region 직렬화 쪽 코드로 옮길 부분들 
+        public static byte[] SerializeWithHeader<THeader>(THeader header, byte[] payloads) where THeader : struct
+        {
+            byte[] headerdata = SerializeStruct(header);
+            byte[] result = new byte[headerdata.Length + payloads.Length];
+            Array.Copy(headerdata, 0, result, 0, headerdata.Length);
+            Array.Copy(payloads, 0, result, 0, payloads.Length);
+
+            return result;
+        }
+      
         public static void SerializeStruct<T>(Stream stream ,T value) where T : struct
         {
             using (var writer = new BinaryWriter(
