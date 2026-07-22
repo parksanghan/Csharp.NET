@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NetworkGenerator.MessageStructs;
+using NetworkGenerator.Packets;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -7,6 +9,7 @@ using System.Reflection;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Xml.Xsl;
 
 namespace NetworkGenerator.Binary
 {
@@ -14,9 +17,32 @@ namespace NetworkGenerator.Binary
     {
         private static readonly Stream _stream;
         public BinaryManager() { }
+
         private static Dictionary<Type, MemberInfo[]> m_memberdic = new Dictionary<Type, MemberInfo[]>();
         // Csv 파일을 읽어 모든 메세지에 대한 Struct 구조로 해당 니모닉 데이터에 대한 구조체로 각 필드를 정의하는 코드 생성하는 기능 추가
         #region 직렬화 쪽 코드로 옮길 부분들 
+        public static CntlCmdUdpData m_data = new CntlCmdUdpData()
+        {
+            PttStatus = 0,
+            RadioRxVolStatus = 0,
+            UvhfCommand = 0,
+        };
+        public static byte[] GetObject() {
+            byte[] bodybytes = SerializeStruct(m_data);
+            MESSAGEHEADER header = GetMessageHeader(1, 1);
+            return SerializeWithHeader(header, bodybytes);
+
+        }
+        public static MESSAGEHEADER GetMessageHeader(int msgidx , int bodylenght)
+        {
+            return  new MESSAGEHEADER()
+            {
+                 snyc =  (ushort)msgidx,
+                messageid = (int)msgidx,
+                messagesize = bodylenght ,
+                
+            }; 
+        }
         public static byte[] SerializeWithHeader<THeader>(THeader header, byte[] payloads) where THeader : struct
         {
             byte[] headerdata = SerializeStruct(header);
@@ -26,7 +52,7 @@ namespace NetworkGenerator.Binary
 
             return result;
         }
-      
+        
         public static void SerializeStruct<T>(Stream stream ,T value) where T : struct
         {
             using (var writer = new BinaryWriter(
