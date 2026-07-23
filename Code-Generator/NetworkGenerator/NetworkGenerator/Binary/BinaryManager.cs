@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Reflection.Metadata;
 using System.Runtime.InteropServices.ComTypes;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -211,6 +212,22 @@ namespace NetworkGenerator.Binary
             Array.Copy(data, sizeof(MESSAGEHEADER), buffer, 0, payloadSize);
             return sizeof(MESSAGEHEADER)+payloadSize;
         }
+        public static void DeSerializeStruct<T>(byte[] data, int byteread) where T : struct
+        {
+             
+        }
+        //public static void DeSerealizeStream<T>(byte[] data, int byteread) where T : struct {
+        //    using (var stream = new MemoryStream(data))
+        //    {
+        //        long startpos  = stream.Position;
+        //        T res = DeSerealizeStream<T>(stream);
+                
+        //    }
+        //}
+        //public static object Deserialize(BinaryReader reader ,Type type)
+        //{
+
+        //}
         #endregion
     }
 }

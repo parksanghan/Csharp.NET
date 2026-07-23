@@ -27,10 +27,7 @@ namespace NetworkGenerator.Packets
         // 상속 Class에서 정의될 Minx  값들
         protected abstract Dictionary<string, double> m_MinValues { get; }
 
-       public int GetPayloadLegnth(EMessageID id)
-        {
-
-        }
+ 
         // 자식 클래스에서 정의한 구조체 데이터 필드를 순회하여 Min,MAX 값을 검증 
         public void Validate()
         {
@@ -99,6 +96,10 @@ namespace NetworkGenerator.Packets
             byte[] bodyBytes =  BinaryManager.SerializeStruct(m_Data);
             MESSAGEHEADER header = GetMessageHeader(bodyBytes.Length);
             return BinaryManager.SerializeWithHeader(header, bodyBytes);
+        }
+        public void DeSerialize()
+        {
+
         }
         public void Rect()
         {
