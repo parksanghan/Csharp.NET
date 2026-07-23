@@ -1,4 +1,5 @@
-﻿using NetworkGenerator.MessageStructs;
+﻿using NetworkGenerator.Binary;
+using NetworkGenerator.MessageStructs;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,7 +13,8 @@ namespace NetworkGenerator.Packets
     public class CntlCmdUdp
     {
 
-        public const ushort MessageType = 65505;
+        public const ushort MessageType = 65505; // sync 값 
+      
         public const int HeaderSize = 4;
         public const int MessageSize = 3; //데이터 송신에 사용할 패킷 헤더 
         public EMessageID MessageId 
@@ -29,6 +31,8 @@ namespace NetworkGenerator.Packets
         // 실제 전송 데이터(구조체)
         public CntlCmdUdpData m_Data;// 단일 데이터
         public CntlCmdUdpData[] m_datalist; //복합 데이터 여러개 데이터 일수도 있으니 리스톨 해야할듯?  어차피 foreach 로 송신하는구조니간 리스트 전체를보내는것이 아닌 
+
+        // Resoultion 들도 결국엔 
         private readonly Dictionary<string, double> m_Resolutions =
              new Dictionary<string, double>
              {
@@ -45,6 +49,13 @@ namespace NetworkGenerator.Packets
                     1.0
                 }
              };
+        private readonly Dictionary<string,double> m_Maxvalues =  
+            new Dictionary<string, double>
+            {
+                {
+
+                }
+            }
         // Resoultion 딕셔너리 
         public bool isResolutioned = false;
         private double GetResolution(string fieldName)
@@ -82,29 +93,31 @@ namespace NetworkGenerator.Packets
         {
             Validate();
             ApplyResolution();
-            using (MemoryStream stream = new MemoryStream(TotalSize))
-            using (BinaryWriter writer = new BinaryWriter(stream))
-            {
-                // 헤더
-                WriteUInt16BigEndian(writer, MessageType);
-                WriteUInt16BigEndian(writer, (ushort)MessageId);
+            return GetObject((int)MessageId);
+            //using (MemoryStream stream = new MemoryStream(TotalSize))
+            //using (BinaryWriter writer = new BinaryWriter(stream))
+            //{
+            //    // 헤더
+            //    WriteUInt16BigEndian(writer, MessageType);
+            //    WriteUInt16BigEndian(writer, (ushort)MessageId);
 
-                // Payload
-                writer.Write(ToRawByte(
-                    m_Data.UvhfCommand,
-                    GetResolution(nameof(CntlCmdUdpData.UvhfCommand))));
+            //    // Payload
+            //    writer.Write(ToRawByte(
+            //        m_Data.UvhfCommand,
+            //        GetResolution(nameof(CntlCmdUdpData.UvhfCommand))));
 
-                writer.Write(ToRawByte(
-                    m_Data.PttStatus,
-                    GetResolution(nameof(CntlCmdUdpData.PttStatus))));
+            //    writer.Write(ToRawByte(
+            //        m_Data.PttStatus,
+            //        GetResolution(nameof(CntlCmdUdpData.PttStatus))));
 
-                writer.Write(ToRawByte(
-                    m_Data.RadioRxVolStatus,
-                    GetResolution(nameof(CntlCmdUdpData.RadioRxVolStatus))));
+            //    writer.Write(ToRawByte(
+            //        m_Data.RadioRxVolStatus,
+            //        GetResolution(nameof(CntlCmdUdpData.RadioRxVolStatus))));
 
-                writer.Flush();
+            //    writer.Flush();
 
-                return stream.ToArray();
+            //return stream.ToArray();
+ 
             }
             //return new byte[]
             //{
@@ -112,7 +125,7 @@ namespace NetworkGenerator.Packets
             //    m_Data.PttStatus,
             //    m_Data.RadioRxVolStatus
             //};
-        }
+     
         private static byte ToRawByte(
             double actualValue,
             double resolution)
@@ -182,19 +195,54 @@ namespace NetworkGenerator.Packets
                 foreach (FieldInfo fieldInfo in fieldInfos) 
                 {
                     var value = fieldInfo.GetValue(m_Data);
-                    double res_value = m_Resolutions[fieldInfo.Name] * Convert.ToDouble(value);
+                    double res_value = m_Resolutions[fieldInfo.Name] * Convert.ToDouble(value);// Resolution 값 적용
                     fieldInfo.SetValue(m_Data, res_value);
                 }
              
         }
+        #region ApplyResoultion 재적용할 코드 
+        //private void ApplyResolution()
+        //{
+        //    object boxedData = m_Data;
+
+        //    FieldInfo[] fieldInfos = typeof(CntlCmdUdpData)
+        //        .GetFields(BindingFlags.Public | BindingFlags.Instance);
+
+        //    foreach (FieldInfo fieldInfo in fieldInfos)
+        //    {
+        //        if (!m_Resolutions.TryGetValue(
+        //                fieldInfo.Name,
+        //                out double resolution))
+        //        {
+        //            continue;
+        //        }
+
+        //        object value = fieldInfo.GetValue(boxedData);
+        //        double actualValue = Convert.ToDouble(value);
+
+        //        // 송신 원시값 = 실제값 / Resolution
+        //        double rawValue = Math.Round(
+        //            actualValue / resolution,
+        //            MidpointRounding.AwayFromZero);
+
+        //        object convertedValue =
+        //            Convert.ChangeType(rawValue, fieldInfo.FieldType);
+
+        //        fieldInfo.SetValue(boxedData, convertedValue);
+        //    }
+
+        //    m_Data = (CntlCmdUdpData)boxedData;
+        //    isResolutioned = true;
+        //}
+        #endregion
         // 메세지 헤더 가져오기 Serialize 하기전에  헤더랑 
-        private MESSAGEHEADER GetMessageHeader(int idx)
+        private MESSAGEHEADER GetMessageHeader(int idx, int length)
         {
             return new MESSAGEHEADER()
             {
                 messageid = (int)MessageId,
                 snyc = MessageType,
-                messagesize = Marshal.SizeOf(m_datalist[idx])
+                messagesize = length,
             };
             
         }
@@ -206,6 +254,14 @@ namespace NetworkGenerator.Packets
                 isresolutioned = isResolutioned,
                 snyc = MessageType
             };
+        }
+
+        private byte[] GetObject(int msgidx)
+        {
+            byte[] bodyBytes = BinaryManager.SerializeStruct(m_Data);
+            MESSAGEHEADER header  = GetMessageHeader((int)MessageId, bodyBytes.Length);
+            //MESSAGETAIL tail =  GetMessageTail((int)MessageId); 필요가 없을수도 
+            return BinaryManager.SerializeWithHeader(header, bodyBytes);
         }
         //public byte[] GetObjects(int idx)
         //{

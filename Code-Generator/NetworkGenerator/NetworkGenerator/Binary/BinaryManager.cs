@@ -48,7 +48,7 @@ namespace NetworkGenerator.Binary
             byte[] headerdata = SerializeStruct(header);
             byte[] result = new byte[headerdata.Length + payloads.Length];
             Array.Copy(headerdata, 0, result, 0, headerdata.Length);
-            Array.Copy(payloads, 0, result, 0, payloads.Length);
+            Array.Copy(payloads, 0, result, headerdata.Length, payloads.Length);
 
             return result;
         }
@@ -199,6 +199,17 @@ namespace NetworkGenerator.Binary
             members.AddRange(fieldInfos.OrderBy(f => f.MetadataToken));
 
             return members.ToArray();
+        }
+        #endregion
+
+        #region 역직렬화 부분 
+        public static unsafe int ParsingPacket(byte[] data , int length)
+        {
+            int msgId = BitConverter.ToInt32(data, 2); // 메세지 정보
+            int payloadSize =  BitConverter.ToInt32(data, 6);
+            byte[] buffer = new byte[payloadSize];
+            Array.Copy(data, sizeof(MESSAGEHEADER), buffer, 0, payloadSize);
+            return sizeof(MESSAGEHEADER)+payloadSize;
         }
         #endregion
     }
