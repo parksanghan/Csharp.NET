@@ -15,9 +15,11 @@ namespace NetworkGenerator.Binary
         // Type 으로 그냥 자동화를하냐 아니면  DataPacketObject 상속받은 타입으로 하냐 
         // 데이터 파싱 시 헤더를 기준으로 반환할 패킷 클래스 
         //public static Dictionary<EMessageID, DataPacketObject> DataObjectDic = new Dictionary<EMessageID,  DataPacketObject>();  // 이렇게 쓰거나
-                                                                                                                   // 
+                                                      
+        // 메세지와  DataPacketObject를 상속받은 클래스를 관리
         public static Dictionary<EMessageID,Type> DataPacketObjDic = new Dictionary<EMessageID,Type>(); // 아래 처럼 타입으로 써서 해당타입을 반환 받거나  이 방식쓰면 아마 Registerall 에서 
 
+        
         // 문제는 헤더를 기준으로 반환할 패킷 클래스에  언제 주입을 할 것인가 . App 진입점에서 ? 아니면 수동으로 패킷 클래스 강제로 ?
         public static void  RegistIDataObject(EMessageID id,Type value)
         {
@@ -180,8 +182,27 @@ namespace NetworkGenerator.Binary
                 throw new KeyNotFoundException(
                     $"등록되지 않은 MessageID입니다: {id}");
             }
-
+             
             return Activator.CreateInstance(packetType);
+        }
+        // DataPacketObject를 상속 받은 클래스의 구조체의 타입을 반환해줌 EX)CntlCmdUdp(class):DataPackdetObject -> CntlCmdUdpData(struct) 구조 
+        public static Type GetPayloadType(Type packetType) 
+        { 
+            Type current = packetType;
+
+            while (current != null)
+            {
+                if (current.IsGenericType &&
+                    current.GetGenericTypeDefinition() == typeof(DataPacketObject<>))
+                {
+                    return current.GetGenericArguments()[0];
+                }
+
+                current = current.BaseType;
+            }
+
+            throw new InvalidOperationException(
+                $"{packetType.FullName} is not a DataPacketObject<TData>.");
         }
     }
 }

@@ -2,6 +2,7 @@
 using NetworkGenerator.MessageStructs;
 using System;
 using System.Collections.Generic;
+using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
 
@@ -26,10 +27,13 @@ namespace NetworkGenerator.Packets
         protected abstract Dictionary<string, double> m_MaxValues { get; }
         // 상속 Class에서 정의될 Minx  값들
         protected abstract Dictionary<string, double> m_MinValues { get; }
-
+        /// <summary>
+        /// 기본 설정에서 해당값들이 누락(미기입)시 반영안하는 것도 필요할수도 
+        /// </summary>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
  
         // 자식 클래스에서 정의한 구조체 데이터 필드를 순회하여 Min,MAX 값을 검증 
-        public void Validate()
+        public virtual void Validate()
         {
             var fields = typeof(TData).GetFields(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
 
@@ -89,7 +93,7 @@ namespace NetworkGenerator.Packets
             m_Data = data;
             IsResolutioned = true;
         }
-        public  byte[]   GetObjects()
+        protected virtual byte[]  GetObjects()
         {
             Validate();
             ApplyResolution();
@@ -97,9 +101,33 @@ namespace NetworkGenerator.Packets
             MESSAGEHEADER header = GetMessageHeader(bodyBytes.Length);
             return BinaryManager.SerializeWithHeader(header, bodyBytes);
         }
-        public void DeSerialize()
+        // 수신 시 호출하게 될 메서드 
+       //public static void UpdateValue(byte[] bytes, EMessageID eMessageid)*/
+        //{
+        //    Type dataPakcetobjType  =  DataObjectRegistry.GetDataObjectType(eMessageid);
+        //    Type structPayloadType = DataObjectRegistry.GetPayloadType(dataPakcetobjType); 
+        //    // 값 처리하는 부분들 
+        //    object payload =BinaryManager.DeserializeStruct(bytes, structPayloadType);
+        //    PropertyInfo dataProperty = dataPakcetobjType.GetProperty("m_Data");
+        //    dataProperty.SetValue(m_Data, payload);
+        //}
+        /// <summary>
+        ///  수신시 호출하게 될 메서드인데 Deserialzie 시 새객체를 만들고 해당 필드 m_data에 반영하므로 안맞음
+        /// </summary>
+        /// <param name="payloadBytes"></param>
+        /// <param name="messageId"></param>
+        /// <exception cref="InvalidOperationException"></exception>
+        public static TData UpdateValue(byte[] payloadBytes, EMessageID messageId)
         {
+            if (messageId != MessageID)
+            {
+                throw new InvalidOperationException(
+                    $"MessageID 불일치: expected={MessageID}, actual={messageId}");
+            }
 
+            m_Data = BinaryManager.DeserializeStruct<TData>(payloadBytes);
+            IsResolutioned = false;
+            return m_Data;
         }
         public void Rect()
         {

@@ -32,7 +32,7 @@ namespace NetworkGenerator.Packets
         public CntlCmdUdpData m_Data;// 단일 데이터
         public CntlCmdUdpData[] m_datalist; //복합 데이터 여러개 데이터 일수도 있으니 리스톨 해야할듯?  어차피 foreach 로 송신하는구조니간 리스트 전체를보내는것이 아닌 
 
-        // Resoultion 들도 결국엔 
+        //     // Resoultion 딕셔너리 
         private readonly Dictionary<string, double> m_Resolutions =
              new Dictionary<string, double>
              {
@@ -49,14 +49,7 @@ namespace NetworkGenerator.Packets
                     1.0
                 }
              };
-        private readonly Dictionary<string,double> m_Maxvalues =  
-            new Dictionary<string, double>
-            {
-                {
-
-                }
-            }
-        // Resoultion 딕셔너리 
+   
         public bool isResolutioned = false;
         private double GetResolution(string fieldName)
         {
@@ -89,7 +82,7 @@ namespace NetworkGenerator.Packets
             writer.Write((byte)(value & 0xFF));
         }
         // 직렬화 부분 (공통)
-        public byte[] Serialize() 
+        public virtual byte[]  Serialize() 
         {
             Validate();
             ApplyResolution();
@@ -175,7 +168,7 @@ namespace NetworkGenerator.Packets
         /// 데이터 검증 함수 : 내부 ICD에 Range 사항있으면 반영할수 있도록 한다.
         /// </summary>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
-        private void Validate()
+        public virtual void Validate()
         {
             if (m_Data.UvhfCommand > 2) // 필드에 등록된 MAX 값
                 throw new ArgumentOutOfRangeException(nameof(m_Data.UvhfCommand));
@@ -189,7 +182,7 @@ namespace NetworkGenerator.Packets
         /// <summary>
         ///  각 필드마다 Resoultion 적용
         /// </summary>
-        private void ApplyResolution()
+        private virtual void ApplyResolution()
         {
                 FieldInfo[] fieldInfos  =  typeof(CntlCmdUdpData).GetFields(BindingFlags.Public | BindingFlags.Instance);
                 foreach (FieldInfo fieldInfo in fieldInfos) 

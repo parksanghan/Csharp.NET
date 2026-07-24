@@ -212,22 +212,174 @@ namespace NetworkGenerator.Binary
             Array.Copy(data, sizeof(MESSAGEHEADER), buffer, 0, payloadSize);
             return sizeof(MESSAGEHEADER)+payloadSize;
         }
-        public static void DeSerializeStruct<T>(byte[] data, int byteread) where T : struct
+        public static object DeserializeStruct(byte[] data, Type type)  
         {
-             
+            using (var stream = new MemoryStream(data))
+            using (var reader = new BinaryReader(
+                stream,
+                Encoding.UTF8,
+                leaveOpen: false))
+            {
+                return DeserializeObject(reader, type);
+            }
+        }
+        public static T DeserializeStruct<T>(byte[] data) where T : struct
+        {
+            return (T)DeserializeStruct<T>(data, typeof(T));
         }
         //public static void DeSerealizeStream<T>(byte[] data, int byteread) where T : struct {
         //    using (var stream = new MemoryStream(data))
         //    {
         //        long startpos  = stream.Position;
         //        T res = DeSerealizeStream<T>(stream);
-                
+
         //    }
         //}
         //public static object Deserialize(BinaryReader reader ,Type type)
         //{
 
         //}
+
+        // 해당 타입을 만들어 인스턴스 얻음
+        public static object Deserialize(BinaryReader reader, Type type)
+        {
+            var instance = Activator.CreateInstance(type);     // 해당 구조체 타입을 가져옴 
+            MemberInfo[] members = GetSerializeMembers(type);
+            foreach (MemberInfo member in members)
+            {
+                if (member is FieldInfo field)
+                {
+                    var marshalAsAttr = field.GetCustomAttribute<System.Runtime.InteropServices.MarshalAsAttribute>(); // 로컬 변수
+                    if (marshalAsAttr != null &&
+                        marshalAsAttr.Value == System.Runtime.InteropServices.UnmanagedType.ByValArray &&
+                        marshalAsAttr.SizeConst > 0)
+                    {
+                        // 고정 크기 배열 역직렬화 (길이 prefix 없이)
+                        DeserializeFixedSizeArray(reader, field, instance, marshalAsAttr.SizeConst);
+
+                        continue;
+
+                    }
+                }
+                var memberType = GetMemberType(member); // 로컬 변수
+                var memberValue = DeserializeObject(reader, memberType); // 로컬 변수
+
+                MemberinfoSetValue(member, instance, memberValue);
+            }
+            return instance;
+        }
+        public static Type GetMemberType(MemberInfo memberInfo)
+        {
+            switch (memberInfo)
+            {
+                case PropertyInfo property:
+                    return property.PropertyType;
+
+                case FieldInfo field:
+                    return field.FieldType;
+
+                default:
+                    throw new NotSupportedException(
+                        $"Member type {memberInfo.GetType().Name} is not supported. " +
+                        "Only PropertyInfo and FieldInfo are supported.");
+
+            }
+        }
+        public static void DeserializeFixedSizeArray(BinaryReader reader, FieldInfo field, object obj, int size)
+        {
+            byte[] buffer = ReadFixedBytes(size);
+                field.SetValue(obj, buffer);
+        }
+        public static byte[] ReadFixedBytes(int size)
+        {
+            if (size <= 0)
+                throw new ArgumentException("Fixed size must be positive", nameof(size));
+
+            var bytes = new byte[size]; // 로컬 변수
+            ReadBytes(bytes, 0, size);
+
+            return bytes;
+        }
+        public static void ReadBytes(byte[] buffer, int offset, int count )
+        {
+            var totalRead = 0; // 로컬 변수
+            while (totalRead < count)
+            {
+                var read = _stream.Read(buffer, offset + totalRead, count - totalRead); // 로컬 변수
+                if (read == 0)
+                    throw new EndOfStreamException();
+
+                totalRead += read;
+
+            }
+        }
+        public static void MemberinfoSetValue(MemberInfo member, object obj, object value)
+        {
+            switch (member)
+            {
+                case PropertyInfo property:
+                    property.SetValue(obj, value);
+
+                    break;
+
+                case FieldInfo field:
+                    field.SetValue(obj, value);
+
+                    break;
+
+                default:
+                    throw new NotSupportedException(
+                        $"Member type {member.GetType().Name} is not supported. " +
+                        "Only PropertyInfo and FieldInfo are supported.");
+
+            }
+        }
+        public static object DeserializeObject(BinaryReader reader, Type type)
+        {
+            /// 내부 역직렬화 메서드 (TypeSerializer에게 작업 위임)
+            // Strategy Pattern: 타입에 맞는 역직렬화 전략 선택
+
+            if (type.IsClass || type.IsValueType)// class 또는 Struct 타입
+            {
+
+                // 선택된 전략에게 실제 역직렬화 작업 위임
+                return DeserializeDataType(reader, type);
+            }
+            return null;
+        }
+        public static object DeserializeDataType(BinaryReader reader , Type type)
+        {
+            // enum은 실제 저장 타입을 읽은 후 enum으로 변환
+            if (type.IsEnum)
+            {
+                Type underlyingType = Enum.GetUnderlyingType(type);
+                object rawValue = DeserializeDataType(reader, underlyingType);
+
+                return Enum.ToObject(type, rawValue);
+            }
+
+            // 기본 자료형
+            if (type == typeof(byte)) return reader.ReadByte();
+            if (type == typeof(sbyte)) return reader.ReadSByte();
+            if (type == typeof(short)) return reader.ReadInt16();
+            if (type == typeof(ushort)) return reader.ReadUInt16();
+            if (type == typeof(int)) return reader.ReadInt32();
+            if (type == typeof(uint)) return reader.ReadUInt32();
+            if (type == typeof(long)) return reader.ReadInt64();
+            if (type == typeof(ulong)) return reader.ReadUInt64();
+            if (type == typeof(float)) return reader.ReadSingle();
+            if (type == typeof(double)) return reader.ReadDouble();
+            if (type == typeof(bool)) return reader.ReadBoolean();
+            if (type == typeof(string)) return reader.ReadString();
+            if (type == typeof(decimal)) return reader.ReadDecimal();
+
+            // 기본형이 아닌 구조체/class는 멤버 단위로 역직렬화
+            if (type.IsValueType || type.IsClass)
+                return Deserialize(reader, type);
+
+            throw new NotSupportedException(
+                $"Type {type.FullName} cannot be deserialized.");
+        }
         #endregion
     }
 }
