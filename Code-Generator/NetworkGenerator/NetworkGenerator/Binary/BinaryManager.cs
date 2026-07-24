@@ -225,7 +225,7 @@ namespace NetworkGenerator.Binary
         }
         public static T DeserializeStruct<T>(byte[] data) where T : struct
         {
-            return (T)DeserializeStruct<T>(data, typeof(T));
+            return (T)DeserializeStruct(data, typeof(T));
         }
         //public static void DeSerealizeStream<T>(byte[] data, int byteread) where T : struct {
         //    using (var stream = new MemoryStream(data))
