@@ -11,7 +11,7 @@ namespace NetworkGenerator.Packets
     {
         private bool disposedValue;
         //전송될 메세지 ID 불필요 할수도
-        public EMessageID messageID {  get; private set; }
+        public int messageID { get; private set; }
 
         bool m_IsSendDataUpdated= false;
         bool m_IsSendDate = false;

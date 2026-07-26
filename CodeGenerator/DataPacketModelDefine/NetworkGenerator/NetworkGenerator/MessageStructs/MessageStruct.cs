@@ -3,11 +3,6 @@ using System.Runtime.InteropServices;
 
 namespace NetworkGenerator.MessageStructs
 {
-    public enum EMessageID
-    {
-        e_data_one
-    }
-
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
     public struct MESSAGEHEADER
     {

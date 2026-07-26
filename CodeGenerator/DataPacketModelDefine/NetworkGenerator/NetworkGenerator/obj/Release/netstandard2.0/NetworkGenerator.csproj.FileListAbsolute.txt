@@ -8,3 +8,14 @@ F:\Repo\M\새 폴더\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.
 F:\Repo\M\새 폴더\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.csproj.CoreCompileInputs.cache
 F:\Repo\M\새 폴더\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.dll
 F:\Repo\M\새 폴더\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.pdb
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\bin\Release\netstandard2.0\NetworkGenerator.deps.json
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\bin\Release\netstandard2.0\NetworkGenerator.dll
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\bin\Release\netstandard2.0\NetworkGenerator.pdb
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.csproj.AssemblyReference.cache
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.AssemblyInfoInputs.cache
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.AssemblyInfo.cs
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.csproj.CoreCompileInputs.cache
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.sourcelink.json
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.dll
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\obj\Release\netstandard2.0\NetworkGenerator.pdb

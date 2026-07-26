@@ -1,4 +1,3 @@
-using NetworkGenerator.MessageStructs;
 using System;
 
 namespace NetworkGenerator.Attributes
@@ -6,12 +5,12 @@ namespace NetworkGenerator.Attributes
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = false)]
     public sealed class DataPakcetObjectAttribute : Attribute
     {
-        public DataPakcetObjectAttribute(EMessageID messageId)
+        public DataPakcetObjectAttribute(int messageId)
         {
             MessageID = messageId;
         }
 
-        public EMessageID MessageID { get; private set; }
+        public int MessageID { get; private set; }
     }
 
     [AttributeUsage(

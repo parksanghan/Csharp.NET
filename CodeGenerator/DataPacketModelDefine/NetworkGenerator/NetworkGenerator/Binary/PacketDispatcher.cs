@@ -1,4 +1,3 @@
-using NetworkGenerator.MessageStructs;
 using NetworkGenerator.Packets;
 using System;
 using System.IO;
@@ -48,7 +47,7 @@ namespace NetworkGenerator.Binary
                 return 0;
             }
 
-            EMessageID messageId = (EMessageID)rawMessageId;
+            int messageId = rawMessageId;
             updatedPacket = DataObjectRegistry.GetInstance(messageId);
 
             if (updatedPacket.MessageSync != sync)
@@ -72,7 +71,7 @@ namespace NetworkGenerator.Binary
         }
 
         public static IDataPacketObject ProcessPayload(
-            EMessageID messageId,
+            int messageId,
             byte[] payload)
         {
             IDataPacketObject packet =

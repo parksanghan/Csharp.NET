@@ -1,0 +1,37 @@
+{
+  "version": 2,
+  "dgSpecHash": "+Jm2LRzXY6A=",
+  "success": false,
+  "projectFilePath": "C:\\Csharp.NET\\CodeGenerator\\CSHARP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\snagh\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.4\\microsoft.codeanalysis.analyzers.3.3.4.nupkg.sha512",
+    "C:\\Users\\snagh\\.nuget\\packages\\microsoft.codeanalysis.common\\4.11.0\\microsoft.codeanalysis.common.4.11.0.nupkg.sha512",
+    "C:\\Users\\snagh\\.nuget\\packages\\microsoft.codeanalysis.csharp\\4.11.0\\microsoft.codeanalysis.csharp.4.11.0.nupkg.sha512",
+    "C:\\Users\\snagh\\.nuget\\packages\\system.collections.immutable\\8.0.0\\system.collections.immutable.8.0.0.nupkg.sha512",
+    "C:\\Users\\snagh\\.nuget\\packages\\system.reflection.metadata\\8.0.0\\system.reflection.metadata.8.0.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "'C:\\Users\\박상한\\source\\repos\\ClassLibrary1\\ClassLibrary1\\ClassLibrary1.csproj' 프로젝트를 찾을 수 없습니다. 프로젝트 참조가 올바르고 프로젝트 파일이 있는지 확인하세요.",
+      "projectPath": "C:\\Csharp.NET\\CodeGenerator\\CSHARP.csproj",
+      "filePath": "C:\\Csharp.NET\\CodeGenerator\\CSHARP.csproj",
+      "libraryId": "C:\\Users\\박상한\\source\\repos\\ClassLibrary1\\ClassLibrary1\\ClassLibrary1.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "'C:\\Users\\박상한\\source\\repos\\testlib\\testlib\\testlib.csproj' 프로젝트를 찾을 수 없습니다. 프로젝트 참조가 올바르고 프로젝트 파일이 있는지 확인하세요.",
+      "projectPath": "C:\\Csharp.NET\\CodeGenerator\\CSHARP.csproj",
+      "filePath": "C:\\Csharp.NET\\CodeGenerator\\CSHARP.csproj",
+      "libraryId": "C:\\Users\\박상한\\source\\repos\\testlib\\testlib\\testlib.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

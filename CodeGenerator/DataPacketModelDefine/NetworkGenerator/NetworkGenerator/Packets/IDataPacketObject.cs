@@ -9,7 +9,7 @@ namespace NetworkGenerator.Packets
 {
     public interface IDataPacketObject
     {
-        EMessageID MessageID { get; }
+        int MessageID { get; }
         ushort MessageSync { get; }
         Type PayloadType { get; }
         object DataObject { get; }
@@ -23,7 +23,7 @@ namespace NetworkGenerator.Packets
     {
         private readonly object _stateLock = new object();
 
-        public abstract EMessageID MessageID { get; }
+        public abstract int MessageID { get; }
 
         public virtual ushort MessageSync
         {
@@ -87,7 +87,7 @@ namespace NetworkGenerator.Packets
 
         public TData UpdateValue(
             byte[] payloadBytes,
-            EMessageID messageId)
+            int messageId)
         {
             if (messageId != MessageID)
             {
@@ -120,7 +120,7 @@ namespace NetworkGenerator.Packets
             return new MESSAGEHEADER
             {
                 snyc = MessageSync,
-                messageid = (int)MessageID,
+                messageid = MessageID,
                 messagesize = bodyLength
             };
         }

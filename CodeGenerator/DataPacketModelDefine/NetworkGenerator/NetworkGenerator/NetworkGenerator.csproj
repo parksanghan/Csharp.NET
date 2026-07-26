@@ -2,5 +2,12 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <LangVersion>7.3</LangVersion>
+    <DefaultItemExcludes>$(DefaultItemExcludes);DataGenerator\**</DefaultItemExcludes>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="MessageStructs\MessageModels.cs" />
+    <Compile Remove="Packets\Class1.cs" />
+    <Compile Remove="Packets\CntlCmdUdp.cs" />
+    <Compile Remove="Packets\DataTest.cs" />
+  </ItemGroup>
 </Project>

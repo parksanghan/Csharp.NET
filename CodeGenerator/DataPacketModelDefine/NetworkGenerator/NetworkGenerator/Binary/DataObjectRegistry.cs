@@ -1,5 +1,4 @@
 using NetworkGenerator.Attributes;
-using NetworkGenerator.MessageStructs;
 using NetworkGenerator.Packets;
 using System;
 using System.Collections.Generic;
@@ -11,12 +10,12 @@ namespace NetworkGenerator.Binary
     {
         private static readonly object RegistryLock = new object();
 
-        public static readonly Dictionary<EMessageID, Type> DataPacketObjDic =
-            new Dictionary<EMessageID, Type>();
+        public static readonly Dictionary<int, Type> DataPacketObjDic =
+            new Dictionary<int, Type>();
 
-        private static readonly Dictionary<EMessageID, IDataPacketObject>
+        private static readonly Dictionary<int, IDataPacketObject>
             DataPacketInstances =
-                new Dictionary<EMessageID, IDataPacketObject>();
+                new Dictionary<int, IDataPacketObject>();
 
         public static void RegisterAssembly(Assembly assembly)
         {
@@ -90,13 +89,13 @@ namespace NetworkGenerator.Binary
             }
         }
 
-        public static void RegistIDataObject(EMessageID id, Type packetType)
+        public static void RegistIDataObject(int id, Type packetType)
         {
             RegistDataObject(id, packetType);
         }
 
         public static void RegistDataObject(
-            EMessageID id,
+            int id,
             Type packetType)
         {
             if (packetType == null)
@@ -122,7 +121,7 @@ namespace NetworkGenerator.Binary
             Register(packet);
         }
 
-        public static void DeRegistDataObject(EMessageID id)
+        public static void DeRegistDataObject(int id)
         {
             lock (RegistryLock)
             {
@@ -131,12 +130,12 @@ namespace NetworkGenerator.Binary
             }
         }
 
-        public static Type GetDataType(EMessageID id)
+        public static Type GetDataType(int id)
         {
             return GetDataObjectType(id);
         }
 
-        public static Type GetDataObjectType(EMessageID id)
+        public static Type GetDataObjectType(int id)
         {
             lock (RegistryLock)
             {
@@ -146,7 +145,7 @@ namespace NetworkGenerator.Binary
             }
         }
 
-        public static IDataPacketObject GetInstance(EMessageID id)
+        public static IDataPacketObject GetInstance(int id)
         {
             lock (RegistryLock)
             {
@@ -161,7 +160,7 @@ namespace NetworkGenerator.Binary
             }
         }
 
-        public static TPacket GetInstance<TPacket>(EMessageID id)
+        public static TPacket GetInstance<TPacket>(int id)
             where TPacket : class, IDataPacketObject
         {
             TPacket packet = GetInstance(id) as TPacket;
@@ -174,7 +173,7 @@ namespace NetworkGenerator.Binary
             return packet;
         }
 
-        public static object CreateDataObject(EMessageID id)
+        public static object CreateDataObject(int id)
         {
             // Compatibility API: the registry-owned instance is returned.
             return GetInstance(id);
