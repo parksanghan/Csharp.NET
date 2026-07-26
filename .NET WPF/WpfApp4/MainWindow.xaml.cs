@@ -1,6 +1,4 @@
-﻿using NetworkGenerator.Binary;
-using System.Reflection;
-using System.Text;
+﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -11,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApp3
+namespace WpfApp4
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -21,11 +19,6 @@ namespace WpfApp3
         public MainWindow()
         {
             InitializeComponent();
-            // app 진입시 호출되어야 할 함수
-            // 
-            DataObjectRegistry.RegisterAssembly(
-            Assembly.GetExecutingAssembly());
         }
-
     }
 }
