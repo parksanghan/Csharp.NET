@@ -180,26 +180,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\snagh\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages": {},
+    "C:\\Users\\Soletop\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
+      "projectUniqueName": "F:\\USER\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
       "projectName": "NetworkGenerator",
-      "projectPath": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
-      "packagesPath": "C:\\Users\\snagh\\.nuget\\packages\\",
-      "outputPath": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\obj\\",
+      "projectPath": "F:\\USER\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
+      "packagesPath": "C:\\Users\\Soletop\\.nuget\\packages\\",
+      "outputPath": "F:\\USER\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 25.1\\Components\\Offline Packages",
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\snagh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 25.1.config",
+        "C:\\Users\\Soletop\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -208,7 +205,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 25.1\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -252,7 +248,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305\\RuntimeIdentifierGraph.json"
       }
     }
   }

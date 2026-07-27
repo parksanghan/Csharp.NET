@@ -1,0 +1,60 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\DataPacketModelDefine\\\uC0C8 \uD3F4\uB354\\DataGenerator\\DataGenerator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4A377E68-6DBB-4A98-B4BC-2F86B2BE74C5}|DataGenerator.csproj|f:\\datapacketmodeldefine\\\uC0C8 \uD3F4\uB354\\datagenerator\\datagenerator\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A377E68-6DBB-4A98-B4BC-2F86B2BE74C5}|DataGenerator.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A377E68-6DBB-4A98-B4BC-2F86B2BE74C5}|DataGenerator.csproj|f:\\datapacketmodeldefine\\\uC0C8 \uD3F4\uB354\\datagenerator\\datagenerator\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A377E68-6DBB-4A98-B4BC-2F86B2BE74C5}|DataGenerator.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "F:\\DataPacketModelDefine\\\uC0C8 \uD3F4\uB354\\DataGenerator\\DataGenerator\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "F:\\DataPacketModelDefine\\\uC0C8 \uD3F4\uB354\\DataGenerator\\DataGenerator\\MainWindow.xaml*",
+              "RelativeToolTip": "MainWindow.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-07-26T10:48:47.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "F:\\DataPacketModelDefine\\\uC0C8 \uD3F4\uB354\\DataGenerator\\DataGenerator\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "F:\\DataPacketModelDefine\\\uC0C8 \uD3F4\uB354\\DataGenerator\\DataGenerator\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-26T10:48:38.576Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

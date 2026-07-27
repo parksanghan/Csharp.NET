@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PacketDefinitions>
+  <Packet
+    Name="AllPrimitiveTypesPacket"
+    MessageId="e_all_primitive_types"
+    MessageIdValue="1001"
+    Sync="65505"
+    DataType="AllPrimitiveTypesData">
+    <Fields>
+      <Field
+        Name="ByteValue"
+        Order="1"
+        Type="byte"
+        Resolution="1"
+        Min="0"
+        Max="255" />
+
+      <Field
+        Name="SByteValue"
+        Order="2"
+        Type="sbyte"
+        Resolution="1"
+        Min="-128"
+        Max="127" />
+
+      <Field
+        Name="Int16Value"
+        Order="3"
+        Type="short"
+        Resolution="1"
+        Min="-32768"
+        Max="32767" />
+
+      <Field
+        Name="UInt16Value"
+        Order="4"
+        Type="ushort"
+        Resolution="1"
+        Min="0"
+        Max="65535" />
+
+      <Field
+        Name="Int32Value"
+        Order="5"
+        Type="int"
+        Resolution="1"
+        Min="-2147483648"
+        Max="2147483647" />
+
+      <Field
+        Name="UInt32Value"
+        Order="6"
+        Type="uint"
+        Resolution="1"
+        Min="0"
+        Max="4294967295" />
+
+      <Field
+        Name="Int64Value"
+        Order="7"
+        Type="long"
+        Resolution="1"
+        Min="-9223372036854775808"
+        Max="9223372036854775807" />
+
+      <Field
+        Name="UInt64Value"
+        Order="8"
+        Type="ulong"
+        Resolution="1"
+        Min="0"
+        Max="18446744073709551615" />
+
+      <Field
+        Name="SingleValue"
+        Order="9"
+        Type="float"
+        Resolution="0.1"
+        Min="-3.4028235E+38"
+        Max="3.4028235E+38" />
+
+      <Field
+        Name="DoubleValue"
+        Order="10"
+        Type="double"
+        Resolution="0.001"
+        Min="-1.7976931348623157E+308"
+        Max="1.7976931348623157E+308" />
+
+      <Field
+        Name="DecimalValue"
+        Order="11"
+        Type="decimal"
+        Resolution="0.01"
+        Min="-79228162514264337593543950335"
+        Max="79228162514264337593543950335" />
+
+      <Field
+        Name="BooleanValue"
+        Order="12"
+        Type="bool"
+        Resolution="1"
+        Min="0"
+        Max="1" />
+
+      <!-- char는 코드 생성과 바이트 변환은 지원하지만,
+           현재 런타임의 Min/Max 검증 변환은 보완이 필요합니다. -->
+      <Field
+        Name="CharacterValue"
+        Order="13"
+        Type="char"
+        Resolution="1"
+        Min="0"
+        Max="65535" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="NavigationStatusPacket"
+    MessageId="e_navigation_status"
+    MessageIdValue="1002"
+    Sync="65505"
+    DataType="NavigationStatusData">
+    <Fields>
+      <Field
+        Name="Latitude"
+        Order="1"
+        Type="double"
+        Resolution="0.0000001"
+        Min="-90"
+        Max="90" />
+      <Field
+        Name="Longitude"
+        Order="2"
+        Type="double"
+        Resolution="0.0000001"
+        Min="-180"
+        Max="180" />
+      <Field
+        Name="Altitude"
+        Order="3"
+        Type="float"
+        Resolution="0.1"
+        Min="-1000"
+        Max="50000" />
+      <Field
+        Name="Heading"
+        Order="4"
+        Type="float"
+        Resolution="0.01"
+        Min="0"
+        Max="359.99" />
+      <Field
+        Name="GroundSpeed"
+        Order="5"
+        Type="float"
+        Resolution="0.1"
+        Min="0"
+        Max="2000" />
+      <Field
+        Name="Timestamp"
+        Order="6"
+        Type="ulong"
+        Resolution="1"
+        Min="0"
+        Max="18446744073709551615" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="EngineStatusPacket"
+    MessageId="e_engine_status"
+    MessageIdValue="1003"
+    Sync="65505"
+    DataType="EngineStatusData">
+    <Fields>
+      <Field
+        Name="Rpm"
+        Order="1"
+        Type="ushort"
+        Resolution="1"
+        Min="0"
+        Max="20000" />
+      <Field
+        Name="Temperature"
+        Order="2"
+        Type="float"
+        Resolution="0.1"
+        Min="-50"
+        Max="250" />
+      <Field
+        Name="OilPressure"
+        Order="3"
+        Type="float"
+        Resolution="0.01"
+        Min="0"
+        Max="20" />
+      <Field
+        Name="ThrottlePosition"
+        Order="4"
+        Type="byte"
+        Resolution="1"
+        Min="0"
+        Max="100" />
+      <Field
+        Name="IsRunning"
+        Order="5"
+        Type="bool"
+        Resolution="1"
+        Min="0"
+        Max="1" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="ControlCommandPacket"
+    MessageId="e_control_command"
+    MessageIdValue="1004"
+    Sync="65505"
+    DataType="ControlCommandData">
+    <Fields>
+      <Field
+        Name="CommandCode"
+        Order="1"
+        Type="byte"
+        Resolution="1"
+        Min="0"
+        Max="255" />
+      <Field
+        Name="SequenceNumber"
+        Order="2"
+        Type="uint"
+        Resolution="1"
+        Min="0"
+        Max="4294967295" />
+      <Field
+        Name="TargetValue"
+        Order="3"
+        Type="double"
+        Resolution="0.001"
+        Min="-1000000"
+        Max="1000000" />
+      <Field
+        Name="IsEnabled"
+        Order="4"
+        Type="bool"
+        Resolution="1"
+        Min="0"
+        Max="1" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="MotionSensorPacket"
+    MessageId="e_motion_sensor"
+    MessageIdValue="1005"
+    Sync="65505"
+    DataType="MotionSensorData">
+    <Fields>
+      <Field
+        Name="AccelerationX"
+        Order="1"
+        Type="short"
+        Resolution="0.01"
+        Min="-327.68"
+        Max="327.67" />
+      <Field
+        Name="AccelerationY"
+        Order="2"
+        Type="short"
+        Resolution="0.01"
+        Min="-327.68"
+        Max="327.67" />
+      <Field
+        Name="AccelerationZ"
+        Order="3"
+        Type="short"
+        Resolution="0.01"
+        Min="-327.68"
+        Max="327.67" />
+      <Field
+        Name="Quality"
+        Order="4"
+        Type="ushort"
+        Resolution="1"
+        Min="0"
+        Max="1000" />
+      <Field
+        Name="SampleNumber"
+        Order="5"
+        Type="uint"
+        Resolution="1"
+        Min="0"
+        Max="4294967295" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="PowerStatusPacket"
+    MessageId="e_power_status"
+    MessageIdValue="1006"
+    Sync="65505"
+    DataType="PowerStatusData">
+    <Fields>
+      <Field
+        Name="Voltage"
+        Order="1"
+        Type="float"
+        Resolution="0.01"
+        Min="0"
+        Max="1000" />
+      <Field
+        Name="Current"
+        Order="2"
+        Type="float"
+        Resolution="0.01"
+        Min="-500"
+        Max="500" />
+      <Field
+        Name="AccumulatedEnergy"
+        Order="3"
+        Type="double"
+        Resolution="0.001"
+        Min="0"
+        Max="1000000000" />
+      <Field
+        Name="BatteryPercent"
+        Order="4"
+        Type="byte"
+        Resolution="1"
+        Min="0"
+        Max="100" />
+      <Field
+        Name="IsCharging"
+        Order="5"
+        Type="bool"
+        Resolution="1"
+        Min="0"
+        Max="1" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="RadioStatusPacket"
+    MessageId="e_radio_status"
+    MessageIdValue="1007"
+    Sync="65505"
+    DataType="RadioStatusData">
+    <Fields>
+      <Field
+        Name="Frequency"
+        Order="1"
+        Type="uint"
+        Resolution="1"
+        Min="100000"
+        Max="4294967295" />
+      <Field
+        Name="Channel"
+        Order="2"
+        Type="byte"
+        Resolution="1"
+        Min="0"
+        Max="255" />
+      <Field
+        Name="SignalStrength"
+        Order="3"
+        Type="sbyte"
+        Resolution="1"
+        Min="-128"
+        Max="0" />
+      <Field
+        Name="IsTransmitting"
+        Order="4"
+        Type="bool"
+        Resolution="1"
+        Min="0"
+        Max="1" />
+      <Field
+        Name="ErrorCode"
+        Order="5"
+        Type="ushort"
+        Resolution="1"
+        Min="0"
+        Max="65535" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="SystemHealthPacket"
+    MessageId="e_system_health"
+    MessageIdValue="1008"
+    Sync="65505"
+    DataType="SystemHealthData">
+    <Fields>
+      <Field
+        Name="UptimeSeconds"
+        Order="1"
+        Type="ulong"
+        Resolution="1"
+        Min="0"
+        Max="18446744073709551615" />
+      <Field
+        Name="AvailableMemory"
+        Order="2"
+        Type="uint"
+        Resolution="1"
+        Min="0"
+        Max="4294967295" />
+      <Field
+        Name="CpuUsage"
+        Order="3"
+        Type="float"
+        Resolution="0.1"
+        Min="0"
+        Max="100" />
+      <Field
+        Name="OperatingState"
+        Order="4"
+        Type="byte"
+        Resolution="1"
+        Min="0"
+        Max="10" />
+      <Field
+        Name="HasFault"
+        Order="5"
+        Type="bool"
+        Resolution="1"
+        Min="0"
+        Max="1" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="TimeSyncPacket"
+    MessageId="e_time_sync"
+    MessageIdValue="1009"
+    Sync="65505"
+    DataType="TimeSyncData">
+    <Fields>
+      <Field
+        Name="UnixSeconds"
+        Order="1"
+        Type="long"
+        Resolution="1"
+        Min="0"
+        Max="4102444800" />
+      <Field
+        Name="Nanoseconds"
+        Order="2"
+        Type="int"
+        Resolution="1"
+        Min="0"
+        Max="999999999" />
+      <Field
+        Name="UtcOffsetMinutes"
+        Order="3"
+        Type="short"
+        Resolution="1"
+        Min="-840"
+        Max="840" />
+      <Field
+        Name="IsSynchronized"
+        Order="4"
+        Type="bool"
+        Resolution="1"
+        Min="0"
+        Max="1" />
+    </Fields>
+  </Packet>
+
+  <Packet
+    Name="StatisticsPacket"
+    MessageId="e_statistics"
+    MessageIdValue="1010"
+    Sync="65505"
+    DataType="StatisticsData">
+    <Fields>
+      <Field
+        Name="TotalAmount"
+        Order="1"
+        Type="decimal"
+        Resolution="0.01"
+        Min="0"
+        Max="1000000000000" />
+      <Field
+        Name="AverageValue"
+        Order="2"
+        Type="double"
+        Resolution="0.001"
+        Min="-1000000000"
+        Max="1000000000" />
+      <Field
+        Name="SuccessRatio"
+        Order="3"
+        Type="float"
+        Resolution="0.0001"
+        Min="0"
+        Max="1" />
+      <Field
+        Name="SampleCount"
+        Order="4"
+        Type="int"
+        Resolution="1"
+        Min="0"
+        Max="2147483647" />
+      <Field
+        Name="IsValid"
+        Order="5"
+        Type="bool"
+        Resolution="1"
+        Min="0"
+        Max="1" />
+    </Fields>
+  </Packet>
+</PacketDefinitions>

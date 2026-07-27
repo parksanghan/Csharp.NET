@@ -1,0 +1,86 @@
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\Lib\NetworkGenerator.dll
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.exe
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.deps.json
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.runtimeconfig.json
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.dll
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.pdb
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\Wpf.Ui.dll
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\Wpf.Ui.Abstractions.dll
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.csproj.AssemblyReference.cache
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\MainWindow.baml
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\App.baml
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\MainWindow.g.cs
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\App.g.cs
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator_MarkupCompile.cache
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.g.resources
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.AssemblyInfoInputs.cache
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.AssemblyInfo.cs
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.csproj.CoreCompileInputs.cache
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.sourcelink.json
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGene.F4E7602D.Up2Date
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.dll
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\refint\DataGenerator.dll
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.pdb
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.genruntimeconfig.cache
+C:\Csharp.NET\CodeGenerator\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\ref\DataGenerator.dll
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\Lib\NetworkGenerator.dll
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.exe
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.deps.json
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.runtimeconfig.json
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.dll
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.pdb
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\Wpf.Ui.dll
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\bin\Release\net9.0-windows\Wpf.Ui.Abstractions.dll
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.csproj.AssemblyReference.cache
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\MainWindow.baml
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\App.baml
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\MainWindow.g.cs
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\App.g.cs
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator_MarkupCompile.cache
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.g.resources
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.GeneratedMSBuildEditorConfig.editorconfig
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.AssemblyInfoInputs.cache
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.AssemblyInfo.cs
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.csproj.CoreCompileInputs.cache
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGene.F4E7602D.Up2Date
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.dll
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\refint\DataGenerator.dll
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.pdb
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.genruntimeconfig.cache
+F:\DataPacketModelDefine\NetworkGenerator\NetworkGenerator\DataGenerator\obj\Release\net9.0-windows\ref\DataGenerator.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\bin\Release\net9.0-windows\Lib\NetworkGenerator.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.exe
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.deps.json
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.runtimeconfig.json
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\bin\Release\net9.0-windows\DataGenerator.pdb
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\bin\Release\net9.0-windows\Wpf.Ui.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\bin\Release\net9.0-windows\Wpf.Ui.Abstractions.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.csproj.AssemblyReference.cache
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\MainWindow.baml
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\App.baml
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\MainWindow.g.cs
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\App.g.cs
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator_MarkupCompile.cache
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.g.resources
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.GeneratedMSBuildEditorConfig.editorconfig
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.AssemblyInfoInputs.cache
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.AssemblyInfo.cs
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.csproj.CoreCompileInputs.cache
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGene.F4E7602D.Up2Date
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\refint\DataGenerator.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.pdb
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\DataGenerator.genruntimeconfig.cache
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\ref\DataGenerator.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\PacketFieldDetailsWindow.baml
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\obj\Release\net9.0-windows\PacketFieldDetailsWindow.g.cs
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\.codex-build-check\Lib\NetworkGenerator.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\.codex-build-check\DataGenerator.exe
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\.codex-build-check\DataGenerator.deps.json
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\.codex-build-check\DataGenerator.runtimeconfig.json
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\.codex-build-check\DataGenerator.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\.codex-build-check\DataGenerator.pdb
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\.codex-build-check\Wpf.Ui.dll
+F:\DataPacketModelDefine\새 폴더\DataGenerator\DataGenerator\.codex-build-check\Wpf.Ui.Abstractions.dll

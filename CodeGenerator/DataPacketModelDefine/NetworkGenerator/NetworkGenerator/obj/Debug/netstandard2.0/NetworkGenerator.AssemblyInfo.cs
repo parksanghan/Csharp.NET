@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NetworkGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a1027ae56c2ff65a6af1f9848a85f15698b33356")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50e5a258613803f544b2a3a76d9e618f18bb210b")]
 [assembly: System.Reflection.AssemblyProductAttribute("NetworkGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NetworkGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

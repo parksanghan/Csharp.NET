@@ -1,57 +1,57 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\",
+  "WorkspaceRootPath": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\packets\\idatapacketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\idatapacketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\packets\\cntlcmdudp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\cntlcmdudp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\packets\\datatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\datatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\attributes\\datapakcetobjectattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\attributes\\datapakcetobjectattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\packets\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\messagestructs\\messagemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\messagestructs\\messagemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\messagestructs\\messagestruct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\messagestructs\\messagestruct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\binary\\dataobjectregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\binary\\dataobjectregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\binary\\dataobjectregistry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\binary\\binarymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\binary\\binarymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\binary\\packetdispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\binary\\packetdispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\binary\\packetdispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\attributes\\nonserializableattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\attributes\\datapakcetobjectattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\attributes\\datapakcetobjectattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\binary\\binarymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\binary\\binarymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\attributes\\nonserializableattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\attributes\\nonserializableattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\networkgenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\messagestructs\\messagestruct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\messagestructs\\messagestruct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\messagestructs\\messagemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\messagestructs\\messagemodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\packets\\cntlcmdudp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\cntlcmdudp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\packets\\idatapacketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\idatapacketobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\packets\\datatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\datatest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\packets\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\networkgenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\networkgenerator.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|f:\\repo\\m\\\uC0C8 \uD3F4\uB354\\networkgenerator\\networkgenerator\\packets\\basepacket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|c:\\csharp.net\\codegenerator\\datapacketmodeldefine\\networkgenerator\\networkgenerator\\packets\\basepacket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6B5F4910-1D90-417E-8F26-C03F2AD41701}|NetworkGenerator\\NetworkGenerator.csproj|solutionrelative:networkgenerator\\packets\\basepacket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -77,80 +77,156 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataPakcetObjectAttribute.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Attributes\\DataPakcetObjectAttribute.cs",
-              "RelativeDocumentMoniker": "NetworkGenerator\\Attributes\\DataPakcetObjectAttribute.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Attributes\\DataPakcetObjectAttribute.cs",
-              "RelativeToolTip": "NetworkGenerator\\Attributes\\DataPakcetObjectAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "NonSerializableAttribute.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Attributes\\NonSerializableAttribute.cs",
+              "RelativeDocumentMoniker": "NetworkGenerator\\Attributes\\NonSerializableAttribute.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Attributes\\NonSerializableAttribute.cs",
+              "RelativeToolTip": "NetworkGenerator\\Attributes\\NonSerializableAttribute.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvw0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-24T04:36:10.277Z",
+              "WhenOpened": "2026-07-16T02:36:01.955Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PacketDispatcher.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Binary\\PacketDispatcher.cs",
-              "RelativeDocumentMoniker": "NetworkGenerator\\Binary\\PacketDispatcher.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Binary\\PacketDispatcher.cs",
-              "RelativeToolTip": "NetworkGenerator\\Binary\\PacketDispatcher.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAADwv0UAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-24T04:21:33.39Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataTest.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\DataTest.cs",
-              "RelativeDocumentMoniker": "NetworkGenerator\\Packets\\DataTest.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\DataTest.cs",
-              "RelativeToolTip": "NetworkGenerator\\Packets\\DataTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-24T04:21:06.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "DataObjectRegistry.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Binary\\DataObjectRegistry.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Binary\\DataObjectRegistry.cs",
               "RelativeDocumentMoniker": "NetworkGenerator\\Binary\\DataObjectRegistry.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Binary\\DataObjectRegistry.cs",
-              "RelativeToolTip": "NetworkGenerator\\Binary\\DataObjectRegistry.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAAAJkAAAAoAAAAAAAAAA==",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Binary\\DataObjectRegistry.cs*",
+              "RelativeToolTip": "NetworkGenerator\\Binary\\DataObjectRegistry.cs*",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAjwAgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-24T04:20:35.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "MessageStruct.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\MessageStructs\\MessageStruct.cs",
+              "RelativeDocumentMoniker": "NetworkGenerator\\MessageStructs\\MessageStruct.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\MessageStructs\\MessageStruct.cs",
+              "RelativeToolTip": "NetworkGenerator\\MessageStructs\\MessageStruct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T09:03:13.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BinaryManager.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Binary\\BinaryManager.cs",
+              "RelativeDocumentMoniker": "NetworkGenerator\\Binary\\BinaryManager.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Binary\\BinaryManager.cs",
+              "RelativeToolTip": "NetworkGenerator\\Binary\\BinaryManager.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAcwJcAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T00:18:07.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataPakcetObjectAttribute.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Attributes\\DataPakcetObjectAttribute.cs",
+              "RelativeDocumentMoniker": "NetworkGenerator\\Attributes\\DataPakcetObjectAttribute.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Attributes\\DataPakcetObjectAttribute.cs*",
+              "RelativeToolTip": "NetworkGenerator\\Attributes\\DataPakcetObjectAttribute.cs*",
+              "ViewState": "AgIAABoAAAAAAAAAAAAqwB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T04:36:10.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PacketDispatcher.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Binary\\PacketDispatcher.cs",
+              "RelativeDocumentMoniker": "NetworkGenerator\\Binary\\PacketDispatcher.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Binary\\PacketDispatcher.cs",
+              "RelativeToolTip": "NetworkGenerator\\Binary\\PacketDispatcher.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T04:21:33.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MessageModels.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\MessageStructs\\MessageModels.cs",
+              "RelativeDocumentMoniker": "NetworkGenerator\\MessageStructs\\MessageModels.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\MessageStructs\\MessageModels.cs",
+              "RelativeToolTip": "NetworkGenerator\\MessageStructs\\MessageModels.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T00:18:07.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CntlCmdUdp.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\CntlCmdUdp.cs",
+              "RelativeDocumentMoniker": "NetworkGenerator\\Packets\\CntlCmdUdp.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\CntlCmdUdp.cs",
+              "RelativeToolTip": "NetworkGenerator\\Packets\\CntlCmdUdp.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAswD8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-15T00:18:07.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "IDataPacketObject.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\IDataPacketObject.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\IDataPacketObject.cs",
               "RelativeDocumentMoniker": "NetworkGenerator\\Packets\\IDataPacketObject.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\IDataPacketObject.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\IDataPacketObject.cs",
               "RelativeToolTip": "NetworkGenerator\\Packets\\IDataPacketObject.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAAwHIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAQwHIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-24T04:20:21.117Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DataTest.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\DataTest.cs",
+              "RelativeDocumentMoniker": "NetworkGenerator\\Packets\\DataTest.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\DataTest.cs",
+              "RelativeToolTip": "NetworkGenerator\\Packets\\DataTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-24T04:21:06.738Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 11,
               "Title": "NetworkGenerator.csproj",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
               "RelativeDocumentMoniker": "NetworkGenerator\\NetworkGenerator.csproj",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
               "RelativeToolTip": "NetworkGenerator\\NetworkGenerator.csproj",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
@@ -158,100 +234,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CntlCmdUdp.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\CntlCmdUdp.cs",
-              "RelativeDocumentMoniker": "NetworkGenerator\\Packets\\CntlCmdUdp.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\CntlCmdUdp.cs",
-              "RelativeToolTip": "NetworkGenerator\\Packets\\CntlCmdUdp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T00:18:07.988Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "NonSerializableAttribute.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Attributes\\NonSerializableAttribute.cs",
-              "RelativeDocumentMoniker": "NetworkGenerator\\Attributes\\NonSerializableAttribute.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Attributes\\NonSerializableAttribute.cs",
-              "RelativeToolTip": "NetworkGenerator\\Attributes\\NonSerializableAttribute.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-16T02:36:01.955Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 14,
               "Title": "DeSerializerManager.cs",
               "DocumentMoniker": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\Binary\\DeSerializerManager.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\Binary\\DeSerializerManager.cs",
               "ToolTip": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\Binary\\DeSerializerManager.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\Binary\\DeSerializerManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-16T00:57:47.712Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MessageStruct.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\MessageStructs\\MessageStruct.cs",
-              "RelativeDocumentMoniker": "NetworkGenerator\\MessageStructs\\MessageStruct.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\MessageStructs\\MessageStruct.cs",
-              "RelativeToolTip": "NetworkGenerator\\MessageStructs\\MessageStruct.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T09:03:13.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "Class1.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\Class1.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\Class1.cs",
               "RelativeDocumentMoniker": "NetworkGenerator\\Packets\\Class1.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\Class1.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\Class1.cs",
               "RelativeToolTip": "NetworkGenerator\\Packets\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T08:19:59.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BinaryManager.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Binary\\BinaryManager.cs",
-              "RelativeDocumentMoniker": "NetworkGenerator\\Binary\\BinaryManager.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Binary\\BinaryManager.cs",
-              "RelativeToolTip": "NetworkGenerator\\Binary\\BinaryManager.cs",
-              "ViewState": "AgIAAIYAAAAAAAAAAAAcwJwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T00:18:07.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MessageModels.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\MessageStructs\\MessageModels.cs",
-              "RelativeDocumentMoniker": "NetworkGenerator\\MessageStructs\\MessageModels.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\MessageStructs\\MessageModels.cs",
-              "RelativeToolTip": "NetworkGenerator\\MessageStructs\\MessageModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-15T00:18:07.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-15T08:19:59.807Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "BasePacket.cs",
-              "DocumentMoniker": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\BasePacket.cs",
+              "DocumentMoniker": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\BasePacket.cs",
               "RelativeDocumentMoniker": "NetworkGenerator\\Packets\\BasePacket.cs",
-              "ToolTip": "F:\\Repo\\M\\\uC0C8 \uD3F4\uB354\\NetworkGenerator\\NetworkGenerator\\Packets\\BasePacket.cs",
+              "ToolTip": "C:\\Csharp.NET\\CodeGenerator\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\Packets\\BasePacket.cs",
               "RelativeToolTip": "NetworkGenerator\\Packets\\BasePacket.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -262,9 +271,7 @@
               "DocumentIndex": 15,
               "Title": "NetworkSourceBuilder.cs",
               "DocumentMoniker": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkSourceBuilder.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkSourceBuilder.cs",
               "ToolTip": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkSourceBuilder.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkSourceBuilder.cs",
               "ViewState": "AgIAAKcCAAAAAAAAAAAAALgCAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-09T00:36:31.831Z"
@@ -274,9 +281,7 @@
               "DocumentIndex": 16,
               "Title": "NetworkSocketGenerator.cs",
               "DocumentMoniker": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkSocketGenerator.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkSocketGenerator.cs",
               "ToolTip": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkSocketGenerator.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkSocketGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-09T00:36:31.116Z"
@@ -286,9 +291,7 @@
               "DocumentIndex": 17,
               "Title": "NetworkConfigParser.cs",
               "DocumentMoniker": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkConfigParser.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkConfigParser.cs",
               "ToolTip": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkConfigParser.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\NetworkConfigParser.cs",
               "ViewState": "AgIAAHQAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-09T00:36:25.813Z"
@@ -298,9 +301,7 @@
               "DocumentIndex": 13,
               "Title": "Class1.cs",
               "DocumentMoniker": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\Class1.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\Class1.cs",
               "ToolTip": "F:\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\Class1.cs",
-              "RelativeToolTip": "..\\..\\..\\..\\USER\\Csharp.NET\\Code-Generator\\NetworkGenerator\\NetworkGenerator\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-07T05:12:59.576Z"
