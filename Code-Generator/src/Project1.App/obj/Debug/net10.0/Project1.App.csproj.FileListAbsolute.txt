@@ -1,0 +1,15 @@
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\bin\Debug\net10.0\Project1.App.exe
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\bin\Debug\net10.0\Project1.App.deps.json
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\bin\Debug\net10.0\Project1.App.runtimeconfig.json
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\bin\Debug\net10.0\Project1.App.dll
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\bin\Debug\net10.0\Project1.App.pdb
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\Project1.App.GeneratedMSBuildEditorConfig.editorconfig
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\Project1.App.AssemblyInfoInputs.cache
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\Project1.App.AssemblyInfo.cs
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\Project1.App.csproj.CoreCompileInputs.cache
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\Project1.App.sourcelink.json
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\Project1.App.dll
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\refint\Project1.App.dll
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\Project1.App.pdb
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\Project1.App.genruntimeconfig.cache
+F:\USER\Csharp.NET\Code-Generator\src\Project1.App\obj\Debug\net10.0\ref\Project1.App.dll

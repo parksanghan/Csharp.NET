@@ -1,0 +1,13 @@
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\RouteGenerator.csproj.AssemblyReference.cache
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\RouteGenerator.GeneratedMSBuildEditorConfig.editorconfig
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\RouteGenerator.AssemblyInfoInputs.cache
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\RouteGenerator.AssemblyInfo.cs
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\RouteGenerator.csproj.CoreCompileInputs.cache
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\RouteGenerator.sourcelink.json
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\bin\Debug\net9.0\RouteGenerator.deps.json
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\bin\Debug\net9.0\RouteGenerator.dll
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\bin\Debug\net9.0\RouteGenerator.pdb
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\RouteGenerator.dll
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\refint\RouteGenerator.dll
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\RouteGenerator.pdb
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net9.0\ref\RouteGenerator.dll

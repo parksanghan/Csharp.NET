@@ -1,0 +1,6 @@
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net8.0\RouteGenerator.csproj.AssemblyReference.cache
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net8.0\RouteGenerator.GeneratedMSBuildEditorConfig.editorconfig
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net8.0\RouteGenerator.AssemblyInfoInputs.cache
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net8.0\RouteGenerator.AssemblyInfo.cs
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net8.0\RouteGenerator.csproj.CoreCompileInputs.cache
+F:\USER\Csharp.NET\Code-Generator\src\RouteGenerator\obj\Debug\net8.0\RouteGenerator.sourcelink.json
