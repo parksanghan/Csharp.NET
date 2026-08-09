@@ -30,35 +30,4 @@
         Max="99.0" />
     </Fields>
   </Packet>
-<Packet
-    Name="CntlCmdUdp2"
-    MessageId="e_data_one2"
-    MessageIdValue="1"
-    Sync="65505"
-    DataType="CntlCmdUdpData2">
-    <Fields>
-      <Field
-        Name="UvhfCommand"
-        Order="1"
-        Type="byte"
-        Resolution="1.0"
-        Min="0.0"
-        Max="2.0" />
-      <Field
-        Name="PttStatus"
-        Order="2"
-        Type="byte"
-        Resolution="1.0"
-        Min="0.0"
-        Max="2.0" />
-      <Field
-        Name="RadioRxVolStatus"
-        Order="3"
-        Type="byte"
-        Resolution="1.0"
-        Min="0.0"
-        Max="99.0" />
-    </Fields>
-  </Packet>
-
 </PacketDefinitions>
