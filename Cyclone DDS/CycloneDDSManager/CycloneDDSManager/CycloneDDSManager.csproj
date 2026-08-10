@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <PlatformTarget>x64</PlatformTarget>
+    <CycloneDdsRoot Condition="'$(CycloneDdsRoot)' == ''">F:\dev\cyclonedds</CycloneDdsRoot>
+  </PropertyGroup>
+
+  <ItemGroup Condition="Exists('$(CycloneDdsRoot)\bin\ddsc.dll')">
+    <Content Include="$(CycloneDdsRoot)\bin\*.dll">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
