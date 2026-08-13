@@ -1,85 +1,142 @@
 # CycloneDDSManager
 
-Cyclone DDS 11.0.1 C API를 C#에서 사용하기 위한 x64 P/Invoke 및 관리형 래퍼입니다.
+Cyclone DDS 11.0.1 C API를 C#에서 사용하는 x64 P/Invoke 및 관리형 래퍼입니다.
 
-## 구현 범위
+## Attribute 기반 class/struct 패킷
 
-- Participant, Topic, Publisher, Subscriber, Writer, Reader
-- `write`, `write_ts`, `writedispose`, `dispose`, instance 등록/해제/키 조회
-- loan 기반 `read`, `take`, mask/instance 읽기 및 `dds_return_loan`
-- QoS 생성/복사/병합과 주요 정책 setter
-- WaitSet, GuardCondition, ReadCondition, QueryCondition
-- Listener의 13개 공개 callback과 Status getter
-- Dynamic Type의 structure/enum/bitmask/sequence 생성, member 속성, 등록 및 Topic 생성
-
-`DDSI` 내부 API, Security plugin API, PSMX, CDR collector, 통계 등은 공개 관리형 API에 포함하지 않았습니다.
-
-## Dynamic Type 예제
+`[Topic]`이 붙은 class 또는 struct에서 `[DdsMember]` 멤버만 DDS 데이터로 사용합니다.
 
 ```csharp
-using System;
-using System.Runtime.InteropServices;
-using CycloneDDSManager.DDS;
+using CycloneDDSManager.Attr;
 
-[StructLayout(LayoutKind.Sequential)]
-public struct Message
+public enum DeviceState
 {
-    public int Id;
-    public double Value;
+    Offline = 0,
+    Running = 5,
+    Failed = 9
 }
 
+public sealed class PositionMeta
+{
+    [DdsMember(0)]
+    public long Timestamp { get; set; }
+}
+
+[Topic(
+    "PositionTopic",
+    "장치 위치 데이터",
+    Module = "MySystem",
+    TypeName = "Position")]
+public sealed class PositionPacket
+{
+    [DdsMember(0, IsKey = true)]
+    public int DeviceId { get; set; }
+
+    [DdsMember(1)]
+    public double X { get; set; }
+
+    [DdsMember(2)]
+    public double Y { get; set; }
+
+    [DdsMember(3)]
+    public bool Enabled { get; set; }
+
+    [DdsMember(4, MaxLength = 64)]
+    public string Name { get; set; }
+
+    [DdsMember(5)]
+    public DeviceState State { get; set; }
+
+    [DdsMember(6)]
+    public PositionMeta Meta { get; set; }
+
+    // DdsMember가 없으므로 DDS로 전송되지 않습니다.
+    public DateTime ReceivedAt { get; set; }
+}
+```
+
+멤버 ID는 0부터 중복 없이 연속되어야 합니다. 이 규칙으로 생성 IDL의 멤버 ID와 런타임 Dynamic Type의 멤버 ID를 동일하게 유지합니다.
+
+## IDL 생성과 Topic 발행/구독
+
+```csharp
+using CycloneDDSManager.DDS;
+
 using (var participant = DdsParticipant.Create())
-using (var type = DdsDynamicType.CreateStructure(participant, "Message")
-    .AddPrimitiveMember("id", DdsDynamicTypeKind.Int32, 0)
-    .AddPrimitiveMember("value", DdsDynamicTypeKind.Float64, 1)
-    .SetMemberKey(0))
-using (var topic = type.RegisterAndCreateTopic(participant, "MessageTopic"))
+// IDL 파일 생성과 Dynamic Type Topic 등록을 동시에 수행합니다.
+using (var topic = participant.CreateTopic<PositionPacket>("idl/Position.idl"))
 using (var writer = participant.CreateWriter(topic))
 using (var reader = participant.CreateReader(topic))
 {
-    writer.Write(new Message { Id = 1, Value = 3.14 });
-
-    using (DdsLoanedSamples samples = reader.Take(32))
+    writer.Write(new PositionPacket
     {
-        for (int i = 0; i < samples.Count; i++)
-        {
-            DdsSampleInfo info = samples.GetInfo(i);
-            if (info.ValidData)
-            {
-                Message value = samples.Get<Message>(i);
-                Console.WriteLine($"{value.Id}: {value.Value}");
-            }
-        }
-    } // dds_return_loan
+        DeviceId = 2,
+        X = 10.5,
+        Y = 20.5,
+        Enabled = true,
+        Name = "RTC-2",
+        State = DeviceState.Running,
+        Meta = new PositionMeta { Timestamp = 123456789 }
+    });
+
+    IReadOnlyList<DdsReceivedSample<PositionPacket>> samples = reader.Take();
+    foreach (DdsReceivedSample<PositionPacket> sample in samples)
+    {
+        if (sample.Info.ValidData)
+            Console.WriteLine(sample.Data.Name);
+    }
 }
 ```
 
-## IDL 생성 descriptor 사용
-
-`idlc`가 생성한 `*_desc`는 네이티브 `dds_topic_descriptor_t`입니다. C#에 같은 구조체를 다시 선언하지 말고, 생성된 C 코드를 DLL로 빌드한 뒤 descriptor 주소를 반환하는 작은 export를 추가하는 방식이 안전합니다.
-
-```c
-__declspec(dllexport)
-const dds_topic_descriptor_t *get_Message_desc(void)
-{
-  return &Message_desc;
-}
-```
-
-그 함수의 반환값(`IntPtr`)을 다음과 같이 넘깁니다.
+파일이 필요 없고 C# 양쪽에서 같은 Attribute 타입을 사용하는 경우에는 경로를 생략할 수 있습니다.
 
 ```csharp
-using (var topic = participant.CreateTopic(get_Message_desc(), "MessageTopic"))
-{
-    // writer / reader 생성
-}
+using var topic = participant.CreateTopic<PositionPacket>();
 ```
 
-IDL의 string, sequence, optional 같은 포인터 기반 필드는 단순 `StructLayout`만으로 충분하지 않을 수 있습니다. 이 경우 생성된 C 타입에 맞는 별도 marshaller를 두고, loan이 반환되기 전에 문자열/sequence를 복사해야 합니다.
+IDL만 별도로 생성할 수도 있습니다.
+
+```csharp
+string text = DdsIdlGenerator.Generate<PositionPacket>();
+string fullPath = DdsIdlGenerator.Save<PositionPacket>("idl/Position.idl");
+```
+
+생성 IDL을 런타임에 `idlc`로 다시 컴파일해서 C#이 사용하는 것은 아닙니다. 하나의 검증된 스키마에서 다음 두 결과를 함께 만듭니다.
+
+```text
+Attribute 스키마
+├─ IDL 파일: 다른 PC/C/C++ 프로그램과 공유
+└─ Dynamic Type: 현재 C# 프로세스에서 Topic 즉시 등록
+```
+
+따라서 생성 IDL과 C# 런타임 Topic 정의가 따로 어긋나지 않습니다.
+
+## 현재 Attribute mapper 지원 타입
+
+- class와 struct
+- field와 property
+- `bool`, 모든 정수형, `float`, `double`, `char`
+- enum
+- UTF-8 `string` (`MaxLength = 0`은 unbounded)
+- 중첩 class/struct
+- 상속받은 CLR 멤버의 평탄화
+
+현재 배열, `List<T>`, nullable, optional, sequence, union은 Attribute mapper에서 거절합니다. 조용히 잘못된 데이터를 보내지 않고 `DdsSchemaException`을 발생시킵니다. 해당 타입은 이후 명시적인 sequence/optional 매핑을 추가하거나 IDL 생성 descriptor 경로를 사용해야 합니다.
+
+## 저수준 API
+
+기존 저수준 API도 그대로 사용할 수 있습니다.
+
+- Participant, Topic, Publisher, Subscriber, Writer, Reader
+- `write`, `write_ts`, `writedispose`, dispose, instance 등록/해제
+- loan 기반 `read`, `take`, mask/instance 읽기와 `dds_return_loan`
+- QoS, WaitSet, Guard/Read/Query Condition
+- Listener callback과 Status getter
+- 수동 Dynamic Type 생성
 
 ## 네이티브 DLL 경로
 
-프로젝트는 현재 설치 경로인 `F:\dev\cyclonedds\bin`의 DLL을 출력 폴더로 복사합니다. 다른 위치에서는 빌드 속성을 지정합니다.
+현재 기본 경로는 `F:\dev\cyclonedds`입니다. 다른 설치 경로에서는 다음과 같이 지정합니다.
 
 ```powershell
 dotnet build -p:CycloneDdsRoot=C:\path\to\cyclonedds

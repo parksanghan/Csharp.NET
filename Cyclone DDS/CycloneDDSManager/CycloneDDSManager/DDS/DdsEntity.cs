@@ -165,6 +165,21 @@ namespace CycloneDDSManager.DDS
             }
         }
 
+        public DdsTopic<T> CreateTopic<T>(DdsQos qos = null, DdsListener listener = null)
+        {
+            return CreateTypedTopic<T>(null, qos, listener);
+        }
+
+        public DdsTopic<T> CreateTopic<T>(
+            string idlFilePath,
+            DdsQos qos = null,
+            DdsListener listener = null)
+        {
+            if (string.IsNullOrWhiteSpace(idlFilePath))
+                throw new ArgumentException("An IDL output path is required.", nameof(idlFilePath));
+            return CreateTypedTopic<T>(idlFilePath, qos, listener);
+        }
+
         public DdsWriter CreateWriter(DdsTopic topic, DdsQos qos = null, DdsListener listener = null)
         {
             if (topic == null) throw new ArgumentNullException(nameof(topic));
@@ -172,11 +187,25 @@ namespace CycloneDDSManager.DDS
             return new DdsWriter(DdsError.CheckEntity(entity, "dds_create_writer"), this, topic, listener);
         }
 
+        public DdsWriter<T> CreateWriter<T>(DdsTopic<T> topic, DdsQos qos = null, DdsListener listener = null)
+        {
+            if (topic == null) throw new ArgumentNullException(nameof(topic));
+            DdsWriter writer = CreateWriter(topic.NativeTopic, qos, listener);
+            return new DdsWriter<T>(writer, topic.Schema);
+        }
+
         public DdsReader CreateReader(DdsTopic topic, DdsQos qos = null, DdsListener listener = null)
         {
             if (topic == null) throw new ArgumentNullException(nameof(topic));
             int entity = DdsNative.dds_create_reader(Handle, topic.Handle, QosHandle(qos), ListenerHandle(listener));
             return new DdsReader(DdsError.CheckEntity(entity, "dds_create_reader"), this, topic, listener);
+        }
+
+        public DdsReader<T> CreateReader<T>(DdsTopic<T> topic, DdsQos qos = null, DdsListener listener = null)
+        {
+            if (topic == null) throw new ArgumentNullException(nameof(topic));
+            DdsReader reader = CreateReader(topic.NativeTopic, qos, listener);
+            return new DdsReader<T>(reader, topic.Schema);
         }
 
         public DdsWaitSet CreateWaitSet()
@@ -189,6 +218,23 @@ namespace CycloneDDSManager.DDS
         {
             return new DdsGuardCondition(
                 DdsError.CheckEntity(DdsNative.dds_create_guardcondition(Handle), "dds_create_guardcondition"), this);
+        }
+
+        private DdsTopic<T> CreateTypedTopic<T>(
+            string idlFilePath,
+            DdsQos qos,
+            DdsListener listener)
+        {
+            DdsObjectSchema schema = DdsSchemaCache.Get<T>();
+            string idl = DdsIdlGenerator.Generate(schema);
+            if (idlFilePath != null) DdsIdlGenerator.Save<T>(idlFilePath);
+
+            using (DdsDynamicTypeGraph graph = DdsDynamicTypeGraph.Build(this, schema))
+            {
+                DdsTopic nativeTopic = graph.Root.RegisterAndCreateTopic(
+                    this, schema.TopicName, qos, listener);
+                return new DdsTopic<T>(nativeTopic, schema, idl);
+            }
         }
     }
 
@@ -220,6 +266,13 @@ namespace CycloneDDSManager.DDS
             return new DdsWriter(DdsError.CheckEntity(entity, "dds_create_writer"), this, topic, listener);
         }
 
+        public DdsWriter<T> CreateWriter<T>(DdsTopic<T> topic, DdsQos qos = null, DdsListener listener = null)
+        {
+            if (topic == null) throw new ArgumentNullException(nameof(topic));
+            DdsWriter writer = CreateWriter(topic.NativeTopic, qos, listener);
+            return new DdsWriter<T>(writer, topic.Schema);
+        }
+
         public void Suspend() { DdsError.Check(DdsNative.dds_suspend(Handle), "dds_suspend"); }
         public void Resume() { DdsError.Check(DdsNative.dds_resume(Handle), "dds_resume"); }
 
@@ -239,6 +292,13 @@ namespace CycloneDDSManager.DDS
             if (topic == null) throw new ArgumentNullException(nameof(topic));
             int entity = DdsNative.dds_create_reader(Handle, topic.Handle, QosHandle(qos), ListenerHandle(listener));
             return new DdsReader(DdsError.CheckEntity(entity, "dds_create_reader"), this, topic, listener);
+        }
+
+        public DdsReader<T> CreateReader<T>(DdsTopic<T> topic, DdsQos qos = null, DdsListener listener = null)
+        {
+            if (topic == null) throw new ArgumentNullException(nameof(topic));
+            DdsReader reader = CreateReader(topic.NativeTopic, qos, listener);
+            return new DdsReader<T>(reader, topic.Schema);
         }
 
         public void NotifyReaders()

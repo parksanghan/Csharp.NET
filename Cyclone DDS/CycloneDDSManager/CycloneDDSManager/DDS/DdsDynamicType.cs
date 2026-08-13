@@ -40,6 +40,34 @@ namespace CycloneDDSManager.DDS
             return CreateNamed(participant, DdsDynamicTypeKind.Bitmask, name);
         }
 
+        public static DdsDynamicType CreateString8(DdsParticipant participant, uint? bound = null)
+        {
+            if (participant == null) throw new ArgumentNullException(nameof(participant));
+            IntPtr bounds = IntPtr.Zero;
+            try
+            {
+                if (bound.HasValue)
+                {
+                    if (bound.Value == 0) throw new ArgumentOutOfRangeException(nameof(bound));
+                    bounds = Marshal.AllocHGlobal(sizeof(uint));
+                    Marshal.WriteInt32(bounds, unchecked((int)bound.Value));
+                }
+
+                var descriptor = new DdsDynamicTypeDescriptorNative
+                {
+                    Kind = DdsDynamicTypeKind.String8,
+                    BoundCount = bound.HasValue ? 1u : 0u,
+                    Bounds = bounds
+                };
+                DdsDynamicTypeNative value = DdsNative.dds_dynamic_type_create(participant.Handle, descriptor);
+                return new DdsDynamicType(value, DdsDynamicTypeKind.String8, null);
+            }
+            finally
+            {
+                if (bounds != IntPtr.Zero) Marshal.FreeHGlobal(bounds);
+            }
+        }
+
         public static DdsDynamicType CreateSequence(
             DdsParticipant participant,
             string name,
