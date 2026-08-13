@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CycloneDDSManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3657b8fbefa9161b8042e55773238f17c3c728a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a78a3bc3a7d5d538f8e689a8d5f2b45b5439c52")]
 [assembly: System.Reflection.AssemblyProductAttribute("CycloneDDSManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CycloneDDSManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
