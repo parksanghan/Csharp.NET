@@ -1,3 +1,0 @@
-Name,Type,Host,Port,MaxConnections,Description
-GatewayServer,Server,0.0.0.0,5000,100,Accepts equipment connections
-Project2Client,Client,127.0.0.1,5000,,Connects to Project2

@@ -1,6 +1,0 @@
-From,To,Protocol,Host,Port,Description
-Project1.App,Project2.App,TCP,127.0.0.1,5000,Project1 sends commands to Project2
-Project1.App,DeviceA,UDP,239.0.0.10,5001,Project1 sends UDP telemetry broadcast
-Project2.App,DeviceB,TCP,10.0.0.42,7001,Project2 connects to DeviceB
-Project2.App,Project1.App,UDP,127.0.0.1,5002,Project2 sends heartbeat to Project1
-
