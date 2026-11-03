@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "DMqrk13xedM=",
+  "success": true,
+  "projectFilePath": "F:\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\DataGenerator\\DataGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Soletop\\.nuget\\packages\\wpf-ui\\4.3.0\\wpf-ui.4.3.0.nupkg.sha512",
+    "C:\\Users\\Soletop\\.nuget\\packages\\wpf-ui.abstractions\\4.3.0\\wpf-ui.abstractions.4.3.0.nupkg.sha512",
+    "C:\\Users\\Soletop\\.nuget\\packages\\microsoft.netcore.app.ref\\9.0.16\\microsoft.netcore.app.ref.9.0.16.nupkg.sha512",
+    "C:\\Users\\Soletop\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\9.0.16\\microsoft.windowsdesktop.app.ref.9.0.16.nupkg.sha512",
+    "C:\\Users\\Soletop\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\9.0.16\\microsoft.aspnetcore.app.ref.9.0.16.nupkg.sha512",
+    "C:\\Users\\Soletop\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\9.0.16\\microsoft.netcore.app.host.win-x64.9.0.16.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "패키지 취약성 데이터를 가져오는 동안 오류가 발생했습니다. 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다. (127.0.0.1:9)",
+      "projectPath": "F:\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\DataGenerator\\DataGenerator.csproj",
+      "warningLevel": 1,
+      "filePath": "F:\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\DataGenerator\\DataGenerator.csproj",
+      "targetGraphs": []
+    }
+  ]
+}

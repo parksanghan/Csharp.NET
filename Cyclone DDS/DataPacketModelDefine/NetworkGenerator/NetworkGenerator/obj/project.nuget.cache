@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "YW2oWzudCaU=",
+  "success": true,
+  "projectFilePath": "F:\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Soletop\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Soletop\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "패키지 취약성 데이터를 가져오는 동안 오류가 발생했습니다. 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다. (127.0.0.1:9)",
+      "projectPath": "F:\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
+      "warningLevel": 1,
+      "filePath": "F:\\DataPacketModelDefine\\NetworkGenerator\\NetworkGenerator\\NetworkGenerator.csproj",
+      "targetGraphs": []
+    }
+  ]
+}

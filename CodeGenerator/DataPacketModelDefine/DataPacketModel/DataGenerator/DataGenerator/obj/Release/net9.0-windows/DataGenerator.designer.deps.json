@@ -1,0 +1,46 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "WPF-UI/4.3.0": {
+        "dependencies": {
+          "WPF-UI.Abstractions": "4.3.0"
+        },
+        "runtime": {
+          "lib/net9.0-windows7.0/Wpf.Ui.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      },
+      "WPF-UI.Abstractions/4.3.0": {
+        "runtime": {
+          "lib/net9.0/Wpf.Ui.Abstractions.dll": {
+            "assemblyVersion": "4.3.0.0",
+            "fileVersion": "4.3.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "WPF-UI/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SIHhc8lIrhEQ/1cLFZN6Dtf8cqsLm4myBULj9obnacd9TyDs2vizhKYzRzTlcPEcnzb3L4EstvPN3M6kcXbJCA==",
+      "path": "wpf-ui/4.3.0",
+      "hashPath": "wpf-ui.4.3.0.nupkg.sha512"
+    },
+    "WPF-UI.Abstractions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7Kj9DmCCo4SOCd1jAiw4+EcMFP2nR8rLLvitAYzVtzbWToTsodkbie24+8x9C4LDLxkopWEUGX62szqqNy7oeg==",
+      "path": "wpf-ui.abstractions/4.3.0",
+      "hashPath": "wpf-ui.abstractions.4.3.0.nupkg.sha512"
+    }
+  }
+}

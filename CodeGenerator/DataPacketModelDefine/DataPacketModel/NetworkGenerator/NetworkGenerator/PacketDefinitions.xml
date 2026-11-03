@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PacketDefinitions>
+  <Packet
+    Name="CntlCmdUdp"
+    MessageId="e_data_one"
+    MessageIdValue="0"
+    Sync="65505"
+    DataType="CntlCmdUdpData">
+    <Fields>
+      <Field
+        Name="UvhfCommand"
+        Order="1"
+        Type="byte"
+        Resolution="1.0"
+        Min="0.0"
+        Max="2.0" />
+      <Field
+        Name="PttStatus"
+        Order="2"
+        Type="byte"
+        Resolution="1.0"
+        Min="0.0"
+        Max="2.0" />
+      <Field
+        Name="RadioRxVolStatus"
+        Order="3"
+        Type="byte"
+        Resolution="1.0"
+        Min="0.0"
+        Max="99.0" />
+    </Fields>
+  </Packet>
+</PacketDefinitions>

@@ -1,0 +1,11 @@
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\obj\Debug\netstandard2.0\NetworkGenerator.csproj.AssemblyReference.cache
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\obj\Debug\netstandard2.0\NetworkGenerator.GeneratedMSBuildEditorConfig.editorconfig
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\obj\Debug\netstandard2.0\NetworkGenerator.AssemblyInfoInputs.cache
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\obj\Debug\netstandard2.0\NetworkGenerator.AssemblyInfo.cs
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\obj\Debug\netstandard2.0\NetworkGenerator.csproj.CoreCompileInputs.cache
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\obj\Debug\netstandard2.0\NetworkGenerator.sourcelink.json
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\bin\Debug\netstandard2.0\NetworkGenerator.deps.json
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\bin\Debug\netstandard2.0\NetworkGenerator.dll
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\bin\Debug\netstandard2.0\NetworkGenerator.pdb
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\obj\Debug\netstandard2.0\NetworkGenerator.dll
+F:\USER\Csharp.NET\Code-Generator\NetworkGenerator\obj\Debug\netstandard2.0\NetworkGenerator.pdb

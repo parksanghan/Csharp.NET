@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "hTGyxqUv5J8=",
+  "success": true,
+  "projectFilePath": "F:\\DataPacketModelDefine\\새 폴더\\DataGenerator\\DataGenerator\\DataGenerator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Soletop\\.nuget\\packages\\wpf-ui\\4.3.0\\wpf-ui.4.3.0.nupkg.sha512",
+    "C:\\Users\\Soletop\\.nuget\\packages\\wpf-ui.abstractions\\4.3.0\\wpf-ui.abstractions.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
